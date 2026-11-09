@@ -1,0 +1,26 @@
+{
+  "experiment": "e2e60-20261109",
+  "generation_command": ".venv/bin/python scripts/run_e2e_experiment.py report --directory runs/e2e60-20261109",
+  "files": {
+    "summary.md": {
+      "source": "runs/e2e60-20261109/summary.md",
+      "sha256": "0d2fafe17bba5df27b5c67c5d4add3c234a358ee035a971a4278caaa0139e8d5"
+    },
+    "summary.json": {
+      "source": "runs/e2e60-20261109/summary.json",
+      "sha256": "b4f4b5b69f80f6eebc0a07b3d7dd42bba5befd59627d98c485496424fb776782"
+    },
+    "results.csv": {
+      "source": "runs/e2e60-20261109/results.csv",
+      "sha256": "8b584cd75015ab935ebc0935d02914863de16dd84b1342e51ed6c53048a5d520"
+    },
+    "paired-differences.csv": {
+      "source": "runs/e2e60-20261109/paired-differences.csv",
+      "sha256": "16f207d771ac0c3139701d68ea416f35eb4b3ab7438e2799bc3aeaffd97d1265"
+    },
+    "e2e60-completion-verification.json": {
+      "source": "reports/e2e60-completion-verification.json",
+      "sha256": "5a5e245b918911aa3c2e20cc55df9b3dbb072c2985833ee6ddd9a9c56f6a35fd"
+    }
+  }
+}

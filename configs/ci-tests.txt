@@ -4,6 +4,8 @@ tests/test_agent_delivery.py
 tests/test_browser.py
 tests/test_control.py
 tests/test_dataset.py
+tests/test_e2e_experiment.py
+tests/test_e2e_report.py
 tests/test_extra_observation.py
 tests/test_forms.py
 tests/test_ledger.py

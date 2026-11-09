@@ -106,6 +106,9 @@ def load_config(path):
         config["adapter_path"] = str((path.parent.parent / config["adapter_path"]).resolve())
     if config.get("agent_runtime", {}).get("enabled"):
         settings = config["agent_runtime"]
+        for key in ("planning", "memory", "reflection"):
+            if key in settings and type(settings[key]) is not bool:
+                raise ValueError(f"agent_runtime.{key} must be a boolean")
         for key in ("refresh_actions", "memory_top_k", "max_tool_calls"):
             if type(settings.get(key)) is not int or settings[key] < 1:
                 raise ValueError(f"agent_runtime.{key} must be a positive integer")

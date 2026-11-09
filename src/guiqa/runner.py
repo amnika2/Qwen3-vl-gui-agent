@@ -345,7 +345,7 @@ def agent_loop(context, task, model, config, deadline):
         if session:
             session.after_action(execution_error)
             if reason:
-                session.refresh(reason)
+                session.reflect(reason)
                 control.actions.clear()
                 control.static_clicks = 0
                 reason = None

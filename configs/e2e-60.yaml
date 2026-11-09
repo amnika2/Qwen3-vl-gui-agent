@@ -1,0 +1,21 @@
+name: e2e-60
+cases: [sweeper-005, sweeper-007, sweeper-008, sweeper-040, sweeper-041]
+builds: [A, B]
+workflow: target
+memory_seed: configs/e2e-memory-seed.yaml
+groups:
+  - id: base-full
+    config: configs/agent-full-base.yaml
+  - id: sft-full
+    config: configs/agent-full-sft.yaml
+  - id: grpo-full
+    config: configs/agent-full-grpo.yaml
+  - id: grpo-no-planning
+    config: configs/agent-full-grpo.yaml
+    overrides: {planning: false}
+  - id: grpo-no-memory
+    config: configs/agent-full-grpo.yaml
+    overrides: {memory: false}
+  - id: grpo-no-reflection
+    config: configs/agent-full-grpo.yaml
+    overrides: {reflection: false}

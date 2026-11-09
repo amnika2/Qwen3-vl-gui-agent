@@ -1,0 +1,53 @@
+experiences:
+  - case_id: sweeper-105
+    workflow: preservation
+    task: >-
+      Use the displayed Geo Zone editor. Create a new Geo Zone. Set Name to
+      'Warehouse collection'; Code to 'wh'; Description to 'Collect after the
+      confirmation email.'. Leave the pending Country unselected and do not
+      click Add. Click Save, reopen this same zone from its list row, and verify
+      Code, Name and Description. Inspect the saved country rows in the table
+      body; the pending dropdown does not count. Report pass if all requested
+      fields and the requested country/city are saved (or no country row exists
+      when none was selected), fail if the completed save reopens with missing
+      or different values, or blocked if the check cannot be completed.
+    procedure:
+      - Focus each requested text field, select all, enter the current task's replacement, and inspect the visible text.
+      - Complete the requested fields, click the form's Save button, and inspect the saved-record list.
+      - Reopen the same record from its list row and compare the requested fields with the current task.
+    lessons:
+      - Creating a record requires submitting the form and reopening the saved record after entering its fields.
+      - Inspect saved child-table rows separately from pending dropdown selections and Add controls.
+    source_run_id: 20261107T160349Z-a7bbc992
+    sources:
+      runs/20261107T160349Z-a7bbc992/manifest.json: 2fbb510c03d2c07804ecccfe7c34893e50e1949260dfb4b496ae3c839096e5e2
+      runs/20261107T160349Z-a7bbc992/result.json: 6166c883d630aeb7c3ef3b517c9ce079e9831c50f1a34b39bf17a694e3ca53c3
+      runs/20261107T160349Z-a7bbc992/trace.jsonl: a72b88ff55bc82e53d23ff9d810b6fa757a744eb1ef8ea2c0001d3b44746e0c8
+      runs/20261107T160349Z-a7bbc992/screenshots/009.png: 6df9ad49e16ae269592f7db8a31e8f47d8cd3fdff0a6e936cb5e64cd1083fd4b
+      runs/20261107T160349Z-a7bbc992/screenshots/010.png: 8cca5fe30f44dc5d7ff5df8ff14888230febdda850aca122b6f5ede03ea1242d
+      runs/20261107T160349Z-a7bbc992/screenshots/011.png: 32d623aca6a5d244ff42853c001ddc708a0a2d75ec8e4961db589c55a1cc6052
+  - case_id: sweeper-125
+    workflow: target
+    task: >-
+      Edit Apple Cinema 30" product #42 in OpenCart. Open the Option tab. Open
+      the option value editor for Green; set Weight to 0.75. Keep the + prefix
+      and leave other fields unchanged. Save the modal, then save the product.
+      Reload the product, reopen Option, and read the same row's displayed
+      Weight. Report pass if the reopened values match the request, fail if
+      they differ, or blocked if you cannot complete the check.
+    procedure:
+      - Open the requested record's tab and the matching child-row editor; replace the requested field while preserving its prefix and unrelated fields.
+      - Save the child editor, then save the enclosing record form and inspect its submission response.
+      - Reload the record, reopen its tab, scroll to the same child row, and inspect the requested field.
+    lessons:
+      - Saving a nested modal and saving its enclosing record are separate actions.
+      - After reloading, identify the same child row before comparing its field; neighboring rows describe different records.
+    source_run_id: 20261107T160406Z-3f79b1b7
+    sources:
+      runs/20261107T160406Z-3f79b1b7/manifest.json: a2623a336a437701cc313f89204ebc79e8b6128f03eabd4c83494478606a04fd
+      runs/20261107T160406Z-3f79b1b7/result.json: 5cd342fafe80d2df3a70a17dcff14f082c47edd004c9015cec4d863ddc6b5ef6
+      runs/20261107T160406Z-3f79b1b7/trace.jsonl: b15756d13497fbce87c0cba86bac3d865847f16f8210c9fbc30f76b90c0ade74
+      runs/20261107T160406Z-3f79b1b7/screenshots/006.png: fba3f5d1b9cd9a7661ec4e39f63fb58bad2ad1ab8804f68d703bae7cfd79feb5
+      runs/20261107T160406Z-3f79b1b7/screenshots/007.png: 023de7dd007c9eba9d145046ef4acc9f4c88916a8e7c77b867c798a611f9db54
+      runs/20261107T160406Z-3f79b1b7/screenshots/010.png: 339a560916ed1ee70f1750d59a1624a6639cc5ea1e62ffe464a90db13175bbcb
+      runs/20261107T160406Z-3f79b1b7/screenshots/014.png: 71625b6702223cc38279457e258c38c8b684687ed544cfd10449b6bc3f564d08

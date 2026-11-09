@@ -1,13 +1,16 @@
 import json
 from pathlib import Path
 import sys
+from contextlib import nullcontext
 from types import SimpleNamespace
+from unittest.mock import MagicMock, Mock
 
 import pytest
 from playwright.sync_api import sync_playwright
 
 from guiqa.actions import parse_action
 from guiqa.agent_memory import ExperienceStore
+from guiqa.agent_session import AgentSession, context_schema
 from guiqa.agent_tools import MCPConnections, ToolRegistry
 from guiqa.cli import load_config
 from guiqa.model import FakeModel, Qwen
@@ -375,3 +378,159 @@ def test_full_config_resolves_persistent_database():
     config = load_config(root / "configs/agent-full-grpo.yaml")
     assert config["agent_runtime"]["memory_database"] == str(root / ".runtime/agent-memory.sqlite3")
     assert config["adapter_path"].endswith("rl-review-grpo-expanded-v1/adapter")
+
+
+def test_planning_off_keeps_summary_updates_and_removes_plan_from_model(runtime_episode):
+    context, config = runtime_episode
+    config["agent_runtime"]["planning"] = False
+
+    class SummaryModel(ContextModel):
+        def update_context(self, task, screenshot, previous, compacted, recent, reason, remaining):
+            assert "plan" not in previous and "next_goal" not in previous
+            self.reasons.append(reason)
+            return json.dumps({"summary": "" if reason == "initial_plan" else "The field was edited at step 3",
+                               "reflection": "" if reason == "initial_plan" else "Inspect the submitted value"})
+
+    actions = [{"action": "click", "coordinate": [200, 100]}, {"action": "press", "key": "Control+a"},
+               {"action": "type", "text": "New"},
+               {"action": "finish", "verdict": "fail", "observation": "Value not saved", "evidence_steps": [3]},
+               {"action": "finish", "verdict": "blocked", "observation": "No submission established", "evidence_steps": [4]}]
+    model = SummaryModel([json.dumps(action) for action in actions])
+    agent(context, "Edit and save a field", model, config)
+    state = json.loads((context.directory / "task-state.json").read_text())
+    assert state["summary"] == "The field was edited at step 3"
+    assert "periodic_context_update" in model.reasons
+    assert context.result["agent_runtime"]["finish_deferrals"] == 0
+    assert all("plan" not in row["progress"]["task_state"]
+               and "next_goal" not in row["progress"]["task_state"] for row in model.progress)
+
+
+def test_memory_off_uses_browser_tools_without_creating_or_saving_memory(runtime_episode):
+    context, config = runtime_episode
+    config["agent_runtime"]["memory"] = False
+
+    class NoMemoryModel(ContextModel):
+        def learn_episode(self, *args):
+            pytest.fail("memory-disabled tasks must not learn or save experiences")
+
+    model = NoMemoryModel([json.dumps(action) for action in [
+        {"action": "click", "coordinate": [200, 100]},
+        {"action": "finish", "verdict": "blocked", "observation": "Cannot submit", "evidence_steps": [1]},
+        {"action": "finish", "verdict": "blocked", "observation": "Cannot submit", "evidence_steps": [2]}]])
+    agent(context, "Edit and save a field", model, config)
+    catalog = json.loads((context.directory / "tool-catalog.json").read_text())["tools"]
+    assert catalog and all(tool["transport"] == "browser" for tool in catalog)
+    assert not Path(config["agent_runtime"]["memory_database"]).exists()
+    assert not (context.directory / "experience.json").exists()
+    assert all("retrieved_experiences" not in row["progress"]["task_state"] for row in model.progress)
+
+
+def test_reflection_off_preserves_raw_errors_and_periodic_summary(runtime_episode, monkeypatch):
+    from playwright.sync_api import TimeoutError
+
+    context, config = runtime_episode
+    config["agent_runtime"].update(reflection=False, refresh_actions=2)
+    execute = context.execute
+
+    def timeout_on_click(action, caller="agent"):
+        if action["action"] == "click":
+            raise TimeoutError("Save did not become ready")
+        return execute(action, caller)
+
+    class NoReflectionModel(ContextModel):
+        def update_context(self, *args):
+            update = json.loads(super().update_context(*args))
+            del update["reflection"]
+            return json.dumps(update)
+
+    monkeypatch.setattr(context, "execute", timeout_on_click)
+    actions = [{"action": "click", "coordinate": [200, 200]},
+               *[{"action": "press", "key": "ArrowRight"}] * 3,
+               {"action": "finish", "verdict": "blocked", "observation": "Cannot save", "evidence_steps": [4]},
+               {"action": "finish", "verdict": "blocked", "observation": "Cannot save", "evidence_steps": [5]}]
+    model = NoReflectionModel([json.dumps(action) for action in actions])
+    agent(context, "Edit and save a field", model, config)
+    assert "periodic_context_update" in model.reasons
+    assert not any(reason.startswith(("execution_error", "action_cycle")) for reason in model.reasons)
+    assert all("reflection" not in row["progress"]["task_state"] for row in model.progress)
+    assert any("Save did not become ready" in json.dumps(row["history"]) for row in model.progress)
+
+
+def test_reflection_off_keeps_raw_tool_error_without_extra_update(runtime_episode):
+    context, config = runtime_episode
+    config["agent_runtime"].update(memory=False, reflection=False)
+
+    class NoReflectionModel(ContextModel):
+        def update_context(self, *args):
+            update = json.loads(super().update_context(*args))
+            del update["reflection"]
+            return json.dumps(update)
+
+    model = NoReflectionModel([])
+    with AgentSession(context, "Inspect the page", model, config, 10 ** 12) as session:
+        session.start()
+        session.tools.call = lambda *args: {"is_error": True, "text": "Unknown record", "data": None}
+        session.call_tool({"name": "helper__lookup", "arguments": {"record": "missing"}})
+        assert session.progress()["tool_observations"][-1]["result"]["text"] == "Unknown record"
+        assert model.reasons == ["initial_plan"]
+
+
+@pytest.mark.parametrize("disabled", ["planning", "reflection", "memory"])
+def test_ablation_prompts_and_schema_only_request_enabled_features(tmp_path, disabled):
+    from PIL import Image
+
+    screenshot = tmp_path / "screen.png"
+    Image.new("RGB", (8, 8), "white").save(screenshot)
+    settings = {"enabled": True, disabled: False}
+    model = Qwen({"agent_runtime": settings, "history_actions": 4})
+    model.load = lambda: None
+    captured = []
+    model._generate = lambda messages, *args, **kwargs: captured.append((messages, kwargs)) or "{}"
+    previous = {"summary": "", "plan": [], "reflection": "", "next_goal": "Open the form"}
+    if disabled == "planning":
+        del previous["plan"]
+        del previous["next_goal"]
+    elif disabled == "reflection":
+        del previous["reflection"]
+    model.update_context("Edit a field", screenshot, previous, [], [], "initial_plan", 30)
+    context_prompt = captured[-1][0][0]["content"][0]["text"]
+    schema = captured[-1][1]["schema"]
+    if disabled == "planning":
+        assert not {"plan", "statuses", "next_goal"} & schema["properties"].keys()
+        assert "Return plan" not in context_prompt and "next_goal" not in context_prompt
+        periodic = context_schema([], planning=False, initial=False)
+        assert periodic["properties"]["summary"]["type"] == "string"
+    elif disabled == "reflection":
+        assert "reflection" not in schema["properties"]
+        assert "reflection" not in context_prompt
+    else:
+        assert "Recalled experiences" not in context_prompt
+    model.generate("Edit a field", screenshot, [], 30, progress={"task_state": previous})
+    actor_prompt = captured[-1][0][0]["content"][0]["text"]
+    assert {"planning": "next_goal", "reflection": "reflections", "memory": "recalled procedures"}[disabled] not in actor_prompt
+
+
+def test_generation_usage_accumulates_all_calls_and_resets_each_run():
+    model = Qwen({"max_new_tokens": 20})
+    inputs = MagicMock()
+    inputs.to.return_value = inputs
+    inputs.input_ids.shape = (1, 7)
+    outputs = MagicMock()
+    outputs.__getitem__.return_value.shape = (1, 3)
+    model.processor = SimpleNamespace(apply_chat_template=lambda *args, **kwargs: inputs,
+                                      batch_decode=lambda *args, **kwargs: ["answer"])
+    model.model = SimpleNamespace(device="cpu", generate=lambda **kwargs: outputs)
+    model.torch = SimpleNamespace(inference_mode=nullcontext,
+                                  cuda=SimpleNamespace(reset_peak_memory_stats=Mock()))
+    model.load = lambda: None
+    model.begin_run()
+    model._generate([], 30)
+    model._generate([], 30)
+    metrics = model.metrics()
+    assert metrics["prompt_tokens"] == 14
+    assert metrics["completion_tokens"] == 6
+    assert metrics["generation_calls"] == 2
+    assert metrics["generation_seconds"] >= 0
+    model.begin_run()
+    assert model.metrics()["prompt_tokens"] == model.metrics()["completion_tokens"] == 0
+    assert model.metrics()["generation_calls"] == 0

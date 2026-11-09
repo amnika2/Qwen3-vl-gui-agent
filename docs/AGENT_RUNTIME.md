@@ -39,6 +39,9 @@ CUDA_VISIBLE_DEVICES=2 LD_LIBRARY_PATH="$PWD/vendor/runtime/root/usr/lib/x86_64-
 | `memory_top_k` | 启动时检索的经验条数 |
 | `max_tool_calls` | 每次任务中模型主动调用外部工具的预算 |
 | `mcp_servers` | 额外连接的 MCP 服务 |
+| `planning` | 默认开启；关闭计划、下一步目标和计划式结束核对 |
+| `memory` | 默认开启；控制内置经验服务、召回和保存 |
+| `reflection` | 默认开启；控制显式反思内容与事件触发更新 |
 
 默认经验空间为 `interactive`。新建经验空间可直接更改 `memory_namespace`。固定基准评测继续使用原有无运行时记忆配置；`evaluate` 会提示改用冻结配置，避免前一次任务的经验改变下一次的评测条件。
 

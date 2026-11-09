@@ -63,6 +63,7 @@ class Qwen:
         self.loaded = False
         self.load_seconds = 0
         self.review_tokenizer_data = None
+        self.usage = {"prompt_tokens": 0, "completion_tokens": 0, "generation_seconds": 0.0, "generation_calls": 0}
 
     def load(self):
         if self.loaded:
@@ -89,6 +90,7 @@ class Qwen:
     def begin_run(self):
         self.load()
         self.torch.cuda.reset_peak_memory_stats(0)
+        self.usage = {"prompt_tokens": 0, "completion_tokens": 0, "generation_seconds": 0.0, "generation_calls": 0}
 
     def generate(self, task, screenshot: Path, history, remaining, progress=None, profile="persistence"):
         from PIL import Image
@@ -102,14 +104,25 @@ class Qwen:
                        "For automatic creation, include the screen before the trigger even when "
                        "no typing is needed.\n")
         if self.config.get("agent_runtime", {}).get("enabled"):
+            settings = self.config["agent_runtime"]
+            components = ["older-action summary"]
+            if settings.get("planning", True):
+                components.append("task plan and next_goal")
+            if settings.get("reflection", True):
+                components.append("reflections")
+            if settings.get("memory", True):
+                components.append("recalled procedures")
+            prompt += "Use Agent context below: it contains " + ", ".join(components) + ". "
+            if settings.get("planning", True):
+                prompt += "Continue from next_goal. "
             prompt += (
-                "Use Agent context below: it contains your task plan, older-action summary, "
-                "reflections and recalled procedures. Recalled procedures are guidance; inspect "
-                "the current screenshots for every value and outcome. Continue from next_goal. "
+                "Inspect the current screenshots for every value and outcome. "
                 "Browser actions use the original JSON format above. To use a listed MCP tool, "
                 "return {\"action\":\"tool\",\"name\":\"server__tool\",\"arguments\":{...}}. "
-                "Tool observations will be returned in Agent context. Procedural memory is "
-                "recalled at startup and saved after review automatically.\n")
+                "Tool observations will be returned in Agent context.\n")
+            if settings.get("memory", True):
+                prompt += ("Recalled procedures are guidance. Procedural memory is recalled at startup "
+                           "and saved after review automatically.\n")
         messages = [{"role": "system", "content": [{"type": "text", "text": prompt}]}, {"role": "user", "content": [
             {"type": "text", "text": task + "\nRecent actions (oldest first):\n" + json.dumps(history[-self.config["history_actions"]:])
              + f"\nCurrent screenshot step: {history[-1]['step'] if history else 0}"
@@ -124,33 +137,40 @@ class Qwen:
         from PIL import Image
         from .agent_session import context_schema
 
-        schema = context_schema(previous["plan"])
-        plan_instruction = (
-            "Return statuses, an array in exactly the existing plan's order. Preserve every plan "
-            "step; only update its status. " if previous["plan"] else
-            "Return plan with 3-5 concrete GUI subtasks. Each step is a short imperative sentence "
-            "describing work on the task's record, field or control; status holds its progress. "
-            "Example initial response: "
-            '{"plan":[{"step":"Open the requested record or creation form","status":"in_progress"},'
-            '{"step":"Enter the requested field values and click Save","status":"pending"},'
-            '{"step":"Reopen the saved record and compare its values","status":"pending"}],'
-            '"summary":"","reflection":"","next_goal":"Open the requested form"}. '
-            "Adapt these subtask descriptions and next_goal to the actual task and screenshot. ")
-        messages = [{"role": "system", "content": [{"type": "text", "text": (
-            "Maintain the working memory and plan of a screenshot GUI agent. " + plan_instruction +
-            "Status values are pending/in_progress/done. Also return summary, reflection and "
-            "next_goal. On initial_plan, decompose this task including Save and reopened-result "
-            "verification. On later updates, preserve important prior summary facts and add the "
-            "actions being compacted, with step numbers. Keep exact task constraints and known "
-            "input/save/reopen milestones. Action attempts are not proof of success. Use the current "
-            "screenshot and feedback to update statuses, explain failed actions and choose a "
-            "concrete next goal. Distinguish unestablished input from a product failure. "
-            "Use 3-5 short plan steps. Mark established completed steps done, only the current "
-            "step in_progress. Summary describes executed actions, never restates the task or "
-            "speculates about outcomes. Initial summary and reflection are empty. For later updates "
-            "write summary in 1-3 sentences, reflection in one sentence. Close each string promptly. "
-            "An example summary is 'Step 1 opened the editor. Step 3 entered the requested value.' "
-            "Recalled experiences provide procedures only; verify this run afresh.")}]},
+        settings = self.config["agent_runtime"]
+        planning, reflection = settings.get("planning", True), settings.get("reflection", True)
+        plan = previous["plan"] if planning else []
+        schema = context_schema(plan, planning, reflection, reason == "initial_plan")
+        instructions = ("Maintain the working memory of a screenshot GUI agent. "
+                        "Return summary describing executed actions and observed results. "
+                        "Preserve important prior summary facts and add the actions being compacted, "
+                        "with step numbers. Keep exact task constraints and established input/save/reopen "
+                        "milestones. Action attempts are not proof of success. Initial summary is empty. "
+                        "On later updates write summary in 1-3 sentences. Close each string promptly. "
+                        "An example summary is 'Step 1 opened the editor. Step 3 entered the requested value.' ")
+        if planning:
+            if plan:
+                instructions += ("Return statuses, an array in exactly the existing plan's order. "
+                                 "Preserve every plan step; only update its status. ")
+            else:
+                example = {"plan": [{"step": "Open the requested record or creation form", "status": "in_progress"},
+                                    {"step": "Enter the requested field values and click Save", "status": "pending"},
+                                    {"step": "Reopen the saved record and compare its values", "status": "pending"}],
+                           "summary": "", "next_goal": "Open the requested form"}
+                if reflection:
+                    example["reflection"] = ""
+                instructions += ("Return plan with 3-5 concrete GUI subtasks. Each step is a short imperative "
+                                 "sentence describing work on the task's record, field or control; status holds "
+                                 "its progress. Example initial response: " + json.dumps(example) + ". "
+                                 "Adapt these subtask descriptions and next_goal to the actual task and screenshot. ")
+            instructions += ("Status values are pending/in_progress/done. Mark established completed steps done, "
+                             "only the current step in_progress. Return next_goal as a concrete next action. ")
+        if reflection:
+            instructions += ("Return reflection explaining an observed mistake and how to correct it, "
+                             "in one sentence. Initial reflection is empty. ")
+        if settings.get("memory", True):
+            instructions += "Recalled experiences provide procedures only; verify this run afresh."
+        messages = [{"role": "system", "content": [{"type": "text", "text": instructions}]},
             {"role": "user", "content": [{"type": "text", "text": json.dumps({
                 "task": task, "reason": reason, "previous_state": previous,
                 "actions_to_compact": compacted, "recent_actions": recent}, ensure_ascii=False)},
@@ -208,6 +228,7 @@ class Qwen:
                                {"role": "user", "content": content}], remaining)
 
     def _generate(self, messages, remaining, max_new_tokens=None, schema=None, generation_options=None, use_base=False):
+        started = time.monotonic()
         inputs = self.processor.apply_chat_template(messages, tokenize=True, add_generation_prompt=True,
                     return_dict=True, return_tensors="pt").to(self.model.device)
         options = dict(generation_options or {})
@@ -225,12 +246,19 @@ class Qwen:
             outputs = self.model.generate(**inputs, do_sample=False,
                          max_new_tokens=max_new_tokens or self.config["max_new_tokens"],
                          max_time=max(0.1, remaining), **options)
-        return self.processor.batch_decode(outputs[:, inputs.input_ids.shape[1]:], skip_special_tokens=True)[0]
+        prompt_tokens = inputs.input_ids.shape[1]
+        completion = outputs[:, prompt_tokens:]
+        decoded = self.processor.batch_decode(completion, skip_special_tokens=True)[0]
+        self.usage["prompt_tokens"] += prompt_tokens
+        self.usage["completion_tokens"] += completion.shape[1]
+        self.usage["generation_seconds"] += time.monotonic() - started
+        self.usage["generation_calls"] += 1
+        return decoded
 
     def metrics(self):
         if not self.loaded:
-            return {"load_seconds": self.load_seconds}
-        return {"load_seconds": self.load_seconds,
+            return {"load_seconds": self.load_seconds, **self.usage}
+        return {"load_seconds": self.load_seconds, **self.usage,
                 "torch": self.torch.__version__, "device": self.torch.cuda.get_device_name(0),
                 "peak_allocated_mib": self.torch.cuda.max_memory_allocated(0) / 1024 ** 2,
                 "peak_reserved_mib": self.torch.cuda.max_memory_reserved(0) / 1024 ** 2}

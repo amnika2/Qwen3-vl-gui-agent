@@ -31,15 +31,22 @@ EXPERIENCE_SCHEMA = {
     "required": ["procedure", "lessons"]}
 
 
-def context_schema(plan):
+def context_schema(plan, planning=True, reflection=True, initial=None):
     properties = dict(CONTEXT_SCHEMA["properties"])
-    if plan:
+    if not planning:
+        del properties["plan"]
+        del properties["next_goal"]
+    elif plan:
         del properties["plan"]
         properties["statuses"] = {"type": "array", "minItems": len(plan), "maxItems": len(plan),
                                   "items": {"enum": ["pending", "in_progress", "done"]}}
-    else:
+    if not reflection:
+        del properties["reflection"]
+    initial = not plan if initial is None else initial
+    if initial:
         properties["summary"] = {"enum": [""]}
-        properties["reflection"] = {"enum": [""]}
+        if reflection:
+            properties["reflection"] = {"enum": [""]}
     return {"type": "object", "additionalProperties": False,
             "properties": properties, "required": list(properties)}
 
@@ -58,10 +65,12 @@ class AgentSession:
                       "context_updates": 0, "external_tool_calls": 0,
                       "finish_deferrals": 0,
                       "planner_adapter": self.settings.get("planner_adapter", "actor")}
-        memory = {"name": "memory", "command": sys.executable,
-                  "args": ["-m", "guiqa.mcp_server", "--database", self.settings["memory_database"],
-                           "--namespace", self.settings["memory_namespace"]]}
-        self.connections = MCPConnections([memory, *self.settings.get("mcp_servers", [])])
+        servers = list(self.settings.get("mcp_servers", []))
+        if self.settings.get("memory", True):
+            servers.insert(0, {"name": "memory", "command": sys.executable,
+                              "args": ["-m", "guiqa.mcp_server", "--database", self.settings["memory_database"],
+                                       "--namespace", self.settings["memory_namespace"]]})
+        self.connections = MCPConnections(servers)
 
     def __enter__(self):
         self.connections.__enter__()
@@ -72,18 +81,29 @@ class AgentSession:
         return self
 
     def start(self):
-        result = self.tools.call("memory__search_experiences", {
-            "task": self.task, "case_id": self.context.result["case_id"],
-            "workflow": self.context.result["workflow"], "limit": self.settings["memory_top_k"]},
-            caller="runtime_recall")
-        if result["is_error"]:
-            raise RuntimeError(result["text"])
-        self.state["retrieved_experiences"] = result["data"]["experiences"]
+        if self.settings.get("memory", True):
+            result = self.tools.call("memory__search_experiences", {
+                "task": self.task, "case_id": self.context.result["case_id"],
+                "workflow": self.context.result["workflow"], "limit": self.settings["memory_top_k"]},
+                caller="runtime_recall")
+            if result["is_error"]:
+                raise RuntimeError(result["text"])
+            self.state["retrieved_experiences"] = result["data"]["experiences"]
         self.refresh("initial_plan")
 
     def progress(self):
-        return {"task_state": self.state, "tools": list(self.tools.catalog.values()),
+        return {"task_state": self.model_state(), "tools": list(self.tools.catalog.values()),
                 "tool_observations": self.tool_observations[-3:]}
+
+    def model_state(self):
+        hidden = set()
+        if not self.settings.get("planning", True):
+            hidden.update(("plan", "next_goal"))
+        if not self.settings.get("reflection", True):
+            hidden.add("reflection")
+        if not self.settings.get("memory", True):
+            hidden.add("retrieved_experiences")
+        return {key: value for key, value in self.state.items() if key not in hidden}
 
     def refresh(self, reason):
         remaining = self.deadline - time.monotonic()
@@ -93,15 +113,16 @@ class AgentSession:
         cutoff = max(self.summarized_count, len(self.context.history) - window)
         forgotten = self.context.history[self.summarized_count:cutoff]
         raw = self.model.update_context(
-            self.task, self.screenshot(), {**self.state, "tool_observations": self.tool_observations[-3:]}, forgotten,
+            self.task, self.screenshot(), {**self.model_state(), "tool_observations": self.tool_observations[-3:]}, forgotten,
             self.context.history[cutoff:], reason, remaining)
         self.context.result["model_calls"] += 1
         self.context.event({"phase": "context", "reason": reason,
                             "step": self.context.result["actions"], "raw_output": raw,
                             "planner_adapter": self.state["planner_adapter"]})
         update = json.loads(raw)
-        validate(update, context_schema(self.state["plan"]))
-        if self.state["plan"]:
+        validate(update, context_schema(self.state["plan"], self.settings.get("planning", True),
+                                        self.settings.get("reflection", True), reason == "initial_plan"))
+        if self.settings.get("planning", True) and self.state["plan"]:
             update["plan"] = [{**step, "status": status}
                               for step, status in zip(self.state["plan"], update.pop("statuses"))]
         self.state.update(update)
@@ -119,13 +140,17 @@ class AgentSession:
 
     def after_action(self, execution_error=None):
         self.persist()
-        if execution_error:
+        if execution_error and self.settings.get("reflection", True):
             self.refresh("execution_error: " + execution_error)
         elif self.context.result["actions"] - self.last_refresh_step >= self.settings["refresh_actions"]:
             self.refresh("periodic_context_update")
 
+    def reflect(self, reason):
+        if self.settings.get("reflection", True):
+            self.refresh(reason)
+
     def defer_finish(self, action):
-        if (action["verdict"] == "blocked" or self.state["finish_deferrals"]
+        if (not self.settings.get("planning", True) or action["verdict"] == "blocked" or self.state["finish_deferrals"]
                 or self.context.result["actions"] >= self.config["max_actions"] - 1):
             return False
         self.refresh("finish_requested: " + action["observation"])
@@ -147,7 +172,10 @@ class AgentSession:
         self.tool_observations.append({"name": action["name"], "result": result})
         self.state["external_tool_calls"] += 1
         reason = "tool_error: " + result["text"] if result["is_error"] else "tool_result: " + action["name"]
-        self.refresh(reason)
+        if result["is_error"]:
+            self.reflect(reason)
+        else:
+            self.refresh(reason)
         self.persist()
 
     def finish(self):
@@ -162,7 +190,7 @@ class AgentSession:
                 self.refresh("final_review_completed: " + self.context.result["agent_verdict"])
             except (ValueError, ValidationError, RuntimeError) as error:
                 self.state["context_error"] = f"{type(error).__name__}: {error}"
-        if time.monotonic() < self.deadline:
+        if self.settings.get("memory", True) and time.monotonic() < self.deadline:
             public_episode = {
                 "task_kind": self.context.result.get("task_kind", "unknown"),
                 "fields": [{key: field[key] for key in ("field", "intent")}
