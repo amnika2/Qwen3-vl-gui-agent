@@ -1,0 +1,127 @@
+{
+  "run_id": "20261109T032326Z-3c8ffe57",
+  "case_id": "sweeper-008",
+  "workflow": "preservation",
+  "method": "qwen-controlled",
+  "build": "B",
+  "experiment": "agent-runtime-20261109-verified",
+  "repeat": 0,
+  "attempt_id": 1,
+  "task": "Create a Site Variable named hoursnote with Value exactly Desk hours. Save and inspect the Site Variables list. Report pass if hoursnote is listed with Desk hours, fail if the submitted variable is missing or has a different value, or blocked if you cannot complete the check. Cite the saved list entry.",
+  "expected": "Desk hours",
+  "matrix_expected": "pass",
+  "actual": null,
+  "agent_verdict": "blocked",
+  "oracle_verdict": "inconclusive",
+  "actions": 8,
+  "model_calls": 15,
+  "config_hash": "422d96b5120e9b5bb769f7cfc768c550b3b925a6a2082aa91d758d1982cc8a07",
+  "model_revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+  "termination_reason": "controlled_review",
+  "started": true,
+  "reproduce": "python -m guiqa run --case sweeper-008 --build B --workflow preservation --method qwen-controlled --config /home/fs_2026/qwen3-gui-agent/runs/20261109T032326Z-3c8ffe57/agent-config.json",
+  "review_format": "evidence_facts_v1",
+  "browser_version": "156.0.8078.4",
+  "control_trigger": "model_proposed_finish",
+  "intervention_step": 7,
+  "operation_actions": 7,
+  "review_evidence": [
+    {
+      "step": 0,
+      "roles": [
+        "before_input_candidate"
+      ]
+    },
+    {
+      "step": 3,
+      "roles": [
+        "input_candidate"
+      ]
+    },
+    {
+      "step": 6,
+      "roles": [
+        "submission_response_candidate"
+      ]
+    },
+    {
+      "step": 7,
+      "roles": [
+        "outcome_candidate"
+      ]
+    },
+    {
+      "step": 8,
+      "roles": [
+        "after_reload"
+      ]
+    }
+  ],
+  "review_calls": 1,
+  "review_images": 5,
+  "review_model_verdict": "blocked",
+  "observation": "Submission: unknown. Final record observed: false. Final field comparisons: 0 matching, 0 mismatching, 2 unestablished. Verdict: blocked.",
+  "evidence_steps": [
+    0,
+    3,
+    6,
+    7,
+    8
+  ],
+  "field_readings": [
+    {
+      "field": "Variable name",
+      "intent": "generated",
+      "requested_value": "hoursnote",
+      "before": {
+        "value": "hoursnote",
+        "step": 3
+      },
+      "after": {
+        "value": "",
+        "step": 8
+      },
+      "input_matches_request": true,
+      "result_matches_request": null
+    },
+    {
+      "field": "Value",
+      "intent": "generated",
+      "requested_value": "Desk hours",
+      "before": {
+        "value": "",
+        "step": 3
+      },
+      "after": {
+        "value": "",
+        "step": 8
+      },
+      "input_matches_request": true,
+      "result_matches_request": null
+    }
+  ],
+  "task_kind": "create",
+  "submission": {
+    "status": "unknown",
+    "evidence": null
+  },
+  "result_observed": false,
+  "result_steps": [],
+  "expected_rejection": false,
+  "agent_runtime": {
+    "context_updates": 5,
+    "compacted_through_step": 4,
+    "retrieved_experiences": 1,
+    "external_tool_calls": 0,
+    "memory_namespace": "runtime-validation"
+  },
+  "oracle_reason": "trigger_not_verified",
+  "gpu": {
+    "load_seconds": 5.836137308971956,
+    "torch": "2.14.1+cu130",
+    "device": "NVIDIA GeForce RTX 4090",
+    "peak_allocated_mib": 18842.771484375,
+    "peak_reserved_mib": 19696.0
+  },
+  "elapsed_seconds": 150.9044600019697
+}

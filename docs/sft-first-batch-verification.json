@@ -1,0 +1,34 @@
+{
+  "stage": "data_generation",
+  "training_started": false,
+  "dataset": "datasets/sft-pluxml-0b3730ec",
+  "trajectories": 8,
+  "samples": 136,
+  "phases": {
+    "operation": 128,
+    "review": 8
+  },
+  "review_labels": {
+    "fail": 2,
+    "pass": 6
+  },
+  "unique_images": 136,
+  "all_images_exist": true,
+  "input_prompts_match_inference": true,
+  "data_hash_matches": true,
+  "only_non_holdout_case": [
+    "sweeper-150"
+  ],
+  "sources": {
+    "base": {
+      "commit": "de02f99800bfb7fb9e6bd6e6a27f5d32acb9dd00",
+      "tracked_source_clean": true
+    },
+    "fixed": {
+      "commit": "9d444dc68ea6a5cf46cd96270a4779c533a1c2f3",
+      "tracked_source_clean": true
+    }
+  },
+  "calibration": "calibration-1ac70c11",
+  "collection": "evaluation-0b3730ec"
+}

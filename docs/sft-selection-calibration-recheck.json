@@ -1,0 +1,42 @@
+[
+  {
+    "case_id": "sweeper-034",
+    "build": "B",
+    "workflow": "preservation",
+    "prior_run": "20261107T151503Z-3133cec2",
+    "run_id": "20261107T151832Z-2583147b",
+    "oracle_verdict": "pass",
+    "agent_verdict": "pass",
+    "matches": true
+  },
+  {
+    "case_id": "sweeper-053",
+    "build": "A",
+    "workflow": "preservation",
+    "prior_run": "20261107T151517Z-4d971805",
+    "run_id": "20261107T151840Z-c2b48405",
+    "oracle_verdict": "pass",
+    "agent_verdict": "pass",
+    "matches": true
+  },
+  {
+    "case_id": "sweeper-053",
+    "build": "B",
+    "workflow": "target",
+    "prior_run": "20261107T151523Z-1fd7d982",
+    "run_id": "20261107T151848Z-1ab9008c",
+    "oracle_verdict": "pass",
+    "agent_verdict": "pass",
+    "matches": true
+  },
+  {
+    "case_id": "sweeper-053",
+    "build": "B",
+    "workflow": "preservation",
+    "prior_run": "20261107T151530Z-cf149053",
+    "run_id": "20261107T151855Z-d38be4ba",
+    "oracle_verdict": "pass",
+    "agent_verdict": "pass",
+    "matches": true
+  }
+]

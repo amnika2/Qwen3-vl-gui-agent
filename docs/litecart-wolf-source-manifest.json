@@ -1,0 +1,34 @@
+[
+  {
+    "case": "sweeper-105",
+    "build": "base",
+    "commit": "612d0e6b12253b52dc8c91f544d01153202095cd",
+    "url": "https://codeload.github.com/litecart/litecart/tar.gz/612d0e6b12253b52dc8c91f544d01153202095cd",
+    "sha256": "e3ef1b6b7ea52d4038c938d37b4bf8ef9354e82ca7975ef8c5f0d8640f6e2662",
+    "bytes": 1121087
+  },
+  {
+    "case": "sweeper-105",
+    "build": "fixed",
+    "commit": "441446d03412b67e10de2e00ccc920ae12004c08",
+    "url": "https://codeload.github.com/litecart/litecart/tar.gz/441446d03412b67e10de2e00ccc920ae12004c08",
+    "sha256": "f0e86c65d9f6a4c99994ebdd9ac31f56946f7c75092216c0ad24470ac5509595",
+    "bytes": 1121127
+  },
+  {
+    "case": "sweeper-195",
+    "build": "base",
+    "commit": "bb30b245e3c38afbdf9b03cf0c5d0613db94bd0f",
+    "url": "https://codeload.github.com/wolfcms/wolfcms/tar.gz/bb30b245e3c38afbdf9b03cf0c5d0613db94bd0f",
+    "sha256": "1b903ee605067668c900724fe039ed4548e32d0c6adc11c6b94dee316d2af2c7",
+    "bytes": 974540
+  },
+  {
+    "case": "sweeper-195",
+    "build": "fixed",
+    "commit": "cd28e302d08ca40589c48b19d80e75c3ac6976e7",
+    "url": "https://codeload.github.com/wolfcms/wolfcms/tar.gz/cd28e302d08ca40589c48b19d80e75c3ac6976e7",
+    "sha256": "8b7e5b9d23caf7732004b4573ec5bc44c6ec45eec955264ee076db8e2209457c",
+    "bytes": 974571
+  }
+]

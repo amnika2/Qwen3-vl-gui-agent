@@ -1,0 +1,410 @@
+{
+  "source_dataset": "datasets/sft-main-10apps-v2-draft1",
+  "scope": "只注释既有terminal_review已选帧，不新增图片或改原始轨迹。Mantis正向声明仅覆盖所列文本输入字段；phpIPAM清空任务缺提交前帧保留blocked。",
+  "runs": {
+    "20261107T161438Z-1c4a892a": {
+      "frames": [
+        {
+          "step": 14,
+          "input_proof_steps": [
+            11,
+            14
+          ],
+          "result_proof_steps": [],
+          "observation": "亲见同屏完整文本字段 {\"summary\": \"Search results crash after changing filters\", \"description\": \"Open the search panel, change the date filter and run the query. The browser shows an empty result panel.\"}；早期摘要/描述仍完整可见，不因其输入动作步号未单独选中而缺证。 Product Version下拉框实际显示 '1.1.0'。 Category实际为[All Projects] General，完整可见。",
+          "visible_required_fields": {
+            "product_version": "1.1.0",
+            "category": "[All Projects] General"
+          }
+        },
+        {
+          "step": 17,
+          "input_proof_steps": [],
+          "result_proof_steps": [],
+          "observation": "亲见 APPLICATION ERROR #29 与 Invalid value for \"version\"；该选中真实终帧直接证明业务拒绝，不将原-1占位当成有效step。",
+          "business_rejection_visible": true
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "unestablished_required_fields": []
+    },
+    "20261107T161449Z-42e0046d": {
+      "frames": [
+        {
+          "step": 14,
+          "input_proof_steps": [
+            11,
+            14
+          ],
+          "result_proof_steps": [],
+          "observation": "亲见同屏完整文本字段 {\"description\": \"Change the display name to Avery Chen, save the profile, then open the dashboard. The old name remains in the header.\", \"summary\": \"Profile changes do not update the header\"}；早期摘要/描述仍完整可见，不因其输入动作步号未单独选中而缺证。 Product Version下拉框实际显示 '1.1.0'。 Category实际为[All Projects] General，完整可见。",
+          "visible_required_fields": {
+            "product_version": "1.1.0",
+            "category": "[All Projects] General"
+          }
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "unestablished_required_fields": []
+    },
+    "20261107T161501Z-935602c0": {
+      "frames": [
+        {
+          "step": 10,
+          "input_proof_steps": [
+            7,
+            10
+          ],
+          "result_proof_steps": [],
+          "observation": "亲见同屏完整文本字段 {\"summary\": \"Keyboard focus skips the confirmation button\", \"description\": \"Use Tab from the project selector through the report form. Focus moves directly to the page footer.\"}；早期摘要/描述仍完整可见，不因其输入动作步号未单独选中而缺证。 Product Version下拉框实际显示 ''。 Category实际为[All Projects] General，完整可见。",
+          "visible_required_fields": {
+            "product_version": "",
+            "category": "[All Projects] General"
+          }
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "unestablished_required_fields": []
+    },
+    "20261107T161511Z-7af81dea": {
+      "frames": [
+        {
+          "step": 10,
+          "input_proof_steps": [
+            7,
+            10
+          ],
+          "result_proof_steps": [],
+          "observation": "亲见同屏完整文本字段 {\"summary\": \"Export range includes one extra day\", \"description\": \"Choose 1-7 November and export the report. The generated preview also contains records from 8 November.\"}；早期摘要/描述仍完整可见，不因其输入动作步号未单独选中而缺证。 Product Version下拉框实际显示 ''。 Category实际为[All Projects] General，完整可见。",
+          "visible_required_fields": {
+            "product_version": "",
+            "category": "[All Projects] General"
+          }
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "unestablished_required_fields": []
+    },
+    "20261107T161522Z-e784acbd": {
+      "frames": [
+        {
+          "step": 17,
+          "input_proof_steps": [
+            11,
+            14,
+            17
+          ],
+          "result_proof_steps": [],
+          "observation": "亲见同屏完整文本字段 {\"summary\": \"Invoice validation message is missing\", \"description\": \"Submit an invoice with an invalid billing postcode. The page remains on the form without explaining which field needs correction.\", \"steps_to_reproduce\": \"1. Open the affected page.\\n2. Apply the change described above.\\n3. Save and inspect the result.\"}；早期摘要/描述仍完整可见，不因其输入动作步号未单独选中而缺证。 Product Version下拉框实际显示 '1.1.0'。 本帧Category已滚出视口，不能覆盖任务要求的Category General；所选posttype也在下方。",
+          "visible_required_fields": {
+            "product_version": "1.1.0"
+          }
+        },
+        {
+          "step": 20,
+          "input_proof_steps": [],
+          "result_proof_steps": [],
+          "observation": "亲见 APPLICATION ERROR #29 与 Invalid value for \"version\"；该选中真实终帧直接证明业务拒绝，不将原-1占位当成有效step。",
+          "business_rejection_visible": true
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "unestablished_required_fields": [
+        "category"
+      ]
+    },
+    "20261107T161534Z-3d8d358f": {
+      "frames": [
+        {
+          "step": 14,
+          "input_proof_steps": [
+            11,
+            14
+          ],
+          "result_proof_steps": [],
+          "observation": "亲见同屏完整文本字段 {\"description\": \"Add a document with a long descriptive name. The attachment label covers the beginning of the filename in the details panel.\", \"summary\": \"Attachment label overlaps the filename\"}；早期摘要/描述仍完整可见，不因其输入动作步号未单独选中而缺证。 Product Version下拉框实际显示 '1.1.0'。 Category实际为[All Projects] General，完整可见。",
+          "visible_required_fields": {
+            "product_version": "1.1.0",
+            "category": "[All Projects] General"
+          }
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "unestablished_required_fields": []
+    },
+    "20261107T161546Z-c239ccb5": {
+      "frames": [
+        {
+          "step": 10,
+          "input_proof_steps": [
+            7,
+            10
+          ],
+          "result_proof_steps": [],
+          "observation": "亲见同屏完整文本字段 {\"summary\": \"中文标题在历史记录中显示异常\", \"description\": \"将项目备注改为“设备检修已完成”，保存后打开历史记录，检查中文内容和标点是否完整显示。\"}；早期摘要/描述仍完整可见，不因其输入动作步号未单独选中而缺证。 Product Version下拉框实际显示 ''。 Category实际为[All Projects] General，完整可见。",
+          "visible_required_fields": {
+            "product_version": "",
+            "category": "[All Projects] General"
+          }
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "unestablished_required_fields": []
+    },
+    "20261107T161558Z-320973c0": {
+      "frames": [
+        {
+          "step": 13,
+          "input_proof_steps": [
+            7,
+            10,
+            13
+          ],
+          "result_proof_steps": [],
+          "observation": "亲见同屏完整文本字段 {\"summary\": \"Accented characters disappear from the notification\", \"description\": \"Enter Réservation confirmée in the notification subject, save it, and reopen the notification preview.\", \"steps_to_reproduce\": \"1. Open the affected page.\\n2. Apply the change described above.\\n3. Save and inspect the result.\"}；早期摘要/描述仍完整可见，不因其输入动作步号未单独选中而缺证。 Product Version下拉框实际显示 ''。 本帧Category已滚出视口，不能覆盖任务要求的Category General；所选posttype也在下方。",
+          "visible_required_fields": {
+            "product_version": ""
+          }
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "unestablished_required_fields": [
+        "category"
+      ]
+    },
+    "20261107T161610Z-82639f3c": {
+      "frames": [
+        {
+          "step": 14,
+          "input_proof_steps": [
+            11,
+            14
+          ],
+          "result_proof_steps": [],
+          "observation": "亲见同屏完整文本字段 {\"summary\": \"Batch review loses the selected assignee\", \"description\": \"Select three pending records and assign them to Jordan Park. After the confirmation, the records still show the previous assignee.\"}；早期摘要/描述仍完整可见，不因其输入动作步号未单独选中而缺证。 Product Version下拉框实际显示 '1.1.0'。 Category实际为[All Projects] General，完整可见。",
+          "visible_required_fields": {
+            "product_version": "1.1.0",
+            "category": "[All Projects] General"
+          }
+        },
+        {
+          "step": 17,
+          "input_proof_steps": [],
+          "result_proof_steps": [],
+          "observation": "亲见 APPLICATION ERROR #29 与 Invalid value for \"version\"；该选中真实终帧直接证明业务拒绝，不将原-1占位当成有效step。",
+          "business_rejection_visible": true
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "unestablished_required_fields": []
+    },
+    "20261107T161620Z-cf8930aa": {
+      "frames": [
+        {
+          "step": 14,
+          "input_proof_steps": [
+            11,
+            14
+          ],
+          "result_proof_steps": [],
+          "observation": "亲见同屏完整文本字段 {\"description\": \"Sort the tasks by due date, open a task and return to the list. The rows revert to the default title order.\", \"summary\": \"Table order resets when returning from details\"}；早期摘要/描述仍完整可见，不因其输入动作步号未单独选中而缺证。 Product Version下拉框实际显示 '1.1.0'。 Category实际为[All Projects] General，完整可见。",
+          "visible_required_fields": {
+            "product_version": "1.1.0",
+            "category": "[All Projects] General"
+          }
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "unestablished_required_fields": []
+    },
+    "20261107T160631Z-5482c6c6": {
+      "frames": [],
+      "unestablished_input_proof_steps": [
+        5
+      ],
+      "unestablished_result_proof_steps": [],
+      "observation": "已选帧全部在Save之后；没有清空字段的提交前输入态，不能用保存后/重开值反推精确输入，保持requested_value_entered=false与blocked。"
+    },
+    "20261107T160648Z-a7c3a6b0": {
+      "frames": [],
+      "unestablished_input_proof_steps": [
+        5
+      ],
+      "unestablished_result_proof_steps": [],
+      "observation": "已选帧全部在Save之后；没有清空字段的提交前输入态，不能用保存后/重开值反推精确输入，保持requested_value_entered=false与blocked。"
+    },
+    "20261107T160703Z-07341158": {
+      "frames": [
+        {
+          "step": 5,
+          "input_proof_steps": [
+            5
+          ],
+          "result_proof_steps": [],
+          "observation": "亲见同一Edit IP弹窗中IP 10.10.1.4，Hostname与Description完整同屏：{\"description\": \"Application server\", \"hostname\": \"app01-prod.cust1.local\"}。较早字段的最终输入状态仍可见。"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    },
+    "20261107T160719Z-c38ec4f5": {
+      "frames": [
+        {
+          "step": 8,
+          "input_proof_steps": [
+            5,
+            8
+          ],
+          "result_proof_steps": [],
+          "observation": "亲见同一Edit IP弹窗中IP 10.10.1.3，Hostname与Description完整同屏：{\"description\": \"Gateway after maintenance\", \"hostname\": \"gateway-prod.cust1.local\"}。较早字段的最终输入状态仍可见。"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    },
+    "20261107T160738Z-8badd27a": {
+      "frames": [],
+      "unestablished_input_proof_steps": [
+        5
+      ],
+      "unestablished_result_proof_steps": [],
+      "observation": "已选帧全部在Save之后；没有清空字段的提交前输入态，不能用保存后/重开值反推精确输入，保持requested_value_entered=false与blocked。"
+    },
+    "20261107T160755Z-74abe9b1": {
+      "frames": [],
+      "unestablished_input_proof_steps": [
+        5,
+        8
+      ],
+      "unestablished_result_proof_steps": [],
+      "observation": "已选帧全部在Save之后；没有清空字段的提交前输入态，不能用保存后/重开值反推精确输入，保持requested_value_entered=false与blocked。"
+    },
+    "20261107T160813Z-a1465f83": {
+      "frames": [
+        {
+          "step": 6,
+          "input_proof_steps": [
+            6
+          ],
+          "result_proof_steps": [],
+          "observation": "亲见同一Edit IP弹窗中IP 10.10.1.4，Hostname与Description完整同屏：{\"description\": \"Finance workstation - checked 08 Nov\", \"hostname\": \"finance02.cust1.local\"}。较早字段的最终输入状态仍可见。"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    },
+    "20261107T160830Z-7745738c": {
+      "frames": [
+        {
+          "step": 5,
+          "input_proof_steps": [
+            5
+          ],
+          "result_proof_steps": [],
+          "observation": "亲见同一Edit IP弹窗中IP 10.10.1.5，Hostname与Description完整同屏：{\"description\": \"Database replica\", \"hostname\": \"db-replica-02.cust1.local\"}。较早字段的最终输入状态仍可见。"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    },
+    "20261107T160846Z-0dd9b17a": {
+      "frames": [],
+      "unestablished_input_proof_steps": [
+        5
+      ],
+      "unestablished_result_proof_steps": [],
+      "observation": "已选帧全部在Save之后；没有清空字段的提交前输入态，不能用保存后/重开值反推精确输入，保持requested_value_entered=false与blocked。"
+    },
+    "20261107T160902Z-c94ea505": {
+      "frames": [],
+      "unestablished_input_proof_steps": [
+        5
+      ],
+      "unestablished_result_proof_steps": [],
+      "observation": "已选帧全部在Save之后；没有清空字段的提交前输入态，不能用保存后/重开值反推精确输入，保持requested_value_entered=false与blocked。"
+    },
+    "20261107T161632Z-0ae58c49": {
+      "frames": [
+        {
+          "step": 17,
+          "input_proof_steps": [
+            11,
+            14,
+            17
+          ],
+          "result_proof_steps": [],
+          "observation": "亲见同屏完整文本字段 {\"summary\": \"Timeout banner covers the retry control\", \"description\": \"Let the status request time out, then inspect the warning panel. The Retry control cannot be reached with the mouse.\", \"steps_to_reproduce\": \"1. Open the affected page.\\n2. Apply the change described above.\\n3. Save and inspect the result.\"}；早期摘要/描述仍完整可见，不因其输入动作步号未单独选中而缺证。 Product Version下拉框实际显示 '1.1.0'。 本帧Category已滚出视口，不能覆盖任务要求的Category General；所选posttype也在下方。",
+          "visible_required_fields": {
+            "product_version": "1.1.0"
+          }
+        },
+        {
+          "step": 20,
+          "input_proof_steps": [],
+          "result_proof_steps": [],
+          "observation": "亲见 APPLICATION ERROR #29 与 Invalid value for \"version\"；该选中真实终帧直接证明业务拒绝，不将原-1占位当成有效step。",
+          "business_rejection_visible": true
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "unestablished_required_fields": [
+        "category"
+      ]
+    },
+    "20261107T161643Z-a8aa6019": {
+      "frames": [
+        {
+          "step": 10,
+          "input_proof_steps": [
+            7,
+            10
+          ],
+          "result_proof_steps": [],
+          "observation": "亲见同屏完整文本字段 {\"summary\": \"Comment preview removes paragraph spacing\", \"description\": \"Write two paragraphs in a comment and open Preview. The blank line between the paragraphs is removed.\"}；早期摘要/描述仍完整可见，不因其输入动作步号未单独选中而缺证。 Product Version下拉框实际显示 ''。 Category实际为[All Projects] General，完整可见。",
+          "visible_required_fields": {
+            "product_version": "",
+            "category": "[All Projects] General"
+          }
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "unestablished_required_fields": []
+    },
+    "20261107T160918Z-04210bbe": {
+      "frames": [],
+      "unestablished_input_proof_steps": [
+        5,
+        8
+      ],
+      "unestablished_result_proof_steps": [],
+      "observation": "已选帧全部在Save之后；没有清空字段的提交前输入态，不能用保存后/重开值反推精确输入，保持requested_value_entered=false与blocked。"
+    },
+    "20261107T160936Z-5020cd4c": {
+      "frames": [
+        {
+          "step": 8,
+          "input_proof_steps": [
+            5,
+            8
+          ],
+          "result_proof_steps": [],
+          "observation": "亲见同一Edit IP弹窗中IP 10.10.1.3，Hostname与Description完整同屏：{\"description\": \"Meeting room display\", \"hostname\": \"meeting-display.cust1.local\"}。较早字段的最终输入状态仍可见。"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    }
+  }
+}

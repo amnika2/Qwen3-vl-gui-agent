@@ -1,0 +1,26 @@
+{
+  "revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+  "passed": true,
+  "checks": [
+    {
+      "file": "model-00001-of-00004.safetensors",
+      "sha256_matches": true,
+      "size_matches": true
+    },
+    {
+      "file": "model-00002-of-00004.safetensors",
+      "sha256_matches": true,
+      "size_matches": true
+    },
+    {
+      "file": "model-00003-of-00004.safetensors",
+      "sha256_matches": true,
+      "size_matches": true
+    },
+    {
+      "file": "model-00004-of-00004.safetensors",
+      "sha256_matches": true,
+      "size_matches": true
+    }
+  ]
+}

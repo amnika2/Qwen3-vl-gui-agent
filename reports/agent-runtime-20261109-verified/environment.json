@@ -1,0 +1,12 @@
+{
+  "python": "3.10.22",
+  "packages": {
+    "mcp": "2.3.0",
+    "mcp-types": "2.3.0",
+    "torch": "2.14.1",
+    "transformers": "4.57.6",
+    "peft": "0.21.2",
+    "anyio": "4.16.0",
+    "jsonschema": "4.26.0"
+  }
+}

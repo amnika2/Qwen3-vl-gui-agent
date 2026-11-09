@@ -1,0 +1,21 @@
+version: 1
+groups:
+  - {app: phpipam, id: birch, split: train, fixture: {object_id: 1, address: 10.10.1.3, description: Birch print service, hostname: birch-print.lab.local, changes: {description: ''}}}
+  - {app: phpipam, id: hazel, split: train, fixture: {object_id: 2, address: 10.10.1.4, description: Hazel file service, hostname: hazel-files.lab.local, changes: {hostname: ''}}}
+  - {app: phpipam, id: pine, split: train, fixture: {object_id: 1, address: 10.10.1.3, description: Pine floor access point, hostname: pine-ap.lab.local, changes: {description: ''}}}
+  - {app: phpipam, id: spruce, split: validation, fixture: {object_id: 2, address: 10.10.1.4, description: Spruce archive terminal, hostname: spruce-archive.lab.local, changes: {hostname: ''}}}
+  - {app: opencart, id: birch, split: train, fixture: {option_label: Green, values: {weight: '0.35'}}}
+  - {app: opencart, id: hazel, split: train, fixture: {option_label: Blue, values: {weight: '1.65'}}}
+  - {app: opencart, id: pine, split: train, fixture: {option_label: Red, values: {weight: '2.875'}}}
+  - {app: opencart, id: spruce, split: validation, fixture: {option_label: Yellow, values: {weight: '3.45'}}}
+  - {app: typesetter, id: birch, split: train, fixture: {first: Birch Community, input: Birch Community Archive}}
+  - {app: typesetter, id: hazel, split: train, fixture: {first: Hazel Workshop, input: Hazel Workshop Schedule}}
+  - {app: typesetter, id: pine, split: train, fixture: {first: Pine Reading Room, input: Pine Reading Room Hours}}
+  - {app: typesetter, id: spruce, split: validation, fixture: {first: Spruce Garden, input: Spruce Garden Volunteers}}
+  - {app: wolf, id: birch-edit, split: train, fixture: {kind: edit, initial_title: Birch Page, fields: {title: Birch Archive}}}
+  - {app: wolf, id: hazel-edit, split: train, fixture: {kind: edit, initial_title: Hazel Page, fields: {title: Hazel Workshop}}}
+  - {app: wolf, id: pine-edit, split: train, fixture: {kind: edit, initial_title: Pine Page, fields: {title: Pine Reading Room}}}
+  - {app: wolf, id: spruce-edit, split: validation, fixture: {kind: edit, initial_title: Spruce Page, fields: {title: Spruce Garden}}}
+  - {app: wolf, id: birch-duplicate, split: train, fixture: {kind: duplicate, initial_title: About us, fields: {title: Birch Copy}}}
+  - {app: wolf, id: hazel-duplicate, split: train, fixture: {kind: duplicate, initial_title: About us, fields: {title: Hazel Copy}}}
+  - {app: wolf, id: spruce-duplicate, split: validation, fixture: {kind: duplicate, initial_title: About us, fields: {title: Spruce Copy}}}

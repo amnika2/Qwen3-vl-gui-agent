@@ -1,0 +1,106 @@
+{
+  "stage": "data_generation",
+  "training_started": false,
+  "dataset": "datasets/sft-typesetter",
+  "calibration": "calibration-2a0f3d1d",
+  "collection": "evaluation-15bc45ef",
+  "calibration_matches": 8,
+  "collection_matches": 8,
+  "apps": 1,
+  "trajectories": 8,
+  "samples": 80,
+  "phases": {
+    "operation": 72,
+    "review": 8
+  },
+  "review_labels": {
+    "fail": 2,
+    "pass": 6
+  },
+  "unique_images": 80,
+  "all_images_exist_and_decode": true,
+  "viewport": [
+    1280,
+    900
+  ],
+  "input_prompts_match_inference": true,
+  "data_hash_matches": true,
+  "data_sha256": "936cfc99b099292fca62ba360fc6ef53328a78c116b8f0cb83aa182db67f919f",
+  "source_sample_hashes_match": true,
+  "labels_match_observed_results": true,
+  "first_customization_visibly_verified": true,
+  "first_reopen_in_target_review_images": true,
+  "eval_holdout_excluded": true,
+  "existing_dataset_hashes_match": {
+    "sft-pluxml-0b3730ec": true,
+    "sft-wondercms": true
+  },
+  "raw_benchmark_hash_matches": true,
+  "split_sha256": "35a65b54dbe9fd4fa4246690084411a2517136283d99cd4f7bcfb77efbbb6094",
+  "runs": [
+    {
+      "run_id": "20261107T150537Z-1a7a33a9",
+      "build": "A",
+      "workflow": "target",
+      "actions": 12,
+      "actual": "Shoremark Edited",
+      "oracle_verdict": "fail"
+    },
+    {
+      "run_id": "20261107T150550Z-e7e0ed10",
+      "build": "A",
+      "workflow": "target",
+      "actions": 12,
+      "actual": "Shoremark Edited",
+      "oracle_verdict": "fail"
+    },
+    {
+      "run_id": "20261107T150601Z-6488f6cc",
+      "build": "A",
+      "workflow": "preservation",
+      "actions": 6,
+      "actual": "SideNote OK",
+      "oracle_verdict": "pass"
+    },
+    {
+      "run_id": "20261107T150612Z-109d8da4",
+      "build": "A",
+      "workflow": "preservation",
+      "actions": 6,
+      "actual": "SideNote OK",
+      "oracle_verdict": "pass"
+    },
+    {
+      "run_id": "20261107T150622Z-3a5615d4",
+      "build": "B",
+      "workflow": "target",
+      "actions": 12,
+      "actual": "Shoremark Final",
+      "oracle_verdict": "pass"
+    },
+    {
+      "run_id": "20261107T150634Z-c9ba2809",
+      "build": "B",
+      "workflow": "target",
+      "actions": 12,
+      "actual": "Shoremark Final",
+      "oracle_verdict": "pass"
+    },
+    {
+      "run_id": "20261107T150648Z-eb379e9f",
+      "build": "B",
+      "workflow": "preservation",
+      "actions": 6,
+      "actual": "SideNote OK",
+      "oracle_verdict": "pass"
+    },
+    {
+      "run_id": "20261107T150657Z-2536f22e",
+      "build": "B",
+      "workflow": "preservation",
+      "actions": 6,
+      "actual": "SideNote OK",
+      "oracle_verdict": "pass"
+    }
+  ]
+}

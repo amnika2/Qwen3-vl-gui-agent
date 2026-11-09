@@ -1,0 +1,391 @@
+{
+  "completed": true,
+  "evaluation_type": "original_trajectory_re_review",
+  "trajectories": 40,
+  "operations_replayed": false,
+  "new_end_to_end_runs": 0,
+  "training_rows_generated": 0,
+  "original": {
+    "samples": 40,
+    "correct": 26,
+    "accuracy": 0.65,
+    "defect_detected": 6,
+    "defect_total": 10,
+    "defect_recall": 0.6,
+    "normal_false_fail": 0,
+    "normal_total": 30,
+    "normal_false_fail_rate": 0.0,
+    "blocked": 14
+  },
+  "reviewed": {
+    "samples": 40,
+    "correct": 36,
+    "accuracy": 0.9,
+    "defect_detected": 6,
+    "defect_total": 10,
+    "defect_recall": 0.6,
+    "normal_false_fail": 0,
+    "normal_total": 30,
+    "normal_false_fail_rate": 0.0,
+    "blocked": 4
+  },
+  "parse_errors": 0,
+  "guarded": 1,
+  "new_error_kinds": {
+    "correct": 36,
+    "model_blocked": 3,
+    "semantic_guard": 1
+  },
+  "recovered_original_blocked": 10,
+  "original_blocked": 14,
+  "regressed_original_correct": 0,
+  "original_correct": 26,
+  "cases": {
+    "sweeper-005": {
+      "app": "Akaunting",
+      "original": {
+        "samples": 8,
+        "correct": 8,
+        "accuracy": 1.0,
+        "defect_detected": 2,
+        "defect_total": 2,
+        "defect_recall": 1.0,
+        "normal_false_fail": 0,
+        "normal_total": 6,
+        "normal_false_fail_rate": 0.0,
+        "blocked": 0
+      },
+      "reviewed": {
+        "samples": 8,
+        "correct": 8,
+        "accuracy": 1.0,
+        "defect_detected": 2,
+        "defect_total": 2,
+        "defect_recall": 1.0,
+        "normal_false_fail": 0,
+        "normal_total": 6,
+        "normal_false_fail_rate": 0.0,
+        "blocked": 0
+      },
+      "recovered_original_blocked": 0,
+      "regressed_original_correct": 0
+    },
+    "sweeper-007": {
+      "app": "Ampache",
+      "original": {
+        "samples": 8,
+        "correct": 2,
+        "accuracy": 0.25,
+        "defect_detected": 0,
+        "defect_total": 2,
+        "defect_recall": 0.0,
+        "normal_false_fail": 0,
+        "normal_total": 6,
+        "normal_false_fail_rate": 0.0,
+        "blocked": 6
+      },
+      "reviewed": {
+        "samples": 8,
+        "correct": 6,
+        "accuracy": 0.75,
+        "defect_detected": 0,
+        "defect_total": 2,
+        "defect_recall": 0.0,
+        "normal_false_fail": 0,
+        "normal_total": 6,
+        "normal_false_fail_rate": 0.0,
+        "blocked": 2
+      },
+      "recovered_original_blocked": 4,
+      "regressed_original_correct": 0
+    },
+    "sweeper-008": {
+      "app": "Anchor CMS",
+      "original": {
+        "samples": 8,
+        "correct": 8,
+        "accuracy": 1.0,
+        "defect_detected": 2,
+        "defect_total": 2,
+        "defect_recall": 1.0,
+        "normal_false_fail": 0,
+        "normal_total": 6,
+        "normal_false_fail_rate": 0.0,
+        "blocked": 0
+      },
+      "reviewed": {
+        "samples": 8,
+        "correct": 8,
+        "accuracy": 1.0,
+        "defect_detected": 2,
+        "defect_total": 2,
+        "defect_recall": 1.0,
+        "normal_false_fail": 0,
+        "normal_total": 6,
+        "normal_false_fail_rate": 0.0,
+        "blocked": 0
+      },
+      "recovered_original_blocked": 0,
+      "regressed_original_correct": 0
+    },
+    "sweeper-040": {
+      "app": "EasyAppointments",
+      "original": {
+        "samples": 8,
+        "correct": 6,
+        "accuracy": 0.75,
+        "defect_detected": 0,
+        "defect_total": 2,
+        "defect_recall": 0.0,
+        "normal_false_fail": 0,
+        "normal_total": 6,
+        "normal_false_fail_rate": 0.0,
+        "blocked": 2
+      },
+      "reviewed": {
+        "samples": 8,
+        "correct": 6,
+        "accuracy": 0.75,
+        "defect_detected": 0,
+        "defect_total": 2,
+        "defect_recall": 0.0,
+        "normal_false_fail": 0,
+        "normal_total": 6,
+        "normal_false_fail_rate": 0.0,
+        "blocked": 2
+      },
+      "recovered_original_blocked": 0,
+      "regressed_original_correct": 0
+    },
+    "sweeper-041": {
+      "app": "emlog",
+      "original": {
+        "samples": 8,
+        "correct": 2,
+        "accuracy": 0.25,
+        "defect_detected": 2,
+        "defect_total": 2,
+        "defect_recall": 1.0,
+        "normal_false_fail": 0,
+        "normal_total": 6,
+        "normal_false_fail_rate": 0.0,
+        "blocked": 6
+      },
+      "reviewed": {
+        "samples": 8,
+        "correct": 8,
+        "accuracy": 1.0,
+        "defect_detected": 2,
+        "defect_total": 2,
+        "defect_recall": 1.0,
+        "normal_false_fail": 0,
+        "normal_total": 6,
+        "normal_false_fail_rate": 0.0,
+        "blocked": 0
+      },
+      "recovered_original_blocked": 6,
+      "regressed_original_correct": 0
+    }
+  },
+  "original_blocked_groups": {
+    "schema_parse_failure": {
+      "original_count": 8,
+      "reviewed": {
+        "samples": 8,
+        "correct": 6,
+        "accuracy": 0.75,
+        "defect_detected": 0,
+        "defect_total": 2,
+        "defect_recall": 0.0,
+        "normal_false_fail": 0,
+        "normal_total": 6,
+        "normal_false_fail_rate": 0.0,
+        "blocked": 2
+      },
+      "recovered": 6,
+      "source_error_kinds": {
+        "schema_parse_failure": 8
+      },
+      "source_run_ids": [
+        "20261108T051648Z-60fb93eb",
+        "20261108T051728Z-aca1ffdb",
+        "20261108T052419Z-ff1673c1",
+        "20261108T052438Z-db04e82b",
+        "20261108T052457Z-e897e92f",
+        "20261108T052518Z-249c887f",
+        "20261108T052536Z-5c966305",
+        "20261108T052554Z-fbaa8624"
+      ],
+      "recovered_run_ids": [
+        "20261108T052419Z-ff1673c1",
+        "20261108T052438Z-db04e82b",
+        "20261108T052457Z-e897e92f",
+        "20261108T052518Z-249c887f",
+        "20261108T052536Z-5c966305",
+        "20261108T052554Z-fbaa8624"
+      ]
+    },
+    "other_review_blocked": {
+      "original_count": 6,
+      "reviewed": {
+        "samples": 6,
+        "correct": 4,
+        "accuracy": 0.6666666666666666,
+        "defect_detected": 0,
+        "defect_total": 2,
+        "defect_recall": 0.0,
+        "normal_false_fail": 0,
+        "normal_total": 4,
+        "normal_false_fail_rate": 0.0,
+        "blocked": 2
+      },
+      "recovered": 4,
+      "source_error_kinds": {
+        "semantic_guard": 3,
+        "model_blocked": 3
+      },
+      "source_run_ids": [
+        "20261108T051843Z-0bd659f3",
+        "20261108T051945Z-124d9043",
+        "20261108T052035Z-f90e2dd3",
+        "20261108T052108Z-297528b1",
+        "20261108T052255Z-c901e41f",
+        "20261108T052331Z-7e2b656a"
+      ],
+      "recovered_run_ids": [
+        "20261108T052035Z-f90e2dd3",
+        "20261108T052108Z-297528b1",
+        "20261108T052255Z-c901e41f",
+        "20261108T052331Z-7e2b656a"
+      ]
+    }
+  },
+  "recovered_run_ids": [
+    "20261108T052035Z-f90e2dd3",
+    "20261108T052108Z-297528b1",
+    "20261108T052255Z-c901e41f",
+    "20261108T052331Z-7e2b656a",
+    "20261108T052419Z-ff1673c1",
+    "20261108T052438Z-db04e82b",
+    "20261108T052457Z-e897e92f",
+    "20261108T052518Z-249c887f",
+    "20261108T052536Z-5c966305",
+    "20261108T052554Z-fbaa8624"
+  ],
+  "regressions": [],
+  "checkpoint": {
+    "best_checkpoint": "/home/fs_2026/qwen3-gui-agent/runs/sft-qwen3vl-10apps-v4/checkpoint-170",
+    "selected_epoch": 2.0,
+    "selection_metric": "eval_loss",
+    "validation_metrics": {
+      "eval_loss": 0.10000308603048325,
+      "epoch": 2.0
+    },
+    "validation_case_ids": [
+      "sweeper-034",
+      "sweeper-053",
+      "sweeper-084",
+      "sweeper-105",
+      "sweeper-107",
+      "sweeper-125",
+      "sweeper-142",
+      "sweeper-195"
+    ]
+  },
+  "verification": {
+    "completed_shards": 4,
+    "distinct_trajectories": 40,
+    "case_counts": {
+      "sweeper-005": 8,
+      "sweeper-007": 8,
+      "sweeper-008": 8,
+      "sweeper-040": 8,
+      "sweeper-041": 8
+    },
+    "oracle_expected_counts": {
+      "fail": 10,
+      "pass": 30
+    },
+    "source_group_counts": {
+      "original_correct": 26,
+      "original_blocked": 14
+    },
+    "original_correct_verdicts_verified": true,
+    "all_failed_reviews_retained": true,
+    "source_artifacts_unchanged": true,
+    "actions_unchanged": true,
+    "operations_replayed": false,
+    "source_artifacts_rehashed": 319,
+    "shard_inputs_identical": true,
+    "checkpoint_selected_on_training_validation_only": true,
+    "shard_sha256": {
+      "shard-0": {
+        "manifest.json": "cb04dcd7baafe56e17f14831d2d007f99b41544d564b385f497ec82c709c9fe8",
+        "summary.json": "1609093ee56576d8c2d222b483ba13c4140456e5ac239b29133dd3093b30ac7f",
+        "results.jsonl": "a89b434ac95cab041943992895516a9cf9197b43e074be0b72d68b4ac5ab605f"
+      },
+      "shard-1": {
+        "manifest.json": "bea7519f90e4affcc60c94c525cf1d7354824f280df72f6a29498d691235100f",
+        "summary.json": "54f018498bd2c8cf4dbcdde99abde29d5ce193ccd50a5d5994ead66fa41fe538",
+        "results.jsonl": "2d31b9d0621b52915bcd6d22984e335a54afc952f6f191b7263efae3523fec08"
+      },
+      "shard-2": {
+        "manifest.json": "0d0b08f3698d95b3ccbd7fca57284e6041e63eb23a5bf1b18602d04616e42cce",
+        "summary.json": "c9bb4fbf5d40721fedcf38344edcb14dccf5d53eabd232faae6c966d18226fe9",
+        "results.jsonl": "42393a0ea0ab0e00a1bf7e272effe23375c3107ac7dc78e65a7279aa6b54d325"
+      },
+      "shard-3": {
+        "manifest.json": "c6e78235dbd043ab5d0db235c89d46d2280732c36737a94caba41c3e5ee0cf02",
+        "summary.json": "c9bb4fbf5d40721fedcf38344edcb14dccf5d53eabd232faae6c966d18226fe9",
+        "results.jsonl": "cefa3abb926640995fe9e0dcd85587706d948ea56b7c44d9699371d3d778a2f7"
+      }
+    }
+  },
+  "provenance": {
+    "adapter_sha256": "d1c1c403d2fed4a5a788fbdfab3f55ae6d70a2a6af98d806ae6dc5422fac72ee",
+    "config_path": "/home/fs_2026/qwen3-gui-agent/configs/agent-review-evidence-v4.yaml",
+    "config_sha256": "13e6b96d128b63866ec890d5edbc6cdcc7c732d69d86645cf4e76c7721fa588d",
+    "generation": {
+      "remaining_seconds": 180,
+      "review_max_new_tokens": 1024,
+      "retries": 0
+    },
+    "source_data_sha256": "f13bb82b46beae0475a2251514c73412370ce9e2e92b704adebc205add40be58",
+    "source_code_sha256": {
+      "scripts/review_sft_v4_holdout.py": "0c887a1eadd74da0e1118d3d70c6d9edfe0e596585cb92235e79ba9d0fd34f03",
+      "src/guiqa/model.py": "7d22bbb1348f296b78aa1fea9ec2b587d63bd88ff86253f17ba44c2f021a5dd7",
+      "src/guiqa/review_context.py": "8eee92305c90357c2c5972d4deb0f5fc8271ad2fe1abc43f18ef7158f4ebca95",
+      "src/guiqa/review_contract.py": "047689db973fea57ae4511460f997227e270e6a25f8487c5473a5fee714adec0",
+      "src/guiqa/review_evidence.py": "3f228611266412b0f8260db4b31e92df4febfdd6f56a55df6170ff06acbc8624",
+      "src/guiqa/control.py": "1903dee7906ba92201501ddfb4884ac8da49fcc691af4d7ec12451d691293724",
+      "src/guiqa/actions.py": "9e12e7ca8e28f7f696f7240d1284dcd46cdde5613d3f5b2fad8f55f880200883",
+      "src/guiqa/sft_v2.py": "31746d8ee247b9d0e511f04eee16ab52000a4c35860c3e85bae81556363ce71b"
+    },
+    "training_completion_sha256": "9b76ea54dcc0ac856785f829d19c94dce07372fadda474e28323f546373dd474",
+    "checkpoint_selection": "completed training selection; holdout reviews are not checkpoint selection inputs"
+  },
+  "references": {
+    "method": "docs/SFT_V4.md",
+    "training_completion": "/home/fs_2026/qwen3-gui-agent/runs/sft-qwen3vl-10apps-v4/completion.json",
+    "training_source": "runs/sft-qwen3vl-10apps-v4/training-source.json",
+    "training_source_archive": "runs/sft-qwen3vl-10apps-v4/training-source.tar.gz",
+    "bounded_inference": "runs/sft-v4-protocol-workers/bounded-inference-fix.json",
+    "bounded_inference_archive": "runs/sft-v4-protocol-workers/bounded-inference-source.tar.gz"
+  },
+  "reference_sha256": {
+    "method": "d8de59e8acb8c681d18bcb61ba68c44034cfa018c19996457eb34ee21447e55e",
+    "training_completion": "9b76ea54dcc0ac856785f829d19c94dce07372fadda474e28323f546373dd474",
+    "training_source": "ced1b23848cfb60cac6bfb3295766a414315f59868ab4ae7ef253f5c3c9ffbb9",
+    "training_source_archive": "7f2d9e1ac3a05ffea55d9ddedbf95d1b9a61a03046b26c299ffb4f6038d05d71",
+    "bounded_inference": "836971059ff1697d9f60cd7206b3fd649cb734aa4e70d2ac4ae0dd636fabbdf2",
+    "bounded_inference_archive": "79462b25b3e18b5d2ea7f7daf457b1fa1fb407973de6a4421a2b32895a5cf7a0"
+  },
+  "metric_definitions": {
+    "correct": "new verdict equals the original independent oracle, including all forty trajectories",
+    "defect_recall": "new fail on the ten oracle-expected fail trajectories, divided by ten",
+    "normal_false_fail": "new fail on the thirty oracle-expected pass trajectories",
+    "blocked": "blocked, parse-error and guarded outputs remain in the denominator",
+    "recovered": "an original blocked verdict becomes the oracle-expected pass or fail",
+    "regressed": "an original correct verdict becomes an incorrect or blocked verdict"
+  }
+}

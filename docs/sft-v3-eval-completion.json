@@ -1,0 +1,90 @@
+{
+  "completed": true,
+  "experiment": "sft-lora-v3",
+  "variants": [
+    "v2",
+    "v3"
+  ],
+  "review_format": "evidence_v1",
+  "runs": 80,
+  "runs_per_variant": 40,
+  "metrics": {
+    "v2": {
+      "runs": 40,
+      "completed_runs": 40,
+      "detected": 3,
+      "target_runs": 10,
+      "false_positives": 2,
+      "normal_runs": 30,
+      "correct_cells": 25,
+      "correct_four_cell_sets": 1,
+      "correct_target_pairs": 2,
+      "active_finish": 36,
+      "active_finish_rate": 0.9,
+      "active_finish_correct": 24,
+      "active_finish_blocked_or_inconclusive": 12,
+      "active_finish_infra_error": 0,
+      "guard_reasons": {
+        "review_evidence_not_established:submission_succeeded": 1
+      },
+      "agent_blocked": 6,
+      "inconclusive": 7,
+      "infra_error": 0,
+      "median_actions": 9.5,
+      "normal_correct": 22,
+      "review_invalid_output": 5,
+      "structured_review_runs": 35,
+      "field_readings": 39,
+      "visible_input_readings": 39,
+      "visible_result_readings": 39
+    },
+    "v3": {
+      "runs": 40,
+      "completed_runs": 40,
+      "detected": 6,
+      "target_runs": 10,
+      "false_positives": 0,
+      "normal_runs": 30,
+      "correct_cells": 26,
+      "correct_four_cell_sets": 4,
+      "correct_target_pairs": 4,
+      "active_finish": 35,
+      "active_finish_rate": 0.875,
+      "active_finish_correct": 24,
+      "active_finish_blocked_or_inconclusive": 11,
+      "active_finish_infra_error": 0,
+      "guard_reasons": {
+        "review_evidence_not_established:submission_succeeded": 2,
+        "review_evidence_not_established:requested_value_entered": 1
+      },
+      "agent_blocked": 14,
+      "inconclusive": 0,
+      "infra_error": 0,
+      "median_actions": 11.0,
+      "normal_correct": 20,
+      "review_invalid_output": 8,
+      "structured_review_runs": 32,
+      "field_readings": 56,
+      "visible_input_readings": 52,
+      "visible_result_readings": 56
+    }
+  },
+  "verification": {
+    "matched_protocol": true,
+    "core_sha256": "55b58e0692f57f327d35f9a0b04068afe51f5c35124a0b407f1f05fc18498273",
+    "core_files": 28,
+    "workers": 10,
+    "adapter_hashes_match_selected_training": true,
+    "all_queues_exit_code": 0,
+    "distinct_runs": 80,
+    "failed_runs_retained": true,
+    "historical_results_reused": false,
+    "oracle_matches_expected_by_variant": {
+      "v2": 33,
+      "v3": 40
+    }
+  },
+  "report": "reports/sft-lora-v3/summary.md",
+  "pairs": "reports/sft-lora-v3/pairs.csv",
+  "historical_v2_old_protocol_report": "reports/sft-lora-v2/comparison.json"
+}

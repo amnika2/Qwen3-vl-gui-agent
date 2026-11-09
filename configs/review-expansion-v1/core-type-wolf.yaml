@@ -1,0 +1,538 @@
+version: 1
+frozen_on: '2026-11-08'
+group_ordered_variants: true
+groups:
+- app: typesetter
+  id: rex1-train-header-001
+  parent_scenario_id: rex1-train-header-001
+  family: consecutive_header_saves
+  split: train
+  fixture:
+    first: Parcel dispatch draft
+    input: Parcel dispatch final
+- app: wolf
+  id: rex1-train-page-001
+  parent_scenario_id: rex1-train-page-001
+  family: edit_own_slug
+  split: train
+  fixture:
+    kind: edit
+    initial_title: Parcel dispatch notice
+    fields:
+      title: Parcel dispatch updated
+- app: wolf
+  id: rex1-train-duplicate-001
+  parent_scenario_id: rex1-train-duplicate-001
+  family: expected_duplicate_slug_rejection
+  split: train
+  retain_builds:
+  - B
+  fixture:
+    kind: duplicate
+    initial_title: Parcel dispatch original
+    fields:
+      title: Parcel dispatch copy
+- app: typesetter
+  id: rex1-train-header-002
+  parent_scenario_id: rex1-train-header-002
+  family: consecutive_header_saves
+  split: train
+  fixture:
+    first: Archive opening draft
+    input: Archive opening final
+- app: typesetter
+  id: rex1-train-header-003
+  parent_scenario_id: rex1-train-header-003
+  family: consecutive_header_saves
+  split: train
+  fixture:
+    first: Workshop stock draft
+    input: Workshop stock final
+- app: typesetter
+  id: rex1-train-header-004
+  parent_scenario_id: rex1-train-header-004
+  family: consecutive_header_saves
+  split: train
+  fixture:
+    first: Repair schedule draft
+    input: Repair schedule final
+- app: typesetter
+  id: rex1-train-header-005
+  parent_scenario_id: rex1-train-header-005
+  family: consecutive_header_saves
+  split: train
+  fixture:
+    first: Warehouse access draft
+    input: Warehouse access final
+- app: typesetter
+  id: rex1-train-header-006
+  parent_scenario_id: rex1-train-header-006
+  family: consecutive_header_saves
+  split: train
+  fixture:
+    first: Branch hours draft
+    input: Branch hours final
+- app: typesetter
+  id: rex1-train-header-007
+  parent_scenario_id: rex1-train-header-007
+  family: consecutive_header_saves
+  split: train
+  fixture:
+    first: Library bookings draft
+    input: Library bookings final
+- app: typesetter
+  id: rex1-train-header-008
+  parent_scenario_id: rex1-train-header-008
+  family: consecutive_header_saves
+  split: train
+  fixture:
+    first: Dock timetable draft
+    input: Dock timetable final
+- app: typesetter
+  id: rex1-train-header-009
+  parent_scenario_id: rex1-train-header-009
+  family: consecutive_header_saves
+  split: train
+  fixture:
+    first: Office delivery draft
+    input: Office delivery final
+- app: typesetter
+  id: rex1-train-header-010
+  parent_scenario_id: rex1-train-header-010
+  family: consecutive_header_saves
+  split: train
+  fixture:
+    first: Supply register draft
+    input: Supply register final
+- app: typesetter
+  id: rex1-train-header-011
+  parent_scenario_id: rex1-train-header-011
+  family: consecutive_header_saves
+  split: train
+  fixture:
+    first: Equipment loans draft
+    input: Equipment loans final
+- app: typesetter
+  id: rex1-train-header-012
+  parent_scenario_id: rex1-train-header-012
+  family: consecutive_header_saves
+  split: train
+  fixture:
+    first: Shift handover draft
+    input: Shift handover final
+- app: typesetter
+  id: rex1-train-header-013
+  parent_scenario_id: rex1-train-header-013
+  family: consecutive_header_saves
+  split: train
+  fixture:
+    first: Service coverage draft
+    input: Service coverage final
+- app: typesetter
+  id: rex1-train-header-014
+  parent_scenario_id: rex1-train-header-014
+  family: consecutive_header_saves
+  split: train
+  fixture:
+    first: Inventory audit draft
+    input: Inventory audit final
+- app: typesetter
+  id: rex1-train-header-015
+  parent_scenario_id: rex1-train-header-015
+  family: consecutive_header_saves
+  split: train
+  fixture:
+    first: Safety briefing draft
+    input: Safety briefing final
+- app: typesetter
+  id: rex1-train-header-016
+  parent_scenario_id: rex1-train-header-016
+  family: consecutive_header_saves
+  split: train
+  fixture:
+    first: Support hours draft
+    input: Support hours final
+- app: typesetter
+  id: rex1-train-header-017
+  parent_scenario_id: rex1-train-header-017
+  family: consecutive_header_saves
+  split: train
+  fixture:
+    first: Resource loans draft
+    input: Resource loans final
+- app: typesetter
+  id: rex1-train-header-018
+  parent_scenario_id: rex1-train-header-018
+  family: consecutive_header_saves
+  split: train
+  fixture:
+    first: Vehicle booking draft
+    input: Vehicle booking final
+- app: typesetter
+  id: rex1-train-header-019
+  parent_scenario_id: rex1-train-header-019
+  family: consecutive_header_saves
+  split: train
+  fixture:
+    first: Storage access draft
+    input: Storage access final
+- app: typesetter
+  id: rex1-train-header-020
+  parent_scenario_id: rex1-train-header-020
+  family: consecutive_header_saves
+  split: train
+  fixture:
+    first: Dispatch routes draft
+    input: Dispatch routes final
+- app: typesetter
+  id: rex1-dev-header-001
+  parent_scenario_id: rex1-dev-header-001
+  family: consecutive_header_saves
+  split: validation
+  fixture:
+    first: Museum tickets draft
+    input: Museum tickets final
+- app: typesetter
+  id: rex1-dev-header-002
+  parent_scenario_id: rex1-dev-header-002
+  family: consecutive_header_saves
+  split: validation
+  fixture:
+    first: Clinic bookings draft
+    input: Clinic bookings final
+- app: typesetter
+  id: rex1-dev-header-003
+  parent_scenario_id: rex1-dev-header-003
+  family: consecutive_header_saves
+  split: validation
+  fixture:
+    first: Rainfall update draft
+    input: Rainfall update final
+- app: wolf
+  id: rex1-train-page-002
+  parent_scenario_id: rex1-train-page-002
+  family: edit_own_slug
+  split: train
+  fixture:
+    kind: edit
+    initial_title: Archive opening notice
+    fields:
+      title: Archive opening updated
+- app: wolf
+  id: rex1-train-page-003
+  parent_scenario_id: rex1-train-page-003
+  family: edit_own_slug
+  split: train
+  fixture:
+    kind: edit
+    initial_title: Workshop stock notice
+    fields:
+      title: Workshop stock updated
+- app: wolf
+  id: rex1-train-page-004
+  parent_scenario_id: rex1-train-page-004
+  family: edit_own_slug
+  split: train
+  fixture:
+    kind: edit
+    initial_title: Repair schedule notice
+    fields:
+      title: Repair schedule updated
+- app: wolf
+  id: rex1-train-page-005
+  parent_scenario_id: rex1-train-page-005
+  family: edit_own_slug
+  split: train
+  fixture:
+    kind: edit
+    initial_title: Warehouse access notice
+    fields:
+      title: Warehouse access updated
+- app: wolf
+  id: rex1-train-page-006
+  parent_scenario_id: rex1-train-page-006
+  family: edit_own_slug
+  split: train
+  fixture:
+    kind: edit
+    initial_title: Branch hours notice
+    fields:
+      title: Branch hours updated
+- app: wolf
+  id: rex1-train-page-007
+  parent_scenario_id: rex1-train-page-007
+  family: edit_own_slug
+  split: train
+  fixture:
+    kind: edit
+    initial_title: Library bookings notice
+    fields:
+      title: Library bookings updated
+- app: wolf
+  id: rex1-train-page-008
+  parent_scenario_id: rex1-train-page-008
+  family: edit_own_slug
+  split: train
+  fixture:
+    kind: edit
+    initial_title: Dock timetable notice
+    fields:
+      title: Dock timetable updated
+- app: wolf
+  id: rex1-train-page-009
+  parent_scenario_id: rex1-train-page-009
+  family: edit_own_slug
+  split: train
+  fixture:
+    kind: edit
+    initial_title: Office delivery notice
+    fields:
+      title: Office delivery updated
+- app: wolf
+  id: rex1-train-page-010
+  parent_scenario_id: rex1-train-page-010
+  family: edit_own_slug
+  split: train
+  fixture:
+    kind: edit
+    initial_title: Supply register notice
+    fields:
+      title: Supply register updated
+- app: wolf
+  id: rex1-train-page-011
+  parent_scenario_id: rex1-train-page-011
+  family: edit_own_slug
+  split: train
+  fixture:
+    kind: edit
+    initial_title: Equipment loans notice
+    fields:
+      title: Equipment loans updated
+- app: wolf
+  id: rex1-train-page-012
+  parent_scenario_id: rex1-train-page-012
+  family: edit_own_slug
+  split: train
+  fixture:
+    kind: edit
+    initial_title: Shift handover notice
+    fields:
+      title: Shift handover updated
+- app: wolf
+  id: rex1-train-page-013
+  parent_scenario_id: rex1-train-page-013
+  family: edit_own_slug
+  split: train
+  fixture:
+    kind: edit
+    initial_title: Service coverage notice
+    fields:
+      title: Service coverage updated
+- app: wolf
+  id: rex1-train-page-014
+  parent_scenario_id: rex1-train-page-014
+  family: edit_own_slug
+  split: train
+  fixture:
+    kind: edit
+    initial_title: Inventory audit notice
+    fields:
+      title: Inventory audit updated
+- app: wolf
+  id: rex1-train-page-015
+  parent_scenario_id: rex1-train-page-015
+  family: edit_own_slug
+  split: train
+  fixture:
+    kind: edit
+    initial_title: Safety briefing notice
+    fields:
+      title: Safety briefing updated
+- app: wolf
+  id: rex1-train-page-016
+  parent_scenario_id: rex1-train-page-016
+  family: edit_own_slug
+  split: train
+  fixture:
+    kind: edit
+    initial_title: Support hours notice
+    fields:
+      title: Support hours updated
+- app: wolf
+  id: rex1-train-page-017
+  parent_scenario_id: rex1-train-page-017
+  family: edit_own_slug
+  split: train
+  fixture:
+    kind: edit
+    initial_title: Resource loans notice
+    fields:
+      title: Resource loans updated
+- app: wolf
+  id: rex1-train-page-018
+  parent_scenario_id: rex1-train-page-018
+  family: edit_own_slug
+  split: train
+  fixture:
+    kind: edit
+    initial_title: Vehicle booking notice
+    fields:
+      title: Vehicle booking updated
+- app: wolf
+  id: rex1-train-page-019
+  parent_scenario_id: rex1-train-page-019
+  family: edit_own_slug
+  split: train
+  fixture:
+    kind: edit
+    initial_title: Storage access notice
+    fields:
+      title: Storage access updated
+- app: wolf
+  id: rex1-train-page-020
+  parent_scenario_id: rex1-train-page-020
+  family: edit_own_slug
+  split: train
+  fixture:
+    kind: edit
+    initial_title: Dispatch routes notice
+    fields:
+      title: Dispatch routes updated
+- app: wolf
+  id: rex1-dev-page-001
+  parent_scenario_id: rex1-dev-page-001
+  family: edit_own_slug
+  split: validation
+  fixture:
+    kind: edit
+    initial_title: Museum tickets notice
+    fields:
+      title: Museum tickets updated
+- app: wolf
+  id: rex1-dev-page-002
+  parent_scenario_id: rex1-dev-page-002
+  family: edit_own_slug
+  split: validation
+  fixture:
+    kind: edit
+    initial_title: Clinic bookings notice
+    fields:
+      title: Clinic bookings updated
+- app: wolf
+  id: rex1-dev-page-003
+  parent_scenario_id: rex1-dev-page-003
+  family: edit_own_slug
+  split: validation
+  fixture:
+    kind: edit
+    initial_title: Rainfall update notice
+    fields:
+      title: Rainfall update updated
+- app: wolf
+  id: rex1-train-duplicate-002
+  parent_scenario_id: rex1-train-duplicate-002
+  family: expected_duplicate_slug_rejection
+  split: train
+  retain_builds:
+  - B
+  fixture:
+    kind: duplicate
+    initial_title: Archive opening original
+    fields:
+      title: Archive opening copy
+- app: wolf
+  id: rex1-train-duplicate-003
+  parent_scenario_id: rex1-train-duplicate-003
+  family: expected_duplicate_slug_rejection
+  split: train
+  retain_builds:
+  - B
+  fixture:
+    kind: duplicate
+    initial_title: Workshop stock original
+    fields:
+      title: Workshop stock copy
+- app: wolf
+  id: rex1-train-duplicate-004
+  parent_scenario_id: rex1-train-duplicate-004
+  family: expected_duplicate_slug_rejection
+  split: train
+  retain_builds:
+  - B
+  fixture:
+    kind: duplicate
+    initial_title: Repair schedule original
+    fields:
+      title: Repair schedule copy
+- app: wolf
+  id: rex1-train-duplicate-005
+  parent_scenario_id: rex1-train-duplicate-005
+  family: expected_duplicate_slug_rejection
+  split: train
+  retain_builds:
+  - B
+  fixture:
+    kind: duplicate
+    initial_title: Warehouse access original
+    fields:
+      title: Warehouse access copy
+- app: wolf
+  id: rex1-train-duplicate-006
+  parent_scenario_id: rex1-train-duplicate-006
+  family: expected_duplicate_slug_rejection
+  split: train
+  retain_builds:
+  - B
+  fixture:
+    kind: duplicate
+    initial_title: Branch hours original
+    fields:
+      title: Branch hours copy
+- app: wolf
+  id: rex1-train-duplicate-007
+  parent_scenario_id: rex1-train-duplicate-007
+  family: expected_duplicate_slug_rejection
+  split: train
+  retain_builds:
+  - B
+  fixture:
+    kind: duplicate
+    initial_title: Library bookings original
+    fields:
+      title: Library bookings copy
+- app: wolf
+  id: rex1-train-duplicate-008
+  parent_scenario_id: rex1-train-duplicate-008
+  family: expected_duplicate_slug_rejection
+  split: train
+  retain_builds:
+  - B
+  fixture:
+    kind: duplicate
+    initial_title: Dock timetable original
+    fields:
+      title: Dock timetable copy
+- app: wolf
+  id: rex1-train-duplicate-009
+  parent_scenario_id: rex1-train-duplicate-009
+  family: expected_duplicate_slug_rejection
+  split: train
+  retain_builds:
+  - B
+  fixture:
+    kind: duplicate
+    initial_title: Office delivery original
+    fields:
+      title: Office delivery copy
+- app: wolf
+  id: rex1-train-duplicate-010
+  parent_scenario_id: rex1-train-duplicate-010
+  family: expected_duplicate_slug_rejection
+  split: train
+  retain_builds:
+  - B
+  fixture:
+    kind: duplicate
+    initial_title: Supply register original
+    fields:
+      title: Supply register copy

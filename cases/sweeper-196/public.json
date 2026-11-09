@@ -1,0 +1,14 @@
+{
+  "case_id": "sweeper-196",
+  "start_path": "/",
+  "workflows": {
+    "target": {
+      "task": "Log in on /loginURL with password cedarNest9!, then open Settings and switch to the Menu tab. Click the Move down arrow on the first top-level menu item (Home). After the page reloads, reopen Settings → Menu and read the top-level menu order. Report pass if How to is now the first item and Home is second (order swapped), fail if the order is still Home first and How to second, or blocked if you cannot complete the check.",
+      "expected": "How to"
+    },
+    "preservation": {
+      "task": "Log in on /loginURL with password cedarNest9!, then open Settings and switch to the Menu tab. Click the Move up arrow on the second top-level menu item (How to). After the page reloads, reopen Settings → Menu and read the order. Report pass if How to is now the first item and Home is second, fail if the order is unchanged, or blocked if you cannot complete the check.",
+      "expected": "How to"
+    }
+  }
+}

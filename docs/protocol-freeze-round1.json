@@ -1,0 +1,29 @@
+{
+  "source_hash": "9ea4ecc08f548853ae714dcc3ccfe83c1c770dcecc7f1cdd65e6c112e64cdc25",
+  "source_archive_sha256": "370f8789dd248047ade8ecf5e63313cf1eed8952f9831129fd34412d71328040",
+  "methods": [
+    "script",
+    "qwen-base",
+    "qwen-improved"
+  ],
+  "development": [
+    "sweeper-041",
+    "sweeper-005"
+  ],
+  "holdout": [
+    "sweeper-040"
+  ],
+  "repeats": 2,
+  "planned_runs": 72,
+  "gpu_host": "server402",
+  "gpu_ids": [
+    0,
+    1
+  ],
+  "budgets": {
+    "browser_actions": 30,
+    "wall_seconds_excluding_model_load": 600
+  },
+  "model_revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+  "attempt_policy": "Primary analysis retains first scheduled attempt; infrastructure repairs remain separate experiments."
+}

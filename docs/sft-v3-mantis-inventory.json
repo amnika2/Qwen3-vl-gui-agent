@@ -1,0 +1,314 @@
+[
+  {
+    "id": "20261107T161438Z-1c4a892a:terminal_review:17",
+    "partition": "train",
+    "run": "runs/20261107T161438Z-1c4a892a",
+    "task": "In the open MantisBT Report Issue form, choose Category General. Choose Product Version '1.1.0'. Fill these fields in the stated order: summary = \"Search results crash after changing filters\", description = \"Open the search panel, change the date filter and run the query. The browser shows an empty result panel.\". Submit Issue, then inspect the response. Report pass if the new issue shows these values, fail if the valid submission is rejected with APPLICATION ERROR #29 for version, or blocked if the check cannot be completed.",
+    "frames": [
+      {
+        "step": 14,
+        "roles": [
+          "input_candidate"
+        ]
+      },
+      {
+        "step": 16,
+        "roles": [
+          "post_edit_action"
+        ]
+      },
+      {
+        "step": 17,
+        "roles": [
+          "outcome_candidate"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "20261107T161449Z-42e0046d:terminal_review:17",
+    "partition": "train",
+    "run": "runs/20261107T161449Z-42e0046d",
+    "task": "In the open MantisBT Report Issue form, choose Category General. Choose Product Version '1.1.0'. Fill these fields in the stated order: description = \"Change the display name to Avery Chen, save the profile, then open the dashboard. The old name remains in the header.\", summary = \"Profile changes do not update the header\". Submit Issue, then inspect the response. Report pass if the new issue shows these values, fail if the valid submission is rejected with APPLICATION ERROR #29 for version, or blocked if the check cannot be completed.",
+    "frames": [
+      {
+        "step": 14,
+        "roles": [
+          "input_candidate"
+        ]
+      },
+      {
+        "step": 16,
+        "roles": [
+          "post_edit_action"
+        ]
+      },
+      {
+        "step": 17,
+        "roles": [
+          "outcome_candidate"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "20261107T161501Z-935602c0:terminal_review:13",
+    "partition": "train",
+    "run": "runs/20261107T161501Z-935602c0",
+    "task": "In the open MantisBT Report Issue form, choose Category General. Leave Product Version empty. Fill these fields in the stated order: summary = \"Keyboard focus skips the confirmation button\", description = \"Use Tab from the project selector through the report form. Focus moves directly to the page footer.\". Submit Issue, then inspect the response. Report pass if the new issue shows these values, fail if the valid submission is rejected with APPLICATION ERROR #29 for version, or blocked if the check cannot be completed.",
+    "frames": [
+      {
+        "step": 10,
+        "roles": [
+          "input_candidate"
+        ]
+      },
+      {
+        "step": 12,
+        "roles": [
+          "post_edit_action"
+        ]
+      },
+      {
+        "step": 13,
+        "roles": [
+          "outcome_candidate"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "20261107T161511Z-7af81dea:terminal_review:13",
+    "partition": "train",
+    "run": "runs/20261107T161511Z-7af81dea",
+    "task": "In the open MantisBT Report Issue form, choose Category General. Leave Product Version empty. Fill these fields in the stated order: summary = \"Export range includes one extra day\", description = \"Choose 1-7 November and export the report. The generated preview also contains records from 8 November.\". Submit Issue, then inspect the response. Report pass if the new issue shows these values, fail if the valid submission is rejected with APPLICATION ERROR #29 for version, or blocked if the check cannot be completed.",
+    "frames": [
+      {
+        "step": 10,
+        "roles": [
+          "input_candidate"
+        ]
+      },
+      {
+        "step": 12,
+        "roles": [
+          "post_edit_action"
+        ]
+      },
+      {
+        "step": 13,
+        "roles": [
+          "outcome_candidate"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "20261107T161522Z-e784acbd:terminal_review:20",
+    "partition": "train",
+    "run": "runs/20261107T161522Z-e784acbd",
+    "task": "In the open MantisBT Report Issue form, choose Category General. Choose Product Version '1.1.0'. Fill these fields in the stated order: summary = \"Invoice validation message is missing\", description = \"Submit an invoice with an invalid billing postcode. The page remains on the form without explaining which field needs correction.\", steps_to_reproduce = \"1. Open the affected page.\\n2. Apply the change described above.\\n3. Save and inspect the result.\". Submit Issue, then inspect the response. Report pass if the new issue shows these values, fail if the valid submission is rejected with APPLICATION ERROR #29 for version, or blocked if the check cannot be completed.",
+    "frames": [
+      {
+        "step": 17,
+        "roles": [
+          "input_candidate"
+        ]
+      },
+      {
+        "step": 19,
+        "roles": [
+          "post_edit_action"
+        ]
+      },
+      {
+        "step": 20,
+        "roles": [
+          "outcome_candidate"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "20261107T161534Z-3d8d358f:terminal_review:17",
+    "partition": "train",
+    "run": "runs/20261107T161534Z-3d8d358f",
+    "task": "In the open MantisBT Report Issue form, choose Category General. Choose Product Version '1.1.0'. Fill these fields in the stated order: description = \"Add a document with a long descriptive name. The attachment label covers the beginning of the filename in the details panel.\", summary = \"Attachment label overlaps the filename\". Submit Issue, then inspect the response. Report pass if the new issue shows these values, fail if the valid submission is rejected with APPLICATION ERROR #29 for version, or blocked if the check cannot be completed.",
+    "frames": [
+      {
+        "step": 14,
+        "roles": [
+          "input_candidate"
+        ]
+      },
+      {
+        "step": 16,
+        "roles": [
+          "post_edit_action"
+        ]
+      },
+      {
+        "step": 17,
+        "roles": [
+          "outcome_candidate"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "20261107T161546Z-c239ccb5:terminal_review:13",
+    "partition": "train",
+    "run": "runs/20261107T161546Z-c239ccb5",
+    "task": "In the open MantisBT Report Issue form, choose Category General. Leave Product Version empty. Fill these fields in the stated order: summary = \"中文标题在历史记录中显示异常\", description = \"将项目备注改为“设备检修已完成”，保存后打开历史记录，检查中文内容和标点是否完整显示。\". Submit Issue, then inspect the response. Report pass if the new issue shows these values, fail if the valid submission is rejected with APPLICATION ERROR #29 for version, or blocked if the check cannot be completed.",
+    "frames": [
+      {
+        "step": 10,
+        "roles": [
+          "input_candidate"
+        ]
+      },
+      {
+        "step": 12,
+        "roles": [
+          "post_edit_action"
+        ]
+      },
+      {
+        "step": 13,
+        "roles": [
+          "outcome_candidate"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "20261107T161558Z-320973c0:terminal_review:16",
+    "partition": "train",
+    "run": "runs/20261107T161558Z-320973c0",
+    "task": "In the open MantisBT Report Issue form, choose Category General. Leave Product Version empty. Fill these fields in the stated order: summary = \"Accented characters disappear from the notification\", description = \"Enter Réservation confirmée in the notification subject, save it, and reopen the notification preview.\", steps_to_reproduce = \"1. Open the affected page.\\n2. Apply the change described above.\\n3. Save and inspect the result.\". Submit Issue, then inspect the response. Report pass if the new issue shows these values, fail if the valid submission is rejected with APPLICATION ERROR #29 for version, or blocked if the check cannot be completed.",
+    "frames": [
+      {
+        "step": 13,
+        "roles": [
+          "input_candidate"
+        ]
+      },
+      {
+        "step": 15,
+        "roles": [
+          "post_edit_action"
+        ]
+      },
+      {
+        "step": 16,
+        "roles": [
+          "outcome_candidate"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "20261107T161610Z-82639f3c:terminal_review:17",
+    "partition": "train",
+    "run": "runs/20261107T161610Z-82639f3c",
+    "task": "In the open MantisBT Report Issue form, choose Category General. Choose Product Version '1.1.0'. Fill these fields in the stated order: summary = \"Batch review loses the selected assignee\", description = \"Select three pending records and assign them to Jordan Park. After the confirmation, the records still show the previous assignee.\". Submit Issue, then inspect the response. Report pass if the new issue shows these values, fail if the valid submission is rejected with APPLICATION ERROR #29 for version, or blocked if the check cannot be completed.",
+    "frames": [
+      {
+        "step": 14,
+        "roles": [
+          "input_candidate"
+        ]
+      },
+      {
+        "step": 16,
+        "roles": [
+          "post_edit_action"
+        ]
+      },
+      {
+        "step": 17,
+        "roles": [
+          "outcome_candidate"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "20261107T161620Z-cf8930aa:terminal_review:17",
+    "partition": "train",
+    "run": "runs/20261107T161620Z-cf8930aa",
+    "task": "In the open MantisBT Report Issue form, choose Category General. Choose Product Version '1.1.0'. Fill these fields in the stated order: description = \"Sort the tasks by due date, open a task and return to the list. The rows revert to the default title order.\", summary = \"Table order resets when returning from details\". Submit Issue, then inspect the response. Report pass if the new issue shows these values, fail if the valid submission is rejected with APPLICATION ERROR #29 for version, or blocked if the check cannot be completed.",
+    "frames": [
+      {
+        "step": 14,
+        "roles": [
+          "input_candidate"
+        ]
+      },
+      {
+        "step": 16,
+        "roles": [
+          "post_edit_action"
+        ]
+      },
+      {
+        "step": 17,
+        "roles": [
+          "outcome_candidate"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "20261107T161632Z-0ae58c49:terminal_review:20",
+    "partition": "validation",
+    "run": "runs/20261107T161632Z-0ae58c49",
+    "task": "In the open MantisBT Report Issue form, choose Category General. Choose Product Version '1.1.0'. Fill these fields in the stated order: summary = \"Timeout banner covers the retry control\", description = \"Let the status request time out, then inspect the warning panel. The Retry control cannot be reached with the mouse.\", steps_to_reproduce = \"1. Open the affected page.\\n2. Apply the change described above.\\n3. Save and inspect the result.\". Submit Issue, then inspect the response. Report pass if the new issue shows these values, fail if the valid submission is rejected with APPLICATION ERROR #29 for version, or blocked if the check cannot be completed.",
+    "frames": [
+      {
+        "step": 17,
+        "roles": [
+          "input_candidate"
+        ]
+      },
+      {
+        "step": 19,
+        "roles": [
+          "post_edit_action"
+        ]
+      },
+      {
+        "step": 20,
+        "roles": [
+          "outcome_candidate"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "20261107T161643Z-a8aa6019:terminal_review:13",
+    "partition": "validation",
+    "run": "runs/20261107T161643Z-a8aa6019",
+    "task": "In the open MantisBT Report Issue form, choose Category General. Leave Product Version empty. Fill these fields in the stated order: summary = \"Comment preview removes paragraph spacing\", description = \"Write two paragraphs in a comment and open Preview. The blank line between the paragraphs is removed.\". Submit Issue, then inspect the response. Report pass if the new issue shows these values, fail if the valid submission is rejected with APPLICATION ERROR #29 for version, or blocked if the check cannot be completed.",
+    "frames": [
+      {
+        "step": 10,
+        "roles": [
+          "input_candidate"
+        ]
+      },
+      {
+        "step": 12,
+        "roles": [
+          "post_edit_action"
+        ]
+      },
+      {
+        "step": 13,
+        "roles": [
+          "outcome_candidate"
+        ]
+      }
+    ]
+  }
+]

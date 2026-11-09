@@ -1,0 +1,7 @@
+{
+  "v1_preserved": true,
+  "v1_artifacts_checked": 8,
+  "v2_trained_data_matches_frozen_release": true,
+  "selected_epoch": 2.0,
+  "selected_validation_loss": 0.07856239378452301
+}

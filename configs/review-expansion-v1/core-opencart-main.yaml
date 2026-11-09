@@ -1,0 +1,664 @@
+version: 1
+frozen_on: '2026-11-08'
+group_ordered_variants: true
+groups:
+- app: opencart
+  id: rex1-train-option-001
+  parent_scenario_id: rex1-train-option-001
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Green
+    initial_weight: '31'
+    initial_quantity: 120
+    values:
+      weight: '11.125'
+- app: opencart
+  id: rex1-train-option-002
+  parent_scenario_id: rex1-train-option-002
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Blue
+    initial_weight: '32'
+    initial_quantity: 121
+    values:
+      weight: '11.375'
+- app: opencart
+  id: rex1-train-option-003
+  parent_scenario_id: rex1-train-option-003
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Red
+    initial_weight: '33'
+    initial_quantity: 122
+    values:
+      weight: '11.625'
+- app: opencart
+  id: rex1-train-option-004
+  parent_scenario_id: rex1-train-option-004
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Yellow
+    initial_weight: '34'
+    initial_quantity: 123
+    values:
+      weight: '11.875'
+- app: opencart
+  id: rex1-train-option-005
+  parent_scenario_id: rex1-train-option-005
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Green
+    initial_weight: '35'
+    initial_quantity: 124
+    values:
+      weight: '11.15'
+- app: opencart
+  id: rex1-train-option-006
+  parent_scenario_id: rex1-train-option-006
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Blue
+    initial_weight: '36'
+    initial_quantity: 125
+    values:
+      weight: '11.35'
+- app: opencart
+  id: rex1-train-option-007
+  parent_scenario_id: rex1-train-option-007
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Red
+    initial_weight: '37'
+    initial_quantity: 126
+    values:
+      weight: '11.65'
+- app: opencart
+  id: rex1-train-option-008
+  parent_scenario_id: rex1-train-option-008
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Yellow
+    initial_weight: '38'
+    initial_quantity: 127
+    values:
+      weight: '11.85'
+- app: opencart
+  id: rex1-train-option-009
+  parent_scenario_id: rex1-train-option-009
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Green
+    initial_weight: '39'
+    initial_quantity: 128
+    values:
+      weight: '11.0625'
+- app: opencart
+  id: rex1-train-option-010
+  parent_scenario_id: rex1-train-option-010
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Blue
+    initial_weight: '40'
+    initial_quantity: 129
+    values:
+      weight: '11.1875'
+- app: opencart
+  id: rex1-train-option-011
+  parent_scenario_id: rex1-train-option-011
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Red
+    initial_weight: '41'
+    initial_quantity: 130
+    values:
+      weight: '11.4375'
+- app: opencart
+  id: rex1-train-option-012
+  parent_scenario_id: rex1-train-option-012
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Yellow
+    initial_weight: '42'
+    initial_quantity: 131
+    values:
+      weight: '11.8125'
+- app: opencart
+  id: rex1-train-option-013
+  parent_scenario_id: rex1-train-option-013
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Green
+    initial_weight: '43'
+    initial_quantity: 132
+    values:
+      weight: '12.125'
+- app: opencart
+  id: rex1-train-option-014
+  parent_scenario_id: rex1-train-option-014
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Blue
+    initial_weight: '44'
+    initial_quantity: 133
+    values:
+      weight: '12.375'
+- app: opencart
+  id: rex1-train-option-015
+  parent_scenario_id: rex1-train-option-015
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Red
+    initial_weight: '45'
+    initial_quantity: 134
+    values:
+      weight: '12.625'
+- app: opencart
+  id: rex1-train-option-016
+  parent_scenario_id: rex1-train-option-016
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Yellow
+    initial_weight: '46'
+    initial_quantity: 135
+    values:
+      weight: '12.875'
+- app: opencart
+  id: rex1-train-option-017
+  parent_scenario_id: rex1-train-option-017
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Green
+    initial_weight: '47'
+    initial_quantity: 136
+    values:
+      weight: '12.15'
+- app: opencart
+  id: rex1-train-option-018
+  parent_scenario_id: rex1-train-option-018
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Blue
+    initial_weight: '48'
+    initial_quantity: 137
+    values:
+      weight: '12.35'
+- app: opencart
+  id: rex1-train-option-019
+  parent_scenario_id: rex1-train-option-019
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Red
+    initial_weight: '49'
+    initial_quantity: 138
+    values:
+      weight: '12.65'
+- app: opencart
+  id: rex1-train-option-020
+  parent_scenario_id: rex1-train-option-020
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Yellow
+    initial_weight: '50'
+    initial_quantity: 139
+    values:
+      weight: '12.85'
+- app: opencart
+  id: rex1-train-option-021
+  parent_scenario_id: rex1-train-option-021
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Green
+    initial_weight: '51'
+    initial_quantity: 140
+    values:
+      weight: '12.0625'
+- app: opencart
+  id: rex1-train-option-022
+  parent_scenario_id: rex1-train-option-022
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Blue
+    initial_weight: '52'
+    initial_quantity: 141
+    values:
+      weight: '12.1875'
+- app: opencart
+  id: rex1-train-option-023
+  parent_scenario_id: rex1-train-option-023
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Red
+    initial_weight: '53'
+    initial_quantity: 142
+    values:
+      weight: '12.4375'
+- app: opencart
+  id: rex1-train-option-024
+  parent_scenario_id: rex1-train-option-024
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Yellow
+    initial_weight: '54'
+    initial_quantity: 143
+    values:
+      weight: '12.8125'
+- app: opencart
+  id: rex1-train-option-025
+  parent_scenario_id: rex1-train-option-025
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Green
+    initial_weight: '55'
+    initial_quantity: 144
+    values:
+      weight: '13.125'
+- app: opencart
+  id: rex1-train-option-026
+  parent_scenario_id: rex1-train-option-026
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Blue
+    initial_weight: '56'
+    initial_quantity: 145
+    values:
+      weight: '13.375'
+- app: opencart
+  id: rex1-train-option-027
+  parent_scenario_id: rex1-train-option-027
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Red
+    initial_weight: '57'
+    initial_quantity: 146
+    values:
+      weight: '13.625'
+- app: opencart
+  id: rex1-train-option-028
+  parent_scenario_id: rex1-train-option-028
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Yellow
+    initial_weight: '58'
+    initial_quantity: 147
+    values:
+      weight: '13.875'
+- app: opencart
+  id: rex1-train-option-029
+  parent_scenario_id: rex1-train-option-029
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Green
+    initial_weight: '59'
+    initial_quantity: 148
+    values:
+      weight: '13.15'
+- app: opencart
+  id: rex1-train-option-030
+  parent_scenario_id: rex1-train-option-030
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Blue
+    initial_weight: '60'
+    initial_quantity: 149
+    values:
+      weight: '13.35'
+- app: opencart
+  id: rex1-train-option-031
+  parent_scenario_id: rex1-train-option-031
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Red
+    initial_weight: '61'
+    initial_quantity: 150
+    values:
+      weight: '13.65'
+- app: opencart
+  id: rex1-train-option-032
+  parent_scenario_id: rex1-train-option-032
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Yellow
+    initial_weight: '62'
+    initial_quantity: 151
+    values:
+      weight: '13.85'
+- app: opencart
+  id: rex1-train-option-033
+  parent_scenario_id: rex1-train-option-033
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Green
+    initial_weight: '63'
+    initial_quantity: 152
+    values:
+      weight: '13.0625'
+- app: opencart
+  id: rex1-train-option-034
+  parent_scenario_id: rex1-train-option-034
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Blue
+    initial_weight: '64'
+    initial_quantity: 153
+    values:
+      weight: '13.1875'
+- app: opencart
+  id: rex1-train-option-035
+  parent_scenario_id: rex1-train-option-035
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Red
+    initial_weight: '65'
+    initial_quantity: 154
+    values:
+      weight: '13.4375'
+- app: opencart
+  id: rex1-train-option-036
+  parent_scenario_id: rex1-train-option-036
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Yellow
+    initial_weight: '66'
+    initial_quantity: 155
+    values:
+      weight: '13.8125'
+- app: opencart
+  id: rex1-train-option-037
+  parent_scenario_id: rex1-train-option-037
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Green
+    initial_weight: '67'
+    initial_quantity: 156
+    values:
+      weight: '14.125'
+- app: opencart
+  id: rex1-train-option-038
+  parent_scenario_id: rex1-train-option-038
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Blue
+    initial_weight: '68'
+    initial_quantity: 157
+    values:
+      weight: '14.375'
+- app: opencart
+  id: rex1-train-option-039
+  parent_scenario_id: rex1-train-option-039
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Red
+    initial_weight: '69'
+    initial_quantity: 158
+    values:
+      weight: '14.625'
+- app: opencart
+  id: rex1-train-option-040
+  parent_scenario_id: rex1-train-option-040
+  family: decimal_weight
+  template_family: shipping_options
+  split: train
+  fixture:
+    option_label: Yellow
+    initial_weight: '70'
+    initial_quantity: 159
+    values:
+      weight: '14.875'
+- app: opencart
+  id: rex1-dev-option-001
+  parent_scenario_id: rex1-dev-option-001
+  family: decimal_weight
+  template_family: display_options
+  split: validation
+  fixture:
+    option_label: Green
+    initial_weight: '31'
+    initial_quantity: 120
+    values:
+      weight: '61.125'
+- app: opencart
+  id: rex1-dev-option-002
+  parent_scenario_id: rex1-dev-option-002
+  family: decimal_weight
+  template_family: display_options
+  split: validation
+  fixture:
+    option_label: Blue
+    initial_weight: '32'
+    initial_quantity: 121
+    values:
+      weight: '61.375'
+- app: opencart
+  id: rex1-dev-option-003
+  parent_scenario_id: rex1-dev-option-003
+  family: decimal_weight
+  template_family: display_options
+  split: validation
+  fixture:
+    option_label: Red
+    initial_weight: '33'
+    initial_quantity: 122
+    values:
+      weight: '61.625'
+- app: opencart
+  id: rex1-dev-option-004
+  parent_scenario_id: rex1-dev-option-004
+  family: decimal_weight
+  template_family: display_options
+  split: validation
+  fixture:
+    option_label: Yellow
+    initial_weight: '34'
+    initial_quantity: 123
+    values:
+      weight: '61.875'
+- app: opencart
+  id: rex1-dev-option-005
+  parent_scenario_id: rex1-dev-option-005
+  family: decimal_weight
+  template_family: display_options
+  split: validation
+  fixture:
+    option_label: Green
+    initial_weight: '35'
+    initial_quantity: 124
+    values:
+      weight: '61.15'
+- app: opencart
+  id: rex1-dev-option-006
+  parent_scenario_id: rex1-dev-option-006
+  family: decimal_weight
+  template_family: display_options
+  split: validation
+  fixture:
+    option_label: Blue
+    initial_weight: '36'
+    initial_quantity: 125
+    values:
+      weight: '61.35'
+- app: opencart
+  id: rex1-dev-option-007
+  parent_scenario_id: rex1-dev-option-007
+  family: decimal_weight
+  template_family: display_options
+  split: validation
+  fixture:
+    option_label: Red
+    initial_weight: '37'
+    initial_quantity: 126
+    values:
+      weight: '61.65'
+- app: opencart
+  id: rex1-dev-option-008
+  parent_scenario_id: rex1-dev-option-008
+  family: decimal_weight
+  template_family: display_options
+  split: validation
+  fixture:
+    option_label: Yellow
+    initial_weight: '38'
+    initial_quantity: 127
+    values:
+      weight: '61.85'
+- app: opencart
+  id: rex1-dev-option-009
+  parent_scenario_id: rex1-dev-option-009
+  family: decimal_weight
+  template_family: display_options
+  split: validation
+  fixture:
+    option_label: Green
+    initial_weight: '39'
+    initial_quantity: 128
+    values:
+      weight: '61.0625'
+- app: opencart
+  id: rex1-dev-option-010
+  parent_scenario_id: rex1-dev-option-010
+  family: decimal_weight
+  template_family: display_options
+  split: validation
+  fixture:
+    option_label: Blue
+    initial_weight: '40'
+    initial_quantity: 129
+    values:
+      weight: '61.1875'
+- app: opencart
+  id: rex1-dev-option-011
+  parent_scenario_id: rex1-dev-option-011
+  family: decimal_weight
+  template_family: display_options
+  split: validation
+  fixture:
+    option_label: Red
+    initial_weight: '41'
+    initial_quantity: 130
+    values:
+      weight: '61.4375'
+- app: opencart
+  id: rex1-dev-option-012
+  parent_scenario_id: rex1-dev-option-012
+  family: decimal_weight
+  template_family: display_options
+  split: validation
+  fixture:
+    option_label: Yellow
+    initial_weight: '42'
+    initial_quantity: 131
+    values:
+      weight: '61.8125'
+- app: opencart
+  id: rex1-dev-option-013
+  parent_scenario_id: rex1-dev-option-013
+  family: decimal_weight
+  template_family: display_options
+  split: validation
+  fixture:
+    option_label: Green
+    initial_weight: '43'
+    initial_quantity: 132
+    values:
+      weight: '62.125'
+- app: opencart
+  id: rex1-dev-option-014
+  parent_scenario_id: rex1-dev-option-014
+  family: decimal_weight
+  template_family: display_options
+  split: validation
+  fixture:
+    option_label: Blue
+    initial_weight: '44'
+    initial_quantity: 133
+    values:
+      weight: '62.375'
+- app: opencart
+  id: rex1-dev-option-015
+  parent_scenario_id: rex1-dev-option-015
+  family: decimal_weight
+  template_family: display_options
+  split: validation
+  fixture:
+    option_label: Red
+    initial_weight: '45'
+    initial_quantity: 134
+    values:
+      weight: '62.625'

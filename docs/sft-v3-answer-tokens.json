@@ -1,0 +1,20 @@
+{
+  "reviews": 124,
+  "maximum_answer_tokens": 564,
+  "p95_answer_tokens": 461,
+  "above_768": 0,
+  "largest": [
+    [
+      483,
+      "20261107T161522Z-e784acbd:terminal_review:20"
+    ],
+    [
+      487,
+      "20261107T161632Z-0ae58c49:terminal_review:20"
+    ],
+    [
+      564,
+      "20261107T161558Z-320973c0:terminal_review:16"
+    ]
+  ]
+}

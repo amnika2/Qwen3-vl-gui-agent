@@ -1,0 +1,148 @@
+updated_on: "2026-11-08"
+status_note: >-
+  十个应用均已完成真实校准、SFT采集与导出核验。各项dataset是原始分应用来源，
+  统一去重成品为datasets/sft-main-10apps-v1。原始数据保留。
+release: datasets/sft-main-10apps-v1
+apps:
+  sweeper-150:
+    slug: pluxml
+    priority: 1
+    source: official
+    training_type: F
+    task: 编辑用户密码/显示名，保存后重新登录或重开验证
+    collect_workflows: [target, preservation]
+    runtime: PHP 8.3
+    storage: flat-file XML
+    preparation: 已有实例、登录、动作流与观察器
+    status: dataset_exported
+    dataset: datasets/sft-pluxml-0b3730ec
+    evidence: docs/sft-first-batch-verification.json
+  sweeper-185:
+    slug: typesetter
+    priority: 2
+    source: official
+    training_type: F
+    task: 两次编辑主题 Area 文本，每次保存后重开首页验证
+    collect_workflows: [target, preservation]
+    runtime: PHP 7.4
+    storage: flat-file PHP config
+    preparation: 已有实例、测试主题、动作流与前置证据检查
+    status: dataset_exported
+    dataset: datasets/sft-typesetter
+    evidence: docs/typesetter-verification.json
+  sweeper-034:
+    slug: dokuwiki
+    priority: 3
+    source: supplementary
+    training_type: F
+    task: 自建 wiki 页面正文编辑、保存、重开
+    collect_workflows: [target, preservation]
+    runtime: PHP 8.3
+    storage: flat-file text
+    preparation: 已有源码缓存、安装 seed、动作流与观察器
+    status: dataset_exported
+    dataset: datasets/sft-dokuwiki-flatpress-rich
+    evidence: datasets/sft-dokuwiki-flatpress-rich/verification.json
+    original_workflow_type: N
+  sweeper-053:
+    slug: flatpress
+    priority: 4
+    source: supplementary
+    training_type: F
+    task: 自建静态页正文编辑、保存、重开
+    collect_workflows: [target, preservation]
+    runtime: PHP 8.3
+    storage: flat-file text
+    preparation: 已有源码缓存、安装 seed、动作流与观察器
+    status: dataset_exported
+    dataset: datasets/sft-dokuwiki-flatpress-rich
+    evidence: datasets/sft-dokuwiki-flatpress-rich/verification.json
+    original_workflow_type: N
+  sweeper-105:
+    slug: litecart
+    priority: 5
+    source: official
+    training_type: F
+    task: Geo Zone 填写 Code/Name、选择 Country，保存后重开
+    collect_workflows: [target, preservation]
+    runtime: PHP 8.3
+    storage: MariaDB
+    preparation: Web 安装、管理员 fixture、Geo Zone 对象；核对已有主题资源
+    status: dataset_exported
+    dataset: datasets/sft-litecart-12fb9a41
+    verification: datasets/sft-litecart-12fb9a41/verification.json
+    evidence: https://github.com/litecart/litecart/tree/612d0e6b12253b52dc8c91f544d01153202095cd/public_html
+  sweeper-195:
+    slug: wolfcms
+    priority: 6
+    source: official
+    training_type: F
+    task: 保持 slug、修改页面标题并保存；相邻流程校验重复 slug
+    collect_workflows: [target, preservation]
+    runtime: PHP 7.4，已实测；两版统一原生allow_html_title配置
+    storage: MariaDB，复用现有 PDO MySQL；上游也支持 SQLite
+    preparation: Web 安装、管理员与 About us 页面；旧版 PHP 兼容核对
+    status: dataset_exported
+    dataset: datasets/sft-wolfcms-9c21067e
+    verification: datasets/sft-wolfcms-9c21067e/verification.json
+    evidence: https://github.com/wolfcms/wolfcms/blob/bb30b245e3c38afbdf9b03cf0c5d0613db94bd0f/readme.md
+  sweeper-084:
+    slug: impresscms
+    priority: 7
+    source: official
+    training_type: F
+    task: 修改 Site Name、保存、重开 General Settings
+    collect_workflows: [target]
+    runtime: PHP 7.4/PDO，实例独立GD扩展
+    storage: MariaDB
+    preparation: Web 安装、管理员；固定源码 htdocs/libraries 已含运行库
+    status: dataset_exported
+    dataset: datasets/sft-impresscms-rich-v2
+    verification: datasets/sft-impresscms-rich-v2/verification.json
+    evidence: https://github.com/ImpressCMS/impresscms/tree/4b8128ed5ede9b2dea929828dd87a6b98ddcc3e8/htdocs/libraries
+    preservation_note: 官方 preservation 只打开表单，保留用于校准，不采入主训练
+  sweeper-125:
+    slug: opencart
+    priority: 8
+    source: official
+    training_type: F
+    task: 修改商品 option value 小数/整数重量，保存后重开 Options
+    collect_workflows: [target, preservation]
+    runtime: PHP 8.3；固定提交要求 PHP >=8.1
+    storage: MariaDB
+    preparation: Composer install 固定 lock、Web 安装、商品与两种 option fixture
+    status: dataset_exported
+    dataset: datasets/sft-opencart-rich
+    verification: datasets/sft-opencart-rich/verification.json
+    evidence: https://github.com/opencart/opencart/blob/0dea7746a52a8e627e392283f4df0ad36e24023c/composer.json
+    frontend_note: upload/admin/view/javascript 已有 Bootstrap、jQuery、CKEditor；仍需实测完整页面
+  sweeper-107:
+    slug: mantisbt
+    priority: 9
+    source: official
+    training_type: F
+    task: Report Issue 多字段填写、选择 released Product Version、提交后查看新 issue
+    collect_workflows: [target, preservation]
+    runtime: PHP 8.3；固定提交要求 PHP ^8.1
+    storage: MariaDB
+    preparation: Composer install 固定 lock、安装 schema、project/reporter/released version fixture
+    status: dataset_exported
+    dataset: datasets/sft-mantisbt-v2
+    verification: datasets/sft-mantisbt-v2/verification.json
+    evidence: https://github.com/mantisbt/mantisbt/blob/148cc34a4ae57848eabd103638642e203f79c72a/composer.json
+    dependency_note: 源码 vendor 只有访问配置文件，不是完整依赖；需安装 Composer 依赖
+  sweeper-142:
+    slug: phpipam
+    priority: 10
+    source: official
+    training_type: F
+    task: 清空 IP Description 或修改 Hostname，保存后重开同一地址
+    collect_workflows: [target, preservation]
+    runtime: PHP 8.3，实例独立GMP与PEAR依赖
+    storage: MariaDB
+    preparation: 按固定 gitlink 初始化 submodule、导入 SQL、管理员/subnet/IP fixture
+    status: dataset_exported
+    dataset: datasets/sft-phpipam-v1
+    verification: datasets/sft-phpipam-v1/verification.json
+    evidence: https://github.com/phpipam/phpipam/blob/81bf8abc4bae32261cf471f3e72f94f1e4a854bb/.gitmodules
+    dependency_note: 不是 Composer 项目；有多个固定 submodule，准备成本高于前几项

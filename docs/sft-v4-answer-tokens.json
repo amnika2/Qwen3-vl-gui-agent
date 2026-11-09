@@ -1,0 +1,28 @@
+{
+  "reviews": 130,
+  "max": 762,
+  "p95": 643,
+  "above_768": 0,
+  "longest": [
+    [
+      652,
+      "20261107T161511Z-7af81dea:terminal_review:13:evidence_v1:evidence_v2"
+    ],
+    [
+      658,
+      "20261107T161449Z-42e0046d:terminal_review:17:evidence_v1:evidence_v2"
+    ],
+    [
+      658,
+      "20261107T161620Z-cf8930aa:terminal_review:17:evidence_v1:evidence_v2"
+    ],
+    [
+      671,
+      "20261107T161546Z-c239ccb5:terminal_review:13:evidence_v1:evidence_v2"
+    ],
+    [
+      762,
+      "20261107T161558Z-320973c0:terminal_review:16:evidence_v1:evidence_v2"
+    ]
+  ]
+}

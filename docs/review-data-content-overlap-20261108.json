@@ -1,0 +1,25 @@
+{
+  "dataset": "datasets/rl-review-pilot-v2",
+  "protocol": "original source data unchanged; tasks exclude screenshot/actions sections; requirements contain case, profile, task_kind and canonical field name/intent/requested_value only; no build/partition/run id/before/after/verdict/image used",
+  "exact_public_task": {
+    "overlap_keys": 0,
+    "overlap_train_rows": 0,
+    "overlap_validation_rows": 0,
+    "unique_keys": {
+      "train": 107,
+      "validation": 25
+    },
+    "matches": []
+  },
+  "normalized_requirement": {
+    "overlap_keys": 0,
+    "overlap_train_rows": 0,
+    "overlap_validation_rows": 0,
+    "unique_keys": {
+      "train": 109,
+      "validation": 25
+    },
+    "matches": []
+  },
+  "task_extraction_missing_markers": []
+}

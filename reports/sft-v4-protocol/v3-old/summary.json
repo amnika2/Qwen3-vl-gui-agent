@@ -1,0 +1,213 @@
+{
+  "completed": true,
+  "planned": 23,
+  "metrics": {
+    "samples": 23,
+    "correct": 16,
+    "accuracy": 0.6956521739130435,
+    "format_errors": 5,
+    "guarded": 3,
+    "false_pass": 0,
+    "false_fail": 0,
+    "pass_on_blocked_label": 0,
+    "field_value_exact": {
+      "correct": 65,
+      "total": 106
+    },
+    "confusion": {
+      "pass->pass": 8,
+      "pass->blocked": 3,
+      "blocked->blocked": 6,
+      "fail->blocked": 3,
+      "fail->fail": 2,
+      "blocked->fail": 1
+    }
+  },
+  "cohorts": {
+    "matched_validation": {
+      "samples": 23,
+      "correct": 16,
+      "accuracy": 0.6956521739130435,
+      "format_errors": 5,
+      "guarded": 3,
+      "false_pass": 0,
+      "false_fail": 0,
+      "pass_on_blocked_label": 0,
+      "field_value_exact": {
+        "correct": 65,
+        "total": 106
+      },
+      "confusion": {
+        "pass->pass": 8,
+        "pass->blocked": 3,
+        "blocked->blocked": 6,
+        "fail->blocked": 3,
+        "fail->fail": 2,
+        "blocked->fail": 1
+      }
+    }
+  },
+  "cases": {
+    "sweeper-034": {
+      "samples": 3,
+      "correct": 2,
+      "accuracy": 0.6666666666666666,
+      "format_errors": 1,
+      "guarded": 1,
+      "false_pass": 0,
+      "false_fail": 0,
+      "pass_on_blocked_label": 0,
+      "field_value_exact": {
+        "correct": 4,
+        "total": 6
+      },
+      "confusion": {
+        "pass->pass": 1,
+        "pass->blocked": 1,
+        "blocked->blocked": 1
+      }
+    },
+    "sweeper-053": {
+      "samples": 3,
+      "correct": 2,
+      "accuracy": 0.6666666666666666,
+      "format_errors": 1,
+      "guarded": 0,
+      "false_pass": 0,
+      "false_fail": 0,
+      "pass_on_blocked_label": 0,
+      "field_value_exact": {
+        "correct": 7,
+        "total": 11
+      },
+      "confusion": {
+        "pass->blocked": 1,
+        "pass->pass": 1,
+        "blocked->blocked": 1
+      }
+    },
+    "sweeper-084": {
+      "samples": 2,
+      "correct": 1,
+      "accuracy": 0.5,
+      "format_errors": 0,
+      "guarded": 1,
+      "false_pass": 0,
+      "false_fail": 0,
+      "pass_on_blocked_label": 0,
+      "field_value_exact": {
+        "correct": 6,
+        "total": 6
+      },
+      "confusion": {
+        "fail->blocked": 1,
+        "pass->pass": 1
+      }
+    },
+    "sweeper-105": {
+      "samples": 4,
+      "correct": 3,
+      "accuracy": 0.75,
+      "format_errors": 2,
+      "guarded": 0,
+      "false_pass": 0,
+      "false_fail": 0,
+      "pass_on_blocked_label": 0,
+      "field_value_exact": {
+        "correct": 12,
+        "total": 30
+      },
+      "confusion": {
+        "blocked->blocked": 2,
+        "pass->pass": 1,
+        "fail->blocked": 1
+      }
+    },
+    "sweeper-107": {
+      "samples": 2,
+      "correct": 1,
+      "accuracy": 0.5,
+      "format_errors": 0,
+      "guarded": 0,
+      "false_pass": 0,
+      "false_fail": 0,
+      "pass_on_blocked_label": 0,
+      "field_value_exact": {
+        "correct": 11,
+        "total": 12
+      },
+      "confusion": {
+        "blocked->fail": 1,
+        "pass->pass": 1
+      }
+    },
+    "sweeper-125": {
+      "samples": 3,
+      "correct": 3,
+      "accuracy": 1.0,
+      "format_errors": 0,
+      "guarded": 0,
+      "false_pass": 0,
+      "false_fail": 0,
+      "pass_on_blocked_label": 0,
+      "field_value_exact": {
+        "correct": 8,
+        "total": 13
+      },
+      "confusion": {
+        "fail->fail": 1,
+        "pass->pass": 1,
+        "blocked->blocked": 1
+      }
+    },
+    "sweeper-142": {
+      "samples": 3,
+      "correct": 2,
+      "accuracy": 0.6666666666666666,
+      "format_errors": 1,
+      "guarded": 0,
+      "false_pass": 0,
+      "false_fail": 0,
+      "pass_on_blocked_label": 0,
+      "field_value_exact": {
+        "correct": 9,
+        "total": 18
+      },
+      "confusion": {
+        "fail->fail": 1,
+        "pass->blocked": 1,
+        "blocked->blocked": 1
+      }
+    },
+    "sweeper-195": {
+      "samples": 3,
+      "correct": 2,
+      "accuracy": 0.6666666666666666,
+      "format_errors": 0,
+      "guarded": 1,
+      "false_pass": 0,
+      "false_fail": 0,
+      "pass_on_blocked_label": 0,
+      "field_value_exact": {
+        "correct": 8,
+        "total": 10
+      },
+      "confusion": {
+        "fail->blocked": 1,
+        "pass->pass": 2
+      }
+    }
+  },
+  "model": {
+    "load_seconds": 7.152069972828031,
+    "torch": "2.14.1+cu130",
+    "device": "NVIDIA GeForce RTX 4090",
+    "peak_allocated_mib": 18615.59912109375,
+    "peak_reserved_mib": 19452.0
+  },
+  "metric_definitions": {
+    "false_pass": "fail label predicted pass",
+    "false_fail": "pass label predicted fail",
+    "field_value_exact": "literal equality on non-null labelled readings; empty string is included"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "case_id": "sweeper-185",
+  "start_path": "/index.php/Admin",
+  "workflows": {
+    "target": {
+      "task": "Log in on /index.php/Admin as MiraEllison with password quillNest8!. Click Edit header, set the value to Shoremark Edited and save. Reopen the homepage to confirm the header shows Shoremark Edited. Open the header editor again, set the value to Shoremark Final and save. Reopen the homepage and read the header h1 link label inside #logo. Report pass if it shows Shoremark Final, fail if it still shows Shoremark Edited, or blocked if you cannot complete the check.",
+      "expected": "Shoremark Final"
+    },
+    "preservation": {
+      "task": "Log in on /index.php/Admin as MiraEllison with password quillNest8!. Click Edit side note, set the value to SideNote OK and save. Reopen the homepage and read the side-note Area text. Report pass if it shows SideNote OK, fail if it still shows SideNote, or blocked if you cannot complete the check.",
+      "expected": "SideNote OK"
+    }
+  }
+}

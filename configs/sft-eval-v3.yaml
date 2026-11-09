@@ -1,0 +1,13 @@
+split: frozen-five-v2-v3-evidence-comparison
+agent_config: configs/agent-eval-evidence.yaml
+models:
+  v2: runs/sft-qwen3vl-10apps-v2/adapter
+  v3: runs/sft-qwen3vl-10apps-v3/adapter
+method: qwen-controlled
+cases: [sweeper-005, sweeper-007, sweeper-008, sweeper-040, sweeper-041]
+builds: [A, B]
+workflows: [target, preservation]
+repeats: 2
+note: >-
+  v2、v3均加载已导出的LoRA，在同一evidence_v1审查协议下各运行40格。
+  同一公共任务、动作/审查预算、截图限制和推理代码。失败保留，只续未启动或interrupted。

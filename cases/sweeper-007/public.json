@@ -1,0 +1,14 @@
+{
+  "case_id": "sweeper-007",
+  "start_path": "/browse.php?action=smartplaylist",
+  "workflows": {
+    "target": {
+      "task": "In Smart Playlists, find Rename Me Smart. Use its Edit control, replace Name with Renamed Smart Core4426, and Save. Reload or reopen Smart Playlists and check that the same playlist is named Renamed Smart Core4426. Report pass if it persisted, fail if the original name remains, or blocked if the check could not be completed. Cite the saved list screenshot.",
+      "expected": "Renamed Smart Core4426"
+    },
+    "preservation": {
+      "task": "On Song search, click Save as Smart Playlist. After the confirmation, open Smart Playlists and verify that a new playlist has been created with an automatically generated name beginning with priya-shah. Report pass if the new playlist is listed, fail if creation completed but no new playlist exists, or blocked if you cannot complete the check. Cite the new playlist row.",
+      "expected": "created"
+    }
+  }
+}

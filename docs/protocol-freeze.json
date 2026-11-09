@@ -1,0 +1,48 @@
+{
+  "source_hash": "327fb6e08f589774a0944cfdc1b90a8268ea5be3d624aaf23456ec6630aa2204",
+  "source_archive_sha256": "25bad4460fccc851feee8947c51feaba1bd118833b010f00bf59559cd2019ef4",
+  "methods": [
+    "script",
+    "qwen-base",
+    "qwen-improved"
+  ],
+  "development": [
+    "sweeper-041",
+    "sweeper-005"
+  ],
+  "holdout": [
+    "sweeper-040"
+  ],
+  "repeats": 2,
+  "planned_runs": 72,
+  "gpu_host": "server402",
+  "gpu_ids": [
+    0,
+    1
+  ],
+  "budgets": {
+    "browser_actions": 30,
+    "wall_seconds_excluding_model_load": 600
+  },
+  "model_revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+  "attempt_policy": "Primary analysis retains first scheduled attempt; infrastructure repairs remain separate experiments.",
+  "round": 3,
+  "instance_storage": "Host-local /tmp for application, database and session; durable evidence on shared project storage",
+  "aborted_round": {
+    "experiments": [
+      "evaluation-866f0006",
+      "evaluation-072cb9fa"
+    ],
+    "planned": 72,
+    "completed_or_interrupted": 8,
+    "not_started": 64,
+    "reason": "NFS instance initialization too slow; no holdout model call executed"
+  },
+  "model_prompt_unchanged": true,
+  "evaluator_version": 2,
+  "prior_rounds": {
+    "1": "NFS instance setup slow; 8/72 completed or interrupted",
+    "2": "Evaluator allowed unsaved edits to overwrite saved observation; 26/72 completed or interrupted"
+  },
+  "controller_byte_identical_to_round2": true
+}

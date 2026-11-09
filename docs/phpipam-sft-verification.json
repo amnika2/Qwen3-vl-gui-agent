@@ -1,0 +1,24 @@
+{
+  "dataset": "/home/fs_2026/qwen3-gui-agent/datasets/sft-phpipam-v1",
+  "passed": true,
+  "apps": 1,
+  "trajectories": 12,
+  "samples": 121,
+  "partitions": {
+    "train": 97,
+    "validation": 24
+  },
+  "review_labels": {
+    "fail": 4,
+    "pass": 8
+  },
+  "unique_referenced_images": 104,
+  "duplicate_exact_samples": 0,
+  "complete_trajectories_preserved": true,
+  "scenario_partition_overlap": 0,
+  "prompts_and_action_histories_match": true,
+  "labels_match_observed_runs": true,
+  "image_bytes_match_recorded_screenshots": true,
+  "source_sample_hashes_match": true,
+  "holdout_excluded": true
+}

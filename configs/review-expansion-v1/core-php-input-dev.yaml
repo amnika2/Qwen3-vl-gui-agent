@@ -1,0 +1,259 @@
+version: 1
+frozen_on: '2026-11-08'
+group_ordered_variants: true
+groups:
+- app: phpipam
+  id: rex1-dev-input-php-001
+  parent_scenario_id: rex1-dev-input-php-001
+  family: clear_description
+  template_family: wind_tunnel
+  split: validation
+  fixture:
+    object_id: 1
+    address: 10.10.1.3
+    description: Wind Tunnel station 21
+    hostname: wind-tunnel-21.lab.local
+    changes:
+      description: ''
+  retain_builds:
+  - B
+  builds:
+  - B
+- app: phpipam
+  id: rex1-dev-input-php-002
+  parent_scenario_id: rex1-dev-input-php-002
+  family: clear_hostname
+  template_family: harbour_tide
+  split: validation
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Harbour Tide station 22
+    hostname: harbour-tide-22.lab.local
+    changes:
+      hostname: ''
+  retain_builds:
+  - B
+  builds:
+  - B
+- app: phpipam
+  id: rex1-dev-input-php-003
+  parent_scenario_id: rex1-dev-input-php-003
+  family: clear_description
+  template_family: orchard_gate
+  split: validation
+  fixture:
+    object_id: 1
+    address: 10.10.1.3
+    description: Orchard Gate station 23
+    hostname: orchard-gate-23.lab.local
+    changes:
+      description: ''
+  retain_builds:
+  - B
+  builds:
+  - B
+- app: phpipam
+  id: rex1-dev-input-php-004
+  parent_scenario_id: rex1-dev-input-php-004
+  family: clear_hostname
+  template_family: aquarium_feed
+  split: validation
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Aquarium Feed station 24
+    hostname: aquarium-feed-24.lab.local
+    changes:
+      hostname: ''
+  retain_builds:
+  - B
+  builds:
+  - B
+- app: phpipam
+  id: rex1-dev-input-php-005
+  parent_scenario_id: rex1-dev-input-php-005
+  family: clear_description
+  template_family: geology_room
+  split: validation
+  fixture:
+    object_id: 1
+    address: 10.10.1.3
+    description: Geology Room station 25
+    hostname: geology-room-25.lab.local
+    changes:
+      description: ''
+  retain_builds:
+  - B
+  builds:
+  - B
+- app: phpipam
+  id: rex1-dev-input-php-006
+  parent_scenario_id: rex1-dev-input-php-006
+  family: clear_hostname
+  template_family: wind_tunnel
+  split: validation
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Wind Tunnel station 26
+    hostname: wind-tunnel-26.lab.local
+    changes:
+      hostname: ''
+  retain_builds:
+  - B
+  builds:
+  - B
+- app: phpipam
+  id: rex1-dev-input-php-007
+  parent_scenario_id: rex1-dev-input-php-007
+  family: clear_description
+  template_family: harbour_tide
+  split: validation
+  fixture:
+    object_id: 1
+    address: 10.10.1.3
+    description: Harbour Tide station 27
+    hostname: harbour-tide-27.lab.local
+    changes:
+      description: ''
+  retain_builds:
+  - B
+  builds:
+  - B
+- app: phpipam
+  id: rex1-dev-input-php-008
+  parent_scenario_id: rex1-dev-input-php-008
+  family: clear_hostname
+  template_family: orchard_gate
+  split: validation
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Orchard Gate station 28
+    hostname: orchard-gate-28.lab.local
+    changes:
+      hostname: ''
+  retain_builds:
+  - B
+  builds:
+  - B
+- app: phpipam
+  id: rex1-dev-input-php-009
+  parent_scenario_id: rex1-dev-input-php-009
+  family: clear_description
+  template_family: aquarium_feed
+  split: validation
+  fixture:
+    object_id: 1
+    address: 10.10.1.3
+    description: Aquarium Feed station 29
+    hostname: aquarium-feed-29.lab.local
+    changes:
+      description: ''
+  retain_builds:
+  - B
+  builds:
+  - B
+- app: phpipam
+  id: rex1-dev-input-php-010
+  parent_scenario_id: rex1-dev-input-php-010
+  family: clear_hostname
+  template_family: geology_room
+  split: validation
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Geology Room station 30
+    hostname: geology-room-30.lab.local
+    changes:
+      hostname: ''
+  retain_builds:
+  - B
+  builds:
+  - B
+- app: phpipam
+  id: rex1-dev-input-php-011
+  parent_scenario_id: rex1-dev-input-php-011
+  family: clear_description
+  template_family: wind_tunnel
+  split: validation
+  fixture:
+    object_id: 1
+    address: 10.10.1.3
+    description: Wind Tunnel station 31
+    hostname: wind-tunnel-31.lab.local
+    changes:
+      description: ''
+  retain_builds:
+  - B
+  builds:
+  - B
+- app: phpipam
+  id: rex1-dev-input-php-012
+  parent_scenario_id: rex1-dev-input-php-012
+  family: clear_hostname
+  template_family: harbour_tide
+  split: validation
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Harbour Tide station 32
+    hostname: harbour-tide-32.lab.local
+    changes:
+      hostname: ''
+  retain_builds:
+  - B
+  builds:
+  - B
+- app: phpipam
+  id: rex1-dev-input-php-013
+  parent_scenario_id: rex1-dev-input-php-013
+  family: clear_description
+  template_family: orchard_gate
+  split: validation
+  fixture:
+    object_id: 1
+    address: 10.10.1.3
+    description: Orchard Gate station 33
+    hostname: orchard-gate-33.lab.local
+    changes:
+      description: ''
+  retain_builds:
+  - B
+  builds:
+  - B
+- app: phpipam
+  id: rex1-dev-input-php-014
+  parent_scenario_id: rex1-dev-input-php-014
+  family: clear_hostname
+  template_family: aquarium_feed
+  split: validation
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Aquarium Feed station 34
+    hostname: aquarium-feed-34.lab.local
+    changes:
+      hostname: ''
+  retain_builds:
+  - B
+  builds:
+  - B
+- app: phpipam
+  id: rex1-dev-input-php-015
+  parent_scenario_id: rex1-dev-input-php-015
+  family: clear_description
+  template_family: geology_room
+  split: validation
+  fixture:
+    object_id: 1
+    address: 10.10.1.3
+    description: Geology Room station 35
+    hostname: geology-room-35.lab.local
+    changes:
+      description: ''
+  retain_builds:
+  - B
+  builds:
+  - B

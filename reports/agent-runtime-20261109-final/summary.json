@@ -1,0 +1,44 @@
+{
+  "completed": true,
+  "cross_task_memory_verified": true,
+  "context_compaction_verified": true,
+  "mcp_verified": true,
+  "episodes": [
+    {
+      "run_id": "20261109T031601Z-2e28d34e",
+      "run_directory": "/home/fs_2026/qwen3-gui-agent/runs/20261109T031601Z-2e28d34e",
+      "workflow": "target",
+      "agent_verdict": "pass",
+      "oracle_verdict": "pass",
+      "actual": "Hello Quillmere",
+      "completed": true,
+      "actions": 7,
+      "model_calls": 13,
+      "elapsed_seconds": 127.80359640507959,
+      "context_updates": 4,
+      "compacted_through_step": 3,
+      "recalled_run_ids": [],
+      "mcp_recall_and_save": true
+    },
+    {
+      "run_id": "20261109T031809Z-84f4bcac",
+      "run_directory": "/home/fs_2026/qwen3-gui-agent/runs/20261109T031809Z-84f4bcac",
+      "workflow": "preservation",
+      "agent_verdict": "pass",
+      "oracle_verdict": "pass",
+      "actual": "Desk hours",
+      "completed": true,
+      "actions": 12,
+      "model_calls": 20,
+      "elapsed_seconds": 157.5906732941512,
+      "context_updates": 6,
+      "compacted_through_step": 8,
+      "recalled_run_ids": [
+        "20261109T031601Z-2e28d34e"
+      ],
+      "mcp_recall_and_save": true
+    }
+  ],
+  "adapter_sha256": "1a0a78947efca8218412e2660b6788cfc2767e4bd9f05c226d841671b005c743",
+  "passed": true
+}

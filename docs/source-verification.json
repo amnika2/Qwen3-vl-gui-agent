@@ -1,0 +1,137 @@
+{
+  "passed": true,
+  "original_dataset_sha256_matches": true,
+  "checkouts": [
+    {
+      "case_id": "sweeper-005",
+      "checkout": "base",
+      "commit_matches": true,
+      "tracked_source_clean": false,
+      "changes": [
+        {
+          "path": "public/css/app.css",
+          "kind": "compiled_frontend",
+          "sha256": "954963c3f0e28389b9a75d9465257ca15a8594c76374a926782c9d2bd2a90017"
+        },
+        {
+          "path": "resources/lang/es-ES/demo.php",
+          "kind": "checkout_line_endings",
+          "sha256": "ae2771c18e3394b8f36fa0b61494105d4cc0fa3e33431dc759cc26a93d221940"
+        },
+        {
+          "path": "resources/lang/es-ES/email_templates.php",
+          "kind": "checkout_line_endings",
+          "sha256": "969114154cef5238ef898c9adaece64abf2ff0dd119c5d76baae2f1665221c9d"
+        },
+        {
+          "path": "resources/lang/es-ES/footer.php",
+          "kind": "checkout_line_endings",
+          "sha256": "9f14bc64c41eac1c052e1be5290ad8d920b91d6a4b1a0d74e7f10ef960d1aac0"
+        },
+        {
+          "path": "resources/lang/es-ES/maintenance.php",
+          "kind": "checkout_line_endings",
+          "sha256": "3ef4aa79f0fcc6c589393c26899c209d2a4d090b6989eefb5d824def8d18a4c0"
+        },
+        {
+          "path": "resources/lang/es-ES/notifications.php",
+          "kind": "checkout_line_endings",
+          "sha256": "351e00a83ba91fa496644939216b800c465c5f575d5702af064e950879a170d5"
+        },
+        {
+          "path": "resources/lang/es-ES/reconciliations.php",
+          "kind": "checkout_line_endings",
+          "sha256": "d1e5f41fcffcabbbe032b73e2360844b1894afc6c49bb0f66f6d5725578dd195"
+        },
+        {
+          "path": "resources/lang/es-ES/reports.php",
+          "kind": "checkout_line_endings",
+          "sha256": "612df81797e7179a7d341f56185bbe400a7c0bbd07ee2dda4a28c46a3975e99f"
+        },
+        {
+          "path": "resources/lang/es-ES/transactions.php",
+          "kind": "checkout_line_endings",
+          "sha256": "a20adec576df78fa35ac47c7ce865464efdd54d4d9195efb3e2cafc9f2d8ebbf"
+        },
+        {
+          "path": "resources/lang/es-ES/validation.php",
+          "kind": "checkout_line_endings",
+          "sha256": "3d2d018ab5be594842758cc39f963cb893d2fef7c4712948ee7ace137cae436d"
+        }
+      ],
+      "business_source_unchanged": true
+    },
+    {
+      "case_id": "sweeper-005",
+      "checkout": "fixed",
+      "commit_matches": true,
+      "tracked_source_clean": true,
+      "changes": [],
+      "business_source_unchanged": true
+    },
+    {
+      "case_id": "sweeper-040",
+      "checkout": "base",
+      "commit_matches": true,
+      "tracked_source_clean": true,
+      "changes": [],
+      "business_source_unchanged": true
+    },
+    {
+      "case_id": "sweeper-040",
+      "checkout": "fixed",
+      "commit_matches": true,
+      "tracked_source_clean": true,
+      "changes": [],
+      "business_source_unchanged": true
+    },
+    {
+      "case_id": "sweeper-008",
+      "checkout": "base",
+      "commit_matches": true,
+      "tracked_source_clean": true,
+      "changes": [],
+      "business_source_unchanged": true
+    },
+    {
+      "case_id": "sweeper-008",
+      "checkout": "fixed",
+      "commit_matches": true,
+      "tracked_source_clean": true,
+      "changes": [],
+      "business_source_unchanged": true
+    },
+    {
+      "case_id": "sweeper-007",
+      "checkout": "base",
+      "commit_matches": true,
+      "tracked_source_clean": true,
+      "changes": [],
+      "business_source_unchanged": true
+    },
+    {
+      "case_id": "sweeper-007",
+      "checkout": "fixed",
+      "commit_matches": true,
+      "tracked_source_clean": true,
+      "changes": [],
+      "business_source_unchanged": true
+    },
+    {
+      "case_id": "sweeper-041",
+      "checkout": "base",
+      "commit_matches": true,
+      "tracked_source_clean": true,
+      "changes": [],
+      "business_source_unchanged": true
+    },
+    {
+      "case_id": "sweeper-041",
+      "checkout": "fixed",
+      "commit_matches": true,
+      "tracked_source_clean": true,
+      "changes": [],
+      "business_source_unchanged": true
+    }
+  ]
+}

@@ -1,0 +1,403 @@
+{
+  "completed": true,
+  "planned_samples": 75,
+  "all": {
+    "samples": 75,
+    "terminal_verdict_correct": 66,
+    "reported_guarded_correct": 73,
+    "terminal_verdict_accuracy": 0.88,
+    "macro_f1": 0.5238095238095238,
+    "class_metrics": {
+      "pass": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "fail": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "blocked": {
+        "precision": 1.0,
+        "recall": 0.4,
+        "f1": 0.5714285714285715
+      }
+    },
+    "strict_correct": 46,
+    "strict_accuracy": 0.6133333333333333,
+    "format_errors": 0,
+    "guard_errors": 7,
+    "truncated": 0,
+    "blocked_predictions": 6,
+    "normal_samples": 60,
+    "normal_false_alarms": 0,
+    "normal_false_alarm_rate": 0.0,
+    "defect_samples": 0,
+    "defects_detected": 0,
+    "defect_recall": null,
+    "defects_false_passed": 0,
+    "defect_false_pass_rate": null,
+    "numeric_rewards": 72,
+    "mean_numeric_reward": 0.42669753083333317,
+    "confusion": {
+      "pass->pass": 60,
+      "blocked->blocked": 6,
+      "blocked->fail": 9
+    }
+  },
+  "label": {
+    "pass": {
+      "samples": 60,
+      "terminal_verdict_correct": 60,
+      "reported_guarded_correct": 60,
+      "terminal_verdict_accuracy": 1.0,
+      "macro_f1": 0.3333333333333333,
+      "class_metrics": {
+        "pass": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "fail": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "blocked": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "strict_correct": 46,
+      "strict_accuracy": 0.7666666666666667,
+      "format_errors": 0,
+      "guard_errors": 0,
+      "truncated": 0,
+      "blocked_predictions": 0,
+      "normal_samples": 60,
+      "normal_false_alarms": 0,
+      "normal_false_alarm_rate": 0.0,
+      "defect_samples": 0,
+      "defects_detected": 0,
+      "defect_recall": null,
+      "defects_false_passed": 0,
+      "defect_false_pass_rate": null,
+      "numeric_rewards": 57,
+      "mean_numeric_reward": 0.7754385964912284,
+      "confusion": {
+        "pass->pass": 60
+      }
+    },
+    "fail": {
+      "samples": 0,
+      "terminal_verdict_correct": 0,
+      "reported_guarded_correct": 0,
+      "terminal_verdict_accuracy": null,
+      "macro_f1": 0.0,
+      "class_metrics": {
+        "pass": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "fail": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "blocked": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "strict_correct": 0,
+      "strict_accuracy": null,
+      "format_errors": 0,
+      "guard_errors": 0,
+      "truncated": 0,
+      "blocked_predictions": 0,
+      "normal_samples": 0,
+      "normal_false_alarms": 0,
+      "normal_false_alarm_rate": null,
+      "defect_samples": 0,
+      "defects_detected": 0,
+      "defect_recall": null,
+      "defects_false_passed": 0,
+      "defect_false_pass_rate": null,
+      "numeric_rewards": 0,
+      "mean_numeric_reward": null,
+      "confusion": {}
+    },
+    "blocked": {
+      "samples": 15,
+      "terminal_verdict_correct": 6,
+      "reported_guarded_correct": 13,
+      "terminal_verdict_accuracy": 0.4,
+      "macro_f1": 0.1904761904761905,
+      "class_metrics": {
+        "pass": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "fail": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "blocked": {
+          "precision": 1.0,
+          "recall": 0.4,
+          "f1": 0.5714285714285715
+        }
+      },
+      "strict_correct": 0,
+      "strict_accuracy": 0.0,
+      "format_errors": 0,
+      "guard_errors": 7,
+      "truncated": 0,
+      "blocked_predictions": 6,
+      "normal_samples": 0,
+      "normal_false_alarms": 0,
+      "normal_false_alarm_rate": null,
+      "defect_samples": 0,
+      "defects_detected": 0,
+      "defect_recall": null,
+      "defects_false_passed": 0,
+      "defect_false_pass_rate": null,
+      "numeric_rewards": 15,
+      "mean_numeric_reward": -0.8985185186666667,
+      "confusion": {
+        "blocked->blocked": 6,
+        "blocked->fail": 9
+      }
+    }
+  },
+  "case_id": {
+    "sweeper-005": {
+      "samples": 15,
+      "terminal_verdict_correct": 14,
+      "reported_guarded_correct": 14,
+      "terminal_verdict_accuracy": 0.9333333333333333,
+      "macro_f1": 0.6,
+      "class_metrics": {
+        "pass": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "fail": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "blocked": {
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "f1": 0.8
+        }
+      },
+      "strict_correct": 0,
+      "strict_accuracy": 0.0,
+      "format_errors": 0,
+      "guard_errors": 0,
+      "truncated": 0,
+      "blocked_predictions": 2,
+      "normal_samples": 12,
+      "normal_false_alarms": 0,
+      "normal_false_alarm_rate": 0.0,
+      "defect_samples": 0,
+      "defects_detected": 0,
+      "defect_recall": null,
+      "defects_false_passed": 0,
+      "defect_false_pass_rate": null,
+      "numeric_rewards": 14,
+      "mean_numeric_reward": -1.0,
+      "confusion": {
+        "pass->pass": 12,
+        "blocked->blocked": 2,
+        "blocked->fail": 1
+      }
+    },
+    "sweeper-007": {
+      "samples": 15,
+      "terminal_verdict_correct": 15,
+      "reported_guarded_correct": 15,
+      "terminal_verdict_accuracy": 1.0,
+      "macro_f1": 0.6666666666666666,
+      "class_metrics": {
+        "pass": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "fail": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "blocked": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "strict_correct": 10,
+      "strict_accuracy": 0.6666666666666666,
+      "format_errors": 0,
+      "guard_errors": 0,
+      "truncated": 0,
+      "blocked_predictions": 3,
+      "normal_samples": 12,
+      "normal_false_alarms": 0,
+      "normal_false_alarm_rate": 0.0,
+      "defect_samples": 0,
+      "defects_detected": 0,
+      "defect_recall": null,
+      "defects_false_passed": 0,
+      "defect_false_pass_rate": null,
+      "numeric_rewards": 13,
+      "mean_numeric_reward": 0.723076923076923,
+      "confusion": {
+        "pass->pass": 12,
+        "blocked->blocked": 3
+      }
+    },
+    "sweeper-008": {
+      "samples": 15,
+      "terminal_verdict_correct": 12,
+      "reported_guarded_correct": 15,
+      "terminal_verdict_accuracy": 0.8,
+      "macro_f1": 0.3333333333333333,
+      "class_metrics": {
+        "pass": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "fail": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "blocked": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "strict_correct": 12,
+      "strict_accuracy": 0.8,
+      "format_errors": 0,
+      "guard_errors": 3,
+      "truncated": 0,
+      "blocked_predictions": 0,
+      "normal_samples": 12,
+      "normal_false_alarms": 0,
+      "normal_false_alarm_rate": 0.0,
+      "defect_samples": 0,
+      "defects_detected": 0,
+      "defect_recall": null,
+      "defects_false_passed": 0,
+      "defect_false_pass_rate": null,
+      "numeric_rewards": 15,
+      "mean_numeric_reward": 0.7837037039999998,
+      "confusion": {
+        "pass->pass": 12,
+        "blocked->fail": 3
+      }
+    },
+    "sweeper-040": {
+      "samples": 15,
+      "terminal_verdict_correct": 13,
+      "reported_guarded_correct": 14,
+      "terminal_verdict_accuracy": 0.8666666666666667,
+      "macro_f1": 0.5,
+      "class_metrics": {
+        "pass": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "fail": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "blocked": {
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f1": 0.5
+        }
+      },
+      "strict_correct": 12,
+      "strict_accuracy": 0.8,
+      "format_errors": 0,
+      "guard_errors": 1,
+      "truncated": 0,
+      "blocked_predictions": 1,
+      "normal_samples": 12,
+      "normal_false_alarms": 0,
+      "normal_false_alarm_rate": 0.0,
+      "defect_samples": 0,
+      "defects_detected": 0,
+      "defect_recall": null,
+      "defects_false_passed": 0,
+      "defect_false_pass_rate": null,
+      "numeric_rewards": 15,
+      "mean_numeric_reward": 0.7977777773333331,
+      "confusion": {
+        "pass->pass": 12,
+        "blocked->fail": 2,
+        "blocked->blocked": 1
+      }
+    },
+    "sweeper-041": {
+      "samples": 15,
+      "terminal_verdict_correct": 12,
+      "reported_guarded_correct": 15,
+      "terminal_verdict_accuracy": 0.8,
+      "macro_f1": 0.3333333333333333,
+      "class_metrics": {
+        "pass": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "fail": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "blocked": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "strict_correct": 12,
+      "strict_accuracy": 0.8,
+      "format_errors": 0,
+      "guard_errors": 3,
+      "truncated": 0,
+      "blocked_predictions": 0,
+      "normal_samples": 12,
+      "normal_false_alarms": 0,
+      "normal_false_alarm_rate": 0.0,
+      "defect_samples": 0,
+      "defects_detected": 0,
+      "defect_recall": null,
+      "defects_false_passed": 0,
+      "defect_false_pass_rate": null,
+      "numeric_rewards": 15,
+      "mean_numeric_reward": 0.7733333333333331,
+      "confusion": {
+        "pass->pass": 12,
+        "blocked->fail": 3
+      }
+    }
+  }
+}

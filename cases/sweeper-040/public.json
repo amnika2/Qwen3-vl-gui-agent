@@ -1,0 +1,15 @@
+{
+  "case_id": "sweeper-040",
+  "start_path": "/index.php/providers",
+  "setup": "An authenticated administrator session and Jane Doe (jane@pippins.test) are prepared.",
+  "workflows": {
+    "target": {
+      "task": "Open provider Jane Doe (jane@pippins.test) from the Providers list. Enter editing mode if required. Replace Mobile Number with +15551234567, save, and inspect the same provider after the server reloads it. Reopen Jane Doe if details close. Report pass if Mobile Number remains +15551234567, fail if it is missing, or blocked if you cannot complete the check. Cite screenshots showing the final field.",
+      "expected": "+15551234567"
+    },
+    "preservation": {
+      "task": "Open provider Jane Doe (jane@pippins.test) from the Providers list. Enter editing mode if required. Replace Phone Number with +15559876543, save, and inspect the same provider after the server reloads it. Reopen Jane Doe if details close. Report pass if Phone Number remains +15559876543, fail if it is missing, or blocked if you cannot complete the check. Cite screenshots showing the final field.",
+      "expected": "+15559876543"
+    }
+  }
+}

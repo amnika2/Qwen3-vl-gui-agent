@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "archives": [
+    {
+      "archive": "reports/protocol-extension-round1-source.tar.gz",
+      "sha256": "3134baf75145d6958ec5d47f20459f63deefa4bea2646e4d729906223fcf8f06",
+      "unchanged_controller_and_tasks": {
+        "src/guiqa/model.py": true,
+        "src/guiqa/ledger.py": true,
+        "src/guiqa/actions.py": true,
+        "src/guiqa/browser.py": true,
+        "configs/agent.yaml": true,
+        "cases/sweeper-007/public.json": true,
+        "cases/sweeper-008/public.json": true,
+        "runner.agent": true
+      }
+    },
+    {
+      "archive": "reports/protocol-extension-round2-source.tar.gz",
+      "sha256": "1873f7cb2f1212ef3814868c1e22fd0a705832a5c25cf29e728d6ef4762e3669",
+      "unchanged_controller_and_tasks": {
+        "src/guiqa/model.py": true,
+        "src/guiqa/ledger.py": true,
+        "src/guiqa/actions.py": true,
+        "src/guiqa/browser.py": true,
+        "configs/agent.yaml": true,
+        "cases/sweeper-007/public.json": true,
+        "cases/sweeper-008/public.json": true,
+        "runner.agent": true
+      }
+    },
+    {
+      "archive": "reports/protocol-extension-round3-source.tar.gz",
+      "sha256": "2de8f57741c98e2e02292871e544c85fa5f24ef96b8bbf0cf3e355b8da4eb3ea",
+      "unchanged_controller_and_tasks": {
+        "src/guiqa/model.py": true,
+        "src/guiqa/ledger.py": true,
+        "src/guiqa/actions.py": true,
+        "src/guiqa/browser.py": true,
+        "configs/agent.yaml": true,
+        "cases/sweeper-007/public.json": true,
+        "cases/sweeper-008/public.json": true,
+        "runner.agent": true
+      }
+    },
+    {
+      "archive": "reports/protocol-extension-source.tar.gz",
+      "sha256": "5bb02ee91aeccb4da171b8b2cc211e07d572765bb8c04b0e93b59c2363bbd3cc",
+      "unchanged_controller_and_tasks": {
+        "src/guiqa/model.py": true,
+        "src/guiqa/ledger.py": true,
+        "src/guiqa/actions.py": true,
+        "src/guiqa/browser.py": true,
+        "configs/agent.yaml": true,
+        "cases/sweeper-007/public.json": true,
+        "cases/sweeper-008/public.json": true,
+        "runner.agent": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "src/guiqa/model.py": true,
+  "src/guiqa/ledger.py": true,
+  "src/guiqa/runner.py": true,
+  "src/guiqa/actions.py": true,
+  "src/guiqa/browser.py": true,
+  "configs/agent.yaml": true,
+  "cases/sweeper-041/public.json": true,
+  "cases/sweeper-005/public.json": true,
+  "cases/sweeper-040/public.json": true
+}

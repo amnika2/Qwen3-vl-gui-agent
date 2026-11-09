@@ -1,0 +1,7 @@
+dataset:
+  repo: zlab-princeton/SWEeper-Bench
+  revision: f10cd684be52322667f1373c8295624e13791b8f
+model:
+  repo: Qwen/Qwen3-VL-8B-Instruct
+  revision: 0c351dd01ed87e9c1b53cbc748cba10e6187ff3b
+  license: Apache-2.0

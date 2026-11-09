@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "primary_runs": 120,
+  "unique_conditions": 120,
+  "planned_conditions_complete": true,
+  "script_matrix_matches": 40,
+  "model_configs_equal_except_method": true,
+  "all_reports_and_cited_screenshots_present": true,
+  "infra_errors": 2,
+  "current_source_matches_final_protocol": true
+}

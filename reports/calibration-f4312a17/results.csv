@@ -1,0 +1,9 @@
+case_id,build,workflow,method,repeat,run_id,started,agent_verdict,oracle_verdict,elapsed_seconds,actions,model_calls,termination_reason
+sweeper-041,A,target,script,0,20261106T154842Z-05c0e98d,True,fail,inconclusive,8.373651214060374,3,0,script_completed
+sweeper-041,A,target,script,1,20261106T154850Z-602f27a8,True,fail,inconclusive,8.720703421975486,3,0,script_completed
+sweeper-041,A,preservation,script,0,20261106T154859Z-eab18610,True,pass,inconclusive,13.247131793061271,3,0,script_completed
+sweeper-041,A,preservation,script,1,20261106T154912Z-84ce4224,True,pass,inconclusive,12.68907245900482,3,0,script_completed
+sweeper-041,B,target,script,0,20261106T154925Z-75867096,True,pass,inconclusive,7.715169565984979,3,0,script_completed
+sweeper-041,B,target,script,1,20261106T154933Z-82476170,True,pass,inconclusive,7.664814430987462,3,0,script_completed
+sweeper-041,B,preservation,script,0,20261106T154940Z-5e89bf0d,True,pass,inconclusive,12.635281792026944,3,0,script_completed
+sweeper-041,B,preservation,script,1,20261106T154953Z-5c631913,True,pass,inconclusive,12.769483002019115,3,0,script_completed

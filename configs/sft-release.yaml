@@ -1,0 +1,19 @@
+version: 1
+updated_on: "2026-11-08"
+stage: data_generation
+output: datasets/sft-main-10apps-v1
+bundle_images: true
+deduplicate_trajectories: true
+experiments:
+- evaluation-0b3730ec
+- evaluation-15bc45ef
+- supplementary-4cb2f402
+- litecart-wolf-12fb9a41
+- litecart-wolf-9c21067e
+- impress-opencart-d1522a56
+- impress-opencart-896cbac1
+- mantis-phpipam-8bca4dcf
+- phpipam-curated-a321a7e5
+note: >-
+  只引用已通过核验的正式数据批次。旧提示词、退役与调试批次不在名单中。
+  完整场景拆分train/validation；合并时按完整轨迹语义与实际结果去重，保留原始来源。

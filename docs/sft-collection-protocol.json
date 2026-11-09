@@ -1,0 +1,19 @@
+{
+  "stage": "sft_data_generation",
+  "training_started": false,
+  "case_id": "sweeper-150",
+  "application": "pluxml",
+  "calibration": "calibration-1ac70c11",
+  "calibration_matches": 8,
+  "methods": "sft",
+  "repeats": 2,
+  "planned_trajectories": 8,
+  "label_source": "observed_run_v2",
+  "source_hash": "5594a8a43f5532ef315e81e43690296f45b53b93608d137311545279f3a9e4c3",
+  "split_sha256": "bdea11059ffd59bde8359fd961bb60e67b882a7656f2d38303204e707a82d825",
+  "deferred": [
+    "sweeper-149"
+  ],
+  "runtime": "PHP 8.3.6, output_buffering=4096, original application business code",
+  "note": "Operation and review are generated from real UI playback. No model weight update."
+}

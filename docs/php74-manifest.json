@@ -1,0 +1,32 @@
+[
+  {
+    "package": "php7.4-cli_7.4.3-4ubuntu2.29_amd64.deb",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/main/p/php7.4/php7.4-cli_7.4.3-4ubuntu2.29_amd64.deb",
+    "sha256": "b4a8a4ce4c579c61a6b068b17312283ca9130b4ed8f1018aa4b451d306b1e811"
+  },
+  {
+    "package": "php7.4-common_7.4.3-4ubuntu2.29_amd64.deb",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/main/p/php7.4/php7.4-common_7.4.3-4ubuntu2.29_amd64.deb",
+    "sha256": "4c3c0a3fabbb7108a8505ab47b132e4621868c71a1f26ae2a09ffccf01203847"
+  },
+  {
+    "package": "php7.4-mysql_7.4.3-4ubuntu2.29_amd64.deb",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/main/p/php7.4/php7.4-mysql_7.4.3-4ubuntu2.29_amd64.deb",
+    "sha256": "81b0288e32869954f8ceef5e554ca53933355fa42d4ec07f59a80bbb7b5e11ad"
+  },
+  {
+    "package": "php7.4-json_7.4.3-4ubuntu2.29_amd64.deb",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/main/p/php7.4/php7.4-json_7.4.3-4ubuntu2.29_amd64.deb",
+    "sha256": "623f199331acd5b807f977c5a5a6bc56027461452c3eebf80a87e20277414efb"
+  },
+  {
+    "package": "php7.4-mbstring_7.4.3-4ubuntu2.29_amd64.deb",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/universe/p/php7.4/php7.4-mbstring_7.4.3-4ubuntu2.29_amd64.deb",
+    "sha256": "2d20b1c331d25157a825128f671f3bdd3462488c7ef2e7846606f11d0509ee3b"
+  },
+  {
+    "package": "libssl1.1_1.1.1f-1ubuntu2.24_amd64.deb",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.24_amd64.deb",
+    "sha256": "7cf39d70a639017d1dd7c8d36daa2258063608688e449fddf40ffdd46f992a78"
+  }
+]

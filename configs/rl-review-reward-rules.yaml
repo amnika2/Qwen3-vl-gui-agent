@@ -1,0 +1,755 @@
+version: 1
+case_aliases:
+  sweeper-125:
+    Option Value Weight: Weight
+    Option Value editor Weight: Weight
+    'Option Value Row: Weight': Weight
+    'Option Value editor: Weight': Weight
+    Option Value's Weight: Weight
+    Option Value editor displayed weight: Weight
+    product_option_value_weight: Weight
+  sweeper-185:
+    SideNote: Side note
+  sweeper-195:
+    Page Title: Title
+samples:
+  20261107T150537Z-1a7a33a9:
+    case_id: sweeper-185
+    sample_id: 20261107T150537Z-1a7a33a9:terminal_review:12:evidence_v1:evidence_v2
+    field_aliases:
+      Default: Header
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      10: f008ed02c111304cc84ad4a71d680a0cabfa26867a9704a4add504d07d681f00
+      11: 4e71a61b0ffecf06b6a0cdb043e7518d35a3b0a3f200451cb7484770892e344f
+      12: 048b1152cf218f1e1bc4430e729fa6c28ed528e48c615c04114d7208fec6e424
+  20261107T150601Z-6488f6cc:
+    case_id: sweeper-185
+    sample_id: 20261107T150601Z-6488f6cc:terminal_review:6:evidence_v1:evidence_v2
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      4: 04582c4fa6c12775ba255e5b890b503793df5febba54e63379b589675fa9d3f3
+      5: 4e71a61b0ffecf06b6a0cdb043e7518d35a3b0a3f200451cb7484770892e344f
+      6: 0b0a69ba8d739ee009cc739e0d30b29623f237b9f007696c3228ead8252cf1bf
+  20261107T161340Z-7b6d223e:
+    case_id: sweeper-195
+    sample_id: 20261107T161340Z-7b6d223e:terminal_review:8:evidence_v1:evidence_v2
+    field_aliases:
+      Page Title: Title
+      Page slug: Slug
+      slug: Slug
+    approved_citations: {}
+    invalid_citations:
+      field_readings.Slug.before.step:
+      - 4
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      4: 9f5dc624f97fa91a469a7e48919f23790dfb816affe0e3bec4cdeb96c0b72cae
+      6: 53e767b7ebdf11916ea3f9e73cb2f6bb67b4e56bd0b047084bfd78b8d15e8943
+      8: 830894f682689a560867082e3fefcf5c225dbace4237f0223a21c2a68a30ce25
+  20261107T161347Z-4fef05d8:
+    case_id: sweeper-195
+    sample_id: 20261107T161347Z-4fef05d8:terminal_review:12:evidence_v1:evidence_v2
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      7: 7f0578e94f37b0e5c52090f52f3325ee2324d751e828e9b8370606698e14b9dd
+      9: fae0c618e32a82785ce73b98a48137d874246f4ceecf260f3cd9da3204f2ee7c
+      12: df75b885cd9ba1cd16214ae6bef322803785552d18f535f47496c0cf870c5dd2
+  20261107T161356Z-7a4d3ffd:
+    case_id: sweeper-195
+    sample_id: 20261107T161356Z-7a4d3ffd:terminal_review:13:evidence_v1:evidence_v2
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      8: a42c9bc60f5ae6ea84b7feeff7c71076013ecb663f2a37588ef3faa9d6e3896b
+      10: 36838f31712a1653f0171954ffbbbfe2027b9f5eb76f38a5b42fc37cd292fd47
+      13: f81ff0a973384c2c541b74cd6f518c04c8eba49aaecfe5d3bb59b65f20c7b594
+  20261107T161404Z-86d22963:
+    case_id: sweeper-195
+    sample_id: 20261107T161404Z-86d22963:terminal_review:12:evidence_v1:evidence_v2
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      7: 7671f44e80eb4db7364fcb763f8c885c7d813f4bc9c40a03557aaca1734e8abf
+      9: b6716014cd052fddecda41c6a0cd39275524a8fe05471e40720fc5aa50794f35
+      12: adac0d69439eb61bfccd7b8a9b55bedca938c104543537331680e3a6a670690c
+  20261107T161421Z-098c22ae:
+    case_id: sweeper-195
+    sample_id: 20261107T161421Z-098c22ae:terminal_review:12:evidence_v1:evidence_v2
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      7: 93fe644e096884deb1b3492609ad24457e7adbb1280c9add737284f1ba40ce05
+      9: f17ff03b639e535eb900ee98755c11496a741e59a76b35c407fd13def37d9ac8
+      12: d829c2f9e7ba6ee83b44677e31f13a4266b3681badcdddd47c62243c0f6bd3eb
+  20261107T161429Z-ca81b597:
+    case_id: sweeper-195
+    sample_id: 20261107T161429Z-ca81b597:terminal_review:11:evidence_v1:evidence_v2
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      8: 1e13720fa5f539255249a0b71486c31a971d470e3e2104faeae5690666e2415f
+      10: a9d3d5ef52acbc9eb1a2e04be6920aef6e8c588a150c6cb3e642b84f5b90f8a3
+      11: 5bd20267dedb0d70a37286dab5036e1f595ce688e8de97897c0238e8e04f0b0e
+  20261107T161436Z-70b1859d:
+    case_id: sweeper-195
+    sample_id: 20261107T161436Z-70b1859d:terminal_review:13:evidence_v1:evidence_v2
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      10: a562d9fc5ae9eb79753b13cdc2632e764cf014174bf359ad636c19dd5a449e35
+      12: effd41155934790a18de169984d88cb75abd5511b2e33f999ff672e321568f8a
+      13: 86228ed8f53256cfd93d90b652d8fcf20fcb0cd440b21bc4bec0558bc47c855d
+  20261107T161443Z-1400e4cd:
+    case_id: sweeper-195
+    sample_id: 20261107T161443Z-1400e4cd:terminal_review:11:evidence_v1:evidence_v2
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      8: c16c2a72f58e4ac341decf6a711eade5aa6a27b2f165ac8fcf34a2f3cc2ec3b1
+      10: d40d5cc651f6770380e1c2d56a3ff7219a5c01d1e31e4d7f122b3d6db11a75b3
+      11: ff81da5a6dc9acd3048aa1ab21e4ad90ec76148e77f0ba44aff717058c8d8c0f
+  20261107T161450Z-9faad4a6:
+    case_id: sweeper-195
+    sample_id: 20261107T161450Z-9faad4a6:terminal_review:13:evidence_v1:evidence_v2
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      10: a562d9fc5ae9eb79753b13cdc2632e764cf014174bf359ad636c19dd5a449e35
+      12: d4824317ce59401251f14d1ba750304a31b7b64420376651e89fe76998b743ee
+      13: 66650bd90248d84f0cea879032f6ed7350eeaf47b2e1d026ef2675b1892046d7
+  20261107T161505Z-079b0f5f:
+    case_id: sweeper-195
+    sample_id: 20261107T161505Z-079b0f5f:terminal_review:13:evidence_v1:evidence_v2
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      10: a562d9fc5ae9eb79753b13cdc2632e764cf014174bf359ad636c19dd5a449e35
+      12: c72bbf1dc58cc3008c2f981e1e7699a37a8ebfbd53b807f981182a08fca18e02
+      13: 4ad932f7cfe5056bb224f7bb36f07fc1a9df97690b31c8e78a37b1da5dea1d5c
+  20261107T160354Z-ec2f6c2b:
+    case_id: sweeper-125
+    sample_id: 20261107T160354Z-ec2f6c2b:terminal_review:13:evidence_v1:evidence_v2
+    field_aliases:
+      'Option Value editor: Weight': Weight
+      Green Weight: Weight
+      Option Value Green Weight: Weight
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      5: 1c383ee10abba57156a48624bcaeb1fac0669d3a9df2c1ffeb6cb3504d5d3f91
+      9: 23b76bc0cd2503f82930763c40131865c3161d30e85b89482daf5ee13ee9e41d
+      12: e8c62134cecd97f08a50159b8d0dc556d374419b1a6aea810355d6459c455e9d
+      13: 2d49a4613409b2a30ae29f80a9731b71d923b8677932df5c13590773e0753c74
+  20261107T160406Z-3f79b1b7:
+    case_id: sweeper-125
+    sample_id: 20261107T160406Z-3f79b1b7:terminal_review:14:evidence_v1:evidence_v2
+    field_aliases:
+      Green Weight: Weight
+      Option Value Green Weight: Weight
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      6: fba3f5d1b9cd9a7661ec4e39f63fb58bad2ad1ab8804f68d703bae7cfd79feb5
+      10: 339a560916ed1ee70f1750d59a1624a6639cc5ea1e62ffe464a90db13175bbcb
+      13: e8c62134cecd97f08a50159b8d0dc556d374419b1a6aea810355d6459c455e9d
+      14: 71625b6702223cc38279457e258c38c8b684687ed544cfd10449b6bc3f564d08
+  20261107T160418Z-4d4606ef:
+    case_id: sweeper-125
+    sample_id: 20261107T160418Z-4d4606ef:terminal_review:16:evidence_v1:evidence_v2
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      8: aeb203f28077a877e89f67b87821b4688d36bc5077d966798a533bf8d653acd1
+      12: 9a3d0566555a7783504f684cdfe830b4caab7173b271e9389afbd5bedd18d1a6
+      15: e8c62134cecd97f08a50159b8d0dc556d374419b1a6aea810355d6459c455e9d
+      16: 034edfe27b8bee35ef8213070f19f2bb1ae1f5949664ed9c9126ba0e992101f3
+  20261107T160430Z-082c91ee:
+    case_id: sweeper-125
+    sample_id: 20261107T160430Z-082c91ee:terminal_review:17:evidence_v1:evidence_v2
+    field_aliases:
+      Red Weight: Weight
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      9: 6262f04187d94094216e562e8bd979c86636c798f5bf4de663f82769d7c97ab9
+      13: 9a3d0566555a7783504f684cdfe830b4caab7173b271e9389afbd5bedd18d1a6
+      16: e8c62134cecd97f08a50159b8d0dc556d374419b1a6aea810355d6459c455e9d
+      17: ccdbf305aedce669e34a6c1853509f1e8e7a03a5448b9d3c9e94e61244c997fb
+  20261107T160443Z-466bc150:
+    case_id: sweeper-125
+    sample_id: 20261107T160443Z-466bc150:terminal_review:14:evidence_v1:evidence_v2
+    field_aliases:
+      Yellow option_value_weight: Weight
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      6: 0c5b28cad42e964743a429fc16ecb01c5441b3236fc4921f2f0a9b3df751dbb4
+      10: c854a355f43e2a31a8e20c280699fadd30392a57c8e49bd737c0b9ad77dec3d0
+      13: e8c62134cecd97f08a50159b8d0dc556d374419b1a6aea810355d6459c455e9d
+      14: 9010c10805b961846f971625b29299e77317dbf7be936fa57abdaacea0309ce0
+  20261107T160455Z-673a3375:
+    case_id: sweeper-125
+    sample_id: 20261107T160455Z-673a3375:terminal_review:13:evidence_v1:evidence_v2
+    field_aliases:
+      Yellow option_value_weight: Weight
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      5: ea701d56eeec2bd7a547e697322f7d9219b71ef840874d8a8de8448cf04626b6
+      9: f3c19c036195c6fef64857ed2a3c6c84497400c017fa37d8a1d674d8d8686bda
+      12: e8c62134cecd97f08a50159b8d0dc556d374419b1a6aea810355d6459c455e9d
+      13: e3f77d3449eaea3aa2a68b05e186a758e474088f699da4a0f9d5cebfcb93d960
+  20261107T160506Z-afd9b8bc:
+    case_id: sweeper-125
+    sample_id: 20261107T160506Z-afd9b8bc:terminal_review:16:evidence_v1:evidence_v2
+    field_aliases:
+      Red Weight: Weight
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      8: 4873f98e932b0ab4b32ac88bff283921ef6552c8928b7d10145280e107a7abb2
+      12: 9242c455beebd4a963048ecda2b14bd7d225174dc391cee4e9ac0979b5c5e68b
+      15: e8c62134cecd97f08a50159b8d0dc556d374419b1a6aea810355d6459c455e9d
+      16: 3b88b2b4133f3f4310655c7d92d047edcc227212bfa65aae84335db474865c3d
+  20261107T160519Z-b19c593a:
+    case_id: sweeper-125
+    sample_id: 20261107T160519Z-b19c593a:terminal_review:17:evidence_v1:evidence_v2
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      9: 2ff0aef2d8e5e3994440917f3724515e6dd841bd5c1151299cebdaa86e38f7ad
+      13: 087afc1c8d827044164188a787595017a3fd4dc9de7a7fc2571265d89ad17625
+      16: e8c62134cecd97f08a50159b8d0dc556d374419b1a6aea810355d6459c455e9d
+      17: ede8e0f023a11ab6d5e229cdfec8f98fa1193e9dfcf8f65973204d86c29fce69
+  20261107T160534Z-13f1fcfc:
+    case_id: sweeper-125
+    sample_id: 20261107T160534Z-13f1fcfc:terminal_review:13:evidence_v1:evidence_v2
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      6: de68b104e4e11940247e3992077847d54014e7f96afcfbb6440723238f2d1286
+      10: 6aa02a88923619fcd9e8d12f3abc808c0f575dc712eee8953060b63e72a6b2e0
+      12: be165571d12fef01cbf9a82e6ee86c35cf3d8e6ee151cd1a5b5f1978bf1b4288
+      13: 047c7fcdc28e467ece3c166dac2a44e7687dd29fe5bd88fa893f67da8bf76e26
+  20261107T160547Z-7b21fd70:
+    case_id: sweeper-125
+    sample_id: 20261107T160547Z-7b21fd70:terminal_review:15:evidence_v1:evidence_v2
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      8: 1a658dee97b5e556f58654f625d1a6475f9738710b78581fcec58c3345787b7e
+      12: 6c808e76f9862ce69fe146dc4f2a0aa7285d2f2b78a4c3ef7d48009ca0672193
+      14: be165571d12fef01cbf9a82e6ee86c35cf3d8e6ee151cd1a5b5f1978bf1b4288
+      15: 1033e5d1e4f4f34e3adad952d6cfb1730d376e6491e40e64fed05b56ca007216
+  20261107T161610Z-82639f3c:
+    case_id: sweeper-107
+    sample_id: 20261107T161610Z-82639f3c:terminal_review:17:evidence_v1:evidence_v2
+    field_aliases: {}
+    approved_citations:
+      submission.evidence.step:
+      - 17
+    invalid_citations:
+      result_steps:
+      - 16
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      14: 23677ae3a18ba97cd5d480718ccf15c6d8c4217a641d9840e9a055fda5947478
+      16: 3466d39ede2e15c1ce3a5b20c5c0e1b1eb0966b0977dce91246a0b67d421e75a
+      17: 3466d39ede2e15c1ce3a5b20c5c0e1b1eb0966b0977dce91246a0b67d421e75a
+  20261107T160631Z-5482c6c6:
+    case_id: sweeper-142
+    sample_id: 20261107T160631Z-5482c6c6:terminal_review:8:evidence_v1:evidence_v2
+    field_aliases: {}
+    approved_citations:
+      field_readings.Description.after.step:
+      - 8
+      field_readings.IP address.after.step:
+      - 8
+      result_steps:
+      - 8
+      field_readings.Hostname.after.step:
+      - 8
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields:
+    - field: Hostname
+      intent: preserve
+      requested_value: server1.cust1.local
+      before:
+        value: server1.cust1.local
+        step: 5
+      after:
+        value: server1.cust1.local
+        step: 7
+      input_matches_request: null
+      result_matches_request: true
+    evidence_images:
+      5: a7fe365cc1e7be0ed5e68ee0b1ac4d9c108481f1fad1bd1d0ac08ffaf8502797
+      6: 5ec1ac54ef590e1ed50cd14c57a20107c3fb23ad247337884ea7c322034a425d
+      7: 5ec1ac54ef590e1ed50cd14c57a20107c3fb23ad247337884ea7c322034a425d
+      8: 7568ac6221d19c8b3fed1ea0ba1717bd17b9b9c499e9d97d94a7b9a8d4de00a6
+  20261107T160738Z-8badd27a:
+    case_id: sweeper-142
+    sample_id: 20261107T160738Z-8badd27a:terminal_review:8:evidence_v1:evidence_v2
+    field_aliases: {}
+    approved_citations:
+      field_readings.Hostname.after.step:
+      - 8
+      field_readings.IP address.after.step:
+      - 8
+      result_steps:
+      - 8
+      field_readings.Description.after.step:
+      - 8
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields:
+    - field: Description
+      intent: preserve
+      requested_value: Reserved workstation
+      before:
+        value: Reserved workstation
+        step: 5
+      after:
+        value: Reserved workstation
+        step: 7
+      input_matches_request: null
+      result_matches_request: true
+    evidence_images:
+      5: abc03cb75c5d8122bc570f55a9a1d51a586e958d98064ac4250624adffe00863
+      6: f04e343cc68ab8b1f4430b797b7532e7e16482788751ad4a6cb7b4260f82f8e1
+      7: f04e343cc68ab8b1f4430b797b7532e7e16482788751ad4a6cb7b4260f82f8e1
+      8: a168977f74b779a3847d0057f201cbde6ee6aaebf698b3a4eb83e4508923b86b
+  20261107T160846Z-0dd9b17a:
+    case_id: sweeper-142
+    sample_id: 20261107T160846Z-0dd9b17a:terminal_review:8:evidence_v1:evidence_v2
+    field_aliases: {}
+    approved_citations:
+      field_readings.Description.after.step:
+      - 8
+      field_readings.IP address.after.step:
+      - 8
+      result_steps:
+      - 8
+      field_readings.Hostname.after.step:
+      - 8
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields:
+    - field: Hostname
+      intent: preserve
+      requested_value: wifi-office.cust1.local
+      before:
+        value: wifi-office.cust1.local
+        step: 5
+      after:
+        value: wifi-office.cust1.local
+        step: 7
+      input_matches_request: null
+      result_matches_request: true
+    evidence_images:
+      5: 1d831bd0b49ec9c06eeb936f9b9a7bca8266794895cbba35bd3afc873a8fb19a
+      6: fb978c72b394b0c0fa7fe084597144c7776a2dda5fd02ee6753d52525b2e727e
+      7: fb978c72b394b0c0fa7fe084597144c7776a2dda5fd02ee6753d52525b2e727e
+      8: 234761a8c623d8ae0f3e33020d6b5a8bb16b6ab4051c93dba83f3d19ca879001
+  20261107T173229Z-b6af7212:
+    case_id: sweeper-195
+    sample_id: 20261107T173229Z-b6af7212:terminal_review:13:evidence_v1:evidence_v2
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      0: a35d1e1ab714de84cb35a00639a4c38f96a9222ff49edca37d220fcbae6bd38d
+      7: e0a4ad0001f33e9f6f24da7d16d587266a0f3f4d26b8ed5d0f6b2a7f76df45b3
+      9: 79756d99ed77b2db6e1c31e1b2f15219a7a0870d078d6f5eb50844299ef18ff2
+      12: a35d1e1ab714de84cb35a00639a4c38f96a9222ff49edca37d220fcbae6bd38d
+      13: b7d09938e953cecea464fb7886ef0d01c4c5aaaa12afabf05b1475510c029ac2
+  20261107T173306Z-341da193:
+    case_id: sweeper-105
+    sample_id: 20261107T173306Z-341da193:terminal_review:16:evidence_v1:evidence_v2
+    field_aliases:
+      Country: Saved country rows
+      City: Saved city rows
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      14: 0fba68547dccb34ba1f6bac3c71c8d682ed7450be8ea2a51caf7ad94a1c9a4a5
+      15: 2cf0e80aed74a1317dbedd788ae4ff45c8508f6d893c9dad31ebe53ad122ca10
+      16: fbb712f8163d1609f0616559a34ee482a5bfb7f925fb1444bb6aaaaba499c93c
+  20261107T173316Z-c732f64f:
+    case_id: sweeper-195
+    sample_id: 20261107T173316Z-c732f64f:terminal_review:14:evidence_v1:evidence_v2
+    field_aliases:
+      Page Title: Title
+      Metadata > Slug: Slug
+      Metadata > Breadcrumb: Breadcrumb
+      Metadata Slug: Slug
+      Metadata Breadcrumb: Breadcrumb
+    approved_citations: {}
+    invalid_citations:
+      field_readings.Title.before.step:
+      - 13
+      field_readings.Slug.before.step:
+      - 14
+    approved_requested_values:
+      Title:
+      - About us
+    optional_fields: []
+    evidence_images:
+      0: 4c6eb919a6df8a422ac52cabe9482f55c42f11597880bc6ba6a3e709547b276d
+      8: f05511a0f0e375d399b9d48a08ea00c255344b9288ef7ab962bd409455dcdedf
+      10: 21d314d86af0c079abdf278ff0987d99c855018be10af9646cd3952a1fab8c20
+      13: a35d1e1ab714de84cb35a00639a4c38f96a9222ff49edca37d220fcbae6bd38d
+      14: aad8d49ee9eab7118b0441fc1ae4c01a78701f4c5a3dd224b7345cf30b17a722
+  20261107T173334Z-318871a5:
+    case_id: sweeper-195
+    sample_id: 20261107T173334Z-318871a5:terminal_review:13:evidence_v1:evidence_v2
+    field_aliases:
+      Page Title: Title
+    approved_citations: {}
+    invalid_citations:
+      field_readings.Title.after.step:
+      - 13
+    approved_requested_values:
+      Title:
+      - About us
+    optional_fields: []
+    evidence_images:
+      0: a35d1e1ab714de84cb35a00639a4c38f96a9222ff49edca37d220fcbae6bd38d
+      7: 2467a3774e47e3449b5300e422f57885f12b2b913ffde905d2c5e815656766bc
+      9: 2a8274a56d552262c4a5db7c8a09049c8c8cb8244b581cbfc5f10362ad596ad6
+      12: a35d1e1ab714de84cb35a00639a4c38f96a9222ff49edca37d220fcbae6bd38d
+      13: aad8d49ee9eab7118b0441fc1ae4c01a78701f4c5a3dd224b7345cf30b17a722
+  20261107T173554Z-d6577a84:
+    case_id: sweeper-125
+    sample_id: 20261107T173554Z-d6577a84:prefix_review:6:evidence_v1:evidence_v2
+    field_aliases:
+      Green Weight: Weight
+      Option Value Green Weight: Weight
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      5: 1c383ee10abba57156a48624bcaeb1fac0669d3a9df2c1ffeb6cb3504d5d3f91
+      6: 1357bbb2f0046ea787881f18c2e152194763faf96faa10adc237c4ce5d3d4e57
+  20261107T173655Z-6ae0cefc:
+    case_id: sweeper-185
+    sample_id: 20261107T173655Z-6ae0cefc:prefix_review:5:evidence_v1:evidence_v2
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      4: 04582c4fa6c12775ba255e5b890b503793df5febba54e63379b589675fa9d3f3
+      5: ec680f60fd11ef344dbd94d1d0bb513dd2058b53b1a1bf3840f6837a3017cbbe
+  wolf-birch-edit-A-saved:
+    case_id: sweeper-195
+    sample_id: wolf-birch-edit-A-saved
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      3: 355c2e2726bf23e700b45798371027f7477eec74e44a97409358fa8ec9a72cb4
+      5: cb7329ef5e1222f408240f7df20d25934f07f069bc5b7e0b5f42a03ab1f8962c
+      6: 57d3ddb66c2a1554f1dac5ec5e1f279596a440aa3461e5c2e959390d96bea65e
+  wolf-birch-edit-B-saved:
+    case_id: sweeper-195
+    sample_id: wolf-birch-edit-B-saved
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      3: 355c2e2726bf23e700b45798371027f7477eec74e44a97409358fa8ec9a72cb4
+      5: cb7329ef5e1222f408240f7df20d25934f07f069bc5b7e0b5f42a03ab1f8962c
+      6: 6abe1282a00d26dfb93f39587d7b562fdf7866dcaa4f05605b5bf92c9c286169
+      8: 017d25cbaf9bdc54e7f60be90698b99b5e05b73bff1a28fb21aa3778db77ab87
+      9: aad8d49ee9eab7118b0441fc1ae4c01a78701f4c5a3dd224b7345cf30b17a722
+  wolf-hazel-edit-A-saved:
+    case_id: sweeper-195
+    sample_id: wolf-hazel-edit-A-saved
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      3: b1eee23976a04bbe32933ceb5efc59741433e4a99960992860792bb45b64ac03
+      5: cb7329ef5e1222f408240f7df20d25934f07f069bc5b7e0b5f42a03ab1f8962c
+      6: 1b821778d5145120c0de512ec44779f1b4c54d995b729aab00e86e288cc8d372
+  wolf-hazel-edit-B-saved:
+    case_id: sweeper-195
+    sample_id: wolf-hazel-edit-B-saved
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      3: b1eee23976a04bbe32933ceb5efc59741433e4a99960992860792bb45b64ac03
+      5: cb7329ef5e1222f408240f7df20d25934f07f069bc5b7e0b5f42a03ab1f8962c
+      6: 01e6f59ad4a164891d9a7c42d2576d98f5465160411bdb6c6118a20483328fcd
+      8: 49be7b477d1fbd4c2df5973f0c9af4fbdb5f1b5db8d8faca26303e21d1cba384
+      9: aad8d49ee9eab7118b0441fc1ae4c01a78701f4c5a3dd224b7345cf30b17a722
+  wolf-pine-edit-A-saved:
+    case_id: sweeper-195
+    sample_id: wolf-pine-edit-A-saved
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      3: 3e971531cb597bc7102d4fa884dbaa81fa60cb7700a2ef2cf7a49268ec74e9e0
+      5: cb7329ef5e1222f408240f7df20d25934f07f069bc5b7e0b5f42a03ab1f8962c
+      6: ea07dde6bb307b9f08e27738f963de8827bdd84db63cc145cc0762f6135d1c93
+  wolf-pine-edit-B-saved:
+    case_id: sweeper-195
+    sample_id: wolf-pine-edit-B-saved
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      3: 3e971531cb597bc7102d4fa884dbaa81fa60cb7700a2ef2cf7a49268ec74e9e0
+      5: cb7329ef5e1222f408240f7df20d25934f07f069bc5b7e0b5f42a03ab1f8962c
+      6: 24fdc092aa68f7b693ab5b8626e9eb1b65398445909f96e7b26981a5f931960e
+      8: b937d7648b25bf98dde7fc815a249125c4f50029099193e6c7456af41746d388
+      9: aad8d49ee9eab7118b0441fc1ae4c01a78701f4c5a3dd224b7345cf30b17a722
+  wolf-birch-duplicate-A-saved:
+    case_id: sweeper-195
+    sample_id: wolf-birch-duplicate-A-saved
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      3: 1780a836086a8cd766aad02726983a3ac6852c7f55635940a90ac15ee4727029
+      8: c3becfa80ce93eaeb73d62a0b86c904bea3af270a0eb3cc4651732767f3ab0fb
+      9: d144a1319da672e786638d6f8afae2d0197da142be0a03df1181c4f79092038b
+  wolf-birch-duplicate-B-saved:
+    case_id: sweeper-195
+    sample_id: wolf-birch-duplicate-B-saved
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      3: 1780a836086a8cd766aad02726983a3ac6852c7f55635940a90ac15ee4727029
+      8: c3becfa80ce93eaeb73d62a0b86c904bea3af270a0eb3cc4651732767f3ab0fb
+      9: 0ec4d34191be3009715a353372093221c8496b673cb858d9a9a2deae38f27400
+  wolf-hazel-duplicate-A-saved:
+    case_id: sweeper-195
+    sample_id: wolf-hazel-duplicate-A-saved
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      3: 7bb726f6c16b0ab9ee6890e156c44fa057679e6f60aa5e2f3c5aa94a08c920cf
+      8: b6c2e8dfc7cdce0182eb76bb4b9de27b85e7542481f86d754d13e63fb149fab1
+      9: 51a8cabcd2f17e281f00a66120d6c393a61511d47f7e9d07e6d32efe07caa982
+  wolf-hazel-duplicate-B-saved:
+    case_id: sweeper-195
+    sample_id: wolf-hazel-duplicate-B-saved
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      3: 7bb726f6c16b0ab9ee6890e156c44fa057679e6f60aa5e2f3c5aa94a08c920cf
+      8: b6c2e8dfc7cdce0182eb76bb4b9de27b85e7542481f86d754d13e63fb149fab1
+      9: 4a9251f0ad7391f336bafaabcc4a2592ad44a896401ef072907ff59ecf09fe74
+  opencart-birch-A-saved:
+    case_id: sweeper-125
+    sample_id: opencart-birch-A-saved
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      2: 1efeffed478c79e2320a120761ea3dfa6bae3b8b5c80e365bd99911aec37ab84
+      6: 3b16d08b21b9474c7f5d4e10e06c1b008b8d1883312304838ddc5ade2b6cc530
+      10: b128b134bbfb41f6ff482d86e2b62bb75d2f44949c03793f13c71eb80b5f9499
+      14: 679f534a2b8ef32dd3f73a5a4af26ba5bc6fb548cc02ce7dc860b97935cdd176
+  opencart-birch-B-saved:
+    case_id: sweeper-125
+    sample_id: opencart-birch-B-saved
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      2: 1efeffed478c79e2320a120761ea3dfa6bae3b8b5c80e365bd99911aec37ab84
+      6: 3b16d08b21b9474c7f5d4e10e06c1b008b8d1883312304838ddc5ade2b6cc530
+      10: b32d34e47621513a80bd79612a0e46a193442675490ae37dd67000eda1daf1b1
+      14: 94740379c225520ff2799d2fa1eaa5c7a9b96c7da8209987911c37385ba85c5f
+  opencart-hazel-A-saved:
+    case_id: sweeper-125
+    sample_id: opencart-hazel-A-saved
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      2: 011d0a890d1b4b57980cff43276641bcae51399a2d523645ee75a8c68f008b2e
+      6: 7b68566f2bfaed412b9e0b7e0d2c5a256e14c4e54b412df60e87c1e40b9c9d75
+      10: b32d34e47621513a80bd79612a0e46a193442675490ae37dd67000eda1daf1b1
+      14: 3c967c38e292e3b8b4de13d066ec7e2621d3eba0890b98e897e634f18a9b7c26
+  opencart-hazel-B-saved:
+    case_id: sweeper-125
+    sample_id: opencart-hazel-B-saved
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      2: 011d0a890d1b4b57980cff43276641bcae51399a2d523645ee75a8c68f008b2e
+      6: 7b68566f2bfaed412b9e0b7e0d2c5a256e14c4e54b412df60e87c1e40b9c9d75
+      10: b32d34e47621513a80bd79612a0e46a193442675490ae37dd67000eda1daf1b1
+      14: 0dbea18f1d6fb47b3d5d273080ef5376ed3e89ddd548b4cfc0b0e81b141fa523
+  opencart-pine-A-saved:
+    case_id: sweeper-125
+    sample_id: opencart-pine-A-saved
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      2: 6a0a96b9ee42537337d0e2174219c808a3c16c2f342f0c21b53311d979e4451f
+      6: d5ffb6d4f775035ed500e6c9af9c0089ad1cbb18a697a71ab6e806e022d070c2
+      10: b128b134bbfb41f6ff482d86e2b62bb75d2f44949c03793f13c71eb80b5f9499
+      14: a3f3d9509fa6b0aa4137294605944e1ad358db92e1fd26ad9b0d4eb6504f3708
+  opencart-pine-B-saved:
+    case_id: sweeper-125
+    sample_id: opencart-pine-B-saved
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      2: 6a0a96b9ee42537337d0e2174219c808a3c16c2f342f0c21b53311d979e4451f
+      6: d5ffb6d4f775035ed500e6c9af9c0089ad1cbb18a697a71ab6e806e022d070c2
+      10: b32d34e47621513a80bd79612a0e46a193442675490ae37dd67000eda1daf1b1
+      14: 695758cead423ba0e566a88dcd2c8ce72433bfa50fde5ae94cce6e94094ef1d4
+  opencart-birch-B-cancelled:
+    case_id: sweeper-125
+    sample_id: opencart-birch-B-cancelled
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      2: 1efeffed478c79e2320a120761ea3dfa6bae3b8b5c80e365bd99911aec37ab84
+      6: 3b16d08b21b9474c7f5d4e10e06c1b008b8d1883312304838ddc5ade2b6cc530
+      7: 99a9b11f66a17e1d9f791be4ea0a77b89b8010b7ff363ee4ef58bf6a8a6de217
+      11: 1efeffed478c79e2320a120761ea3dfa6bae3b8b5c80e365bd99911aec37ab84
+  opencart-hazel-B-cancelled:
+    case_id: sweeper-125
+    sample_id: opencart-hazel-B-cancelled
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      2: 011d0a890d1b4b57980cff43276641bcae51399a2d523645ee75a8c68f008b2e
+      6: 7b68566f2bfaed412b9e0b7e0d2c5a256e14c4e54b412df60e87c1e40b9c9d75
+      7: 5bebb8670bd4cd05649aadeb606cc11451a6131c2188f50ad9486fc718ed74f5
+      11: 011d0a890d1b4b57980cff43276641bcae51399a2d523645ee75a8c68f008b2e
+  opencart-pine-B-cancelled:
+    case_id: sweeper-125
+    sample_id: opencart-pine-B-cancelled
+    field_aliases: {}
+    approved_citations: {}
+    invalid_citations: {}
+    approved_requested_values: {}
+    optional_fields: []
+    evidence_images:
+      2: 6a0a96b9ee42537337d0e2174219c808a3c16c2f342f0c21b53311d979e4451f
+      6: d5ffb6d4f775035ed500e6c9af9c0089ad1cbb18a697a71ab6e806e022d070c2
+      7: 71e436f06d9092197577399902e3c036fa928de3f5c3b29d9d61ee11cadf2867
+      11: 6a0a96b9ee42537337d0e2174219c808a3c16c2f342f0c21b53311d979e4451f

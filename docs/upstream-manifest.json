@@ -1,0 +1,15 @@
+{
+  "sweeper_bench": {
+    "commit": "96f86f2bb28f0de6c302c910aabe7baf3fb90b6a",
+    "license": "MIT"
+  },
+  "cua_lite": {
+    "commit": "2af69268c0573f4c12aac391cc03125e6d5c7974",
+    "license": "See upstream; adapter consulted, no source copied"
+  },
+  "model": {
+    "repo": "Qwen/Qwen3-VL-8B-Instruct",
+    "revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+    "license": "Apache-2.0"
+  }
+}

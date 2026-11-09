@@ -1,0 +1,42 @@
+{
+  "reviewed_on": "2026-11-08",
+  "dataset": "datasets/sft-main-10apps-v1",
+  "reviewers": ["impress_opencart", "litecart_wolf"],
+  "mode": "read_only_no_application_reruns",
+  "passed": true,
+  "apps": 10,
+  "trajectories": 102,
+  "samples": 1398,
+  "train_samples": 1164,
+  "validation_samples": 234,
+  "unique_trajectory_fingerprints": 102,
+  "duplicate_trajectories_removed": 10,
+  "different_observed_outcomes_preserved": true,
+  "scenario_overlap_between_partitions": 0,
+  "semantic_trajectory_overlap_between_partitions": 0,
+  "exact_sample_overlap_between_partitions": 0,
+  "holdout_overlap": 0,
+  "quarantined_or_retired_run_overlap": 0,
+  "images_decoded": 919,
+  "original_screenshot_sources_byte_matched": 1398,
+  "relative_image_paths": true,
+  "honest_business_rejection_reviews": 19,
+  "original_dataset_hashes_match": true,
+  "raw_benchmark_hash_matches": true,
+  "official_case_private_metadata_matches": true,
+  "business_source_matches_pinned_commits": true,
+  "shared_operation_prefix_samples": {
+    "total": 15,
+    "pluxml": 4,
+    "typesetter": 11,
+    "partition": "train",
+    "reason": "Shared prefixes of retained trajectories with different observed A-fail and B-pass outcomes."
+  },
+  "dependency_generated_metadata_differences": {
+    "case_id": "sweeper-125",
+    "build": "A",
+    "directory": "upload/system/storage/vendor/composer/",
+    "files": ["autoload_psr4.php", "autoload_static.php", "installed.json", "installed.php", "platform_check.php"],
+    "scope": "Generated development autoload, root version/reference, dev flag and platform-check metadata; business and dependency implementation files match."
+  }
+}

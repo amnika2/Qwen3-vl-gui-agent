@@ -1,0 +1,35 @@
+{
+  "architecture_verified": true,
+  "checks": {
+    "source_snapshot_matches_current_code": true,
+    "cross_task_memory_recalled": true,
+    "context_compaction_observed": true,
+    "mcp_search_and_save_completed": true,
+    "target_runtime_finished": true,
+    "target_artifacts_complete": true,
+    "target_screenshots_exist": true,
+    "preservation_runtime_finished": true,
+    "preservation_artifacts_complete": true,
+    "preservation_screenshots_exist": true,
+    "test_suite_passed": true,
+    "latest_grpo_adapter_matches": true
+  },
+  "tests": {
+    "passed": 334,
+    "failed": 0
+  },
+  "business_results": [
+    {
+      "workflow": "target",
+      "agent_verdict": "pass",
+      "oracle_verdict": "pass",
+      "run_directory": "/home/fs_2026/qwen3-gui-agent/runs/20261109T032123Z-4735918a"
+    },
+    {
+      "workflow": "preservation",
+      "agent_verdict": "blocked",
+      "oracle_verdict": "inconclusive",
+      "run_directory": "/home/fs_2026/qwen3-gui-agent/runs/20261109T032326Z-3c8ffe57"
+    }
+  ]
+}

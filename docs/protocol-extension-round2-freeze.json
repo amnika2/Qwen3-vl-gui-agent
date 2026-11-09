@@ -1,0 +1,46 @@
+{
+  "frozen_at": "2026-11-07T04:25:31.878210+00:00",
+  "source_hash": "3a437ba2c73c905c3c6334b97a1a37f7d81be2994ab4de873a19623a895bef8d",
+  "source_archive_sha256": "1873f7cb2f1212ef3814868c1e22fd0a705832a5c25cf29e728d6ef4762e3669",
+  "unchanged_from_round3": {
+    "src/guiqa/model.py": true,
+    "src/guiqa/ledger.py": true,
+    "src/guiqa/actions.py": true,
+    "src/guiqa/browser.py": true,
+    "configs/agent.yaml": true,
+    "cases/sweeper-005/public.json": true,
+    "cases/sweeper-040/public.json": true,
+    "cases/sweeper-041/public.json": true,
+    "runner.agent": true
+  },
+  "development": [
+    "sweeper-041",
+    "sweeper-005"
+  ],
+  "additional_holdout": [
+    "sweeper-007",
+    "sweeper-008"
+  ],
+  "existing_holdout": [
+    "sweeper-040"
+  ],
+  "selection": "Original predeclared candidates, admitted only after independent script calibration",
+  "methods": [
+    "script",
+    "qwen-base",
+    "qwen-improved"
+  ],
+  "repeats": 2,
+  "additional_planned_runs": 48,
+  "total_planned_runs": 120,
+  "gpu_host": "server402",
+  "gpu_ids": [
+    0,
+    1
+  ],
+  "budgets": {
+    "browser_actions": 30,
+    "wall_seconds_excluding_model_load": 600
+  },
+  "prior_protocol": "docs/protocol-freeze.json"
+}

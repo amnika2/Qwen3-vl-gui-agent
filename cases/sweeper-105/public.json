@@ -1,0 +1,13 @@
+{
+  "case_id": "sweeper-105",
+  "workflows": {
+    "target": {
+      "task": "Open the Geo Zone editor from the Geo Zones list. Create a new Geo Zone. Set Code to 'af1'; Name to 'Afghanistan regional shipping'; Description to 'Standard weekday delivery'. Choose Afghanistan in the pending Country dropdown. Do not click Add. Click Save, reopen this same zone from its list row, and verify Code, Name and Description. Inspect the saved country rows in the table body; the pending dropdown does not count. Report pass if all requested fields and the requested country/city are saved (or no country row exists when none was selected), fail if the completed save reopens with missing or different values, or blocked if the check cannot be completed.",
+      "expected": "{\"cities\": [\"-- All Cities --\"], \"code\": \"af1\", \"countries\": [\"Afghanistan\"], \"description\": \"Standard weekday delivery\", \"name\": \"Afghanistan regional shipping\"}"
+    },
+    "preservation": {
+      "task": "Use the displayed Geo Zone editor. Create a new Geo Zone. Set Name to 'Warehouse collection'; Code to 'wh'; Description to 'Collect after the confirmation email.'. Leave the pending Country unselected and do not click Add. Click Save, reopen this same zone from its list row, and verify Code, Name and Description. Inspect the saved country rows in the table body; the pending dropdown does not count. Report pass if all requested fields and the requested country/city are saved (or no country row exists when none was selected), fail if the completed save reopens with missing or different values, or blocked if the check cannot be completed.",
+      "expected": "{\"cities\": [], \"code\": \"wh\", \"countries\": [], \"description\": \"Collect after the confirmation email.\", \"name\": \"Warehouse collection\"}"
+    }
+  }
+}

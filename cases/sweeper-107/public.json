@@ -1,0 +1,13 @@
+{
+  "case_id": "sweeper-107",
+  "workflows": {
+    "target": {
+      "task": "Create a MantisBT issue with Summary 'Softfield target initial report', Description 'Initial target report body', Category General, and Product Version '1.1.0'. Submit and inspect the resulting issue or application error.",
+      "expected": "created"
+    },
+    "preservation": {
+      "task": "Create a MantisBT issue with Summary 'Softfield preservation initial report', Description 'Initial preservation report body', Category General, and Product Version ''. Submit and inspect the resulting issue or application error.",
+      "expected": "created"
+    }
+  }
+}

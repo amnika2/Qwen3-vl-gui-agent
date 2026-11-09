@@ -1,0 +1,47 @@
+{
+  "official_cases": 200,
+  "official_workflows": 400,
+  "main_training_apps": 10,
+  "official_main_apps": 8,
+  "supplementary_main_apps": 2,
+  "planned_training_workflows": 19,
+  "all_main_workflows_are_form_save_or_validation": true,
+  "eval_holdout_unchanged": true,
+  "raw_benchmark_hash_matches": true,
+  "report_input_hashes_match": true,
+  "original_case_metadata_matches": true,
+  "supplementary_first_batch": {
+    "pass": 4,
+    "infra_error": 4
+  },
+  "failed_cells_rechecked": 4,
+  "rechecks_passed": 4,
+  "supplementary_grid_cells_with_expected_result": 8,
+  "new_sft_data_generated_this_turn": false,
+  "readiness_counts": {
+    "dataset_exported": 2,
+    "calibrated_with_rechecks": 2,
+    "source_reviewed": 6
+  },
+  "existing_datasets": {
+    "sft-pluxml-0b3730ec": {
+      "samples": 136,
+      "data_sha256": "78c6c62987d2d8cda8329233f817bf5f20d23e01e5e787687d758ab6156ed8f0",
+      "matches_manifest": true
+    },
+    "sft-typesetter": {
+      "samples": 80,
+      "data_sha256": "936cfc99b099292fca62ba360fc6ef53328a78c116b8f0cb83aa182db67f919f",
+      "matches_manifest": true
+    },
+    "sft-wondercms": {
+      "samples": 48,
+      "data_sha256": "12e0bc30740a55e3aa6c0c24e37ef52985e135c0cd7257aadd6c1f7c03bfc360",
+      "matches_manifest": true
+    }
+  },
+  "export_tests": {
+    "passed": 5,
+    "log": "docs/sft-selection-export-tests.log"
+  }
+}

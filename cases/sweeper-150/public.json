@@ -1,0 +1,14 @@
+{
+  "case_id": "sweeper-150",
+  "start_path": "/core/admin/parametres_users.php",
+  "workflows": {
+    "target": {
+      "task": "In Manage users, replace only jonah19's Password with riverGate6!, leaving ElenaVoss unchanged. Click Modify the users' list. Sign out, then sign in as jonah19 with riverGate6!. Report pass if that login reaches Administration, fail if it shows Incorrect login or password after the saved change, or blocked if the operation could not be completed.",
+      "expected": "login=jonah19"
+    },
+    "preservation": {
+      "task": "In Manage users, replace ElenaVoss's Name with Elena Voss Desk, leaving Password empty. Click Modify the users' list, reload and inspect the name. Sign out and sign back in as ElenaVoss with quietMaple8!, then reopen Manage users. Report pass if the name remains Elena Voss Desk and the original password still signs in, fail if either check fails, or blocked if you cannot complete the check.",
+      "expected": "Elena Voss Desk"
+    }
+  }
+}

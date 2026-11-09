@@ -1,0 +1,530 @@
+{
+  "before": {
+    "all": {
+      "candidates": 512,
+      "numeric_rewards": 176,
+      "none_rewards": 336,
+      "strict_correct_candidates": 31,
+      "positive_rewards": 31,
+      "confirmed_negative_rewards": 145,
+      "zero_rewards": 0,
+      "truncated": 5
+    },
+    "label": {
+      "pass": {
+        "candidates": 184,
+        "numeric_rewards": 50,
+        "none_rewards": 134,
+        "strict_correct_candidates": 25,
+        "positive_rewards": 25,
+        "confirmed_negative_rewards": 25,
+        "zero_rewards": 0,
+        "truncated": 2
+      },
+      "fail": {
+        "candidates": 168,
+        "numeric_rewards": 74,
+        "none_rewards": 94,
+        "strict_correct_candidates": 5,
+        "positive_rewards": 5,
+        "confirmed_negative_rewards": 69,
+        "zero_rewards": 0,
+        "truncated": 0
+      },
+      "blocked": {
+        "candidates": 160,
+        "numeric_rewards": 52,
+        "none_rewards": 108,
+        "strict_correct_candidates": 1,
+        "positive_rewards": 1,
+        "confirmed_negative_rewards": 51,
+        "zero_rewards": 0,
+        "truncated": 3
+      }
+    }
+  },
+  "after": {
+    "all": {
+      "candidates": 512,
+      "numeric_rewards": 459,
+      "none_rewards": 53,
+      "strict_correct_candidates": 44,
+      "positive_rewards": 44,
+      "confirmed_negative_rewards": 415,
+      "zero_rewards": 0,
+      "truncated": 5
+    },
+    "label": {
+      "pass": {
+        "candidates": 184,
+        "numeric_rewards": 149,
+        "none_rewards": 35,
+        "strict_correct_candidates": 35,
+        "positive_rewards": 35,
+        "confirmed_negative_rewards": 114,
+        "zero_rewards": 0,
+        "truncated": 2
+      },
+      "fail": {
+        "candidates": 168,
+        "numeric_rewards": 162,
+        "none_rewards": 6,
+        "strict_correct_candidates": 7,
+        "positive_rewards": 7,
+        "confirmed_negative_rewards": 155,
+        "zero_rewards": 0,
+        "truncated": 0
+      },
+      "blocked": {
+        "candidates": 160,
+        "numeric_rewards": 148,
+        "none_rewards": 12,
+        "strict_correct_candidates": 2,
+        "positive_rewards": 2,
+        "confirmed_negative_rewards": 146,
+        "zero_rewards": 0,
+        "truncated": 3
+      }
+    }
+  },
+  "changes": {
+    "reward_changed": 315,
+    "strict_gained": 13,
+    "strict_lost": 0,
+    "none_to_numeric": 283,
+    "numeric_to_none": 0,
+    "none_to_positive": 13,
+    "none_to_negative": 270
+  },
+  "reward_status_transitions": {
+    "negative->negative": 145,
+    "none->negative": 270,
+    "none->none": 53,
+    "none->positive": 13,
+    "positive->positive": 31
+  },
+  "new_strict_candidates": [
+    {
+      "id": "20261107T160846Z-0dd9b17a:terminal_review:8:evidence_v1:evidence_v2",
+      "source_run_id": "20261107T160846Z-0dd9b17a",
+      "case_id": "sweeper-142",
+      "sample_index": 11,
+      "candidate_index": 2,
+      "label": "fail"
+    },
+    {
+      "id": "20261107T160631Z-5482c6c6:terminal_review:8:evidence_v1:evidence_v2",
+      "source_run_id": "20261107T160631Z-5482c6c6",
+      "case_id": "sweeper-142",
+      "sample_index": 12,
+      "candidate_index": 0,
+      "label": "fail"
+    },
+    {
+      "id": "20261107T173306Z-341da193:terminal_review:16:evidence_v1:evidence_v2",
+      "source_run_id": "20261107T173306Z-341da193",
+      "case_id": "sweeper-105",
+      "sample_index": 28,
+      "candidate_index": 3,
+      "label": "pass"
+    },
+    {
+      "id": "20261107T173306Z-341da193:terminal_review:16:evidence_v1:evidence_v2",
+      "source_run_id": "20261107T173306Z-341da193",
+      "case_id": "sweeper-105",
+      "sample_index": 28,
+      "candidate_index": 5,
+      "label": "pass"
+    },
+    {
+      "id": "20261107T173306Z-341da193:terminal_review:16:evidence_v1:evidence_v2",
+      "source_run_id": "20261107T173306Z-341da193",
+      "case_id": "sweeper-105",
+      "sample_index": 28,
+      "candidate_index": 7,
+      "label": "pass"
+    },
+    {
+      "id": "20261107T173655Z-6ae0cefc:prefix_review:5:evidence_v1:evidence_v2",
+      "source_run_id": "20261107T173655Z-6ae0cefc",
+      "case_id": "sweeper-185",
+      "sample_index": 52,
+      "candidate_index": 1,
+      "label": "blocked"
+    },
+    {
+      "id": "20261107T150601Z-6488f6cc:terminal_review:6:evidence_v1:evidence_v2",
+      "source_run_id": "20261107T150601Z-6488f6cc",
+      "case_id": "sweeper-185",
+      "sample_index": 53,
+      "candidate_index": 0,
+      "label": "pass"
+    },
+    {
+      "id": "20261107T150601Z-6488f6cc:terminal_review:6:evidence_v1:evidence_v2",
+      "source_run_id": "20261107T150601Z-6488f6cc",
+      "case_id": "sweeper-185",
+      "sample_index": 53,
+      "candidate_index": 1,
+      "label": "pass"
+    },
+    {
+      "id": "20261107T150601Z-6488f6cc:terminal_review:6:evidence_v1:evidence_v2",
+      "source_run_id": "20261107T150601Z-6488f6cc",
+      "case_id": "sweeper-185",
+      "sample_index": 53,
+      "candidate_index": 2,
+      "label": "pass"
+    },
+    {
+      "id": "20261107T150601Z-6488f6cc:terminal_review:6:evidence_v1:evidence_v2",
+      "source_run_id": "20261107T150601Z-6488f6cc",
+      "case_id": "sweeper-185",
+      "sample_index": 53,
+      "candidate_index": 3,
+      "label": "pass"
+    },
+    {
+      "id": "20261107T150601Z-6488f6cc:terminal_review:6:evidence_v1:evidence_v2",
+      "source_run_id": "20261107T150601Z-6488f6cc",
+      "case_id": "sweeper-185",
+      "sample_index": 53,
+      "candidate_index": 5,
+      "label": "pass"
+    },
+    {
+      "id": "20261107T150601Z-6488f6cc:terminal_review:6:evidence_v1:evidence_v2",
+      "source_run_id": "20261107T150601Z-6488f6cc",
+      "case_id": "sweeper-185",
+      "sample_index": 53,
+      "candidate_index": 6,
+      "label": "pass"
+    },
+    {
+      "id": "20261107T150601Z-6488f6cc:terminal_review:6:evidence_v1:evidence_v2",
+      "source_run_id": "20261107T150601Z-6488f6cc",
+      "case_id": "sweeper-185",
+      "sample_index": 53,
+      "candidate_index": 7,
+      "label": "pass"
+    }
+  ],
+  "definitions": {
+    "baseline": "Saved adjudicated_predictions.jsonl under the original reward code.",
+    "confirmed_negative_rewards": "Candidates with a numeric reward below zero; provisional_reward is never substituted.",
+    "truncated": "The saved length-limit marker always keeps reward=null and strict_correct=false."
+  },
+  "legacy_training_policy_replay": {
+    "before": {
+      "all": {
+        "candidates": 512,
+        "numeric_rewards": 351,
+        "none_rewards": 161,
+        "strict_correct_candidates": 30,
+        "positive_rewards": 30,
+        "confirmed_negative_rewards": 321,
+        "zero_rewards": 0,
+        "truncated": 5
+      },
+      "label": {
+        "pass": {
+          "candidates": 184,
+          "numeric_rewards": 69,
+          "none_rewards": 115,
+          "strict_correct_candidates": 25,
+          "positive_rewards": 25,
+          "confirmed_negative_rewards": 44,
+          "zero_rewards": 0,
+          "truncated": 2
+        },
+        "fail": {
+          "candidates": 168,
+          "numeric_rewards": 146,
+          "none_rewards": 22,
+          "strict_correct_candidates": 4,
+          "positive_rewards": 4,
+          "confirmed_negative_rewards": 142,
+          "zero_rewards": 0,
+          "truncated": 0
+        },
+        "blocked": {
+          "candidates": 160,
+          "numeric_rewards": 136,
+          "none_rewards": 24,
+          "strict_correct_candidates": 1,
+          "positive_rewards": 1,
+          "confirmed_negative_rewards": 135,
+          "zero_rewards": 0,
+          "truncated": 3
+        }
+      }
+    },
+    "after": {
+      "all": {
+        "candidates": 512,
+        "numeric_rewards": 459,
+        "none_rewards": 53,
+        "strict_correct_candidates": 44,
+        "positive_rewards": 44,
+        "confirmed_negative_rewards": 415,
+        "zero_rewards": 0,
+        "truncated": 5
+      },
+      "label": {
+        "pass": {
+          "candidates": 184,
+          "numeric_rewards": 149,
+          "none_rewards": 35,
+          "strict_correct_candidates": 35,
+          "positive_rewards": 35,
+          "confirmed_negative_rewards": 114,
+          "zero_rewards": 0,
+          "truncated": 2
+        },
+        "fail": {
+          "candidates": 168,
+          "numeric_rewards": 162,
+          "none_rewards": 6,
+          "strict_correct_candidates": 7,
+          "positive_rewards": 7,
+          "confirmed_negative_rewards": 155,
+          "zero_rewards": 0,
+          "truncated": 0
+        },
+        "blocked": {
+          "candidates": 160,
+          "numeric_rewards": 148,
+          "none_rewards": 12,
+          "strict_correct_candidates": 2,
+          "positive_rewards": 2,
+          "confirmed_negative_rewards": 146,
+          "zero_rewards": 0,
+          "truncated": 3
+        }
+      }
+    },
+    "changes": {
+      "reward_changed": 159,
+      "strict_gained": 14,
+      "strict_lost": 0,
+      "none_to_numeric": 113,
+      "numeric_to_none": 5,
+      "none_to_positive": 14,
+      "none_to_negative": 99
+    },
+    "reward_status_transitions": {
+      "negative->negative": 316,
+      "negative->none": 5,
+      "none->negative": 99,
+      "none->none": 48,
+      "none->positive": 14,
+      "positive->positive": 30
+    },
+    "new_strict_candidates": [
+      {
+        "id": "20261107T150537Z-1a7a33a9:terminal_review:12:evidence_v1:evidence_v2",
+        "source_run_id": "20261107T150537Z-1a7a33a9",
+        "case_id": "sweeper-185",
+        "sample_index": 9,
+        "candidate_index": 7,
+        "label": "fail"
+      },
+      {
+        "id": "20261107T160846Z-0dd9b17a:terminal_review:8:evidence_v1:evidence_v2",
+        "source_run_id": "20261107T160846Z-0dd9b17a",
+        "case_id": "sweeper-142",
+        "sample_index": 11,
+        "candidate_index": 2,
+        "label": "fail"
+      },
+      {
+        "id": "20261107T160631Z-5482c6c6:terminal_review:8:evidence_v1:evidence_v2",
+        "source_run_id": "20261107T160631Z-5482c6c6",
+        "case_id": "sweeper-142",
+        "sample_index": 12,
+        "candidate_index": 0,
+        "label": "fail"
+      },
+      {
+        "id": "20261107T173306Z-341da193:terminal_review:16:evidence_v1:evidence_v2",
+        "source_run_id": "20261107T173306Z-341da193",
+        "case_id": "sweeper-105",
+        "sample_index": 28,
+        "candidate_index": 3,
+        "label": "pass"
+      },
+      {
+        "id": "20261107T173306Z-341da193:terminal_review:16:evidence_v1:evidence_v2",
+        "source_run_id": "20261107T173306Z-341da193",
+        "case_id": "sweeper-105",
+        "sample_index": 28,
+        "candidate_index": 5,
+        "label": "pass"
+      },
+      {
+        "id": "20261107T173306Z-341da193:terminal_review:16:evidence_v1:evidence_v2",
+        "source_run_id": "20261107T173306Z-341da193",
+        "case_id": "sweeper-105",
+        "sample_index": 28,
+        "candidate_index": 7,
+        "label": "pass"
+      },
+      {
+        "id": "20261107T173655Z-6ae0cefc:prefix_review:5:evidence_v1:evidence_v2",
+        "source_run_id": "20261107T173655Z-6ae0cefc",
+        "case_id": "sweeper-185",
+        "sample_index": 52,
+        "candidate_index": 1,
+        "label": "blocked"
+      },
+      {
+        "id": "20261107T150601Z-6488f6cc:terminal_review:6:evidence_v1:evidence_v2",
+        "source_run_id": "20261107T150601Z-6488f6cc",
+        "case_id": "sweeper-185",
+        "sample_index": 53,
+        "candidate_index": 0,
+        "label": "pass"
+      },
+      {
+        "id": "20261107T150601Z-6488f6cc:terminal_review:6:evidence_v1:evidence_v2",
+        "source_run_id": "20261107T150601Z-6488f6cc",
+        "case_id": "sweeper-185",
+        "sample_index": 53,
+        "candidate_index": 1,
+        "label": "pass"
+      },
+      {
+        "id": "20261107T150601Z-6488f6cc:terminal_review:6:evidence_v1:evidence_v2",
+        "source_run_id": "20261107T150601Z-6488f6cc",
+        "case_id": "sweeper-185",
+        "sample_index": 53,
+        "candidate_index": 2,
+        "label": "pass"
+      },
+      {
+        "id": "20261107T150601Z-6488f6cc:terminal_review:6:evidence_v1:evidence_v2",
+        "source_run_id": "20261107T150601Z-6488f6cc",
+        "case_id": "sweeper-185",
+        "sample_index": 53,
+        "candidate_index": 3,
+        "label": "pass"
+      },
+      {
+        "id": "20261107T150601Z-6488f6cc:terminal_review:6:evidence_v1:evidence_v2",
+        "source_run_id": "20261107T150601Z-6488f6cc",
+        "case_id": "sweeper-185",
+        "sample_index": 53,
+        "candidate_index": 5,
+        "label": "pass"
+      },
+      {
+        "id": "20261107T150601Z-6488f6cc:terminal_review:6:evidence_v1:evidence_v2",
+        "source_run_id": "20261107T150601Z-6488f6cc",
+        "case_id": "sweeper-185",
+        "sample_index": 53,
+        "candidate_index": 6,
+        "label": "pass"
+      },
+      {
+        "id": "20261107T150601Z-6488f6cc:terminal_review:6:evidence_v1:evidence_v2",
+        "source_run_id": "20261107T150601Z-6488f6cc",
+        "case_id": "sweeper-185",
+        "sample_index": 53,
+        "candidate_index": 7,
+        "label": "pass"
+      }
+    ],
+    "definitions": {
+      "baseline": "Original unadjudicated scores with the old training resolver's four certain-error rules. The original worker masked five truncated parse failures, while the old training callback scored them -1.",
+      "confirmed_negative_rewards": "Candidates with a numeric reward below zero; provisional_reward is never substituted.",
+      "truncated": "The saved length-limit marker always keeps reward=null and strict_correct=false."
+    }
+  },
+  "provenance": {
+    "version": 1,
+    "input_directory": "/home/fs_2026/qwen3-gui-agent/reports/rl-review-diagnostic-v1-distributed",
+    "dataset": "/home/fs_2026/qwen3-gui-agent/datasets/sft-main-10apps-v4",
+    "source_manifest_sha256": "77ebdda457b1fce278e3e5df2bedf6d7bc80da0ad3186eda702d4a5d44c89ff8",
+    "selected_sha256": "30c8a8f4bf9fc0b3ea2c0ba58a4f0ba5d81fae0e511f47cb4019e56edb5bc143",
+    "raw_predictions_sha256": "a907e4d8c82d02496a8384709bc5e2603225a7c8a69c62d4470b107cfc2d09c8",
+    "adjudicated_predictions_sha256": "a1f4dd365202d10d160b777cec99b388a3155edfdfb420ae3be429ff70f67329",
+    "reward_source": "/home/fs_2026/qwen3-gui-agent/src/guiqa/rl_review_reward.py",
+    "original_reward_sha256": "3da7b95b423e3f71551a49d4a47c5d3553c5c26ebb4d181a941199dde54561de",
+    "calibrated_reward_sha256": "b38727f48365a89c9d1fae40b919d78789d49baf21a2afb8bcdf2e0494b68504",
+    "rules_path": "/home/fs_2026/qwen3-gui-agent/configs/rl-review-reward-rules.yaml",
+    "rules_sha256": "a1403fbc108dc9055e4e711bd1b4e23bdd82bb43e0d62b0b7f5857c9133f5b2b",
+    "rules_loader_sha256": "651ad0cafb324cd1606e3a0141260220a8c001743708aa57afb714303ab6b048",
+    "calibration_script_sha256": "6ef15a6304278bcf9897a937692c9144eb11812afe4f49c0624ade35e0209078",
+    "source_files_verification": {
+      "/home/fs_2026/qwen3-gui-agent/datasets/sft-main-10apps-v4/train.jsonl": {
+        "original_sha256": "a6590e8202a024e6715d74752eebfb57b4b7459b8fe78402f5968433f03fb96b",
+        "current_sha256": "a6590e8202a024e6715d74752eebfb57b4b7459b8fe78402f5968433f03fb96b",
+        "reward_update_allowed": false
+      },
+      "/home/fs_2026/qwen3-gui-agent/datasets/sft-main-10apps-v4/validation.jsonl": {
+        "original_sha256": "5048c8d432e80ed58d87e4d0219472cc5c902b8a200c56f26ace86018c1c30fe",
+        "current_sha256": "5048c8d432e80ed58d87e4d0219472cc5c902b8a200c56f26ace86018c1c30fe",
+        "reward_update_allowed": false
+      },
+      "/home/fs_2026/qwen3-gui-agent/configs/sft-split.yaml": {
+        "original_sha256": "7639b4d8fb7e62e377afd8ba83396b783da299605de9bbd90bca310cc2263a41",
+        "current_sha256": "7639b4d8fb7e62e377afd8ba83396b783da299605de9bbd90bca310cc2263a41",
+        "reward_update_allowed": false
+      },
+      "/home/fs_2026/qwen3-gui-agent/configs/agent-review-evidence-v4-selected.yaml": {
+        "original_sha256": "d37f49ce6f9028fe466e1836d76c93bf11948b87893c0e365087ff87fcf66be6",
+        "current_sha256": "d37f49ce6f9028fe466e1836d76c93bf11948b87893c0e365087ff87fcf66be6",
+        "reward_update_allowed": false
+      },
+      "/home/fs_2026/qwen3-gui-agent/runs/sft-qwen3vl-10apps-v4-review-selected/adapter/adapter_model.safetensors": {
+        "original_sha256": "d1c1c403d2fed4a5a788fbdfab3f55ae6d70a2a6af98d806ae6dc5422fac72ee",
+        "current_sha256": "d1c1c403d2fed4a5a788fbdfab3f55ae6d70a2a6af98d806ae6dc5422fac72ee",
+        "reward_update_allowed": false
+      },
+      "/home/fs_2026/qwen3-gui-agent/runs/sft-qwen3vl-10apps-v4-review-selected/adapter/adapter_config.json": {
+        "original_sha256": "42610c0a70902c8ac9ed8e501b3e1e7350fd967204f30331bd183f23c07dbdd0",
+        "current_sha256": "42610c0a70902c8ac9ed8e501b3e1e7350fd967204f30331bd183f23c07dbdd0",
+        "reward_update_allowed": false
+      },
+      "/home/fs_2026/qwen3-gui-agent/vendor/models/Qwen3-VL-8B-Instruct/generation_config.json": {
+        "original_sha256": "8469742d1fce0de951c8909b26a2c0c0d8490837ce476efb114da9e0cefc4d44",
+        "current_sha256": "8469742d1fce0de951c8909b26a2c0c0d8490837ce476efb114da9e0cefc4d44",
+        "reward_update_allowed": false
+      },
+      "/home/fs_2026/qwen3-gui-agent/vendor/models/Qwen3-VL-8B-Instruct/config.json": {
+        "original_sha256": "5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661",
+        "current_sha256": "5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661",
+        "reward_update_allowed": false
+      },
+      "/home/fs_2026/qwen3-gui-agent/src/guiqa/rl_review_diagnostic.py": {
+        "original_sha256": "6f41ab4c08758e0cb172d654a995e26b443f92b26ba171aba36e6e6109af6dd5",
+        "current_sha256": "6f41ab4c08758e0cb172d654a995e26b443f92b26ba171aba36e6e6109af6dd5",
+        "reward_update_allowed": false
+      },
+      "/home/fs_2026/qwen3-gui-agent/src/guiqa/rl_review_reward.py": {
+        "original_sha256": "3da7b95b423e3f71551a49d4a47c5d3553c5c26ebb4d181a941199dde54561de",
+        "current_sha256": "b38727f48365a89c9d1fae40b919d78789d49baf21a2afb8bcdf2e0494b68504",
+        "reward_update_allowed": true
+      },
+      "/home/fs_2026/qwen3-gui-agent/src/guiqa/model.py": {
+        "original_sha256": "7d22bbb1348f296b78aa1fea9ec2b587d63bd88ff86253f17ba44c2f021a5dd7",
+        "current_sha256": "7d22bbb1348f296b78aa1fea9ec2b587d63bd88ff86253f17ba44c2f021a5dd7",
+        "reward_update_allowed": false
+      },
+      "/home/fs_2026/qwen3-gui-agent/src/guiqa/review_contract.py": {
+        "original_sha256": "047689db973fea57ae4511460f997227e270e6a25f8487c5473a5fee714adec0",
+        "current_sha256": "047689db973fea57ae4511460f997227e270e6a25f8487c5473a5fee714adec0",
+        "reward_update_allowed": false
+      },
+      "/home/fs_2026/qwen3-gui-agent/src/guiqa/cli.py": {
+        "original_sha256": "6198abaa48e9827675f3de49b0acffa8672f1f349fe17a5fa1152f8edbc9e4ac",
+        "current_sha256": "6198abaa48e9827675f3de49b0acffa8672f1f349fe17a5fa1152f8edbc9e4ac",
+        "reward_update_allowed": false
+      }
+    },
+    "training_only": true,
+    "new_generation": false,
+    "gpu_used": false,
+    "raw_answers_preserved": true
+  }
+}

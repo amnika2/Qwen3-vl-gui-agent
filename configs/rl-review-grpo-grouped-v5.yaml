@@ -1,0 +1,12 @@
+dataset: datasets/rl-review-pilot-v2
+model_config: configs/agent-review-evidence-v4-selected.yaml
+adapter_path: runs/sft-qwen3vl-review-v5/adapter
+reward_rules: configs/rl-review-reward-rules-retry.yaml
+curriculum_config: configs/rl-review-grpo-retry.yaml
+groups_per_update: 2
+max_generation_attempts: 2
+max_samples_per_update: 12
+max_steps: 2
+learning_rate: 0.000002
+beta: 0.02
+seed: 42

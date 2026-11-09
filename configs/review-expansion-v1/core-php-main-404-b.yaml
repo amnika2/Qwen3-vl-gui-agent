@@ -1,0 +1,394 @@
+version: 1
+frozen_on: '2026-11-08'
+group_ordered_variants: true
+groups:
+- app: phpipam
+  id: rex1-train-php-002
+  parent_scenario_id: rex1-train-php-002
+  family: clear_hostname
+  template_family: archive_lending
+  split: train
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Archive Lending station 22
+    hostname: archive-lending-22.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-train-php-004
+  parent_scenario_id: rex1-train-php-004
+  family: clear_hostname
+  template_family: storeroom_inventory
+  split: train
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Storeroom Inventory station 24
+    hostname: storeroom-inventory-24.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-train-php-006
+  parent_scenario_id: rex1-train-php-006
+  family: clear_hostname
+  template_family: vehicle_scanning
+  split: train
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Vehicle Scanning station 26
+    hostname: vehicle-scanning-26.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-train-php-008
+  parent_scenario_id: rex1-train-php-008
+  family: clear_hostname
+  template_family: print_dispatch
+  split: train
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Print Dispatch station 28
+    hostname: print-dispatch-28.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-train-php-010
+  parent_scenario_id: rex1-train-php-010
+  family: clear_hostname
+  template_family: archive_lending
+  split: train
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Archive Lending station 30
+    hostname: archive-lending-30.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-train-php-012
+  parent_scenario_id: rex1-train-php-012
+  family: clear_hostname
+  template_family: storeroom_inventory
+  split: train
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Storeroom Inventory station 32
+    hostname: storeroom-inventory-32.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-train-php-014
+  parent_scenario_id: rex1-train-php-014
+  family: clear_hostname
+  template_family: vehicle_scanning
+  split: train
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Vehicle Scanning station 34
+    hostname: vehicle-scanning-34.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-train-php-016
+  parent_scenario_id: rex1-train-php-016
+  family: clear_hostname
+  template_family: print_dispatch
+  split: train
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Print Dispatch station 36
+    hostname: print-dispatch-36.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-train-php-018
+  parent_scenario_id: rex1-train-php-018
+  family: clear_hostname
+  template_family: archive_lending
+  split: train
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Archive Lending station 38
+    hostname: archive-lending-38.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-train-php-020
+  parent_scenario_id: rex1-train-php-020
+  family: clear_hostname
+  template_family: storeroom_inventory
+  split: train
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Storeroom Inventory station 40
+    hostname: storeroom-inventory-40.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-train-php-022
+  parent_scenario_id: rex1-train-php-022
+  family: clear_hostname
+  template_family: vehicle_scanning
+  split: train
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Vehicle Scanning station 42
+    hostname: vehicle-scanning-42.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-train-php-024
+  parent_scenario_id: rex1-train-php-024
+  family: clear_hostname
+  template_family: print_dispatch
+  split: train
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Print Dispatch station 44
+    hostname: print-dispatch-44.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-train-php-026
+  parent_scenario_id: rex1-train-php-026
+  family: clear_hostname
+  template_family: archive_lending
+  split: train
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Archive Lending station 46
+    hostname: archive-lending-46.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-train-php-028
+  parent_scenario_id: rex1-train-php-028
+  family: clear_hostname
+  template_family: storeroom_inventory
+  split: train
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Storeroom Inventory station 48
+    hostname: storeroom-inventory-48.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-train-php-030
+  parent_scenario_id: rex1-train-php-030
+  family: clear_hostname
+  template_family: vehicle_scanning
+  split: train
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Vehicle Scanning station 50
+    hostname: vehicle-scanning-50.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-train-php-032
+  parent_scenario_id: rex1-train-php-032
+  family: clear_hostname
+  template_family: print_dispatch
+  split: train
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Print Dispatch station 52
+    hostname: print-dispatch-52.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-train-php-034
+  parent_scenario_id: rex1-train-php-034
+  family: clear_hostname
+  template_family: archive_lending
+  split: train
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Archive Lending station 54
+    hostname: archive-lending-54.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-train-php-036
+  parent_scenario_id: rex1-train-php-036
+  family: clear_hostname
+  template_family: storeroom_inventory
+  split: train
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Storeroom Inventory station 56
+    hostname: storeroom-inventory-56.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-train-php-038
+  parent_scenario_id: rex1-train-php-038
+  family: clear_hostname
+  template_family: vehicle_scanning
+  split: train
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Vehicle Scanning station 58
+    hostname: vehicle-scanning-58.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-train-php-040
+  parent_scenario_id: rex1-train-php-040
+  family: clear_hostname
+  template_family: print_dispatch
+  split: train
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Print Dispatch station 60
+    hostname: print-dispatch-60.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-dev-php-002
+  parent_scenario_id: rex1-dev-php-002
+  family: clear_hostname
+  template_family: clinic_queue
+  split: validation
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Clinic Queue station 22
+    hostname: clinic-queue-22.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-dev-php-004
+  parent_scenario_id: rex1-dev-php-004
+  family: clear_hostname
+  template_family: rainfall_survey
+  split: validation
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Rainfall Survey station 24
+    hostname: rainfall-survey-24.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-dev-php-006
+  parent_scenario_id: rex1-dev-php-006
+  family: clear_hostname
+  template_family: river_sampling
+  split: validation
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: River Sampling station 26
+    hostname: river-sampling-26.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-dev-php-008
+  parent_scenario_id: rex1-dev-php-008
+  family: clear_hostname
+  template_family: theatre_access
+  split: validation
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Theatre Access station 28
+    hostname: theatre-access-28.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-dev-php-010
+  parent_scenario_id: rex1-dev-php-010
+  family: clear_hostname
+  template_family: clinic_queue
+  split: validation
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Clinic Queue station 30
+    hostname: clinic-queue-30.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-dev-php-012
+  parent_scenario_id: rex1-dev-php-012
+  family: clear_hostname
+  template_family: rainfall_survey
+  split: validation
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Rainfall Survey station 32
+    hostname: rainfall-survey-32.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-dev-php-014
+  parent_scenario_id: rex1-dev-php-014
+  family: clear_hostname
+  template_family: river_sampling
+  split: validation
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: River Sampling station 34
+    hostname: river-sampling-34.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-dev-php-016
+  parent_scenario_id: rex1-dev-php-016
+  family: clear_hostname
+  template_family: theatre_access
+  split: validation
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Theatre Access station 36
+    hostname: theatre-access-36.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-dev-php-018
+  parent_scenario_id: rex1-dev-php-018
+  family: clear_hostname
+  template_family: clinic_queue
+  split: validation
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Clinic Queue station 38
+    hostname: clinic-queue-38.lab.local
+    changes:
+      hostname: ''
+- app: phpipam
+  id: rex1-dev-php-020
+  parent_scenario_id: rex1-dev-php-020
+  family: clear_hostname
+  template_family: rainfall_survey
+  split: validation
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Rainfall Survey station 40
+    hostname: rainfall-survey-40.lab.local
+    changes:
+      hostname: ''

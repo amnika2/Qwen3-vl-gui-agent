@@ -1,0 +1,19 @@
+{
+  "php": "7.4.3",
+  "additional_extensions": [
+    {
+      "name": "gd",
+      "package_url": "https://archive.ubuntu.com/ubuntu/pool/main/p/php7.4/php7.4-gd_7.4.3-4ubuntu2.29_amd64.deb",
+      "sha256": "d324f8e14b37889f81d5d67e8a7eb31abb7325bb3ef3ef1050b47aa05b91a3ef",
+      "extracted_module": "vendor/runtime/impress-php74-extensions/root/usr/lib/php/20190902/gd.so"
+    }
+  ],
+  "configuration_only": [
+    "PDO MySQL Unix socket",
+    "output_buffering=4096",
+    "iconv",
+    "mysqli",
+    "gd"
+  ],
+  "business_source_modified": false
+}

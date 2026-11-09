@@ -1,0 +1,256 @@
+{
+  "stage": "data_generation",
+  "training_started": false,
+  "dataset": "datasets/sft-main-10apps-v1",
+  "apps": 10,
+  "trajectories": 102,
+  "samples": 1398,
+  "train_samples": 1164,
+  "validation_samples": 234,
+  "operation_samples": 1296,
+  "review_samples": 102,
+  "review_labels": {
+    "fail": 27,
+    "pass": 75
+  },
+  "images": 919,
+  "trajectory_deduplication": {
+    "enabled": true,
+    "unit": "complete_trajectory",
+    "key": "case,task,observed_outcome,semantic_action_sequence",
+    "removed": 10
+  },
+  "excluded_runs": [
+    {
+      "run_id": "20261107T094144Z-2d16ba74",
+      "reason": "duplicate_trajectory"
+    },
+    {
+      "run_id": "20261107T094202Z-46b1c5c7",
+      "reason": "duplicate_trajectory"
+    },
+    {
+      "run_id": "20261107T094220Z-124a75e2",
+      "reason": "duplicate_trajectory"
+    },
+    {
+      "run_id": "20261107T094229Z-e059db77",
+      "reason": "duplicate_trajectory"
+    },
+    {
+      "run_id": "20261107T094238Z-70904132",
+      "reason": "duplicate_trajectory"
+    },
+    {
+      "run_id": "20261107T150550Z-e7e0ed10",
+      "reason": "duplicate_trajectory"
+    },
+    {
+      "run_id": "20261107T150612Z-109d8da4",
+      "reason": "duplicate_trajectory"
+    },
+    {
+      "run_id": "20261107T150634Z-c9ba2809",
+      "reason": "duplicate_trajectory"
+    },
+    {
+      "run_id": "20261107T150648Z-eb379e9f",
+      "reason": "duplicate_trajectory"
+    },
+    {
+      "run_id": "20261107T150657Z-2536f22e",
+      "reason": "duplicate_trajectory"
+    },
+    {
+      "run_id": "20261107T155920Z-52261d6f",
+      "reason": "inconclusive"
+    },
+    {
+      "run_id": "20261107T155929Z-a59d1abf",
+      "reason": "inconclusive"
+    },
+    {
+      "run_id": "20261107T160007Z-96d7058f",
+      "reason": "inconclusive"
+    },
+    {
+      "run_id": "20261107T160032Z-04bd27a0",
+      "reason": "inconclusive"
+    },
+    {
+      "run_id": "20261107T160040Z-2f677242",
+      "reason": "inconclusive"
+    },
+    {
+      "run_id": "20261107T160118Z-5b0aebaf",
+      "reason": "inconclusive"
+    },
+    {
+      "run_id": "20261107T160127Z-cd8fc36a",
+      "reason": "inconclusive"
+    },
+    {
+      "run_id": "20261107T160208Z-073dfaa5",
+      "reason": "infra_error"
+    },
+    {
+      "run_id": "20261107T160246Z-03518d00",
+      "reason": "inconclusive"
+    }
+  ],
+  "by_app": {
+    "sweeper-150": {
+      "trajectories": 3,
+      "samples": 50,
+      "train_samples": 50,
+      "validation_samples": 0,
+      "review_labels": {
+        "fail": 1,
+        "pass": 2
+      },
+      "review_profiles": {
+        "persistence": 3
+      }
+    },
+    "sweeper-185": {
+      "trajectories": 3,
+      "samples": 33,
+      "train_samples": 33,
+      "validation_samples": 0,
+      "review_labels": {
+        "fail": 1,
+        "pass": 2
+      },
+      "review_profiles": {
+        "persistence": 3
+      }
+    },
+    "sweeper-034": {
+      "trajectories": 12,
+      "samples": 115,
+      "train_samples": 89,
+      "validation_samples": 26,
+      "review_labels": {
+        "pass": 12
+      },
+      "review_profiles": {
+        "persistence": 12
+      }
+    },
+    "sweeper-053": {
+      "trajectories": 12,
+      "samples": 168,
+      "train_samples": 138,
+      "validation_samples": 30,
+      "review_labels": {
+        "pass": 12
+      },
+      "review_profiles": {
+        "persistence": 12
+      }
+    },
+    "sweeper-105": {
+      "trajectories": 12,
+      "samples": 198,
+      "train_samples": 163,
+      "validation_samples": 35,
+      "review_labels": {
+        "fail": 3,
+        "pass": 9
+      },
+      "review_profiles": {
+        "persistence": 12
+      }
+    },
+    "sweeper-195": {
+      "trajectories": 12,
+      "samples": 154,
+      "train_samples": 128,
+      "validation_samples": 26,
+      "review_labels": {
+        "fail": 3,
+        "pass": 9
+      },
+      "review_profiles": {
+        "business_outcome_v1": 12
+      }
+    },
+    "sweeper-084": {
+      "trajectories": 12,
+      "samples": 162,
+      "train_samples": 136,
+      "validation_samples": 26,
+      "review_labels": {
+        "fail": 6,
+        "pass": 6
+      },
+      "review_profiles": {
+        "business_outcome_v1": 12
+      }
+    },
+    "sweeper-125": {
+      "trajectories": 12,
+      "samples": 192,
+      "train_samples": 160,
+      "validation_samples": 32,
+      "review_labels": {
+        "fail": 5,
+        "pass": 7
+      },
+      "review_profiles": {
+        "persistence": 12
+      }
+    },
+    "sweeper-107": {
+      "trajectories": 12,
+      "samples": 205,
+      "train_samples": 170,
+      "validation_samples": 35,
+      "review_labels": {
+        "fail": 4,
+        "pass": 8
+      },
+      "review_profiles": {
+        "business_outcome_v1": 12
+      }
+    },
+    "sweeper-142": {
+      "trajectories": 12,
+      "samples": 121,
+      "train_samples": 97,
+      "validation_samples": 24,
+      "review_labels": {
+        "fail": 4,
+        "pass": 8
+      },
+      "review_profiles": {
+        "persistence": 12
+      }
+    }
+  },
+  "verification": {
+    "dataset": "/home/fs_2026/qwen3-gui-agent/datasets/sft-main-10apps-v1",
+    "passed": true,
+    "apps": 10,
+    "trajectories": 102,
+    "samples": 1398,
+    "partitions": {
+      "train": 1164,
+      "validation": 234
+    },
+    "review_labels": {
+      "fail": 27,
+      "pass": 75
+    },
+    "unique_referenced_images": 919,
+    "duplicate_exact_samples": 15,
+    "complete_trajectories_preserved": true,
+    "scenario_partition_overlap": 0,
+    "prompts_and_action_histories_match": true,
+    "labels_match_observed_runs": true,
+    "image_bytes_match_recorded_screenshots": true,
+    "source_sample_hashes_match": true,
+    "holdout_excluded": true
+  },
+  "release_config_sha256": "c7340289822b03efc3364ac664b7fac835bf79477a5238007f465ec2b570734f"
+}

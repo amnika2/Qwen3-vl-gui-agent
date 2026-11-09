@@ -1,0 +1,370 @@
+version: 2
+scenarios:
+- id: lite-pending-af
+  case_id: sweeper-105
+  build: A
+  workflow: target
+  data_split: train
+  family: pending_country
+  start: list
+  code: af1
+  name: Afghanistan regional shipping
+  description: Standard weekday delivery
+  country_code: AF
+  country: Afghanistan
+  country_index: 1
+  city: ''
+  field_order:
+  - code
+  - name
+  - description
+- id: lite-pending-al
+  case_id: sweeper-105
+  build: B
+  workflow: target
+  data_split: train
+  family: pending_country
+  start: editor
+  code: al2
+  name: Albania regional shipping
+  description: Dispatch from the regional hub
+  country_code: AL
+  country: Albania
+  country_index: 3
+  city: ''
+  field_order:
+  - name
+  - description
+  - code
+- id: lite-pending-dz
+  case_id: sweeper-105
+  build: A
+  workflow: target
+  data_split: train
+  family: pending_country_city
+  start: list
+  code: dz3
+  name: Algeria regional shipping
+  description: Customer collection route
+  country_code: DZ
+  country: Algeria
+  country_index: 4
+  city: Central depot
+  field_order:
+  - code
+  - name
+  - description
+- id: lite-pending-as
+  case_id: sweeper-105
+  build: B
+  workflow: target
+  data_split: train
+  family: pending_country
+  start: editor
+  code: as4
+  name: American Samoa regional shipping
+  description: Island parcel service
+  country_code: AS
+  country: American Samoa
+  country_index: 5
+  city: ''
+  field_order:
+  - name
+  - description
+  - code
+- id: lite-pending-ad
+  case_id: sweeper-105
+  build: A
+  workflow: target
+  data_split: train
+  family: pending_country_city
+  start: list
+  code: ad5
+  name: Andorra regional shipping
+  description: Warehouse deliveries
+  country_code: AD
+  country: Andorra
+  country_index: 6
+  city: Central depot
+  field_order:
+  - code
+  - name
+  - description
+- id: lite-pending-ao
+  case_id: sweeper-105
+  build: B
+  workflow: target
+  data_split: validation
+  family: pending_country
+  start: editor
+  code: ao6
+  name: Angola regional shipping
+  description: Priority local route
+  country_code: AO
+  country: Angola
+  country_index: 7
+  city: ''
+  field_order:
+  - name
+  - description
+  - code
+- id: lite-empty-wh
+  case_id: sweeper-105
+  build: B
+  workflow: preservation
+  data_split: train
+  family: create_without_country
+  start: editor
+  code: wh
+  name: Warehouse collection
+  description: Collect after the confirmation email.
+  country_code: ''
+  country: ''
+  country_index: 0
+  city: ''
+  field_order:
+  - name
+  - code
+  - description
+- id: lite-empty-ret
+  case_id: sweeper-105
+  build: A
+  workflow: preservation
+  data_split: train
+  family: create_without_country
+  start: list
+  code: ret
+  name: Returns hub
+  description: Use the return reference on every parcel.
+  country_code: ''
+  country: ''
+  country_index: 0
+  city: ''
+  field_order:
+  - description
+  - code
+  - name
+- id: lite-empty-std
+  case_id: sweeper-105
+  build: B
+  workflow: preservation
+  data_split: train
+  family: create_without_country
+  start: editor
+  code: std
+  name: Standard domestic shipping
+  description: Ships on working days.
+  country_code: ''
+  country: ''
+  country_index: 0
+  city: ''
+  field_order:
+  - name
+  - code
+  - description
+- id: lite-empty-exp
+  case_id: sweeper-105
+  build: A
+  workflow: preservation
+  data_split: train
+  family: edit_existing_fields
+  start: list
+  code: exp
+  name: Express delivery
+  description: Place orders before noon.
+  country_code: ''
+  country: ''
+  country_index: 0
+  city: ''
+  field_order:
+  - description
+  - code
+  - name
+  initial:
+    code: old
+    name: Previous delivery zone
+    description: Old instructions
+- id: lite-empty-fr
+  case_id: sweeper-105
+  build: B
+  workflow: preservation
+  data_split: train
+  family: edit_existing_fields
+  start: editor
+  code: fr
+  name: Livraisons locales
+  description: Livraison du mardi au samedi.
+  country_code: ''
+  country: ''
+  country_index: 0
+  city: ''
+  field_order:
+  - name
+  - code
+  - description
+  initial:
+    code: old
+    name: Previous delivery zone
+    description: Old instructions
+- id: lite-empty-cn
+  case_id: sweeper-105
+  build: A
+  workflow: preservation
+  data_split: validation
+  family: edit_existing_fields
+  start: list
+  code: cn
+  name: 城市配送
+  description: 请在发货前确认收件地址。
+  country_code: ''
+  country: ''
+  country_index: 0
+  city: ''
+  field_order:
+  - description
+  - code
+  - name
+  initial:
+    code: old
+    name: Previous delivery zone
+    description: Old instructions
+- id: wolf-edit-1
+  case_id: sweeper-195
+  build: A
+  workflow: target
+  data_split: train
+  family: title_only
+  start: list
+  kind: edit
+  initial_title: About us
+  fields:
+    title: About the community archive
+- id: wolf-edit-2
+  case_id: sweeper-195
+  build: B
+  workflow: target
+  data_split: train
+  family: title_and_metadata
+  start: editor
+  kind: edit
+  initial_title: About us
+  fields:
+    title: Visitor information
+    breadcrumb: Opening hours, access arrangements and contact details.
+- id: wolf-edit-3
+  case_id: sweeper-195
+  build: A
+  workflow: target
+  data_split: train
+  family: title_and_metadata
+  start: list
+  kind: edit
+  initial_title: About us
+  fields:
+    title: Notre association
+    breadcrumb: association, accueil, activités
+- id: wolf-edit-4
+  case_id: sweeper-195
+  build: B
+  workflow: target
+  data_split: train
+  family: title_and_metadata
+  start: editor
+  kind: edit
+  initial_title: About us
+  fields:
+    title: About our workshop
+    breadcrumb: Workshop information
+- id: wolf-edit-5
+  case_id: sweeper-195
+  build: A
+  workflow: target
+  data_split: validation
+  family: title_and_metadata
+  start: list
+  kind: edit
+  initial_title: About us
+  fields:
+    title: 关于我们的服务
+    breadcrumb: 本页介绍服务范围、开放时间和联系方式。
+- id: wolf-edit-6
+  case_id: sweeper-195
+  build: B
+  workflow: target
+  data_split: train
+  family: title_and_metadata
+  start: editor
+  kind: edit
+  initial_title: About us
+  fields:
+    title: Local history collection
+    breadcrumb: archive, local history, research
+- id: wolf-duplicate-1
+  case_id: sweeper-195
+  build: B
+  workflow: preservation
+  data_split: train
+  family: duplicate_slug_validation
+  start: list
+  kind: duplicate
+  initial_title: About us
+  fields:
+    title: About Copy
+- id: wolf-duplicate-2
+  case_id: sweeper-195
+  build: A
+  workflow: preservation
+  data_split: train
+  family: duplicate_slug_with_metadata
+  start: editor
+  kind: duplicate
+  initial_title: About us
+  fields:
+    title: Archive visitor page
+    breadcrumb: This draft deliberately uses an existing sibling slug.
+- id: wolf-duplicate-3
+  case_id: sweeper-195
+  build: B
+  workflow: preservation
+  data_split: train
+  family: duplicate_slug_validation
+  start: list
+  kind: duplicate
+  initial_title: About us
+  fields:
+    title: Services overview
+- id: wolf-duplicate-4
+  case_id: sweeper-195
+  build: A
+  workflow: preservation
+  data_split: train
+  family: duplicate_slug_with_metadata
+  start: editor
+  kind: duplicate
+  initial_title: About us
+  fields:
+    title: Informations pratiques
+    breadcrumb: This draft deliberately uses an existing sibling slug.
+- id: wolf-duplicate-5
+  case_id: sweeper-195
+  build: B
+  workflow: preservation
+  data_split: validation
+  family: duplicate_slug_validation
+  start: list
+  kind: duplicate
+  initial_title: About us
+  fields:
+    title: 预约说明
+- id: wolf-duplicate-6
+  case_id: sweeper-195
+  build: A
+  workflow: preservation
+  data_split: train
+  family: duplicate_slug_with_metadata
+  start: editor
+  kind: duplicate
+  initial_title: About us
+  fields:
+    title: Community catalogue
+    breadcrumb: This draft deliberately uses an existing sibling slug.

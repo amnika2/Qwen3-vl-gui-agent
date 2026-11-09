@@ -1,0 +1,10 @@
+{
+  "datasets/sft-main-10apps-v2/manifest.json": "99d5caded342b3182c87661f895641648e90ebad52db3ea277b2a83009e11d56",
+  "datasets/sft-main-10apps-v2/train.jsonl": "9d5309cd2abe0e9dbc9d21c303bef4400f1572a7a524ab6c0668d03b68f3070a",
+  "datasets/sft-main-10apps-v2/validation.jsonl": "c404009acf4ab45ed20f52ba825c0f8f0cbce7c9edc09d87add1395c6a6fbe70",
+  "datasets/sft-main-10apps-v2/media_manifest.json": "440af402121677b8c96259893e3a1c8476e04ec2e8ee0a0bb879850022226b37",
+  "runs/sft-qwen3vl-10apps-v2/completion.json": "40d8ec601bd7025e2b89692547871b79deac8bf15027a0b005423c57914b5c30",
+  "runs/sft-qwen3vl-10apps-v2/adapter/adapter_model.safetensors": "fa713fac95769e1a5e552eb7f0e3414d321526894f390d18a340875d63dd4faf",
+  "reports/sft-lora-v2/comparison.json": "acb3d938f73c2224e7c4d848dd2e979f4cf4a9ff5d9dffa815ac3477020d4bb4",
+  "reports/sft-lora-v2/pairs.csv": "b83e541ce7eb900dc81657ab1a11fb5198e8d024d07282d56977cd2b6f13cea4"
+}

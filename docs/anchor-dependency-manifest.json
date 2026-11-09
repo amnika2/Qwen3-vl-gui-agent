@@ -1,0 +1,7 @@
+{
+  "change": "Normalize Composer package type CMS to project in a separate dependency directory",
+  "source_modified": false,
+  "original_manifest_sha256": "a8400a75cda76d5dbb5f5b03331d2d2fee4e940454d13ef050f6837b1554acd1",
+  "normalized_manifest_sha256": "aab236bb26f84fb5178d4f06bf6dfda8a656446cd89f99be6d2d196342eaf39d",
+  "lock_sha256": "e8acc85d758ce520579500fe218829462605641e9d7bce17f3c1df938ed00b47"
+}

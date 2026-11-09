@@ -1,0 +1,87 @@
+{
+  "reviewer": "root: direct screenshot inspection reported to builder",
+  "runs": {
+    "20261107T155948Z-322dcddc": {
+      "frames": [
+        {
+          "step": 6,
+          "input_proof_steps": [
+            3,
+            6
+          ],
+          "result_proof_steps": [],
+          "screenshot_sha256": "0b01069768aef5abcee6ec62e5a0fc704e5a7c84f1bcb9c80537f3d64db62f14",
+          "observation": "Full replacement-access-card body and Add replacement access-card instructions summary are simultaneously visible."
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    },
+    "20261107T155957Z-680fdaa6": {
+      "frames": [
+        {
+          "step": 7,
+          "input_proof_steps": [
+            4,
+            7
+          ],
+          "result_proof_steps": [],
+          "screenshot_sha256": "53e2e53c847eaa2aea46e24d2348cc29b9efbb6f59635689c1af15870204ec4d",
+          "observation": "Full corrected support-address body and Correct the support address spelling summary are visible."
+        },
+        {
+          "step": 8,
+          "input_proof_steps": [
+            4,
+            7
+          ],
+          "result_proof_steps": [],
+          "screenshot_sha256": "26c1777bd26b4895fd41485925209e79aca1c9afd8745fc0fe717b520691dff8",
+          "observation": "The same full body and summary remain visible and Minor is now visibly checked."
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    },
+    "20261107T160158Z-025e0607": {
+      "frames": [
+        {
+          "step": 9,
+          "input_proof_steps": [
+            5,
+            9
+          ],
+          "result_proof_steps": [],
+          "screenshot_sha256": "6f6816a091a8afba67c1d3dd1a21360b13cc416e3072289b9295230924b945fa",
+          "observation": "Subject Saturday repair workshop and the full repair-workshop content are simultaneously visible."
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    },
+    "20261107T160058Z-345f86c1": {
+      "frames": [
+        {
+          "step": 14,
+          "input_proof_steps": [
+            11,
+            14
+          ],
+          "result_proof_steps": [],
+          "screenshot_sha256": "6378935e50f88b0c0e9e5dd3c1e1670f343077857fe112dde154b99f7a5d96e6",
+          "observation": "The complete approved travel-policy body (EUR 45) and Publish the approved travel claim policy summary are simultaneously visible."
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    },
+    "20261107T160148Z-4c23171f": {
+      "frames": [],
+      "unestablished_input_proof_steps": [
+        4
+      ],
+      "unestablished_result_proof_steps": [],
+      "observation": "Selected typed-state frame8 completely shows Winter hours content but Subject is outside the viewport. The later saved Subject cannot substitute for proof of the typed Subject."
+    }
+  }
+}

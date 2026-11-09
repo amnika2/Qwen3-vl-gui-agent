@@ -1,0 +1,10 @@
+{
+  "source_run": "20261107T170319Z-5721eab3",
+  "replay_run": "20261107T171603Z-dc51b101",
+  "recorded_actions": 14,
+  "actions_captured": 14,
+  "termination_reason": "model_finished",
+  "oracle_verdict": "fail",
+  "synthetic": true,
+  "final_screenshot_exists": true
+}

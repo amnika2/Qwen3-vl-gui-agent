@@ -1,0 +1,14 @@
+{
+  "case_id": "sweeper-034",
+  "start_path": "/doku.php?id=wiki:welcome&do=edit",
+  "workflows": {
+    "target": {
+      "task": "Edit the DokuWiki page wiki:welcome: replace the entire body text with 'GUIQA edited welcome page body', save the page, then reopen it. Report pass if the reopened page shows the new text, fail if it still shows the old text, or blocked if you cannot complete the edit.",
+      "expected": "GUIQA edited welcome page body"
+    },
+    "preservation": {
+      "task": "Edit the DokuWiki page wiki:syntax: replace the entire body text with 'GUIQA edited syntax page body', save the page, then reopen it. Report pass if the reopened page shows the new text, fail if it still shows the old text, or blocked if you cannot complete the edit.",
+      "expected": "GUIQA edited syntax page body"
+    }
+  }
+}

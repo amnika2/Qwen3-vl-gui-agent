@@ -1,0 +1,12 @@
+split: frozen-five-sft-v2-fresh-comparison
+agent_config: configs/agent.yaml
+adapter_path: runs/sft-qwen3vl-10apps-v2/adapter
+method: qwen-controlled
+cases: [sweeper-005, sweeper-007, sweeper-008, sweeper-040, sweeper-041]
+builds: [A, B]
+workflows: [target, preservation]
+repeats: 2
+note: >-
+  当前截图环境下重新执行base40格和selected adapter40格，不复用v1 baseline。
+  每个case/variant独立worker，一次加载模型运行8格；可分配到4张空闲GPU。
+  同prompt、动作预算、图片限制和重复数。保留失败，只续未开始或interrupted。

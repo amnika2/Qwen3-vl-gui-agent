@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "samples": 1642,
+  "preserved_operation_samples": 1512,
+  "review_samples": 130,
+  "curriculum_reviews": 6,
+  "field_intents": {
+    "edit": 249,
+    "generated": 10,
+    "preserve": 77
+  },
+  "literal_empty_readings": {
+    "after": 30,
+    "before": 25
+  },
+  "reviews_with_five_frames": 11,
+  "source_hashes_still_match": true,
+  "all_review_schema_and_semantic_guards_pass": true,
+  "labels": {
+    "blocked": 33,
+    "fail": 26,
+    "pass": 71
+  },
+  "train_samples": 1354,
+  "validation_samples": 288,
+  "train_scenario_overlap_validation": 0,
+  "frozen_holdout_excluded": true,
+  "data_sha256": "a6590e8202a024e6715d74752eebfb57b4b7459b8fe78402f5968433f03fb96b",
+  "validation_sha256": "5048c8d432e80ed58d87e4d0219472cc5c902b8a200c56f26ace86018c1c30fe"
+}

@@ -1,0 +1,1249 @@
+{
+  "version": 1,
+  "date": "2026-11-08",
+  "reviewer": "Codex screenshot inspection",
+  "method": "Viewed all 68 distinct original key screenshots with view_image; checked exact before/after readings, submission responses and cancellation actions. Compared clicked coordinates or Escape in original traces for cancellation/save distinctions.",
+  "human_review": false,
+  "training_source": "datasets/rl-review-pilot-v2/train.jsonl",
+  "training_source_sha256": "ac4bd6ca05cb3d9973bf2e1073ff36402f96304f4f90265859d70b251d83256e",
+  "reviewed_training_samples": 40,
+  "distinct_original_key_screenshots": 68,
+  "new_training_structured_gold_errors_found": 0,
+  "excluded_reviews": [],
+  "issues_removed_with_facts_only": [
+    {
+      "case": "sweeper-142",
+      "finding": "The visible submit button says Edit IP; original descriptions call it Save. The structured accepted/unknown status and cited steps are correct."
+    },
+    {
+      "case": "sweeper-125",
+      "finding": "Cancellation examples close the option modal with its X control, then navigate back. The source description uses cancel generically. The structured unknown submission status and blocked verdict are correct."
+    }
+  ],
+  "reviews": {
+    "wolf-birch-edit-A-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "616b3f696e8528340dd7beeb08ef88f8ea01ebb896927a2ac2cb44fa723e6866",
+      "reviewed_steps": [
+        3,
+        5,
+        6
+      ],
+      "screenshots": [
+        {
+          "step": 3,
+          "image": "images/355c2e2726bf23e700b45798371027f7477eec74e44a97409358fa8ec9a72cb4.png",
+          "sha256": "355c2e2726bf23e700b45798371027f7477eec74e44a97409358fa8ec9a72cb4"
+        },
+        {
+          "step": 5,
+          "image": "images/cb7329ef5e1222f408240f7df20d25934f07f069bc5b7e0b5f42a03ab1f8962c.png",
+          "sha256": "cb7329ef5e1222f408240f7df20d25934f07f069bc5b7e0b5f42a03ab1f8962c"
+        },
+        {
+          "step": 6,
+          "image": "images/57d3ddb66c2a1554f1dac5ec5e1f279596a440aa3461e5c2e959390d96bea65e.png",
+          "sha256": "57d3ddb66c2a1554f1dac5ec5e1f279596a440aa3461e5c2e959390d96bea65e"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "wolf-birch-edit-B-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "8f81dc02baa0879f1c53f41a2f4a607938ca88c6c32956d79df2be19729ef3ca",
+      "reviewed_steps": [
+        3,
+        5,
+        6,
+        8,
+        9
+      ],
+      "screenshots": [
+        {
+          "step": 3,
+          "image": "images/355c2e2726bf23e700b45798371027f7477eec74e44a97409358fa8ec9a72cb4.png",
+          "sha256": "355c2e2726bf23e700b45798371027f7477eec74e44a97409358fa8ec9a72cb4"
+        },
+        {
+          "step": 5,
+          "image": "images/cb7329ef5e1222f408240f7df20d25934f07f069bc5b7e0b5f42a03ab1f8962c.png",
+          "sha256": "cb7329ef5e1222f408240f7df20d25934f07f069bc5b7e0b5f42a03ab1f8962c"
+        },
+        {
+          "step": 6,
+          "image": "images/6abe1282a00d26dfb93f39587d7b562fdf7866dcaa4f05605b5bf92c9c286169.png",
+          "sha256": "6abe1282a00d26dfb93f39587d7b562fdf7866dcaa4f05605b5bf92c9c286169"
+        },
+        {
+          "step": 8,
+          "image": "images/017d25cbaf9bdc54e7f60be90698b99b5e05b73bff1a28fb21aa3778db77ab87.png",
+          "sha256": "017d25cbaf9bdc54e7f60be90698b99b5e05b73bff1a28fb21aa3778db77ab87"
+        },
+        {
+          "step": 9,
+          "image": "images/aad8d49ee9eab7118b0441fc1ae4c01a78701f4c5a3dd224b7345cf30b17a722.png",
+          "sha256": "aad8d49ee9eab7118b0441fc1ae4c01a78701f4c5a3dd224b7345cf30b17a722"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "wolf-hazel-edit-A-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "e31a1e4bf92a9854517e3bd8719039a63fab1edac82a4e24303294577b70c8d6",
+      "reviewed_steps": [
+        3,
+        5,
+        6
+      ],
+      "screenshots": [
+        {
+          "step": 3,
+          "image": "images/b1eee23976a04bbe32933ceb5efc59741433e4a99960992860792bb45b64ac03.png",
+          "sha256": "b1eee23976a04bbe32933ceb5efc59741433e4a99960992860792bb45b64ac03"
+        },
+        {
+          "step": 5,
+          "image": "images/cb7329ef5e1222f408240f7df20d25934f07f069bc5b7e0b5f42a03ab1f8962c.png",
+          "sha256": "cb7329ef5e1222f408240f7df20d25934f07f069bc5b7e0b5f42a03ab1f8962c"
+        },
+        {
+          "step": 6,
+          "image": "images/1b821778d5145120c0de512ec44779f1b4c54d995b729aab00e86e288cc8d372.png",
+          "sha256": "1b821778d5145120c0de512ec44779f1b4c54d995b729aab00e86e288cc8d372"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "wolf-hazel-edit-B-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "3adfc07981d664ee4279d240ed6b6880f88ac1c6d877dfbb88f5375fa45501cb",
+      "reviewed_steps": [
+        3,
+        5,
+        6,
+        8,
+        9
+      ],
+      "screenshots": [
+        {
+          "step": 3,
+          "image": "images/b1eee23976a04bbe32933ceb5efc59741433e4a99960992860792bb45b64ac03.png",
+          "sha256": "b1eee23976a04bbe32933ceb5efc59741433e4a99960992860792bb45b64ac03"
+        },
+        {
+          "step": 5,
+          "image": "images/cb7329ef5e1222f408240f7df20d25934f07f069bc5b7e0b5f42a03ab1f8962c.png",
+          "sha256": "cb7329ef5e1222f408240f7df20d25934f07f069bc5b7e0b5f42a03ab1f8962c"
+        },
+        {
+          "step": 6,
+          "image": "images/01e6f59ad4a164891d9a7c42d2576d98f5465160411bdb6c6118a20483328fcd.png",
+          "sha256": "01e6f59ad4a164891d9a7c42d2576d98f5465160411bdb6c6118a20483328fcd"
+        },
+        {
+          "step": 8,
+          "image": "images/49be7b477d1fbd4c2df5973f0c9af4fbdb5f1b5db8d8faca26303e21d1cba384.png",
+          "sha256": "49be7b477d1fbd4c2df5973f0c9af4fbdb5f1b5db8d8faca26303e21d1cba384"
+        },
+        {
+          "step": 9,
+          "image": "images/aad8d49ee9eab7118b0441fc1ae4c01a78701f4c5a3dd224b7345cf30b17a722.png",
+          "sha256": "aad8d49ee9eab7118b0441fc1ae4c01a78701f4c5a3dd224b7345cf30b17a722"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "wolf-pine-edit-A-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "90e4d2f674bdd61de3d926c7e7d06f7cd901910bf138a0ed0c0323e210756590",
+      "reviewed_steps": [
+        3,
+        5,
+        6
+      ],
+      "screenshots": [
+        {
+          "step": 3,
+          "image": "images/3e971531cb597bc7102d4fa884dbaa81fa60cb7700a2ef2cf7a49268ec74e9e0.png",
+          "sha256": "3e971531cb597bc7102d4fa884dbaa81fa60cb7700a2ef2cf7a49268ec74e9e0"
+        },
+        {
+          "step": 5,
+          "image": "images/cb7329ef5e1222f408240f7df20d25934f07f069bc5b7e0b5f42a03ab1f8962c.png",
+          "sha256": "cb7329ef5e1222f408240f7df20d25934f07f069bc5b7e0b5f42a03ab1f8962c"
+        },
+        {
+          "step": 6,
+          "image": "images/ea07dde6bb307b9f08e27738f963de8827bdd84db63cc145cc0762f6135d1c93.png",
+          "sha256": "ea07dde6bb307b9f08e27738f963de8827bdd84db63cc145cc0762f6135d1c93"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "wolf-pine-edit-B-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "0c130bfc7dcd6e01cc0d7209703898cbf45131e2fb8bd1b39bb899e2bb35ec14",
+      "reviewed_steps": [
+        3,
+        5,
+        6,
+        8,
+        9
+      ],
+      "screenshots": [
+        {
+          "step": 3,
+          "image": "images/3e971531cb597bc7102d4fa884dbaa81fa60cb7700a2ef2cf7a49268ec74e9e0.png",
+          "sha256": "3e971531cb597bc7102d4fa884dbaa81fa60cb7700a2ef2cf7a49268ec74e9e0"
+        },
+        {
+          "step": 5,
+          "image": "images/cb7329ef5e1222f408240f7df20d25934f07f069bc5b7e0b5f42a03ab1f8962c.png",
+          "sha256": "cb7329ef5e1222f408240f7df20d25934f07f069bc5b7e0b5f42a03ab1f8962c"
+        },
+        {
+          "step": 6,
+          "image": "images/24fdc092aa68f7b693ab5b8626e9eb1b65398445909f96e7b26981a5f931960e.png",
+          "sha256": "24fdc092aa68f7b693ab5b8626e9eb1b65398445909f96e7b26981a5f931960e"
+        },
+        {
+          "step": 8,
+          "image": "images/b937d7648b25bf98dde7fc815a249125c4f50029099193e6c7456af41746d388.png",
+          "sha256": "b937d7648b25bf98dde7fc815a249125c4f50029099193e6c7456af41746d388"
+        },
+        {
+          "step": 9,
+          "image": "images/aad8d49ee9eab7118b0441fc1ae4c01a78701f4c5a3dd224b7345cf30b17a722.png",
+          "sha256": "aad8d49ee9eab7118b0441fc1ae4c01a78701f4c5a3dd224b7345cf30b17a722"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "wolf-birch-duplicate-A-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "7bc33323d2f0c98fcd2e3d640d616fbca79b84e390b8a141ab162735818d7dae",
+      "reviewed_steps": [
+        3,
+        8,
+        9
+      ],
+      "screenshots": [
+        {
+          "step": 3,
+          "image": "images/1780a836086a8cd766aad02726983a3ac6852c7f55635940a90ac15ee4727029.png",
+          "sha256": "1780a836086a8cd766aad02726983a3ac6852c7f55635940a90ac15ee4727029"
+        },
+        {
+          "step": 8,
+          "image": "images/c3becfa80ce93eaeb73d62a0b86c904bea3af270a0eb3cc4651732767f3ab0fb.png",
+          "sha256": "c3becfa80ce93eaeb73d62a0b86c904bea3af270a0eb3cc4651732767f3ab0fb"
+        },
+        {
+          "step": 9,
+          "image": "images/d144a1319da672e786638d6f8afae2d0197da142be0a03df1181c4f79092038b.png",
+          "sha256": "d144a1319da672e786638d6f8afae2d0197da142be0a03df1181c4f79092038b"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "wolf-birch-duplicate-B-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "de92d8ca454de77691343756a7b66a9763d25c6943e6399c57b5c8477a4e1862",
+      "reviewed_steps": [
+        3,
+        8,
+        9
+      ],
+      "screenshots": [
+        {
+          "step": 3,
+          "image": "images/1780a836086a8cd766aad02726983a3ac6852c7f55635940a90ac15ee4727029.png",
+          "sha256": "1780a836086a8cd766aad02726983a3ac6852c7f55635940a90ac15ee4727029"
+        },
+        {
+          "step": 8,
+          "image": "images/c3becfa80ce93eaeb73d62a0b86c904bea3af270a0eb3cc4651732767f3ab0fb.png",
+          "sha256": "c3becfa80ce93eaeb73d62a0b86c904bea3af270a0eb3cc4651732767f3ab0fb"
+        },
+        {
+          "step": 9,
+          "image": "images/0ec4d34191be3009715a353372093221c8496b673cb858d9a9a2deae38f27400.png",
+          "sha256": "0ec4d34191be3009715a353372093221c8496b673cb858d9a9a2deae38f27400"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "wolf-hazel-duplicate-A-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "ba7a40f1efef4271c909b5ebcfdb959bb3dde34488626b28013c3a7f621ec426",
+      "reviewed_steps": [
+        3,
+        8,
+        9
+      ],
+      "screenshots": [
+        {
+          "step": 3,
+          "image": "images/7bb726f6c16b0ab9ee6890e156c44fa057679e6f60aa5e2f3c5aa94a08c920cf.png",
+          "sha256": "7bb726f6c16b0ab9ee6890e156c44fa057679e6f60aa5e2f3c5aa94a08c920cf"
+        },
+        {
+          "step": 8,
+          "image": "images/b6c2e8dfc7cdce0182eb76bb4b9de27b85e7542481f86d754d13e63fb149fab1.png",
+          "sha256": "b6c2e8dfc7cdce0182eb76bb4b9de27b85e7542481f86d754d13e63fb149fab1"
+        },
+        {
+          "step": 9,
+          "image": "images/51a8cabcd2f17e281f00a66120d6c393a61511d47f7e9d07e6d32efe07caa982.png",
+          "sha256": "51a8cabcd2f17e281f00a66120d6c393a61511d47f7e9d07e6d32efe07caa982"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "wolf-hazel-duplicate-B-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "1b25d839de3d60d5f99bc46be581ce3345ed2005cbd215dbb98482269c92f7bf",
+      "reviewed_steps": [
+        3,
+        8,
+        9
+      ],
+      "screenshots": [
+        {
+          "step": 3,
+          "image": "images/7bb726f6c16b0ab9ee6890e156c44fa057679e6f60aa5e2f3c5aa94a08c920cf.png",
+          "sha256": "7bb726f6c16b0ab9ee6890e156c44fa057679e6f60aa5e2f3c5aa94a08c920cf"
+        },
+        {
+          "step": 8,
+          "image": "images/b6c2e8dfc7cdce0182eb76bb4b9de27b85e7542481f86d754d13e63fb149fab1.png",
+          "sha256": "b6c2e8dfc7cdce0182eb76bb4b9de27b85e7542481f86d754d13e63fb149fab1"
+        },
+        {
+          "step": 9,
+          "image": "images/4a9251f0ad7391f336bafaabcc4a2592ad44a896401ef072907ff59ecf09fe74.png",
+          "sha256": "4a9251f0ad7391f336bafaabcc4a2592ad44a896401ef072907ff59ecf09fe74"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "phpipam-birch-A-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "4a7929c9a3cb72f3624de39518ccd462d6e0c368c0d502ba153b3fc472c53fb7",
+      "reviewed_steps": [
+        2,
+        5,
+        6,
+        8
+      ],
+      "screenshots": [
+        {
+          "step": 2,
+          "image": "images/cde92abb594566bd55a06efe77a4813b1efa5172db51a1387cb4d9489940a696.png",
+          "sha256": "cde92abb594566bd55a06efe77a4813b1efa5172db51a1387cb4d9489940a696"
+        },
+        {
+          "step": 5,
+          "image": "images/3eb6bd006b1424e85815f1a06de324fe721c3ee0cc1fb01f2b2789df20aa932a.png",
+          "sha256": "3eb6bd006b1424e85815f1a06de324fe721c3ee0cc1fb01f2b2789df20aa932a"
+        },
+        {
+          "step": 6,
+          "image": "images/cd8b9998f95e6721358f62e8241b88c9740c34053236dce88697989ab85844c8.png",
+          "sha256": "cd8b9998f95e6721358f62e8241b88c9740c34053236dce88697989ab85844c8"
+        },
+        {
+          "step": 8,
+          "image": "images/cde92abb594566bd55a06efe77a4813b1efa5172db51a1387cb4d9489940a696.png",
+          "sha256": "cde92abb594566bd55a06efe77a4813b1efa5172db51a1387cb4d9489940a696"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "phpipam-birch-B-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "563da6bc10ac0c68e37f12680fc372f1a2aa35f6091d1266a28f8c28e065d3e8",
+      "reviewed_steps": [
+        2,
+        5,
+        6,
+        8
+      ],
+      "screenshots": [
+        {
+          "step": 2,
+          "image": "images/cde92abb594566bd55a06efe77a4813b1efa5172db51a1387cb4d9489940a696.png",
+          "sha256": "cde92abb594566bd55a06efe77a4813b1efa5172db51a1387cb4d9489940a696"
+        },
+        {
+          "step": 5,
+          "image": "images/3eb6bd006b1424e85815f1a06de324fe721c3ee0cc1fb01f2b2789df20aa932a.png",
+          "sha256": "3eb6bd006b1424e85815f1a06de324fe721c3ee0cc1fb01f2b2789df20aa932a"
+        },
+        {
+          "step": 6,
+          "image": "images/12248f38dc18ea0b02b7427773188b17bcc34a31a40470e13a5bfc671fde84f7.png",
+          "sha256": "12248f38dc18ea0b02b7427773188b17bcc34a31a40470e13a5bfc671fde84f7"
+        },
+        {
+          "step": 8,
+          "image": "images/d60d1e465f6b3cf9758a31e714c7d4162f01b4fc2f689a7030eef295bf1f0794.png",
+          "sha256": "d60d1e465f6b3cf9758a31e714c7d4162f01b4fc2f689a7030eef295bf1f0794"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "phpipam-hazel-A-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "4656db590a9f58f32d206c04b54dbe0e772ebcc3c74ced6096981bbc7a67d4c9",
+      "reviewed_steps": [
+        2,
+        5,
+        6,
+        8
+      ],
+      "screenshots": [
+        {
+          "step": 2,
+          "image": "images/5c0c2e3cf0dd5341a774a599ed090d1dcc49a4d9dd5d9bdb2b264e19d879b3b7.png",
+          "sha256": "5c0c2e3cf0dd5341a774a599ed090d1dcc49a4d9dd5d9bdb2b264e19d879b3b7"
+        },
+        {
+          "step": 5,
+          "image": "images/471834a67d7d5b15b5d590bed8daa5a3ecdc524046b003ec5c3ea8fec0b0062a.png",
+          "sha256": "471834a67d7d5b15b5d590bed8daa5a3ecdc524046b003ec5c3ea8fec0b0062a"
+        },
+        {
+          "step": 6,
+          "image": "images/186ef6a5ef84cf75fab6e1ecf7709c0035820836d6c00313dc65e389f8b3e599.png",
+          "sha256": "186ef6a5ef84cf75fab6e1ecf7709c0035820836d6c00313dc65e389f8b3e599"
+        },
+        {
+          "step": 8,
+          "image": "images/5c0c2e3cf0dd5341a774a599ed090d1dcc49a4d9dd5d9bdb2b264e19d879b3b7.png",
+          "sha256": "5c0c2e3cf0dd5341a774a599ed090d1dcc49a4d9dd5d9bdb2b264e19d879b3b7"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "phpipam-hazel-B-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "5e3d0f8ae71f0d8f148802b7138d73aa61cc8a4b2eda9b4784e7eb7caf15ba24",
+      "reviewed_steps": [
+        2,
+        5,
+        6,
+        8
+      ],
+      "screenshots": [
+        {
+          "step": 2,
+          "image": "images/5c0c2e3cf0dd5341a774a599ed090d1dcc49a4d9dd5d9bdb2b264e19d879b3b7.png",
+          "sha256": "5c0c2e3cf0dd5341a774a599ed090d1dcc49a4d9dd5d9bdb2b264e19d879b3b7"
+        },
+        {
+          "step": 5,
+          "image": "images/471834a67d7d5b15b5d590bed8daa5a3ecdc524046b003ec5c3ea8fec0b0062a.png",
+          "sha256": "471834a67d7d5b15b5d590bed8daa5a3ecdc524046b003ec5c3ea8fec0b0062a"
+        },
+        {
+          "step": 6,
+          "image": "images/b7f91e8c8924972551d6b1ac628ea1390970e58399bec3f9bc72341cc38bc007.png",
+          "sha256": "b7f91e8c8924972551d6b1ac628ea1390970e58399bec3f9bc72341cc38bc007"
+        },
+        {
+          "step": 8,
+          "image": "images/7bfc82867f2acf8a62835fce2334ffdd593dca0278c716d312a09c37d1a6696c.png",
+          "sha256": "7bfc82867f2acf8a62835fce2334ffdd593dca0278c716d312a09c37d1a6696c"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "phpipam-pine-A-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "0842f391843ef33dc061e830d88304c7b41f3f71c2e606cab9f86e394d7016bb",
+      "reviewed_steps": [
+        2,
+        5,
+        6,
+        8
+      ],
+      "screenshots": [
+        {
+          "step": 2,
+          "image": "images/5952f841c7c0a0871e3f602a86dc6efaa4dfae4869120c80a262ac86d6616848.png",
+          "sha256": "5952f841c7c0a0871e3f602a86dc6efaa4dfae4869120c80a262ac86d6616848"
+        },
+        {
+          "step": 5,
+          "image": "images/cf42dab16bac664d26d8af978d67d1aa4dbc26d02369ffff44e5d3e0bfc2694e.png",
+          "sha256": "cf42dab16bac664d26d8af978d67d1aa4dbc26d02369ffff44e5d3e0bfc2694e"
+        },
+        {
+          "step": 6,
+          "image": "images/94d2eb8d65ae85f53cec4429267c63dfa3c6fd8de342d00a73e23ae8e751702d.png",
+          "sha256": "94d2eb8d65ae85f53cec4429267c63dfa3c6fd8de342d00a73e23ae8e751702d"
+        },
+        {
+          "step": 8,
+          "image": "images/5952f841c7c0a0871e3f602a86dc6efaa4dfae4869120c80a262ac86d6616848.png",
+          "sha256": "5952f841c7c0a0871e3f602a86dc6efaa4dfae4869120c80a262ac86d6616848"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "phpipam-pine-B-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "7910579553f6209052cf969e618dab690138d80c3d19a2b1aa5c089fbacdc25f",
+      "reviewed_steps": [
+        2,
+        5,
+        6,
+        8
+      ],
+      "screenshots": [
+        {
+          "step": 2,
+          "image": "images/5952f841c7c0a0871e3f602a86dc6efaa4dfae4869120c80a262ac86d6616848.png",
+          "sha256": "5952f841c7c0a0871e3f602a86dc6efaa4dfae4869120c80a262ac86d6616848"
+        },
+        {
+          "step": 5,
+          "image": "images/cf42dab16bac664d26d8af978d67d1aa4dbc26d02369ffff44e5d3e0bfc2694e.png",
+          "sha256": "cf42dab16bac664d26d8af978d67d1aa4dbc26d02369ffff44e5d3e0bfc2694e"
+        },
+        {
+          "step": 6,
+          "image": "images/6328b98dbcc6d30abb70464e7baa5ecd87a9574326591592556498672ef39aeb.png",
+          "sha256": "6328b98dbcc6d30abb70464e7baa5ecd87a9574326591592556498672ef39aeb"
+        },
+        {
+          "step": 8,
+          "image": "images/4808d3c1c226f71ae7dbfc8f30a565dfbbd81def33e2cd63efa03af7084462e1.png",
+          "sha256": "4808d3c1c226f71ae7dbfc8f30a565dfbbd81def33e2cd63efa03af7084462e1"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "opencart-birch-A-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "482e9fe6e845edf5e9eeeedd92c7154a450a891255d20d41d709582be2dc4f6a",
+      "reviewed_steps": [
+        6,
+        10,
+        14
+      ],
+      "screenshots": [
+        {
+          "step": 6,
+          "image": "images/3b16d08b21b9474c7f5d4e10e06c1b008b8d1883312304838ddc5ade2b6cc530.png",
+          "sha256": "3b16d08b21b9474c7f5d4e10e06c1b008b8d1883312304838ddc5ade2b6cc530"
+        },
+        {
+          "step": 10,
+          "image": "images/b128b134bbfb41f6ff482d86e2b62bb75d2f44949c03793f13c71eb80b5f9499.png",
+          "sha256": "b128b134bbfb41f6ff482d86e2b62bb75d2f44949c03793f13c71eb80b5f9499"
+        },
+        {
+          "step": 14,
+          "image": "images/679f534a2b8ef32dd3f73a5a4af26ba5bc6fb548cc02ce7dc860b97935cdd176.png",
+          "sha256": "679f534a2b8ef32dd3f73a5a4af26ba5bc6fb548cc02ce7dc860b97935cdd176"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "opencart-birch-B-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "0cce010edd1dd1ab94726779248a036982158e81fccc473771dfb28acd324140",
+      "reviewed_steps": [
+        6,
+        10,
+        14
+      ],
+      "screenshots": [
+        {
+          "step": 6,
+          "image": "images/3b16d08b21b9474c7f5d4e10e06c1b008b8d1883312304838ddc5ade2b6cc530.png",
+          "sha256": "3b16d08b21b9474c7f5d4e10e06c1b008b8d1883312304838ddc5ade2b6cc530"
+        },
+        {
+          "step": 10,
+          "image": "images/b32d34e47621513a80bd79612a0e46a193442675490ae37dd67000eda1daf1b1.png",
+          "sha256": "b32d34e47621513a80bd79612a0e46a193442675490ae37dd67000eda1daf1b1"
+        },
+        {
+          "step": 14,
+          "image": "images/94740379c225520ff2799d2fa1eaa5c7a9b96c7da8209987911c37385ba85c5f.png",
+          "sha256": "94740379c225520ff2799d2fa1eaa5c7a9b96c7da8209987911c37385ba85c5f"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "opencart-hazel-A-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "a3e5019cb3318d65611ef71040ab102bd2106ef982c78a06482a061f9f8da77c",
+      "reviewed_steps": [
+        6,
+        10,
+        14
+      ],
+      "screenshots": [
+        {
+          "step": 6,
+          "image": "images/7b68566f2bfaed412b9e0b7e0d2c5a256e14c4e54b412df60e87c1e40b9c9d75.png",
+          "sha256": "7b68566f2bfaed412b9e0b7e0d2c5a256e14c4e54b412df60e87c1e40b9c9d75"
+        },
+        {
+          "step": 10,
+          "image": "images/b32d34e47621513a80bd79612a0e46a193442675490ae37dd67000eda1daf1b1.png",
+          "sha256": "b32d34e47621513a80bd79612a0e46a193442675490ae37dd67000eda1daf1b1"
+        },
+        {
+          "step": 14,
+          "image": "images/3c967c38e292e3b8b4de13d066ec7e2621d3eba0890b98e897e634f18a9b7c26.png",
+          "sha256": "3c967c38e292e3b8b4de13d066ec7e2621d3eba0890b98e897e634f18a9b7c26"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "opencart-hazel-B-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "20eaa797b9e04a259395fe0bec860bb8e8431a742c2e2f400f743aa9de9d2e4b",
+      "reviewed_steps": [
+        6,
+        10,
+        14
+      ],
+      "screenshots": [
+        {
+          "step": 6,
+          "image": "images/7b68566f2bfaed412b9e0b7e0d2c5a256e14c4e54b412df60e87c1e40b9c9d75.png",
+          "sha256": "7b68566f2bfaed412b9e0b7e0d2c5a256e14c4e54b412df60e87c1e40b9c9d75"
+        },
+        {
+          "step": 10,
+          "image": "images/b32d34e47621513a80bd79612a0e46a193442675490ae37dd67000eda1daf1b1.png",
+          "sha256": "b32d34e47621513a80bd79612a0e46a193442675490ae37dd67000eda1daf1b1"
+        },
+        {
+          "step": 14,
+          "image": "images/0dbea18f1d6fb47b3d5d273080ef5376ed3e89ddd548b4cfc0b0e81b141fa523.png",
+          "sha256": "0dbea18f1d6fb47b3d5d273080ef5376ed3e89ddd548b4cfc0b0e81b141fa523"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "opencart-pine-A-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "90ce2fc4a1b319ac8887507dbcd2b6aeb3577c978f915d88f8b380f601bc3657",
+      "reviewed_steps": [
+        6,
+        10,
+        14
+      ],
+      "screenshots": [
+        {
+          "step": 6,
+          "image": "images/d5ffb6d4f775035ed500e6c9af9c0089ad1cbb18a697a71ab6e806e022d070c2.png",
+          "sha256": "d5ffb6d4f775035ed500e6c9af9c0089ad1cbb18a697a71ab6e806e022d070c2"
+        },
+        {
+          "step": 10,
+          "image": "images/b128b134bbfb41f6ff482d86e2b62bb75d2f44949c03793f13c71eb80b5f9499.png",
+          "sha256": "b128b134bbfb41f6ff482d86e2b62bb75d2f44949c03793f13c71eb80b5f9499"
+        },
+        {
+          "step": 14,
+          "image": "images/a3f3d9509fa6b0aa4137294605944e1ad358db92e1fd26ad9b0d4eb6504f3708.png",
+          "sha256": "a3f3d9509fa6b0aa4137294605944e1ad358db92e1fd26ad9b0d4eb6504f3708"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "opencart-pine-B-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "9e385bda88c61bf85b680f1b9c80f84864db4fd395bf7692e95dcbc536316e37",
+      "reviewed_steps": [
+        6,
+        10,
+        14
+      ],
+      "screenshots": [
+        {
+          "step": 6,
+          "image": "images/d5ffb6d4f775035ed500e6c9af9c0089ad1cbb18a697a71ab6e806e022d070c2.png",
+          "sha256": "d5ffb6d4f775035ed500e6c9af9c0089ad1cbb18a697a71ab6e806e022d070c2"
+        },
+        {
+          "step": 10,
+          "image": "images/b32d34e47621513a80bd79612a0e46a193442675490ae37dd67000eda1daf1b1.png",
+          "sha256": "b32d34e47621513a80bd79612a0e46a193442675490ae37dd67000eda1daf1b1"
+        },
+        {
+          "step": 14,
+          "image": "images/695758cead423ba0e566a88dcd2c8ce72433bfa50fde5ae94cce6e94094ef1d4.png",
+          "sha256": "695758cead423ba0e566a88dcd2c8ce72433bfa50fde5ae94cce6e94094ef1d4"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "typesetter-birch-A-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "aef4972dccf869be250fea1152b6ee02cf255a9b61af1e2e0a9451fcbff85c3d",
+      "reviewed_steps": [
+        10,
+        11,
+        12
+      ],
+      "screenshots": [
+        {
+          "step": 10,
+          "image": "images/746335ce0cf316eff525fcec3643a8f81b09d7c5e41a082164a23fc337a30044.png",
+          "sha256": "746335ce0cf316eff525fcec3643a8f81b09d7c5e41a082164a23fc337a30044"
+        },
+        {
+          "step": 11,
+          "image": "images/4e71a61b0ffecf06b6a0cdb043e7518d35a3b0a3f200451cb7484770892e344f.png",
+          "sha256": "4e71a61b0ffecf06b6a0cdb043e7518d35a3b0a3f200451cb7484770892e344f"
+        },
+        {
+          "step": 12,
+          "image": "images/5ebe4fe89c410e303169f8efb58cb879b70aa00f49f2283faaf253aaa0dc5b08.png",
+          "sha256": "5ebe4fe89c410e303169f8efb58cb879b70aa00f49f2283faaf253aaa0dc5b08"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "typesetter-birch-B-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "afa49d232c6865789362fec3e7cf64dbc6c36a0edb39a6f29b4481edb30f9f8e",
+      "reviewed_steps": [
+        10,
+        11,
+        12
+      ],
+      "screenshots": [
+        {
+          "step": 10,
+          "image": "images/746335ce0cf316eff525fcec3643a8f81b09d7c5e41a082164a23fc337a30044.png",
+          "sha256": "746335ce0cf316eff525fcec3643a8f81b09d7c5e41a082164a23fc337a30044"
+        },
+        {
+          "step": 11,
+          "image": "images/4e71a61b0ffecf06b6a0cdb043e7518d35a3b0a3f200451cb7484770892e344f.png",
+          "sha256": "4e71a61b0ffecf06b6a0cdb043e7518d35a3b0a3f200451cb7484770892e344f"
+        },
+        {
+          "step": 12,
+          "image": "images/2912e2de88c6064d3389e177cfe78e8f92cfc6d617908c32bfc25e35021840bd.png",
+          "sha256": "2912e2de88c6064d3389e177cfe78e8f92cfc6d617908c32bfc25e35021840bd"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "typesetter-hazel-A-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "11ebb9b18277d5baffd72fab200ec8fcc63b4607ca74abb22654c955a2a99d0b",
+      "reviewed_steps": [
+        10,
+        11,
+        12
+      ],
+      "screenshots": [
+        {
+          "step": 10,
+          "image": "images/4cfe879ae377f9fdd5a6461e7aeff374c7fee5bee435b5e474206c354158cc10.png",
+          "sha256": "4cfe879ae377f9fdd5a6461e7aeff374c7fee5bee435b5e474206c354158cc10"
+        },
+        {
+          "step": 11,
+          "image": "images/4e71a61b0ffecf06b6a0cdb043e7518d35a3b0a3f200451cb7484770892e344f.png",
+          "sha256": "4e71a61b0ffecf06b6a0cdb043e7518d35a3b0a3f200451cb7484770892e344f"
+        },
+        {
+          "step": 12,
+          "image": "images/43d14fc688f94902f6f5460de95003a933c43202903d758960232e9edf9e57b7.png",
+          "sha256": "43d14fc688f94902f6f5460de95003a933c43202903d758960232e9edf9e57b7"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "typesetter-hazel-B-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "e32fdb6be26227e20f7914f647f1dcc66a66dab62bd63039fc67e948b08c21e3",
+      "reviewed_steps": [
+        10,
+        11,
+        12
+      ],
+      "screenshots": [
+        {
+          "step": 10,
+          "image": "images/4cfe879ae377f9fdd5a6461e7aeff374c7fee5bee435b5e474206c354158cc10.png",
+          "sha256": "4cfe879ae377f9fdd5a6461e7aeff374c7fee5bee435b5e474206c354158cc10"
+        },
+        {
+          "step": 11,
+          "image": "images/4e71a61b0ffecf06b6a0cdb043e7518d35a3b0a3f200451cb7484770892e344f.png",
+          "sha256": "4e71a61b0ffecf06b6a0cdb043e7518d35a3b0a3f200451cb7484770892e344f"
+        },
+        {
+          "step": 12,
+          "image": "images/9c1c099cbb2e8502d14e14a615627c26799bdaf598e239a82549c92abfdae2d8.png",
+          "sha256": "9c1c099cbb2e8502d14e14a615627c26799bdaf598e239a82549c92abfdae2d8"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "typesetter-pine-A-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "18f01f6cee6f41780bd02b985c29496146ba991e251a2c3edf1218c3b2be49db",
+      "reviewed_steps": [
+        10,
+        11,
+        12
+      ],
+      "screenshots": [
+        {
+          "step": 10,
+          "image": "images/35b7ce6a278397980988e1f309ba775c9862dc6f318e67ff139d7570a5d7e085.png",
+          "sha256": "35b7ce6a278397980988e1f309ba775c9862dc6f318e67ff139d7570a5d7e085"
+        },
+        {
+          "step": 11,
+          "image": "images/4e71a61b0ffecf06b6a0cdb043e7518d35a3b0a3f200451cb7484770892e344f.png",
+          "sha256": "4e71a61b0ffecf06b6a0cdb043e7518d35a3b0a3f200451cb7484770892e344f"
+        },
+        {
+          "step": 12,
+          "image": "images/389a22a178311ee96763dadc369e3461f71fc79d866b28f18d18c0c2604cbd62.png",
+          "sha256": "389a22a178311ee96763dadc369e3461f71fc79d866b28f18d18c0c2604cbd62"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "typesetter-pine-B-saved": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "52f77139181cc34ab593b61f1047a242acc3e900c8b1fbdb18dcb88522a81283",
+      "reviewed_steps": [
+        10,
+        11,
+        12
+      ],
+      "screenshots": [
+        {
+          "step": 10,
+          "image": "images/35b7ce6a278397980988e1f309ba775c9862dc6f318e67ff139d7570a5d7e085.png",
+          "sha256": "35b7ce6a278397980988e1f309ba775c9862dc6f318e67ff139d7570a5d7e085"
+        },
+        {
+          "step": 11,
+          "image": "images/4e71a61b0ffecf06b6a0cdb043e7518d35a3b0a3f200451cb7484770892e344f.png",
+          "sha256": "4e71a61b0ffecf06b6a0cdb043e7518d35a3b0a3f200451cb7484770892e344f"
+        },
+        {
+          "step": 12,
+          "image": "images/7c26a4017b1a428f0dbbb1468ecd85809cdd5f550edad820039be753dd008ebe.png",
+          "sha256": "7c26a4017b1a428f0dbbb1468ecd85809cdd5f550edad820039be753dd008ebe"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "phpipam-birch-B-cancelled": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "9999a87dab15e4ecf8a6c08fb424cf2b829738f7f61748ad3bdbcee33e1f8f22",
+      "reviewed_steps": [
+        2,
+        5,
+        6,
+        9
+      ],
+      "screenshots": [
+        {
+          "step": 2,
+          "image": "images/cde92abb594566bd55a06efe77a4813b1efa5172db51a1387cb4d9489940a696.png",
+          "sha256": "cde92abb594566bd55a06efe77a4813b1efa5172db51a1387cb4d9489940a696"
+        },
+        {
+          "step": 5,
+          "image": "images/3eb6bd006b1424e85815f1a06de324fe721c3ee0cc1fb01f2b2789df20aa932a.png",
+          "sha256": "3eb6bd006b1424e85815f1a06de324fe721c3ee0cc1fb01f2b2789df20aa932a"
+        },
+        {
+          "step": 6,
+          "image": "images/cd8b9998f95e6721358f62e8241b88c9740c34053236dce88697989ab85844c8.png",
+          "sha256": "cd8b9998f95e6721358f62e8241b88c9740c34053236dce88697989ab85844c8"
+        },
+        {
+          "step": 9,
+          "image": "images/cde92abb594566bd55a06efe77a4813b1efa5172db51a1387cb4d9489940a696.png",
+          "sha256": "cde92abb594566bd55a06efe77a4813b1efa5172db51a1387cb4d9489940a696"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "phpipam-hazel-B-cancelled": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "4876a3d966fe8bb78e04c0a16cd7c32483a9bb356ca6d9c441f3c53b8b7b2a01",
+      "reviewed_steps": [
+        2,
+        5,
+        6,
+        9
+      ],
+      "screenshots": [
+        {
+          "step": 2,
+          "image": "images/5c0c2e3cf0dd5341a774a599ed090d1dcc49a4d9dd5d9bdb2b264e19d879b3b7.png",
+          "sha256": "5c0c2e3cf0dd5341a774a599ed090d1dcc49a4d9dd5d9bdb2b264e19d879b3b7"
+        },
+        {
+          "step": 5,
+          "image": "images/471834a67d7d5b15b5d590bed8daa5a3ecdc524046b003ec5c3ea8fec0b0062a.png",
+          "sha256": "471834a67d7d5b15b5d590bed8daa5a3ecdc524046b003ec5c3ea8fec0b0062a"
+        },
+        {
+          "step": 6,
+          "image": "images/186ef6a5ef84cf75fab6e1ecf7709c0035820836d6c00313dc65e389f8b3e599.png",
+          "sha256": "186ef6a5ef84cf75fab6e1ecf7709c0035820836d6c00313dc65e389f8b3e599"
+        },
+        {
+          "step": 9,
+          "image": "images/5c0c2e3cf0dd5341a774a599ed090d1dcc49a4d9dd5d9bdb2b264e19d879b3b7.png",
+          "sha256": "5c0c2e3cf0dd5341a774a599ed090d1dcc49a4d9dd5d9bdb2b264e19d879b3b7"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "phpipam-pine-B-cancelled": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "009cdc0183251994fbedd1cf3f9a6cf99ab95a367002dabead6d167a49964165",
+      "reviewed_steps": [
+        2,
+        5,
+        6,
+        9
+      ],
+      "screenshots": [
+        {
+          "step": 2,
+          "image": "images/5952f841c7c0a0871e3f602a86dc6efaa4dfae4869120c80a262ac86d6616848.png",
+          "sha256": "5952f841c7c0a0871e3f602a86dc6efaa4dfae4869120c80a262ac86d6616848"
+        },
+        {
+          "step": 5,
+          "image": "images/cf42dab16bac664d26d8af978d67d1aa4dbc26d02369ffff44e5d3e0bfc2694e.png",
+          "sha256": "cf42dab16bac664d26d8af978d67d1aa4dbc26d02369ffff44e5d3e0bfc2694e"
+        },
+        {
+          "step": 6,
+          "image": "images/94d2eb8d65ae85f53cec4429267c63dfa3c6fd8de342d00a73e23ae8e751702d.png",
+          "sha256": "94d2eb8d65ae85f53cec4429267c63dfa3c6fd8de342d00a73e23ae8e751702d"
+        },
+        {
+          "step": 9,
+          "image": "images/5952f841c7c0a0871e3f602a86dc6efaa4dfae4869120c80a262ac86d6616848.png",
+          "sha256": "5952f841c7c0a0871e3f602a86dc6efaa4dfae4869120c80a262ac86d6616848"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "opencart-birch-B-cancelled": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "fae0b748bec5261943b457cd105180f1ce8016b9f9f0d0284d36a9099d2dd6df",
+      "reviewed_steps": [
+        2,
+        6,
+        7,
+        11
+      ],
+      "screenshots": [
+        {
+          "step": 2,
+          "image": "images/1efeffed478c79e2320a120761ea3dfa6bae3b8b5c80e365bd99911aec37ab84.png",
+          "sha256": "1efeffed478c79e2320a120761ea3dfa6bae3b8b5c80e365bd99911aec37ab84"
+        },
+        {
+          "step": 6,
+          "image": "images/3b16d08b21b9474c7f5d4e10e06c1b008b8d1883312304838ddc5ade2b6cc530.png",
+          "sha256": "3b16d08b21b9474c7f5d4e10e06c1b008b8d1883312304838ddc5ade2b6cc530"
+        },
+        {
+          "step": 7,
+          "image": "images/99a9b11f66a17e1d9f791be4ea0a77b89b8010b7ff363ee4ef58bf6a8a6de217.png",
+          "sha256": "99a9b11f66a17e1d9f791be4ea0a77b89b8010b7ff363ee4ef58bf6a8a6de217"
+        },
+        {
+          "step": 11,
+          "image": "images/1efeffed478c79e2320a120761ea3dfa6bae3b8b5c80e365bd99911aec37ab84.png",
+          "sha256": "1efeffed478c79e2320a120761ea3dfa6bae3b8b5c80e365bd99911aec37ab84"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "opencart-hazel-B-cancelled": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "2cedbf4a4f06fbdc11292c3d35c5f0ad47a3b61df67c7ac3037803149565dc3a",
+      "reviewed_steps": [
+        2,
+        6,
+        7,
+        11
+      ],
+      "screenshots": [
+        {
+          "step": 2,
+          "image": "images/011d0a890d1b4b57980cff43276641bcae51399a2d523645ee75a8c68f008b2e.png",
+          "sha256": "011d0a890d1b4b57980cff43276641bcae51399a2d523645ee75a8c68f008b2e"
+        },
+        {
+          "step": 6,
+          "image": "images/7b68566f2bfaed412b9e0b7e0d2c5a256e14c4e54b412df60e87c1e40b9c9d75.png",
+          "sha256": "7b68566f2bfaed412b9e0b7e0d2c5a256e14c4e54b412df60e87c1e40b9c9d75"
+        },
+        {
+          "step": 7,
+          "image": "images/5bebb8670bd4cd05649aadeb606cc11451a6131c2188f50ad9486fc718ed74f5.png",
+          "sha256": "5bebb8670bd4cd05649aadeb606cc11451a6131c2188f50ad9486fc718ed74f5"
+        },
+        {
+          "step": 11,
+          "image": "images/011d0a890d1b4b57980cff43276641bcae51399a2d523645ee75a8c68f008b2e.png",
+          "sha256": "011d0a890d1b4b57980cff43276641bcae51399a2d523645ee75a8c68f008b2e"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "opencart-pine-B-cancelled": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "b09e9c4ec4c15aba225c7a8071910204d7b70d1eb21134909c96b251266e9b63",
+      "reviewed_steps": [
+        2,
+        6,
+        7,
+        11
+      ],
+      "screenshots": [
+        {
+          "step": 2,
+          "image": "images/6a0a96b9ee42537337d0e2174219c808a3c16c2f342f0c21b53311d979e4451f.png",
+          "sha256": "6a0a96b9ee42537337d0e2174219c808a3c16c2f342f0c21b53311d979e4451f"
+        },
+        {
+          "step": 6,
+          "image": "images/d5ffb6d4f775035ed500e6c9af9c0089ad1cbb18a697a71ab6e806e022d070c2.png",
+          "sha256": "d5ffb6d4f775035ed500e6c9af9c0089ad1cbb18a697a71ab6e806e022d070c2"
+        },
+        {
+          "step": 7,
+          "image": "images/71e436f06d9092197577399902e3c036fa928de3f5c3b29d9d61ee11cadf2867.png",
+          "sha256": "71e436f06d9092197577399902e3c036fa928de3f5c3b29d9d61ee11cadf2867"
+        },
+        {
+          "step": 11,
+          "image": "images/6a0a96b9ee42537337d0e2174219c808a3c16c2f342f0c21b53311d979e4451f.png",
+          "sha256": "6a0a96b9ee42537337d0e2174219c808a3c16c2f342f0c21b53311d979e4451f"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "phpipam-birch-A-input_not_established": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "982d585d65aa8f8cb41e46ba0a0fa9a59f96b5f97b7348073daa8bff5b8b4522",
+      "reviewed_steps": [
+        2,
+        5,
+        6,
+        8
+      ],
+      "screenshots": [
+        {
+          "step": 2,
+          "image": "images/cde92abb594566bd55a06efe77a4813b1efa5172db51a1387cb4d9489940a696.png",
+          "sha256": "cde92abb594566bd55a06efe77a4813b1efa5172db51a1387cb4d9489940a696"
+        },
+        {
+          "step": 5,
+          "image": "images/49e714b70f40c4c920953024c481a1746af3be9863ee203c2e9ea752a552636a.png",
+          "sha256": "49e714b70f40c4c920953024c481a1746af3be9863ee203c2e9ea752a552636a"
+        },
+        {
+          "step": 6,
+          "image": "images/cd8b9998f95e6721358f62e8241b88c9740c34053236dce88697989ab85844c8.png",
+          "sha256": "cd8b9998f95e6721358f62e8241b88c9740c34053236dce88697989ab85844c8"
+        },
+        {
+          "step": 8,
+          "image": "images/cde92abb594566bd55a06efe77a4813b1efa5172db51a1387cb4d9489940a696.png",
+          "sha256": "cde92abb594566bd55a06efe77a4813b1efa5172db51a1387cb4d9489940a696"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "phpipam-birch-B-input_not_established": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "edd4226048d9334053d7a743375efd21ed6b86e8219080727d20f6ba26f3fda8",
+      "reviewed_steps": [
+        2,
+        5,
+        6,
+        8
+      ],
+      "screenshots": [
+        {
+          "step": 2,
+          "image": "images/cde92abb594566bd55a06efe77a4813b1efa5172db51a1387cb4d9489940a696.png",
+          "sha256": "cde92abb594566bd55a06efe77a4813b1efa5172db51a1387cb4d9489940a696"
+        },
+        {
+          "step": 5,
+          "image": "images/49e714b70f40c4c920953024c481a1746af3be9863ee203c2e9ea752a552636a.png",
+          "sha256": "49e714b70f40c4c920953024c481a1746af3be9863ee203c2e9ea752a552636a"
+        },
+        {
+          "step": 6,
+          "image": "images/cd8b9998f95e6721358f62e8241b88c9740c34053236dce88697989ab85844c8.png",
+          "sha256": "cd8b9998f95e6721358f62e8241b88c9740c34053236dce88697989ab85844c8"
+        },
+        {
+          "step": 8,
+          "image": "images/cde92abb594566bd55a06efe77a4813b1efa5172db51a1387cb4d9489940a696.png",
+          "sha256": "cde92abb594566bd55a06efe77a4813b1efa5172db51a1387cb4d9489940a696"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "phpipam-hazel-A-input_not_established": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "5bafa80bdfcc5bb2f4e5ed12c75e63edb2e05e89f303dc6404403fcb84758fb3",
+      "reviewed_steps": [
+        2,
+        5,
+        6,
+        8
+      ],
+      "screenshots": [
+        {
+          "step": 2,
+          "image": "images/5c0c2e3cf0dd5341a774a599ed090d1dcc49a4d9dd5d9bdb2b264e19d879b3b7.png",
+          "sha256": "5c0c2e3cf0dd5341a774a599ed090d1dcc49a4d9dd5d9bdb2b264e19d879b3b7"
+        },
+        {
+          "step": 5,
+          "image": "images/1d486b4754a2713c9704399f6a2e6d06942f04ac60f39907b07e6bede3203427.png",
+          "sha256": "1d486b4754a2713c9704399f6a2e6d06942f04ac60f39907b07e6bede3203427"
+        },
+        {
+          "step": 6,
+          "image": "images/186ef6a5ef84cf75fab6e1ecf7709c0035820836d6c00313dc65e389f8b3e599.png",
+          "sha256": "186ef6a5ef84cf75fab6e1ecf7709c0035820836d6c00313dc65e389f8b3e599"
+        },
+        {
+          "step": 8,
+          "image": "images/5c0c2e3cf0dd5341a774a599ed090d1dcc49a4d9dd5d9bdb2b264e19d879b3b7.png",
+          "sha256": "5c0c2e3cf0dd5341a774a599ed090d1dcc49a4d9dd5d9bdb2b264e19d879b3b7"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "phpipam-hazel-B-input_not_established": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "eec7e85a9cd19522dea8402d39a7c186e84cca2ba9314fd7dcde8cda1054f74f",
+      "reviewed_steps": [
+        2,
+        5,
+        6,
+        8
+      ],
+      "screenshots": [
+        {
+          "step": 2,
+          "image": "images/5c0c2e3cf0dd5341a774a599ed090d1dcc49a4d9dd5d9bdb2b264e19d879b3b7.png",
+          "sha256": "5c0c2e3cf0dd5341a774a599ed090d1dcc49a4d9dd5d9bdb2b264e19d879b3b7"
+        },
+        {
+          "step": 5,
+          "image": "images/849600e6fbdfd663e8fd54a305237e54ffff3b5793518d1e99563e057163bd4b.png",
+          "sha256": "849600e6fbdfd663e8fd54a305237e54ffff3b5793518d1e99563e057163bd4b"
+        },
+        {
+          "step": 6,
+          "image": "images/186ef6a5ef84cf75fab6e1ecf7709c0035820836d6c00313dc65e389f8b3e599.png",
+          "sha256": "186ef6a5ef84cf75fab6e1ecf7709c0035820836d6c00313dc65e389f8b3e599"
+        },
+        {
+          "step": 8,
+          "image": "images/5c0c2e3cf0dd5341a774a599ed090d1dcc49a4d9dd5d9bdb2b264e19d879b3b7.png",
+          "sha256": "5c0c2e3cf0dd5341a774a599ed090d1dcc49a4d9dd5d9bdb2b264e19d879b3b7"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "phpipam-pine-A-input_not_established": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "3d12629b463eaecd25f0d22b506e1d208ff20dc545c1d99bce9315cfa5d8663f",
+      "reviewed_steps": [
+        2,
+        5,
+        6,
+        8
+      ],
+      "screenshots": [
+        {
+          "step": 2,
+          "image": "images/5952f841c7c0a0871e3f602a86dc6efaa4dfae4869120c80a262ac86d6616848.png",
+          "sha256": "5952f841c7c0a0871e3f602a86dc6efaa4dfae4869120c80a262ac86d6616848"
+        },
+        {
+          "step": 5,
+          "image": "images/d460751eebf84fcfddef7ee7daa12fb41fd4b9e3e8ed9083bbb7f32dd585c5fc.png",
+          "sha256": "d460751eebf84fcfddef7ee7daa12fb41fd4b9e3e8ed9083bbb7f32dd585c5fc"
+        },
+        {
+          "step": 6,
+          "image": "images/94d2eb8d65ae85f53cec4429267c63dfa3c6fd8de342d00a73e23ae8e751702d.png",
+          "sha256": "94d2eb8d65ae85f53cec4429267c63dfa3c6fd8de342d00a73e23ae8e751702d"
+        },
+        {
+          "step": 8,
+          "image": "images/5952f841c7c0a0871e3f602a86dc6efaa4dfae4869120c80a262ac86d6616848.png",
+          "sha256": "5952f841c7c0a0871e3f602a86dc6efaa4dfae4869120c80a262ac86d6616848"
+        }
+      ],
+      "structured_gold_changes": []
+    },
+    "phpipam-pine-B-input_not_established": {
+      "status": "verified_key_frames",
+      "source_row_sha256": "68060e6270a7a88f7700cc57ee6ebca13006a312421da429c97c958e904a67fb",
+      "reviewed_steps": [
+        2,
+        5,
+        6,
+        8
+      ],
+      "screenshots": [
+        {
+          "step": 2,
+          "image": "images/5952f841c7c0a0871e3f602a86dc6efaa4dfae4869120c80a262ac86d6616848.png",
+          "sha256": "5952f841c7c0a0871e3f602a86dc6efaa4dfae4869120c80a262ac86d6616848"
+        },
+        {
+          "step": 5,
+          "image": "images/d460751eebf84fcfddef7ee7daa12fb41fd4b9e3e8ed9083bbb7f32dd585c5fc.png",
+          "sha256": "d460751eebf84fcfddef7ee7daa12fb41fd4b9e3e8ed9083bbb7f32dd585c5fc"
+        },
+        {
+          "step": 6,
+          "image": "images/94d2eb8d65ae85f53cec4429267c63dfa3c6fd8de342d00a73e23ae8e751702d.png",
+          "sha256": "94d2eb8d65ae85f53cec4429267c63dfa3c6fd8de342d00a73e23ae8e751702d"
+        },
+        {
+          "step": 8,
+          "image": "images/5952f841c7c0a0871e3f602a86dc6efaa4dfae4869120c80a262ac86d6616848.png",
+          "sha256": "5952f841c7c0a0871e3f602a86dc6efaa4dfae4869120c80a262ac86d6616848"
+        }
+      ],
+      "structured_gold_changes": []
+    }
+  }
+}

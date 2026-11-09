@@ -1,0 +1,3 @@
+split: sft-training
+cases: [sweeper-196]
+repeats: 2

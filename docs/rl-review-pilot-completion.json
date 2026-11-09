@@ -1,0 +1,66 @@
+{
+  "completed": true,
+  "date": "2026-11-08",
+  "phase": "review_rl_diagnostic_targeted_collection_and_real_update_smoke",
+  "diagnostic": {
+    "samples": 64,
+    "candidates": 512,
+    "strict_candidates_after_adjudication": 31,
+    "samples_with_strict_candidate": 8,
+    "fail_samples_with_strict_candidate": 3,
+    "fail_samples": 21,
+    "trusted_numeric_candidates": 176,
+    "complete_trusted_groups": 12,
+    "groups_with_reward_difference": 11,
+    "report": "reports/rl-review-diagnostic-v1-distributed"
+  },
+  "targeted_data": {
+    "new_reviews": 54,
+    "combined_reviews": 184,
+    "train": 145,
+    "validation": 39,
+    "dataset": "datasets/rl-review-pilot-v2",
+    "verification_passed": true
+  },
+  "grpo_smoke": {
+    "optimizer_steps": 1,
+    "smoke_passed": true,
+    "verification": {
+      "finite_nonzero_gradient": true,
+      "default_adapter_changed": true,
+      "reference_equal_to_initial_v4": true,
+      "reference_unchanged": true,
+      "original_v4_disk_unchanged": true,
+      "trusted_differential_reward_seen": true,
+      "trusted_group_nonzero_gradient_update": true,
+      "vision_frozen": true
+    },
+    "peak_allocated_mib": 19447.52734375,
+    "output": "runs/rl-review-grpo-smoke-v2",
+    "quality_improvement_evaluated": false
+  },
+  "targeted_tests": {
+    "passed": 67,
+    "gpu_disabled": true
+  },
+  "original_artifacts_unchanged": {
+    "datasets/sft-main-10apps-v3/train.jsonl": true,
+    "datasets/sft-main-10apps-v3/validation.jsonl": true,
+    "datasets/sft-main-10apps-v4/train.jsonl": true,
+    "datasets/sft-main-10apps-v4/validation.jsonl": true,
+    "runs/sft-qwen3vl-10apps-v4-review-selected/adapter/adapter_model.safetensors": true,
+    "runs/sft-qwen3vl-10apps-v4-review-selected/selection.json": true
+  },
+  "artifact_sha256": {
+    "reports/rl-review-diagnostic-v1-distributed/manifest.json": "77ebdda457b1fce278e3e5df2bedf6d7bc80da0ad3186eda702d4a5d44c89ff8",
+    "reports/rl-review-diagnostic-v1-distributed/predictions.jsonl": "a907e4d8c82d02496a8384709bc5e2603225a7c8a69c62d4470b107cfc2d09c8",
+    "reports/rl-review-diagnostic-v1-distributed/adjudicated_summary.json": "fc60893740de21d76c678a5d69654701d24320d47f59e3d80bfafc492b5b7071",
+    "reports/rl-review-diagnostic-v1-distributed/fail_signal_summary.json": "854bf4b7546398dd6653caecf2bc9be73476acb721186bc8c42f548b9d9aa32a",
+    "datasets/rl-review-pilot-v2/manifest.json": "0d5a000bea6b5c51fe5b211782bc67953ed94f261be60169480200cb9db3b2f9",
+    "datasets/rl-review-pilot-v2/verification.json": "9b21947fc7f85c90fb6f0773bb1579d556def4d0903ed0ffaa473e415570ab80",
+    "runs/rl-review-grpo-smoke-v2/completion.json": "14fd0e28ae50c5345837667867e363ac7e4f05fd891d1de0a427d60f71e8b0de",
+    "runs/rl-review-grpo-smoke-v2/adapter/adapter_model.safetensors": "e74edb1f6cb41de8c54d36d0ba64d4538af8810e9fcb87e1945d1466b7104247"
+  },
+  "report": "docs/RL_REVIEW_PILOT.md",
+  "production_config": "configs/agent-review-evidence-v4-selected.yaml"
+}

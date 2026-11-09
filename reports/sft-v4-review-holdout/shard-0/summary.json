@@ -1,0 +1,19 @@
+{
+  "completed": true,
+  "planned": 10,
+  "reviewed": 10,
+  "correct": 8,
+  "recovered_original_blocked": 1,
+  "regressed_original_correct": 0,
+  "error_kinds": {
+    "correct": 8,
+    "model_blocked": 2
+  },
+  "source_group_counts": {
+    "original_correct": 7,
+    "original_blocked": 3
+  },
+  "source_artifacts_unchanged": true,
+  "operations_replayed": false,
+  "training_rows_generated": 0
+}

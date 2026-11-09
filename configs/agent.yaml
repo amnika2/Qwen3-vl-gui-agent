@@ -1,0 +1,8 @@
+model_path: vendor/models/Qwen3-VL-8B-Instruct
+model_revision: 0c351dd01ed87e9c1b53cbc748cba10e6187ff3b
+max_actions: 30
+wall_seconds: 600
+max_new_tokens: 384
+max_pixels: 802816
+seed: 42
+history_actions: 8

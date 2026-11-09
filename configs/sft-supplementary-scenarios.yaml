@@ -1,0 +1,289 @@
+version: 1
+note: 24 个不同任务；每应用 12 个，A/B 各 6 个；按完整场景预留验证集，不重复同一任务。
+scenarios:
+- id: wiki-hours
+  case_id: sweeper-034
+  build: A
+  workflow: target
+  data_split: train
+  family: replace
+  start: editor
+  edit: replace
+  initial: "Reception opens at 10:00 and closes at 16:00."
+  input: "Reception is open Monday to Friday, 09:00-17:30."
+- id: wiki-agenda
+  case_id: sweeper-034
+  build: B
+  workflow: preservation
+  data_split: train
+  family: multiline
+  start: view
+  edit: replace
+  initial: "Project meeting: venue and agenda are not confirmed."
+  input: |-
+    Project meeting
+    Location: Cedar Room, second floor.
+    Agenda: review the draft, assign owners, agree on delivery dates.
+    Bring the revised budget and the customer feedback summary.
+- id: wiki-release-append
+  case_id: sweeper-034
+  build: A
+  workflow: preservation
+  data_split: train
+  family: append
+  start: editor
+  edit: append
+  initial: "Release checklist: update the changelog and tag the version."
+  input: "\nAfter deployment, verify sign-in and record the release checksum."
+- id: wiki-deadline
+  case_id: sweeper-034
+  build: B
+  workflow: target
+  data_split: train
+  family: suffix_correction
+  start: view
+  edit: replace_suffix
+  initial: "Keep the agreed scope unchanged. The delivery deadline is Friday."
+  old_suffix: "Friday."
+  input: "Monday."
+- id: wiki-handbook-summary
+  case_id: sweeper-034
+  build: A
+  workflow: target
+  data_split: train
+  family: body_and_summary
+  start: editor
+  edit: replace
+  initial: "The handbook has no instructions for requesting a replacement access card."
+  input: "For a replacement access card, contact reception with your employee ID. Lost cards must be reported before a new card is issued."
+  summary: "Add replacement access-card instructions"
+- id: wiki-minor-correction
+  case_id: sweeper-034
+  build: B
+  workflow: preservation
+  data_split: train
+  family: body_summary_and_checkbox
+  start: view
+  edit: replace
+  initial: "The support address is suport@example.test. Include the invoice reference."
+  input: "The support address is support@example.test. Include the invoice reference."
+  summary: "Correct the support address spelling"
+  minor: true
+- id: wiki-preview-guide
+  case_id: sweeper-034
+  build: A
+  workflow: preservation
+  data_split: train
+  family: preview_then_save
+  start: editor
+  edit: replace
+  initial: "Visitor guide: details will be added later."
+  input: |-
+    Visitor guide
+    Check in at reception and collect a temporary badge.
+    Wi-Fi name: Guest Network. Ask your host for the daily code.
+    Return the badge before leaving the building.
+  preview: true
+- id: wiki-two-revisions
+  case_id: sweeper-034
+  build: B
+  workflow: target
+  data_split: train
+  family: consecutive_saves
+  start: view
+  edit: replace
+  initial: "Equipment collection: the schedule is still provisional."
+  intermediate: "Equipment collection is scheduled for Tuesday at 14:00."
+  input: "Equipment collection is confirmed for Wednesday at 14:30, at the loading entrance."
+- id: wiki-chinese-notice
+  case_id: sweeper-034
+  build: A
+  workflow: target
+  data_split: train
+  family: multilingual
+  start: view
+  edit: replace
+  initial: "资料室的预约规则尚未更新。"
+  input: |-
+    资料室预约须知
+    开放时间：周一至周五 09:00—18:00。
+    请提前一天预约；借阅资料后应在登记表中填写归还日期。
+    联系人：林老师，分机 208。
+- id: wiki-accented-append
+  case_id: sweeper-034
+  build: B
+  workflow: preservation
+  data_split: train
+  family: append
+  start: editor
+  edit: append
+  initial: "Café accueil : les visiteurs peuvent attendre dans le hall."
+  input: "\nRéservation : indiquez votre nom, votre société et l'heure d'arrivée."
+- id: wiki-stock-count
+  case_id: sweeper-034
+  build: A
+  workflow: preservation
+  data_split: validation
+  family: suffix_correction
+  start: editor
+  edit: replace_suffix
+  initial: "Warehouse note: leave the storage location unchanged. Available adapters: 24"
+  old_suffix: "24"
+  input: "36"
+- id: wiki-policy-final
+  case_id: sweeper-034
+  build: B
+  workflow: target
+  data_split: validation
+  family: consecutive_saves
+  start: editor
+  edit: replace
+  initial: "Travel policy: the reimbursement limit has not been announced."
+  intermediate: "Travel policy draft: receipts are required for every claim."
+  input: "Travel policy approved: attach receipts and submit claims within 30 days; the daily meal limit is EUR 45."
+  summary: "Publish the approved travel claim policy"
+- id: flat-contact
+  case_id: sweeper-053
+  build: A
+  workflow: target
+  data_split: train
+  family: replace
+  start: editor
+  edit: replace
+  initial_subject: "Contact information"
+  initial: "Contact details will be published soon."
+  input: "For order enquiries, email orders@example.test and include your order number."
+- id: flat-delivery-guide
+  case_id: sweeper-053
+  build: B
+  workflow: preservation
+  data_split: train
+  family: multiline
+  start: list
+  edit: replace
+  initial_subject: "Delivery guide"
+  initial: "Our delivery guide is being revised."
+  input: |-
+    Delivery guide
+    Standard dispatch: within two working days.
+    Tracking: sent by email after the parcel leaves the warehouse.
+    Address changes: contact us before dispatch and quote the order number.
+- id: flat-returns-append
+  case_id: sweeper-053
+  build: A
+  workflow: preservation
+  data_split: train
+  family: append
+  start: editor
+  edit: append
+  initial_subject: "Returns policy"
+  initial: "Returns are accepted within 14 days of delivery."
+  input: "\nKeep the original packaging and request a return reference before posting the parcel."
+- id: flat-collection-date
+  case_id: sweeper-053
+  build: B
+  workflow: target
+  data_split: train
+  family: suffix_correction
+  start: list
+  edit: replace_suffix
+  initial_subject: "Collection arrangements"
+  initial: "Collection point: North entrance. Last collection date: 18 November"
+  old_suffix: "18 November"
+  input: "21 November"
+- id: flat-subject-first
+  case_id: sweeper-053
+  build: A
+  workflow: target
+  data_split: train
+  family: subject_then_body
+  start: editor
+  edit: replace
+  field_order: subject_first
+  initial_subject: "Opening schedule"
+  subject: "Winter opening schedule"
+  initial: "Opening times are based on the summer schedule."
+  input: "Winter hours: Tuesday-Saturday, 10:00-18:00. Closed on Sunday and Monday."
+- id: flat-body-first
+  case_id: sweeper-053
+  build: B
+  workflow: preservation
+  data_split: train
+  family: body_then_subject
+  start: list
+  edit: replace
+  field_order: body_first
+  initial_subject: "Workshop announcement"
+  subject: "Saturday repair workshop"
+  initial: "The next workshop has not been scheduled."
+  input: "Join the repair workshop on Saturday at 11:00. Bring one small household item; tools and safety glasses are provided."
+- id: flat-preview-welcome
+  case_id: sweeper-053
+  build: A
+  workflow: preservation
+  data_split: train
+  family: preview_then_save
+  start: editor
+  edit: replace
+  initial_subject: "Welcome message"
+  initial: "Welcome text is awaiting review."
+  input: "Welcome to the community archive. Browse the catalogue, book a reading desk, or ask the team for help finding local records."
+  preview: true
+- id: flat-two-updates
+  case_id: sweeper-053
+  build: B
+  workflow: target
+  data_split: train
+  family: consecutive_saves
+  start: list
+  edit: replace
+  initial_subject: "Maintenance update"
+  initial: "Maintenance details are not yet available."
+  intermediate: "Maintenance is planned for Thursday from 07:00 to 08:00."
+  input: "Maintenance is confirmed for Thursday from 06:30 to 08:30. Online booking will resume after the checks are complete."
+- id: flat-french-visit
+  case_id: sweeper-053
+  build: A
+  workflow: target
+  data_split: train
+  family: multilingual
+  start: editor
+  edit: replace
+  initial_subject: "Informations visiteurs"
+  initial: "Les informations de visite seront mises à jour."
+  input: "L'entrée est gratuite. Réservez une visite guidée à l'accueil ; les groupes sont limités à douze personnes."
+- id: flat-chinese-append
+  case_id: sweeper-053
+  build: B
+  workflow: preservation
+  data_split: train
+  family: append
+  start: list
+  edit: append
+  initial_subject: "借阅说明"
+  initial: "每位读者最多可借阅三本书，借期为两周。"
+  input: "\n续借请在到期前办理；如图书已有预约，则不能续借。"
+- id: flat-title-only
+  case_id: sweeper-053
+  build: A
+  workflow: preservation
+  data_split: validation
+  family: subject_only_preserve_body
+  start: list
+  edit: keep
+  initial_subject: "Events"
+  subject: "Community events calendar"
+  initial: "The monthly neighbourhood meeting takes place on the first Tuesday at 19:00."
+  input: ""
+- id: flat-final-revision
+  case_id: sweeper-053
+  build: B
+  workflow: target
+  data_split: validation
+  family: consecutive_saves
+  start: editor
+  edit: replace
+  initial_subject: "Ticket terms"
+  initial: "Ticket terms are being prepared."
+  intermediate: "Draft terms: keep the confirmation email as proof of purchase."
+  input: "Final terms: keep the confirmation email; ticket changes close 48 hours before the event. Questions: tickets@example.test."

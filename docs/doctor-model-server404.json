@@ -1,0 +1,49 @@
+{
+  "platform": "Linux-6.8.0-139-generic-x86_64-with-glibc2.39",
+  "python": "3.10.22 (main, Oct 29 2026, 20:33:25) [GCC 14.3.0]",
+  "executable": "/home/fs_2026/qwen3-gui-agent/.model-venv/bin/python",
+  "disk_free_gib": 318.3805847167969,
+  "cuda_visible_devices": "2",
+  "checks": {
+    "gpu": {
+      "ok": true,
+      "output": "index, name, memory.total [MiB], memory.free [MiB]\n0, NVIDIA GeForce RTX 4090, 24564 MiB, 24080 MiB\n1, NVIDIA GeForce RTX 4090, 24564 MiB, 4945 MiB\n2, NVIDIA GeForce RTX 4090, 24564 MiB, 24080 MiB\n3, NVIDIA GeForce RTX 4090, 24564 MiB, 24080 MiB",
+      "error": ""
+    },
+    "memory": {
+      "ok": true,
+      "output": "total        used        free      shared  buff/cache   available\nMem:           251Gi        25Gi        13Gi        51Mi       214Gi       225Gi\nSwap:          8.0Gi       4.7Gi       3.3Gi",
+      "error": ""
+    },
+    "git": {
+      "ok": true,
+      "output": "git version 2.43.0",
+      "error": ""
+    },
+    "docker": {
+      "ok": false,
+      "output": "",
+      "error": "permission denied while trying to connect to the docker API at unix:///var/run/docker.sock"
+    },
+    "native_php": {
+      "ok": true,
+      "output": "PHP 8.3.6 (cli) (built: Oct 19 2026 15:16:58) (NTS)\nCopyright (c) The PHP Group\nZend Engine v4.3.6, Copyright (c) Zend Technologies",
+      "error": ""
+    },
+    "browser": {
+      "ok": true,
+      "corner_center_clicks": 5,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dpr": 1,
+      "chromium": "156.0.8078.4"
+    },
+    "cuda": {
+      "ok": true,
+      "torch": "2.14.1+cu130",
+      "device": "NVIDIA GeForce RTX 4090"
+    }
+  }
+}

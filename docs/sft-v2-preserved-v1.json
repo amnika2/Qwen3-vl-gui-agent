@@ -1,0 +1,10 @@
+{
+  "datasets/sft-main-10apps-v1/train.jsonl": "9202ee84b671ca1ad6d53b7f4ada66325f77e5aca879056f005e7e23df6f8547",
+  "datasets/sft-main-10apps-v1/validation.jsonl": "ecea9283db3823f41da4dc8c5483c51f6a2ed524f7e6e073ed1fbe1fe68aab0c",
+  "datasets/sft-main-10apps-v1/manifest.json": "edc4cc686da230b709aed7589d03815467eaa909f9aab296c835ac24adb3298b",
+  "runs/sft-qwen3vl-10apps-v1/adapter/adapter_model.safetensors": "8c0b790672649ec1ad259588faaf2e86ccdb688b494c60aa5b21268d12dafd7f",
+  "runs/sft-qwen3vl-10apps-v1/completion.json": "5f5ff9997c5d0f16b5d5797ada3f0e0be7fcf4d1327cd5f7354dd4d974d99730",
+  "reports/sft-lora-v1/comparison.json": "5580a13c24200c3c8e30f294f1945ff5c381c8185b10076d955013ee4e475f4a",
+  "reports/sft-lora-v1/pairs.csv": "7a5935fc69efb390231f087d3b7e015780fa7e76686c06cf2f08d1ef5e6bdbdf",
+  "configs/sft-train.yaml": "3bb83796e47bc84d5ba08eb6135e32856159262da9dd674d75f62257da0d0670"
+}

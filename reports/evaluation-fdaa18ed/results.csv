@@ -1,0 +1,13 @@
+case_id,build,workflow,method,repeat,run_id,started,agent_verdict,oracle_verdict,elapsed_seconds,actions,model_calls,termination_reason
+sweeper-007,B,target,script,0,20261107T044204Z-6075304f,True,pass,pass,9.564317424898036,4,0,script_completed
+sweeper-007,B,target,script,1,20261107T044213Z-4211bbca,True,pass,pass,7.595250988961197,4,0,script_completed
+sweeper-007,B,target,qwen-base,0,20261107T044221Z-40e680ae,True,blocked,inconclusive,46.913214904023334,30,31,action_budget
+sweeper-007,B,target,qwen-base,1,20261107T044308Z-5ad86a02,True,blocked,inconclusive,48.10014097997919,30,31,action_budget
+sweeper-007,B,target,qwen-improved,0,20261107T044356Z-afe9f287,True,blocked,inconclusive,39.273339409031905,30,31,action_budget
+sweeper-007,B,target,qwen-improved,1,20261107T044436Z-0c2f2f28,True,blocked,inconclusive,32.83833091100678,30,31,action_budget
+sweeper-007,B,preservation,script,0,20261107T044509Z-a3e5212a,True,pass,pass,9.697758969967254,2,0,script_completed
+sweeper-007,B,preservation,script,1,20261107T044518Z-eb19420e,True,pass,pass,14.610005013993941,2,0,script_completed
+sweeper-007,B,preservation,qwen-base,0,20261107T044533Z-060fb86a,True,blocked,pass,34.57736447197385,30,31,action_budget
+sweeper-007,B,preservation,qwen-base,1,20261107T044608Z-51f5b7fc,True,pass,pass,15.806523132021539,7,8,model_finished
+sweeper-007,B,preservation,qwen-improved,0,20261107T044624Z-ce567d71,True,pass,pass,23.56977642304264,12,13,model_finished
+sweeper-007,B,preservation,qwen-improved,1,20261107T044647Z-e7bf2d89,True,blocked,pass,43.48816913692281,30,31,action_budget

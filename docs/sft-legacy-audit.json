@@ -1,0 +1,143 @@
+{
+  "stage": "data_generation",
+  "historical_samples_modified": false,
+  "historical_exports_used": false,
+  "runs": [
+    {
+      "run_id": "20261107T081835Z-429ef61a",
+      "case_id": "sweeper-041",
+      "samples": 5,
+      "review_samples": 0,
+      "source_sha256": "447c25941777eaf8fbdd5413b8c2cb2162e4c72c72c3bbe2c699838f43504ed5",
+      "disposition": "holdout_smoke_only",
+      "legacy_reviews": 0,
+      "oracle_verdict": "fail",
+      "conflicting_review_labels": 0
+    },
+    {
+      "run_id": "20261107T081841Z-c9733d65",
+      "case_id": "sweeper-041",
+      "samples": 5,
+      "review_samples": 0,
+      "source_sha256": "4740369095f15b81564a6a8c4ee6521ad3879f83f0f180c014f886a67d5a601f",
+      "disposition": "holdout_smoke_only",
+      "legacy_reviews": 0,
+      "oracle_verdict": "pass",
+      "conflicting_review_labels": 0
+    },
+    {
+      "run_id": "20261107T081847Z-aeb5f20d",
+      "case_id": "sweeper-041",
+      "samples": 6,
+      "review_samples": 1,
+      "source_sha256": "1ccd7549d6182206ebdd68b1195f9a75b88f096f508a6dc060cadff90d2db14b",
+      "disposition": "holdout_smoke_only",
+      "legacy_reviews": 1,
+      "oracle_verdict": "pass",
+      "conflicting_review_labels": 0
+    },
+    {
+      "run_id": "20261107T081853Z-e8125da3",
+      "case_id": "sweeper-041",
+      "samples": 6,
+      "review_samples": 1,
+      "source_sha256": "865765578b80a58797a53728e34a9e914bbfa1db7dda2dee800b0a4b8c311438",
+      "disposition": "holdout_smoke_only",
+      "legacy_reviews": 1,
+      "oracle_verdict": "pass",
+      "conflicting_review_labels": 0
+    },
+    {
+      "run_id": "20261107T081859Z-0bd1302c",
+      "case_id": "sweeper-040",
+      "samples": 9,
+      "review_samples": 0,
+      "source_sha256": "06371cd11fc6a8393f22402803f8cbc5da085c44f81a34ab2c64b80e590ec66a",
+      "disposition": "holdout_smoke_only",
+      "legacy_reviews": 0,
+      "oracle_verdict": "inconclusive",
+      "conflicting_review_labels": 0
+    },
+    {
+      "run_id": "20261107T081910Z-6e9d6bb0",
+      "case_id": "sweeper-040",
+      "samples": 9,
+      "review_samples": 0,
+      "source_sha256": "e3396b0a1cf16e5e078a9de4b355b7b3767d24c0dcd30136ad9a8f98cdb14932",
+      "disposition": "holdout_smoke_only",
+      "legacy_reviews": 0,
+      "oracle_verdict": "pass",
+      "conflicting_review_labels": 0
+    },
+    {
+      "run_id": "20261107T081919Z-b82ab6fb",
+      "case_id": "sweeper-040",
+      "samples": 10,
+      "review_samples": 1,
+      "source_sha256": "dce3a140c7f5d15c6f2464c89cd916ad93b4da1e9cbd08fd226af10a30940099",
+      "disposition": "holdout_smoke_only",
+      "legacy_reviews": 1,
+      "oracle_verdict": "inconclusive",
+      "conflicting_review_labels": 0
+    },
+    {
+      "run_id": "20261107T081929Z-b9f53159",
+      "case_id": "sweeper-040",
+      "samples": 10,
+      "review_samples": 1,
+      "source_sha256": "fe826dc1d80951439b578406b49a0859d09f1d2bb47d47d4ce5fc7815e699f2f",
+      "disposition": "holdout_smoke_only",
+      "legacy_reviews": 1,
+      "oracle_verdict": "pass",
+      "conflicting_review_labels": 0
+    },
+    {
+      "run_id": "20261107T082300Z-a7a11669",
+      "case_id": "sweeper-040",
+      "samples": 10,
+      "review_samples": 0,
+      "source_sha256": "a28f1315beac162b2489c6d47e75905dabedda8e80f81b49a30f31f9885ddbd3",
+      "disposition": "holdout_smoke_only",
+      "legacy_reviews": 0,
+      "oracle_verdict": "fail",
+      "conflicting_review_labels": 0
+    },
+    {
+      "run_id": "20261107T082313Z-bb47de34",
+      "case_id": "sweeper-040",
+      "samples": 10,
+      "review_samples": 0,
+      "source_sha256": "c5056f0a27a731cb19fa4b31dff7ccd789fbff13ba62ac3b461a081e32e1e944",
+      "disposition": "holdout_smoke_only",
+      "legacy_reviews": 0,
+      "oracle_verdict": "pass",
+      "conflicting_review_labels": 0
+    },
+    {
+      "run_id": "20261107T082325Z-ece96847",
+      "case_id": "sweeper-040",
+      "samples": 11,
+      "review_samples": 1,
+      "source_sha256": "3af14d82e6fec52a3f9ff6f6e6678861b08d6b805c9ace2747d1bce3263e6831",
+      "disposition": "holdout_smoke_only",
+      "legacy_reviews": 1,
+      "oracle_verdict": "pass",
+      "conflicting_review_labels": 0
+    },
+    {
+      "run_id": "20261107T082336Z-1ae12b4d",
+      "case_id": "sweeper-040",
+      "samples": 11,
+      "review_samples": 1,
+      "source_sha256": "b15c4beb7ddc2ed3ab6b38f4017fffc093c023baccad1b65eaaac3af8e9140e9",
+      "disposition": "holdout_smoke_only",
+      "legacy_reviews": 1,
+      "oracle_verdict": "pass",
+      "conflicting_review_labels": 0
+    }
+  ],
+  "samples": 102,
+  "dispositions": {
+    "holdout_smoke_only": 12
+  }
+}

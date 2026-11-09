@@ -1,0 +1,98 @@
+{
+  "updated_on": "2026-11-08",
+  "training_started": false,
+  "datasets": {
+    "sweeper-107": {
+      "path": "datasets/sft-mantisbt-v2",
+      "apps": 1,
+      "trajectories": 12,
+      "samples": 205,
+      "operation_samples": 193,
+      "review_samples": 12,
+      "train_samples": 170,
+      "validation_samples": 35,
+      "images": 81,
+      "scenario_family_counts": {
+        "issue_report": 5,
+        "description_first": 3,
+        "multifield_with_steps": 3,
+        "multilingual": 1
+      },
+      "review_labels": {
+        "fail": 4,
+        "pass": 8
+      },
+      "review_profiles": {
+        "business_outcome_v1": 12
+      },
+      "experiments": [
+        "mantis-phpipam-8bca4dcf"
+      ],
+      "data_sha256": "54b97548527624b81cddb638939318ce2e52ff72d0d8c041da38fcebe1ec40c8",
+      "validation_sha256": "431a3092665e3446591b36ed73dee049b89e4828cd82e487d5b79179d8e042a4",
+      "sources": {
+        "base": {
+          "commit": "148cc34a4ae57848eabd103638642e203f79c72a",
+          "tracked_business_source_clean": true
+        },
+        "fixed": {
+          "commit": "4cfa980d9ed086ee6bbeb34c2450724dcec4c8bb",
+          "tracked_business_source_clean": true
+        }
+      }
+    },
+    "sweeper-142": {
+      "path": "datasets/sft-phpipam-v1",
+      "apps": 1,
+      "trajectories": 12,
+      "samples": 121,
+      "operation_samples": 109,
+      "review_samples": 12,
+      "train_samples": 97,
+      "validation_samples": 24,
+      "images": 104,
+      "scenario_family_counts": {
+        "clear_fields": 7,
+        "rename_hostname": 2,
+        "multifield": 2,
+        "append": 1
+      },
+      "review_labels": {
+        "fail": 4,
+        "pass": 8
+      },
+      "review_profiles": {
+        "persistence": 12
+      },
+      "experiments": [
+        "phpipam-curated-a321a7e5"
+      ],
+      "data_sha256": "e388620133fd501e279022fea214c8b451bd6f997aad90ae16de04acb08e3a35",
+      "validation_sha256": "d33bed24f763b72f060fabf52b2e597749785810f9bd48efe2583b00df62a18b",
+      "sources": {
+        "base": {
+          "commit": "81bf8abc4bae32261cf471f3e72f94f1e4a854bb",
+          "tracked_business_source_clean": true
+        },
+        "fixed": {
+          "commit": "d7885fa11d29598cf170f682a5966a7194e4f04e",
+          "tracked_business_source_clean": true
+        }
+      }
+    }
+  },
+  "tests": {
+    "passed": 5,
+    "log": "docs/mantis-phpipam-tests.log"
+  },
+  "representative_calibration": "runs/mantis-phpipam-8310702e/matrix.json",
+  "retired_mantis_collections": [
+    "runs/mantis-phpipam-a321a7e5/quarantine.json",
+    "runs/mantis-phpipam-38fcfa9b/quarantine.json"
+  ],
+  "retired_mantis_dataset": "datasets/sft-mantisbt-v1/RETIRED.json",
+  "verification": {
+    "sweeper-107": "docs/mantisbt-sft-verification.json",
+    "sweeper-142": "docs/phpipam-sft-verification.json"
+  }
+}

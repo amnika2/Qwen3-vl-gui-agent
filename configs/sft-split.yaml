@@ -1,0 +1,51 @@
+split_frozen: "2026-11-07"
+note: >-
+  主训练固定为 10 个表单类应用：training_pilot 的 8 个官方回归用例，
+  加 training_supplementary 的 2 个自建文本编辑用例。
+  eval_holdout 是冻结的 5 个测试应用，已完成基线评测，永不进入训练数据，
+  用于 SFT 前后同协议对比。supplementary 使用自建流程，不计入官方回归成绩。
+  training_pool 为表单类备选，不计入当前十应用；auxiliary_pool 为相邻操作类，
+  既有数据保留、单列。部署与采集状态见 configs/sft-app-readiness.yaml。
+  全部 200 个官方用例的逐流程分类见 configs/sft-case-types.yaml 与生成报告。
+
+eval_holdout:
+- sweeper-005   # akaunting，创建商品、保存售价后核对列表
+- sweeper-007   # ampache，智能播放列表重命名重开
+- sweeper-008   # anchor-cms，站点变量持久化
+- sweeper-040   # easyappointments，服务人员手机号重开
+- sweeper-041   # emlog，作者昵称保存
+
+training_pilot:
+- sweeper-150   # pluxml，用户密码/显示名编辑，已完成 136 条
+- sweeper-185   # typesetter，主题文本编辑保存（flat-file，免 DB）
+- sweeper-105   # litecart，Geo Zone 编辑保存（MariaDB）
+- sweeper-195   # wolfcms，编辑页面标题、保存；复用 PHP 7.4 与 MariaDB
+- sweeper-084   # impresscms，Site Name 编辑保存（MariaDB，源码含运行库）
+- sweeper-125   # opencart，商品 option 编辑保存重开（MariaDB）
+- sweeper-107   # mantisbt，填写 Report Issue 并提交（MariaDB，需 Composer）
+- sweeper-142   # phpipam，IP 描述清空、主机名编辑（MariaDB，需固定 submodule）
+
+training_supplementary:
+- sweeper-034   # dokuwiki，自建 wiki 正文编辑、保存、重开；官方 ACL 任务另记
+- sweeper-053   # flatpress，自建静态页正文编辑、保存、重开；官方 PrettyURLs 任务另记
+
+training_pool:
+- sweeper-032   # cypht，设置复选框保存，需 Composer 和配置初始化
+- sweeper-083   # ihatemoney，账单表单创建，Python/Flask/SQLite，需独立环境
+- sweeper-018   # calibre-web，图书 tag 编辑保存，Python/SQLite，需 Calibre library fixture
+- sweeper-143   # phplist，订阅者表单保存；多插件和主题安装链路暂后置
+
+auxiliary_pool:
+- sweeper-196   # wondercms，菜单排序；已有 48 条单独保留，不计十个表单应用
+- sweeper-055   # flyspray，target 删除提醒；preservation 新增提醒是表单
+- sweeper-025   # cockpit，target 删除重建；preservation 表单保存重开
+- sweeper-199   # zencart，target 列表状态切换；preservation 打开列表
+
+deferred:
+  sweeper-149: Pluck 修复版尚未稳定校准，移出首批采集，保留源码与历史日志。
+  sweeper-024: cmsimple-xh 是带令牌/邮件链路的密码重置流程，非本轮普通表单任务。
+  sweeper-184: Typemill 官方流程包含 Vue 内部状态操作，先验证纯截图鼠标键盘路径再考虑采集。
+  sweeper-167: SMF 开发分支需 Composer 与额外兼容核对，优先完成当前较短初始化链路的应用。
+  sweeper-030: Crater 表单类型合适；本轮优先复用 PHP 运行方式，暂缓额外框架与构建准备。
+  sweeper-058: Fork CMS 表单类型合适；本轮优先较短的安装与 seed 流程。
+  sweeper-093: Kimai 表单类型合适；本轮优先已有依赖与较短的安装、seed 流程。

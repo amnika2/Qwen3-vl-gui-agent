@@ -1,0 +1,3819 @@
+version: 1
+stage: final-test-expanded-v1
+test_reviews: 150
+test_fixture_groups: 100
+calibration_reviews: 40
+groups:
+- id: final-akaunting-test-01
+  parent_scenario_id: final-akaunting-test-01
+  app: akaunting
+  case_id: sweeper-005
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: Harbor reading product
+    Sale Price: 1.200.000,25
+    expected_sale_price: '1200000.25'
+  fixture:
+    title: Harbor reading
+    name: Harbor reading product
+    input_amount: 1.200.000,25
+    expected: '1200000.25'
+  task: Create a product named exactly 'Harbor reading product'. Set Sale Price to
+    '1.200.000,25', complete the required form, and Save. Reopen the Items list and
+    inspect the same named product. Its sale price must represent the full amount
+    $1,200,000.25. Report pass when it matches, fail for an accepted save with a different
+    amount, or blocked when the requested save is not established.
+  scenario_fingerprint: 51afa34ece259816201c591a746642349cb808c2f9d69ac8302cd0709dd83436
+  content_key: 51afa34ece259816201c591a746642349cb808c2f9d69ac8302cd0709dd83436
+- id: final-akaunting-test-02
+  parent_scenario_id: final-akaunting-test-02
+  app: akaunting
+  case_id: sweeper-005
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: Cedar workshop product
+    Sale Price: 1.207.319,25
+    expected_sale_price: '1207319.25'
+  fixture:
+    title: Cedar workshop
+    name: Cedar workshop product
+    input_amount: 1.207.319,25
+    expected: '1207319.25'
+  task: Create a product named exactly 'Cedar workshop product'. Set Sale Price to
+    '1.207.319,25', complete the required form, and Save. Reopen the Items list and
+    inspect the same named product. Its sale price must represent the full amount
+    $1,207,319.25. Report pass when it matches, fail for an accepted save with a different
+    amount, or blocked when the requested save is not established.
+  scenario_fingerprint: 90ed60a1625c3c56422ab9262eb022a0782b1d3b8fd4bb2c2f1f6a81d3615586
+  content_key: 90ed60a1625c3c56422ab9262eb022a0782b1d3b8fd4bb2c2f1f6a81d3615586
+- id: final-akaunting-test-03
+  parent_scenario_id: final-akaunting-test-03
+  app: akaunting
+  case_id: sweeper-005
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: Museum visits product
+    Sale Price: 1.214.638,25
+    expected_sale_price: '1214638.25'
+  fixture:
+    title: Museum visits
+    name: Museum visits product
+    input_amount: 1.214.638,25
+    expected: '1214638.25'
+  task: Create a product named exactly 'Museum visits product'. Set Sale Price to
+    '1.214.638,25', complete the required form, and Save. Reopen the Items list and
+    inspect the same named product. Its sale price must represent the full amount
+    $1,214,638.25. Report pass when it matches, fail for an accepted save with a different
+    amount, or blocked when the requested save is not established.
+  scenario_fingerprint: f7f47aec618ebb5b0b7d666fbc3a387b43f29a2c0d602e2379a570427fed61c6
+  content_key: f7f47aec618ebb5b0b7d666fbc3a387b43f29a2c0d602e2379a570427fed61c6
+- id: final-akaunting-test-04
+  parent_scenario_id: final-akaunting-test-04
+  app: akaunting
+  case_id: sweeper-005
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: Garden supplies product
+    Sale Price: 1.221.957,25
+    expected_sale_price: '1221957.25'
+  fixture:
+    title: Garden supplies
+    name: Garden supplies product
+    input_amount: 1.221.957,25
+    expected: '1221957.25'
+  task: Create a product named exactly 'Garden supplies product'. Set Sale Price to
+    '1.221.957,25', complete the required form, and Save. Reopen the Items list and
+    inspect the same named product. Its sale price must represent the full amount
+    $1,221,957.25. Report pass when it matches, fail for an accepted save with a different
+    amount, or blocked when the requested save is not established.
+  scenario_fingerprint: 419b4737eb9831f38e139ac451fb121766655c54a8a2cc05776c45a6cfbf3e75
+  content_key: 419b4737eb9831f38e139ac451fb121766655c54a8a2cc05776c45a6cfbf3e75
+- id: final-akaunting-test-05
+  parent_scenario_id: final-akaunting-test-05
+  app: akaunting
+  case_id: sweeper-005
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: Studio lighting product
+    Sale Price: 1.229.276,25
+    expected_sale_price: '1229276.25'
+  fixture:
+    title: Studio lighting
+    name: Studio lighting product
+    input_amount: 1.229.276,25
+    expected: '1229276.25'
+  task: Create a product named exactly 'Studio lighting product'. Set Sale Price to
+    '1.229.276,25', complete the required form, and Save. Reopen the Items list and
+    inspect the same named product. Its sale price must represent the full amount
+    $1,229,276.25. Report pass when it matches, fail for an accepted save with a different
+    amount, or blocked when the requested save is not established.
+  scenario_fingerprint: a7d6eb3d9ea939a7e49c52fbf77646a39c5f5963d28149ec4922d6d5b01ea847
+  content_key: a7d6eb3d9ea939a7e49c52fbf77646a39c5f5963d28149ec4922d6d5b01ea847
+- id: final-akaunting-test-06
+  parent_scenario_id: final-akaunting-test-06
+  app: akaunting
+  case_id: sweeper-005
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: Library desk product
+    Sale Price: 1.236.595,25
+    expected_sale_price: '1236595.25'
+  fixture:
+    title: Library desk
+    name: Library desk product
+    input_amount: 1.236.595,25
+    expected: '1236595.25'
+  task: Create a product named exactly 'Library desk product'. Set Sale Price to '1.236.595,25',
+    complete the required form, and Save. Reopen the Items list and inspect the same
+    named product. Its sale price must represent the full amount $1,236,595.25. Report
+    pass when it matches, fail for an accepted save with a different amount, or blocked
+    when the requested save is not established.
+  scenario_fingerprint: 63bb407741655e0699c5352817c6f23e0d00c941a8e1517a95d17c43dea6657c
+  content_key: 63bb407741655e0699c5352817c6f23e0d00c941a8e1517a95d17c43dea6657c
+- id: final-akaunting-test-07
+  parent_scenario_id: final-akaunting-test-07
+  app: akaunting
+  case_id: sweeper-005
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: Orchard tools product
+    Sale Price: 1.243.914,25
+    expected_sale_price: '1243914.25'
+  fixture:
+    title: Orchard tools
+    name: Orchard tools product
+    input_amount: 1.243.914,25
+    expected: '1243914.25'
+  task: Create a product named exactly 'Orchard tools product'. Set Sale Price to
+    '1.243.914,25', complete the required form, and Save. Reopen the Items list and
+    inspect the same named product. Its sale price must represent the full amount
+    $1,243,914.25. Report pass when it matches, fail for an accepted save with a different
+    amount, or blocked when the requested save is not established.
+  scenario_fingerprint: d18f318e5e6037a24776733a48f647c83b5bc99fe9c7f65d303e64cc79aa0415
+  content_key: d18f318e5e6037a24776733a48f647c83b5bc99fe9c7f65d303e64cc79aa0415
+- id: final-akaunting-test-08
+  parent_scenario_id: final-akaunting-test-08
+  app: akaunting
+  case_id: sweeper-005
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: River concert product
+    Sale Price: 1.251.233,25
+    expected_sale_price: '1251233.25'
+  fixture:
+    title: River concert
+    name: River concert product
+    input_amount: 1.251.233,25
+    expected: '1251233.25'
+  task: Create a product named exactly 'River concert product'. Set Sale Price to
+    '1.251.233,25', complete the required form, and Save. Reopen the Items list and
+    inspect the same named product. Its sale price must represent the full amount
+    $1,251,233.25. Report pass when it matches, fail for an accepted save with a different
+    amount, or blocked when the requested save is not established.
+  scenario_fingerprint: 54c8216dfa5ffe82716cbf737491498155db0fc728a50ccc95faaa917c1982be
+  content_key: 54c8216dfa5ffe82716cbf737491498155db0fc728a50ccc95faaa917c1982be
+- id: final-akaunting-test-09
+  parent_scenario_id: final-akaunting-test-09
+  app: akaunting
+  case_id: sweeper-005
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: Market support product
+    Sale Price: 1.258.552,25
+    expected_sale_price: '1258552.25'
+  fixture:
+    title: Market support
+    name: Market support product
+    input_amount: 1.258.552,25
+    expected: '1258552.25'
+  task: Create a product named exactly 'Market support product'. Set Sale Price to
+    '1.258.552,25', complete the required form, and Save. Reopen the Items list and
+    inspect the same named product. Its sale price must represent the full amount
+    $1,258,552.25. Report pass when it matches, fail for an accepted save with a different
+    amount, or blocked when the requested save is not established.
+  scenario_fingerprint: 4a36daeb223a06c2599ba5e7c8d712b8ee8cbf1a63f6ad46ed54bfc685375587
+  content_key: 4a36daeb223a06c2599ba5e7c8d712b8ee8cbf1a63f6ad46ed54bfc685375587
+- id: final-akaunting-test-10
+  parent_scenario_id: final-akaunting-test-10
+  app: akaunting
+  case_id: sweeper-005
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: Lakeside lessons product
+    Sale Price: 1.265.871,25
+    expected_sale_price: '1265871.25'
+  fixture:
+    title: Lakeside lessons
+    name: Lakeside lessons product
+    input_amount: 1.265.871,25
+    expected: '1265871.25'
+  task: Create a product named exactly 'Lakeside lessons product'. Set Sale Price
+    to '1.265.871,25', complete the required form, and Save. Reopen the Items list
+    and inspect the same named product. Its sale price must represent the full amount
+    $1,265,871.25. Report pass when it matches, fail for an accepted save with a different
+    amount, or blocked when the requested save is not established.
+  scenario_fingerprint: 0dbc1e906c0f0729df8c6d60f037bf0cfb1fec958bfd4fccb54ab3837d2abc6d
+  content_key: 0dbc1e906c0f0729df8c6d60f037bf0cfb1fec958bfd4fccb54ab3837d2abc6d
+- id: final-akaunting-test-11
+  parent_scenario_id: final-akaunting-test-11
+  app: akaunting
+  case_id: sweeper-005
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - A
+  calibration: false
+  split: test
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: Archive service product
+    Sale Price: 1.510,75
+    expected_sale_price: '1510.75'
+  fixture:
+    title: Archive service
+    name: Archive service product
+    input_amount: 1.510,75
+    expected: '1510.75'
+  task: Create a product named exactly 'Archive service product'. Set Sale Price to
+    '1.510,75', complete the required form, and Save. Reopen the Items list and inspect
+    the same named product. Its sale price must represent the full amount $1,510.75.
+    Report pass when it matches, fail for an accepted save with a different amount,
+    or blocked when the requested save is not established.
+  scenario_fingerprint: 256d2d43d9f616c1f15ee0219c2c4fe2919957eb8172c66b1183b9d44dc1df6b
+  content_key: 256d2d43d9f616c1f15ee0219c2c4fe2919957eb8172c66b1183b9d44dc1df6b
+- id: final-akaunting-test-12
+  parent_scenario_id: final-akaunting-test-12
+  app: akaunting
+  case_id: sweeper-005
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: Theatre tickets product
+    Sale Price: 1.541,75
+    expected_sale_price: '1541.75'
+  fixture:
+    title: Theatre tickets
+    name: Theatre tickets product
+    input_amount: 1.541,75
+    expected: '1541.75'
+  task: Create a product named exactly 'Theatre tickets product'. Set Sale Price to
+    '1.541,75', complete the required form, and Save. Reopen the Items list and inspect
+    the same named product. Its sale price must represent the full amount $1,541.75.
+    Report pass when it matches, fail for an accepted save with a different amount,
+    or blocked when the requested save is not established.
+  scenario_fingerprint: ce27baa8d2f905396d2945e8078a303dc3a34355b12e891dfd8ac07f22248191
+  content_key: ce27baa8d2f905396d2945e8078a303dc3a34355b12e891dfd8ac07f22248191
+- id: final-akaunting-test-13
+  parent_scenario_id: final-akaunting-test-13
+  app: akaunting
+  case_id: sweeper-005
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - A
+  calibration: false
+  split: test
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: Coffee deliveries product
+    Sale Price: 1.572,75
+    expected_sale_price: '1572.75'
+  fixture:
+    title: Coffee deliveries
+    name: Coffee deliveries product
+    input_amount: 1.572,75
+    expected: '1572.75'
+  task: Create a product named exactly 'Coffee deliveries product'. Set Sale Price
+    to '1.572,75', complete the required form, and Save. Reopen the Items list and
+    inspect the same named product. Its sale price must represent the full amount
+    $1,572.75. Report pass when it matches, fail for an accepted save with a different
+    amount, or blocked when the requested save is not established.
+  scenario_fingerprint: c8e00b189c1e54e25d002d54ae6bbbca781dda961e9ffbb8c5ee72ca90926f03
+  content_key: c8e00b189c1e54e25d002d54ae6bbbca781dda961e9ffbb8c5ee72ca90926f03
+- id: final-akaunting-test-14
+  parent_scenario_id: final-akaunting-test-14
+  app: akaunting
+  case_id: sweeper-005
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: Science club product
+    Sale Price: 1.603,75
+    expected_sale_price: '1603.75'
+  fixture:
+    title: Science club
+    name: Science club product
+    input_amount: 1.603,75
+    expected: '1603.75'
+  task: Create a product named exactly 'Science club product'. Set Sale Price to '1.603,75',
+    complete the required form, and Save. Reopen the Items list and inspect the same
+    named product. Its sale price must represent the full amount $1,603.75. Report
+    pass when it matches, fail for an accepted save with a different amount, or blocked
+    when the requested save is not established.
+  scenario_fingerprint: cbc75ac89e98922d7395001646d8a04c754de8fbedba7c3d951d8b1c3e526396
+  content_key: cbc75ac89e98922d7395001646d8a04c754de8fbedba7c3d951d8b1c3e526396
+- id: final-akaunting-test-15
+  parent_scenario_id: final-akaunting-test-15
+  app: akaunting
+  case_id: sweeper-005
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - A
+  calibration: false
+  split: test
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: Trail guides product
+    Sale Price: 1.634,75
+    expected_sale_price: '1634.75'
+  fixture:
+    title: Trail guides
+    name: Trail guides product
+    input_amount: 1.634,75
+    expected: '1634.75'
+  task: Create a product named exactly 'Trail guides product'. Set Sale Price to '1.634,75',
+    complete the required form, and Save. Reopen the Items list and inspect the same
+    named product. Its sale price must represent the full amount $1,634.75. Report
+    pass when it matches, fail for an accepted save with a different amount, or blocked
+    when the requested save is not established.
+  scenario_fingerprint: b4f7ff96a1f32e0266af36b6b9bfcadfd46e3b2071d84407374c79b6af6ca249
+  content_key: b4f7ff96a1f32e0266af36b6b9bfcadfd46e3b2071d84407374c79b6af6ca249
+- id: final-akaunting-test-16
+  parent_scenario_id: final-akaunting-test-16
+  app: akaunting
+  case_id: sweeper-005
+  workflow: target
+  kind: blocked
+  variant: cancelled
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: Textile display product
+    Sale Price: 1.309.785,25
+    expected_sale_price: '1309785.25'
+  fixture:
+    title: Textile display
+    name: Textile display product
+    input_amount: 1.309.785,25
+    expected: '1309785.25'
+  task: Create a product named exactly 'Textile display product'. Set Sale Price to
+    '1.309.785,25', complete the required form, and Save. Reopen the Items list and
+    inspect the same named product. Its sale price must represent the full amount
+    $1,309,785.25. Report pass when it matches, fail for an accepted save with a different
+    amount, or blocked when the requested save is not established.
+  scenario_fingerprint: ea1019bec0daf2b7d7d1bfb33166def88169f5314446979bd57938c5555038c2
+  content_key: ea1019bec0daf2b7d7d1bfb33166def88169f5314446979bd57938c5555038c2
+- id: final-akaunting-test-17
+  parent_scenario_id: final-akaunting-test-17
+  app: akaunting
+  case_id: sweeper-005
+  workflow: target
+  kind: blocked
+  variant: cancelled
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: Pottery course product
+    Sale Price: 1.317.104,25
+    expected_sale_price: '1317104.25'
+  fixture:
+    title: Pottery course
+    name: Pottery course product
+    input_amount: 1.317.104,25
+    expected: '1317104.25'
+  task: Create a product named exactly 'Pottery course product'. Set Sale Price to
+    '1.317.104,25', complete the required form, and Save. Reopen the Items list and
+    inspect the same named product. Its sale price must represent the full amount
+    $1,317,104.25. Report pass when it matches, fail for an accepted save with a different
+    amount, or blocked when the requested save is not established.
+  scenario_fingerprint: cb4ba596978f3084300a7ad2a7315a62ef1fa091a3583190631297d5fbda4ce4
+  content_key: cb4ba596978f3084300a7ad2a7315a62ef1fa091a3583190631297d5fbda4ce4
+- id: final-akaunting-test-18
+  parent_scenario_id: final-akaunting-test-18
+  app: akaunting
+  case_id: sweeper-005
+  workflow: target
+  kind: blocked
+  variant: cancelled
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: Book repairs product
+    Sale Price: 1.324.423,25
+    expected_sale_price: '1324423.25'
+  fixture:
+    title: Book repairs
+    name: Book repairs product
+    input_amount: 1.324.423,25
+    expected: '1324423.25'
+  task: Create a product named exactly 'Book repairs product'. Set Sale Price to '1.324.423,25',
+    complete the required form, and Save. Reopen the Items list and inspect the same
+    named product. Its sale price must represent the full amount $1,324,423.25. Report
+    pass when it matches, fail for an accepted save with a different amount, or blocked
+    when the requested save is not established.
+  scenario_fingerprint: a33503ed48e2d8292c11e04c3b3457273acf7677c9d4a0848b40ae722a09f85e
+  content_key: a33503ed48e2d8292c11e04c3b3457273acf7677c9d4a0848b40ae722a09f85e
+- id: final-akaunting-test-19
+  parent_scenario_id: final-akaunting-test-19
+  app: akaunting
+  case_id: sweeper-005
+  workflow: target
+  kind: blocked
+  variant: input_not_established
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: Autumn exhibit product
+    Sale Price: 1.331.742,25
+    expected_sale_price: '1331742.25'
+  fixture:
+    title: Autumn exhibit
+    name: Autumn exhibit product
+    input_amount: 1.331.742,25
+    expected: '1331742.25'
+  task: Create a product named exactly 'Autumn exhibit product'. Set Sale Price to
+    '1.331.742,25', complete the required form, and Save. Reopen the Items list and
+    inspect the same named product. Its sale price must represent the full amount
+    $1,331,742.25. Report pass when it matches, fail for an accepted save with a different
+    amount, or blocked when the requested save is not established.
+  scenario_fingerprint: a2b2242959236c2da03b2ab680fe384e1a532ab3244a42a47c4666ae6d7bbdb8
+  content_key: a2b2242959236c2da03b2ab680fe384e1a532ab3244a42a47c4666ae6d7bbdb8
+- id: final-akaunting-test-20
+  parent_scenario_id: final-akaunting-test-20
+  app: akaunting
+  case_id: sweeper-005
+  workflow: target
+  kind: blocked
+  variant: input_not_established
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: Spring schedule product
+    Sale Price: 1.339.061,25
+    expected_sale_price: '1339061.25'
+  fixture:
+    title: Spring schedule
+    name: Spring schedule product
+    input_amount: 1.339.061,25
+    expected: '1339061.25'
+  task: Create a product named exactly 'Spring schedule product'. Set Sale Price to
+    '1.339.061,25', complete the required form, and Save. Reopen the Items list and
+    inspect the same named product. Its sale price must represent the full amount
+    $1,339,061.25. Report pass when it matches, fail for an accepted save with a different
+    amount, or blocked when the requested save is not established.
+  scenario_fingerprint: 02a9762c5b27460ba2e8c6fde90936382e651d38230e31e15552902dc811fe0a
+  content_key: 02a9762c5b27460ba2e8c6fde90936382e651d38230e31e15552902dc811fe0a
+- id: final-akaunting-calibration-31
+  parent_scenario_id: final-akaunting-calibration-31
+  app: akaunting
+  case_id: sweeper-005
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: Archive service calibration product
+    Sale Price: 1.419.570,25
+    expected_sale_price: '1419570.25'
+  fixture:
+    title: Archive service calibration
+    name: Archive service calibration product
+    input_amount: 1.419.570,25
+    expected: '1419570.25'
+  task: Create a product named exactly 'Archive service calibration product'. Set
+    Sale Price to '1.419.570,25', complete the required form, and Save. Reopen the
+    Items list and inspect the same named product. Its sale price must represent the
+    full amount $1,419,570.25. Report pass when it matches, fail for an accepted save
+    with a different amount, or blocked when the requested save is not established.
+  scenario_fingerprint: 1ad584c3fc20b0b91da94ac844097123eb5ec30e409b07884d93c771694b9081
+  content_key: 1ad584c3fc20b0b91da94ac844097123eb5ec30e409b07884d93c771694b9081
+- id: final-akaunting-calibration-32
+  parent_scenario_id: final-akaunting-calibration-32
+  app: akaunting
+  case_id: sweeper-005
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: Theatre tickets calibration product
+    Sale Price: 1.426.889,25
+    expected_sale_price: '1426889.25'
+  fixture:
+    title: Theatre tickets calibration
+    name: Theatre tickets calibration product
+    input_amount: 1.426.889,25
+    expected: '1426889.25'
+  task: Create a product named exactly 'Theatre tickets calibration product'. Set
+    Sale Price to '1.426.889,25', complete the required form, and Save. Reopen the
+    Items list and inspect the same named product. Its sale price must represent the
+    full amount $1,426,889.25. Report pass when it matches, fail for an accepted save
+    with a different amount, or blocked when the requested save is not established.
+  scenario_fingerprint: 43f2c74c774422d1de421eaff9abf79521b9d3356b97e5b99b79aeedeb4f6f38
+  content_key: 43f2c74c774422d1de421eaff9abf79521b9d3356b97e5b99b79aeedeb4f6f38
+- id: final-akaunting-calibration-33
+  parent_scenario_id: final-akaunting-calibration-33
+  app: akaunting
+  case_id: sweeper-005
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: Coffee deliveries calibration product
+    Sale Price: 2.192,75
+    expected_sale_price: '2192.75'
+  fixture:
+    title: Coffee deliveries calibration
+    name: Coffee deliveries calibration product
+    input_amount: 2.192,75
+    expected: '2192.75'
+  task: Create a product named exactly 'Coffee deliveries calibration product'. Set
+    Sale Price to '2.192,75', complete the required form, and Save. Reopen the Items
+    list and inspect the same named product. Its sale price must represent the full
+    amount $2,192.75. Report pass when it matches, fail for an accepted save with
+    a different amount, or blocked when the requested save is not established.
+  scenario_fingerprint: 4ae6485fc58ef6416cda00a3408092459d3e05050b9d0fbe41193570f60de24c
+  content_key: 4ae6485fc58ef6416cda00a3408092459d3e05050b9d0fbe41193570f60de24c
+- id: final-akaunting-calibration-34
+  parent_scenario_id: final-akaunting-calibration-34
+  app: akaunting
+  case_id: sweeper-005
+  workflow: target
+  kind: blocked
+  variant: cancelled
+  builds:
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: Science club calibration product
+    Sale Price: 1.441.527,25
+    expected_sale_price: '1441527.25'
+  fixture:
+    title: Science club calibration
+    name: Science club calibration product
+    input_amount: 1.441.527,25
+    expected: '1441527.25'
+  task: Create a product named exactly 'Science club calibration product'. Set Sale
+    Price to '1.441.527,25', complete the required form, and Save. Reopen the Items
+    list and inspect the same named product. Its sale price must represent the full
+    amount $1,441,527.25. Report pass when it matches, fail for an accepted save with
+    a different amount, or blocked when the requested save is not established.
+  scenario_fingerprint: 939bccdf9be9af0bd99092bb549d0ddc8ea19ba1c46530af3f8130824ab9ca2a
+  content_key: 939bccdf9be9af0bd99092bb549d0ddc8ea19ba1c46530af3f8130824ab9ca2a
+- id: final-akaunting-calibration-35
+  parent_scenario_id: final-akaunting-calibration-35
+  app: akaunting
+  case_id: sweeper-005
+  workflow: target
+  kind: blocked
+  variant: input_not_established
+  builds:
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    catalog: empty
+  requested_changes:
+    Name: Trail guides calibration product
+    Sale Price: 1.448.846,25
+    expected_sale_price: '1448846.25'
+  fixture:
+    title: Trail guides calibration
+    name: Trail guides calibration product
+    input_amount: 1.448.846,25
+    expected: '1448846.25'
+  task: Create a product named exactly 'Trail guides calibration product'. Set Sale
+    Price to '1.448.846,25', complete the required form, and Save. Reopen the Items
+    list and inspect the same named product. Its sale price must represent the full
+    amount $1,448,846.25. Report pass when it matches, fail for an accepted save with
+    a different amount, or blocked when the requested save is not established.
+  scenario_fingerprint: 3fe74eb239ceba0464aa6780813a46ab717e205ee77a858d9095cf75444d1118
+  content_key: 3fe74eb239ceba0464aa6780813a46ab717e205ee77a858d9095cf75444d1118
+- id: final-ampache-test-01
+  parent_scenario_id: final-ampache-test-01
+  app: ampache
+  case_id: sweeper-007
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    playlist_name: Harbor reading source playlist
+    search_session: Harbor reading
+  requested_changes:
+    Name: Harbor reading final playlist
+  fixture:
+    title: Harbor reading
+    initial_name: Harbor reading source playlist
+    expected: Harbor reading final playlist
+    category: target
+  task: Find Smart Playlist 'Harbor reading source playlist'. Edit its Name to exactly
+    'Harbor reading final playlist' and Save. Reopen Smart Playlists and inspect the
+    same playlist. Report pass if the rename persists, fail for an accepted rename
+    that leaves a different name, or blocked if saving is not established.
+  scenario_fingerprint: 98711501ee7878babbad1668d6cfa2cedc2f9d37ecf18f7c7dea79ff4c8762c1
+  content_key: 98711501ee7878babbad1668d6cfa2cedc2f9d37ecf18f7c7dea79ff4c8762c1
+- id: final-ampache-test-02
+  parent_scenario_id: final-ampache-test-02
+  app: ampache
+  case_id: sweeper-007
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    playlist_name: Cedar workshop source playlist
+    search_session: Cedar workshop
+  requested_changes:
+    Name: Cedar workshop final playlist
+  fixture:
+    title: Cedar workshop
+    initial_name: Cedar workshop source playlist
+    expected: Cedar workshop final playlist
+    category: target
+  task: Find Smart Playlist 'Cedar workshop source playlist'. Edit its Name to exactly
+    'Cedar workshop final playlist' and Save. Reopen Smart Playlists and inspect the
+    same playlist. Report pass if the rename persists, fail for an accepted rename
+    that leaves a different name, or blocked if saving is not established.
+  scenario_fingerprint: 8b51917216ac527139e4a46997bdce75eee7392a8f755b609b208cbbe6ec2af1
+  content_key: 8b51917216ac527139e4a46997bdce75eee7392a8f755b609b208cbbe6ec2af1
+- id: final-ampache-test-03
+  parent_scenario_id: final-ampache-test-03
+  app: ampache
+  case_id: sweeper-007
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    playlist_name: Museum visits source playlist
+    search_session: Museum visits
+  requested_changes:
+    Name: Museum visits final playlist
+  fixture:
+    title: Museum visits
+    initial_name: Museum visits source playlist
+    expected: Museum visits final playlist
+    category: target
+  task: Find Smart Playlist 'Museum visits source playlist'. Edit its Name to exactly
+    'Museum visits final playlist' and Save. Reopen Smart Playlists and inspect the
+    same playlist. Report pass if the rename persists, fail for an accepted rename
+    that leaves a different name, or blocked if saving is not established.
+  scenario_fingerprint: 14befd6c5052a3b8e881fe4c79488e4c0c30ae0371490259a4c77954cf5081fb
+  content_key: 14befd6c5052a3b8e881fe4c79488e4c0c30ae0371490259a4c77954cf5081fb
+- id: final-ampache-test-04
+  parent_scenario_id: final-ampache-test-04
+  app: ampache
+  case_id: sweeper-007
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    playlist_name: Garden supplies source playlist
+    search_session: Garden supplies
+  requested_changes:
+    Name: Garden supplies final playlist
+  fixture:
+    title: Garden supplies
+    initial_name: Garden supplies source playlist
+    expected: Garden supplies final playlist
+    category: target
+  task: Find Smart Playlist 'Garden supplies source playlist'. Edit its Name to exactly
+    'Garden supplies final playlist' and Save. Reopen Smart Playlists and inspect
+    the same playlist. Report pass if the rename persists, fail for an accepted rename
+    that leaves a different name, or blocked if saving is not established.
+  scenario_fingerprint: e8262b8f9ddb629107c378636d88182aa42ae19200971a92e9f833ead6cd6023
+  content_key: e8262b8f9ddb629107c378636d88182aa42ae19200971a92e9f833ead6cd6023
+- id: final-ampache-test-05
+  parent_scenario_id: final-ampache-test-05
+  app: ampache
+  case_id: sweeper-007
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    playlist_name: Studio lighting source playlist
+    search_session: Studio lighting
+  requested_changes:
+    Name: Studio lighting final playlist
+  fixture:
+    title: Studio lighting
+    initial_name: Studio lighting source playlist
+    expected: Studio lighting final playlist
+    category: target
+  task: Find Smart Playlist 'Studio lighting source playlist'. Edit its Name to exactly
+    'Studio lighting final playlist' and Save. Reopen Smart Playlists and inspect
+    the same playlist. Report pass if the rename persists, fail for an accepted rename
+    that leaves a different name, or blocked if saving is not established.
+  scenario_fingerprint: 7c7fec6d1953a2b7da6207af3f52905630d43e1b69854c3e62e78575c5da9759
+  content_key: 7c7fec6d1953a2b7da6207af3f52905630d43e1b69854c3e62e78575c5da9759
+- id: final-ampache-test-06
+  parent_scenario_id: final-ampache-test-06
+  app: ampache
+  case_id: sweeper-007
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    playlist_name: Library desk source playlist
+    search_session: Library desk
+  requested_changes:
+    Name: Library desk final playlist
+  fixture:
+    title: Library desk
+    initial_name: Library desk source playlist
+    expected: Library desk final playlist
+    category: target
+  task: Find Smart Playlist 'Library desk source playlist'. Edit its Name to exactly
+    'Library desk final playlist' and Save. Reopen Smart Playlists and inspect the
+    same playlist. Report pass if the rename persists, fail for an accepted rename
+    that leaves a different name, or blocked if saving is not established.
+  scenario_fingerprint: 35a0b04e1ababcdea99003501ac3176e57e357c7b54ba351e14c49b22d7bca4f
+  content_key: 35a0b04e1ababcdea99003501ac3176e57e357c7b54ba351e14c49b22d7bca4f
+- id: final-ampache-test-07
+  parent_scenario_id: final-ampache-test-07
+  app: ampache
+  case_id: sweeper-007
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    playlist_name: Orchard tools source playlist
+    search_session: Orchard tools
+  requested_changes:
+    Name: Orchard tools final playlist
+  fixture:
+    title: Orchard tools
+    initial_name: Orchard tools source playlist
+    expected: Orchard tools final playlist
+    category: target
+  task: Find Smart Playlist 'Orchard tools source playlist'. Edit its Name to exactly
+    'Orchard tools final playlist' and Save. Reopen Smart Playlists and inspect the
+    same playlist. Report pass if the rename persists, fail for an accepted rename
+    that leaves a different name, or blocked if saving is not established.
+  scenario_fingerprint: 09c5d6281dc9071ea78726129d34b6311676268fe5ffbd0f5e803cd163cf5e87
+  content_key: 09c5d6281dc9071ea78726129d34b6311676268fe5ffbd0f5e803cd163cf5e87
+- id: final-ampache-test-08
+  parent_scenario_id: final-ampache-test-08
+  app: ampache
+  case_id: sweeper-007
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    playlist_name: River concert source playlist
+    search_session: River concert
+  requested_changes:
+    Name: River concert final playlist
+  fixture:
+    title: River concert
+    initial_name: River concert source playlist
+    expected: River concert final playlist
+    category: target
+  task: Find Smart Playlist 'River concert source playlist'. Edit its Name to exactly
+    'River concert final playlist' and Save. Reopen Smart Playlists and inspect the
+    same playlist. Report pass if the rename persists, fail for an accepted rename
+    that leaves a different name, or blocked if saving is not established.
+  scenario_fingerprint: eac7e4a89c6dbeb321f4111dcbf7619f47466a2ecf41d97ca00b3067cbb2d2b5
+  content_key: eac7e4a89c6dbeb321f4111dcbf7619f47466a2ecf41d97ca00b3067cbb2d2b5
+- id: final-ampache-test-09
+  parent_scenario_id: final-ampache-test-09
+  app: ampache
+  case_id: sweeper-007
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    playlist_name: Market support source playlist
+    search_session: Market support
+  requested_changes:
+    Name: Market support final playlist
+  fixture:
+    title: Market support
+    initial_name: Market support source playlist
+    expected: Market support final playlist
+    category: target
+  task: Find Smart Playlist 'Market support source playlist'. Edit its Name to exactly
+    'Market support final playlist' and Save. Reopen Smart Playlists and inspect the
+    same playlist. Report pass if the rename persists, fail for an accepted rename
+    that leaves a different name, or blocked if saving is not established.
+  scenario_fingerprint: 70d084937e6856b9fea7ab970f419d5a7c9eaffdd6f6f184d9a79a21af0ac04a
+  content_key: 70d084937e6856b9fea7ab970f419d5a7c9eaffdd6f6f184d9a79a21af0ac04a
+- id: final-ampache-test-10
+  parent_scenario_id: final-ampache-test-10
+  app: ampache
+  case_id: sweeper-007
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    playlist_name: Lakeside lessons source playlist
+    search_session: Lakeside lessons
+  requested_changes:
+    Name: Lakeside lessons final playlist
+  fixture:
+    title: Lakeside lessons
+    initial_name: Lakeside lessons source playlist
+    expected: Lakeside lessons final playlist
+    category: target
+  task: Find Smart Playlist 'Lakeside lessons source playlist'. Edit its Name to exactly
+    'Lakeside lessons final playlist' and Save. Reopen Smart Playlists and inspect
+    the same playlist. Report pass if the rename persists, fail for an accepted rename
+    that leaves a different name, or blocked if saving is not established.
+  scenario_fingerprint: 452d9c6fa185cdd76a66ae572de80f3c2d642327125eb7685d0abc11922a82cb
+  content_key: 452d9c6fa185cdd76a66ae572de80f3c2d642327125eb7685d0abc11922a82cb
+- id: final-ampache-test-11
+  parent_scenario_id: final-ampache-test-11
+  app: ampache
+  case_id: sweeper-007
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - A
+  calibration: false
+  split: test
+  initial:
+    playlist_name: Archive service source playlist
+    search_session: Archive service
+  requested_changes:
+    new_playlist: automatic name beginning with signed-in username
+  fixture:
+    title: Archive service
+    initial_name: Archive service source playlist
+    expected: created
+    category: preservation
+  task: On Song search for the 'Archive service' session, use Save as Smart Playlist
+    once. Continue to Smart Playlists and confirm a newly created row with the automatic
+    name beginning with the signed-in username. No name typing is needed. Inspect
+    the new row after reload.
+  scenario_fingerprint: 0ba4d83758722259b52246eb0a29b57c376b70406c83d67015aee4ddc9c93b94
+  content_key: 0ba4d83758722259b52246eb0a29b57c376b70406c83d67015aee4ddc9c93b94
+- id: final-ampache-test-12
+  parent_scenario_id: final-ampache-test-12
+  app: ampache
+  case_id: sweeper-007
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    playlist_name: Theatre tickets source playlist
+    search_session: Theatre tickets
+  requested_changes:
+    new_playlist: automatic name beginning with signed-in username
+  fixture:
+    title: Theatre tickets
+    initial_name: Theatre tickets source playlist
+    expected: created
+    category: preservation
+  task: On Song search for the 'Theatre tickets' session, use Save as Smart Playlist
+    once. Continue to Smart Playlists and confirm a newly created row with the automatic
+    name beginning with the signed-in username. No name typing is needed. Inspect
+    the new row after reload.
+  scenario_fingerprint: 0b419ac7dd6469b76e210a298df9b25ca8a648fc02631306b6330634edf89911
+  content_key: 0b419ac7dd6469b76e210a298df9b25ca8a648fc02631306b6330634edf89911
+- id: final-ampache-test-13
+  parent_scenario_id: final-ampache-test-13
+  app: ampache
+  case_id: sweeper-007
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - A
+  calibration: false
+  split: test
+  initial:
+    playlist_name: Coffee deliveries source playlist
+    search_session: Coffee deliveries
+  requested_changes:
+    new_playlist: automatic name beginning with signed-in username
+  fixture:
+    title: Coffee deliveries
+    initial_name: Coffee deliveries source playlist
+    expected: created
+    category: preservation
+  task: On Song search for the 'Coffee deliveries' session, use Save as Smart Playlist
+    once. Continue to Smart Playlists and confirm a newly created row with the automatic
+    name beginning with the signed-in username. No name typing is needed. Inspect
+    the new row after reload.
+  scenario_fingerprint: 4ce607d5714110bab342a4d3f738a289cae40647c93d440bbbd63463bd56321a
+  content_key: 4ce607d5714110bab342a4d3f738a289cae40647c93d440bbbd63463bd56321a
+- id: final-ampache-test-14
+  parent_scenario_id: final-ampache-test-14
+  app: ampache
+  case_id: sweeper-007
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    playlist_name: Science club source playlist
+    search_session: Science club
+  requested_changes:
+    new_playlist: automatic name beginning with signed-in username
+  fixture:
+    title: Science club
+    initial_name: Science club source playlist
+    expected: created
+    category: preservation
+  task: On Song search for the 'Science club' session, use Save as Smart Playlist
+    once. Continue to Smart Playlists and confirm a newly created row with the automatic
+    name beginning with the signed-in username. No name typing is needed. Inspect
+    the new row after reload.
+  scenario_fingerprint: 5910655f7754e40b54ba277f9d9ff95d367dfb7448651c8ccb4343ba2e3c1f4c
+  content_key: 5910655f7754e40b54ba277f9d9ff95d367dfb7448651c8ccb4343ba2e3c1f4c
+- id: final-ampache-test-15
+  parent_scenario_id: final-ampache-test-15
+  app: ampache
+  case_id: sweeper-007
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - A
+  calibration: false
+  split: test
+  initial:
+    playlist_name: Trail guides source playlist
+    search_session: Trail guides
+  requested_changes:
+    new_playlist: automatic name beginning with signed-in username
+  fixture:
+    title: Trail guides
+    initial_name: Trail guides source playlist
+    expected: created
+    category: preservation
+  task: On Song search for the 'Trail guides' session, use Save as Smart Playlist
+    once. Continue to Smart Playlists and confirm a newly created row with the automatic
+    name beginning with the signed-in username. No name typing is needed. Inspect
+    the new row after reload.
+  scenario_fingerprint: cf6c27ab071393ee9dcf8afdaab46dd26bf9c0648131081de64d72a8b303f115
+  content_key: cf6c27ab071393ee9dcf8afdaab46dd26bf9c0648131081de64d72a8b303f115
+- id: final-ampache-test-16
+  parent_scenario_id: final-ampache-test-16
+  app: ampache
+  case_id: sweeper-007
+  workflow: target
+  kind: blocked
+  variant: cancelled
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    playlist_name: Textile display source playlist
+    search_session: Textile display
+  requested_changes:
+    Name: Textile display final playlist
+  fixture:
+    title: Textile display
+    initial_name: Textile display source playlist
+    expected: Textile display final playlist
+    category: target
+  task: Find Smart Playlist 'Textile display source playlist'. Edit its Name to exactly
+    'Textile display final playlist' and Save. Reopen Smart Playlists and inspect
+    the same playlist. Report pass if the rename persists, fail for an accepted rename
+    that leaves a different name, or blocked if saving is not established.
+  scenario_fingerprint: f24467fe90fedb2a3c9fe6c376ee73028f32fd6bb16f62b3ecf28c3151b3ea4e
+  content_key: f24467fe90fedb2a3c9fe6c376ee73028f32fd6bb16f62b3ecf28c3151b3ea4e
+- id: final-ampache-test-17
+  parent_scenario_id: final-ampache-test-17
+  app: ampache
+  case_id: sweeper-007
+  workflow: target
+  kind: blocked
+  variant: cancelled
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    playlist_name: Pottery course source playlist
+    search_session: Pottery course
+  requested_changes:
+    Name: Pottery course final playlist
+  fixture:
+    title: Pottery course
+    initial_name: Pottery course source playlist
+    expected: Pottery course final playlist
+    category: target
+  task: Find Smart Playlist 'Pottery course source playlist'. Edit its Name to exactly
+    'Pottery course final playlist' and Save. Reopen Smart Playlists and inspect the
+    same playlist. Report pass if the rename persists, fail for an accepted rename
+    that leaves a different name, or blocked if saving is not established.
+  scenario_fingerprint: f1280b16e1790ee9f1911b38daca306f571bc987cc68b484858497f2bce807ff
+  content_key: f1280b16e1790ee9f1911b38daca306f571bc987cc68b484858497f2bce807ff
+- id: final-ampache-test-18
+  parent_scenario_id: final-ampache-test-18
+  app: ampache
+  case_id: sweeper-007
+  workflow: target
+  kind: blocked
+  variant: cancelled
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    playlist_name: Book repairs source playlist
+    search_session: Book repairs
+  requested_changes:
+    Name: Book repairs final playlist
+  fixture:
+    title: Book repairs
+    initial_name: Book repairs source playlist
+    expected: Book repairs final playlist
+    category: target
+  task: Find Smart Playlist 'Book repairs source playlist'. Edit its Name to exactly
+    'Book repairs final playlist' and Save. Reopen Smart Playlists and inspect the
+    same playlist. Report pass if the rename persists, fail for an accepted rename
+    that leaves a different name, or blocked if saving is not established.
+  scenario_fingerprint: b6a4faf737c9277d3479740118d3f11d82c4c577e887ca9c82b8eaf8c54e48ef
+  content_key: b6a4faf737c9277d3479740118d3f11d82c4c577e887ca9c82b8eaf8c54e48ef
+- id: final-ampache-test-19
+  parent_scenario_id: final-ampache-test-19
+  app: ampache
+  case_id: sweeper-007
+  workflow: target
+  kind: blocked
+  variant: input_not_established
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    playlist_name: Autumn exhibit source playlist
+    search_session: Autumn exhibit
+  requested_changes:
+    Name: Autumn exhibit final playlist
+  fixture:
+    title: Autumn exhibit
+    initial_name: Autumn exhibit source playlist
+    expected: Autumn exhibit final playlist
+    category: target
+  task: Find Smart Playlist 'Autumn exhibit source playlist'. Edit its Name to exactly
+    'Autumn exhibit final playlist' and Save. Reopen Smart Playlists and inspect the
+    same playlist. Report pass if the rename persists, fail for an accepted rename
+    that leaves a different name, or blocked if saving is not established.
+  scenario_fingerprint: 94b5868fb218709a67278d04f2c02437c0abf31303b41a039cc47b19655999f8
+  content_key: 94b5868fb218709a67278d04f2c02437c0abf31303b41a039cc47b19655999f8
+- id: final-ampache-test-20
+  parent_scenario_id: final-ampache-test-20
+  app: ampache
+  case_id: sweeper-007
+  workflow: target
+  kind: blocked
+  variant: input_not_established
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    playlist_name: Spring schedule source playlist
+    search_session: Spring schedule
+  requested_changes:
+    Name: Spring schedule final playlist
+  fixture:
+    title: Spring schedule
+    initial_name: Spring schedule source playlist
+    expected: Spring schedule final playlist
+    category: target
+  task: Find Smart Playlist 'Spring schedule source playlist'. Edit its Name to exactly
+    'Spring schedule final playlist' and Save. Reopen Smart Playlists and inspect
+    the same playlist. Report pass if the rename persists, fail for an accepted rename
+    that leaves a different name, or blocked if saving is not established.
+  scenario_fingerprint: 04458727642ce063bfd4fbcfec9b23eb8e35b0d7debff7923241b771d461775f
+  content_key: 04458727642ce063bfd4fbcfec9b23eb8e35b0d7debff7923241b771d461775f
+- id: final-ampache-calibration-31
+  parent_scenario_id: final-ampache-calibration-31
+  app: ampache
+  case_id: sweeper-007
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    playlist_name: Archive service calibration source playlist
+    search_session: Archive service calibration
+  requested_changes:
+    Name: Archive service calibration final playlist
+  fixture:
+    title: Archive service calibration
+    initial_name: Archive service calibration source playlist
+    expected: Archive service calibration final playlist
+    category: target
+  task: Find Smart Playlist 'Archive service calibration source playlist'. Edit its
+    Name to exactly 'Archive service calibration final playlist' and Save. Reopen
+    Smart Playlists and inspect the same playlist. Report pass if the rename persists,
+    fail for an accepted rename that leaves a different name, or blocked if saving
+    is not established.
+  scenario_fingerprint: ccd1cd0aceb960a0ba0206706064c46f356eab0b83df513ec1556b518477ad1e
+  content_key: ccd1cd0aceb960a0ba0206706064c46f356eab0b83df513ec1556b518477ad1e
+- id: final-ampache-calibration-32
+  parent_scenario_id: final-ampache-calibration-32
+  app: ampache
+  case_id: sweeper-007
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    playlist_name: Theatre tickets calibration source playlist
+    search_session: Theatre tickets calibration
+  requested_changes:
+    Name: Theatre tickets calibration final playlist
+  fixture:
+    title: Theatre tickets calibration
+    initial_name: Theatre tickets calibration source playlist
+    expected: Theatre tickets calibration final playlist
+    category: target
+  task: Find Smart Playlist 'Theatre tickets calibration source playlist'. Edit its
+    Name to exactly 'Theatre tickets calibration final playlist' and Save. Reopen
+    Smart Playlists and inspect the same playlist. Report pass if the rename persists,
+    fail for an accepted rename that leaves a different name, or blocked if saving
+    is not established.
+  scenario_fingerprint: ee437c3380cc4fc995f09ba0ca8f2375e419441e2c44e81fa84355b49b95815a
+  content_key: ee437c3380cc4fc995f09ba0ca8f2375e419441e2c44e81fa84355b49b95815a
+- id: final-ampache-calibration-33
+  parent_scenario_id: final-ampache-calibration-33
+  app: ampache
+  case_id: sweeper-007
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    playlist_name: Coffee deliveries calibration source playlist
+    search_session: Coffee deliveries calibration
+  requested_changes:
+    new_playlist: automatic name beginning with signed-in username
+  fixture:
+    title: Coffee deliveries calibration
+    initial_name: Coffee deliveries calibration source playlist
+    expected: created
+    category: preservation
+  task: On Song search for the 'Coffee deliveries calibration' session, use Save as
+    Smart Playlist once. Continue to Smart Playlists and confirm a newly created row
+    with the automatic name beginning with the signed-in username. No name typing
+    is needed. Inspect the new row after reload.
+  scenario_fingerprint: d69bfc41af2d16616bf4325fd6f38b26b0d8a83e0e04989afc1bd45e9a74e44e
+  content_key: d69bfc41af2d16616bf4325fd6f38b26b0d8a83e0e04989afc1bd45e9a74e44e
+- id: final-ampache-calibration-34
+  parent_scenario_id: final-ampache-calibration-34
+  app: ampache
+  case_id: sweeper-007
+  workflow: target
+  kind: blocked
+  variant: cancelled
+  builds:
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    playlist_name: Science club calibration source playlist
+    search_session: Science club calibration
+  requested_changes:
+    Name: Science club calibration final playlist
+  fixture:
+    title: Science club calibration
+    initial_name: Science club calibration source playlist
+    expected: Science club calibration final playlist
+    category: target
+  task: Find Smart Playlist 'Science club calibration source playlist'. Edit its Name
+    to exactly 'Science club calibration final playlist' and Save. Reopen Smart Playlists
+    and inspect the same playlist. Report pass if the rename persists, fail for an
+    accepted rename that leaves a different name, or blocked if saving is not established.
+  scenario_fingerprint: e487f2d0a821c4fb2c2120e4dc526488c4de577d7b128c8c39e3aa64435a3f03
+  content_key: e487f2d0a821c4fb2c2120e4dc526488c4de577d7b128c8c39e3aa64435a3f03
+- id: final-ampache-calibration-35
+  parent_scenario_id: final-ampache-calibration-35
+  app: ampache
+  case_id: sweeper-007
+  workflow: target
+  kind: blocked
+  variant: input_not_established
+  builds:
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    playlist_name: Trail guides calibration source playlist
+    search_session: Trail guides calibration
+  requested_changes:
+    Name: Trail guides calibration final playlist
+  fixture:
+    title: Trail guides calibration
+    initial_name: Trail guides calibration source playlist
+    expected: Trail guides calibration final playlist
+    category: target
+  task: Find Smart Playlist 'Trail guides calibration source playlist'. Edit its Name
+    to exactly 'Trail guides calibration final playlist' and Save. Reopen Smart Playlists
+    and inspect the same playlist. Report pass if the rename persists, fail for an
+    accepted rename that leaves a different name, or blocked if saving is not established.
+  scenario_fingerprint: b1953d013110314ed484775348a2c08455da78a9c0a7f390bfc0811686141807
+  content_key: b1953d013110314ed484775348a2c08455da78a9c0a7f390bfc0811686141807
+- id: final-anchor-test-01
+  parent_scenario_id: final-anchor-test-01
+  app: anchor
+  case_id: sweeper-008
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    variable_key: ft01t
+    value: Harbor reading original notice
+  requested_changes:
+    Name: ft01t
+    Value: Harbor reading revised notice
+  fixture:
+    title: Harbor reading
+    name: ft01t
+    initial_value: Harbor reading original notice
+    expected: Harbor reading revised notice
+    category: target
+    object_id: custom_ft01t
+  task: Edit the existing Site Variable named 'ft01t'. Its original Value is 'Harbor
+    reading original notice'; keep Name unchanged. Set Value to exactly 'Harbor reading
+    revised notice', Update, then reopen that variable and inspect its full Value.
+    The ordinary valid save should succeed. Report pass if it persists, fail for a
+    demonstrated business rejection or a saved mismatch, or blocked if the input or
+    outcome cannot be established.
+  scenario_fingerprint: 0c1e84e082fb7ec17e1956d04583194c08dba28ea0874d5e35afa618ee391e0f
+  content_key: 0c1e84e082fb7ec17e1956d04583194c08dba28ea0874d5e35afa618ee391e0f
+- id: final-anchor-test-02
+  parent_scenario_id: final-anchor-test-02
+  app: anchor
+  case_id: sweeper-008
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    variable_key: ft02t
+    value: Cedar workshop original notice
+  requested_changes:
+    Name: ft02t
+    Value: Cedar workshop revised notice
+  fixture:
+    title: Cedar workshop
+    name: ft02t
+    initial_value: Cedar workshop original notice
+    expected: Cedar workshop revised notice
+    category: target
+    object_id: custom_ft02t
+  task: Edit the existing Site Variable named 'ft02t'. Its original Value is 'Cedar
+    workshop original notice'; keep Name unchanged. Set Value to exactly 'Cedar workshop
+    revised notice', Update, then reopen that variable and inspect its full Value.
+    The ordinary valid save should succeed. Report pass if it persists, fail for a
+    demonstrated business rejection or a saved mismatch, or blocked if the input or
+    outcome cannot be established.
+  scenario_fingerprint: bf560f398755d6c62fc755ca21dad4e4bb9312d898f9c2b657433bdc1857107e
+  content_key: bf560f398755d6c62fc755ca21dad4e4bb9312d898f9c2b657433bdc1857107e
+- id: final-anchor-test-03
+  parent_scenario_id: final-anchor-test-03
+  app: anchor
+  case_id: sweeper-008
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    variable_key: ft03t
+    value: Museum visits original notice
+  requested_changes:
+    Name: ft03t
+    Value: Museum visits revised notice
+  fixture:
+    title: Museum visits
+    name: ft03t
+    initial_value: Museum visits original notice
+    expected: Museum visits revised notice
+    category: target
+    object_id: custom_ft03t
+  task: Edit the existing Site Variable named 'ft03t'. Its original Value is 'Museum
+    visits original notice'; keep Name unchanged. Set Value to exactly 'Museum visits
+    revised notice', Update, then reopen that variable and inspect its full Value.
+    The ordinary valid save should succeed. Report pass if it persists, fail for a
+    demonstrated business rejection or a saved mismatch, or blocked if the input or
+    outcome cannot be established.
+  scenario_fingerprint: 489b98ba78233eff46f7cc05173583cf039b9398dccc98345d099f89db57c3f6
+  content_key: 489b98ba78233eff46f7cc05173583cf039b9398dccc98345d099f89db57c3f6
+- id: final-anchor-test-04
+  parent_scenario_id: final-anchor-test-04
+  app: anchor
+  case_id: sweeper-008
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    variable_key: ft04t
+    value: Garden supplies original notice
+  requested_changes:
+    Name: ft04t
+    Value: Garden supplies revised notice
+  fixture:
+    title: Garden supplies
+    name: ft04t
+    initial_value: Garden supplies original notice
+    expected: Garden supplies revised notice
+    category: target
+    object_id: custom_ft04t
+  task: Edit the existing Site Variable named 'ft04t'. Its original Value is 'Garden
+    supplies original notice'; keep Name unchanged. Set Value to exactly 'Garden supplies
+    revised notice', Update, then reopen that variable and inspect its full Value.
+    The ordinary valid save should succeed. Report pass if it persists, fail for a
+    demonstrated business rejection or a saved mismatch, or blocked if the input or
+    outcome cannot be established.
+  scenario_fingerprint: 59e4f66745ba75b9f07e50e8c406c760df96cebec54832cc914f01e1fadf10d7
+  content_key: 59e4f66745ba75b9f07e50e8c406c760df96cebec54832cc914f01e1fadf10d7
+- id: final-anchor-test-05
+  parent_scenario_id: final-anchor-test-05
+  app: anchor
+  case_id: sweeper-008
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    variable_key: ft05t
+    value: Studio lighting original notice
+  requested_changes:
+    Name: ft05t
+    Value: Studio lighting revised notice
+  fixture:
+    title: Studio lighting
+    name: ft05t
+    initial_value: Studio lighting original notice
+    expected: Studio lighting revised notice
+    category: target
+    object_id: custom_ft05t
+  task: Edit the existing Site Variable named 'ft05t'. Its original Value is 'Studio
+    lighting original notice'; keep Name unchanged. Set Value to exactly 'Studio lighting
+    revised notice', Update, then reopen that variable and inspect its full Value.
+    The ordinary valid save should succeed. Report pass if it persists, fail for a
+    demonstrated business rejection or a saved mismatch, or blocked if the input or
+    outcome cannot be established.
+  scenario_fingerprint: 300fa1597e0815efa287108c69a8b51085618eb8f43c8ac52c30caedf536e6c5
+  content_key: 300fa1597e0815efa287108c69a8b51085618eb8f43c8ac52c30caedf536e6c5
+- id: final-anchor-test-06
+  parent_scenario_id: final-anchor-test-06
+  app: anchor
+  case_id: sweeper-008
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    variable_key: ft06t
+    value: Library desk original notice
+  requested_changes:
+    Name: ft06t
+    Value: Library desk revised notice
+  fixture:
+    title: Library desk
+    name: ft06t
+    initial_value: Library desk original notice
+    expected: Library desk revised notice
+    category: target
+    object_id: custom_ft06t
+  task: Edit the existing Site Variable named 'ft06t'. Its original Value is 'Library
+    desk original notice'; keep Name unchanged. Set Value to exactly 'Library desk
+    revised notice', Update, then reopen that variable and inspect its full Value.
+    The ordinary valid save should succeed. Report pass if it persists, fail for a
+    demonstrated business rejection or a saved mismatch, or blocked if the input or
+    outcome cannot be established.
+  scenario_fingerprint: e45f9ca5cacb35ce07553192f05071cbd0ea07aa49572521a33b7dd008b38444
+  content_key: e45f9ca5cacb35ce07553192f05071cbd0ea07aa49572521a33b7dd008b38444
+- id: final-anchor-test-07
+  parent_scenario_id: final-anchor-test-07
+  app: anchor
+  case_id: sweeper-008
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    variable_key: ft07t
+    value: Orchard tools original notice
+  requested_changes:
+    Name: ft07t
+    Value: Orchard tools revised notice
+  fixture:
+    title: Orchard tools
+    name: ft07t
+    initial_value: Orchard tools original notice
+    expected: Orchard tools revised notice
+    category: target
+    object_id: custom_ft07t
+  task: Edit the existing Site Variable named 'ft07t'. Its original Value is 'Orchard
+    tools original notice'; keep Name unchanged. Set Value to exactly 'Orchard tools
+    revised notice', Update, then reopen that variable and inspect its full Value.
+    The ordinary valid save should succeed. Report pass if it persists, fail for a
+    demonstrated business rejection or a saved mismatch, or blocked if the input or
+    outcome cannot be established.
+  scenario_fingerprint: e762203ce2b63c2b49d302a019d8094cf41594179823b36e4be13333922be55d
+  content_key: e762203ce2b63c2b49d302a019d8094cf41594179823b36e4be13333922be55d
+- id: final-anchor-test-08
+  parent_scenario_id: final-anchor-test-08
+  app: anchor
+  case_id: sweeper-008
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    variable_key: ft08t
+    value: River concert original notice
+  requested_changes:
+    Name: ft08t
+    Value: River concert revised notice
+  fixture:
+    title: River concert
+    name: ft08t
+    initial_value: River concert original notice
+    expected: River concert revised notice
+    category: target
+    object_id: custom_ft08t
+  task: Edit the existing Site Variable named 'ft08t'. Its original Value is 'River
+    concert original notice'; keep Name unchanged. Set Value to exactly 'River concert
+    revised notice', Update, then reopen that variable and inspect its full Value.
+    The ordinary valid save should succeed. Report pass if it persists, fail for a
+    demonstrated business rejection or a saved mismatch, or blocked if the input or
+    outcome cannot be established.
+  scenario_fingerprint: bc7cf0d968bcb6999e8d966a974815246a6c7df90a6aca7453acb7b22719b43b
+  content_key: bc7cf0d968bcb6999e8d966a974815246a6c7df90a6aca7453acb7b22719b43b
+- id: final-anchor-test-09
+  parent_scenario_id: final-anchor-test-09
+  app: anchor
+  case_id: sweeper-008
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    variable_key: ft09t
+    value: Market support original notice
+  requested_changes:
+    Name: ft09t
+    Value: Market support revised notice
+  fixture:
+    title: Market support
+    name: ft09t
+    initial_value: Market support original notice
+    expected: Market support revised notice
+    category: target
+    object_id: custom_ft09t
+  task: Edit the existing Site Variable named 'ft09t'. Its original Value is 'Market
+    support original notice'; keep Name unchanged. Set Value to exactly 'Market support
+    revised notice', Update, then reopen that variable and inspect its full Value.
+    The ordinary valid save should succeed. Report pass if it persists, fail for a
+    demonstrated business rejection or a saved mismatch, or blocked if the input or
+    outcome cannot be established.
+  scenario_fingerprint: ef7abea300bfbb7eae089138c03890760a4b8cc9fbde4bae301cd39d376a1c31
+  content_key: ef7abea300bfbb7eae089138c03890760a4b8cc9fbde4bae301cd39d376a1c31
+- id: final-anchor-test-10
+  parent_scenario_id: final-anchor-test-10
+  app: anchor
+  case_id: sweeper-008
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    variable_key: ft10t
+    value: Lakeside lessons original notice
+  requested_changes:
+    Name: ft10t
+    Value: Lakeside lessons revised notice
+  fixture:
+    title: Lakeside lessons
+    name: ft10t
+    initial_value: Lakeside lessons original notice
+    expected: Lakeside lessons revised notice
+    category: target
+    object_id: custom_ft10t
+  task: Edit the existing Site Variable named 'ft10t'. Its original Value is 'Lakeside
+    lessons original notice'; keep Name unchanged. Set Value to exactly 'Lakeside
+    lessons revised notice', Update, then reopen that variable and inspect its full
+    Value. The ordinary valid save should succeed. Report pass if it persists, fail
+    for a demonstrated business rejection or a saved mismatch, or blocked if the input
+    or outcome cannot be established.
+  scenario_fingerprint: 48660653a615531618f371a2d9b5b969d0efaf3ee7161121638c97e640983f27
+  content_key: 48660653a615531618f371a2d9b5b969d0efaf3ee7161121638c97e640983f27
+- id: final-anchor-test-11
+  parent_scenario_id: final-anchor-test-11
+  app: anchor
+  case_id: sweeper-008
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - A
+  calibration: false
+  split: test
+  initial:
+    variable_absent: ft11t
+  requested_changes:
+    Name: ft11t
+    Value: Archive service revised notice
+  fixture:
+    title: Archive service
+    name: ft11t
+    initial_value: Archive service original notice
+    expected: Archive service revised notice
+    category: preservation
+    object_id: custom_ft11t
+  task: Create a new Site Variable named 'ft11t'. Set Value to exactly 'Archive service
+    revised notice', Save, then reopen that variable and inspect its full Value. The
+    ordinary valid save should succeed. Report pass if it persists, fail for a demonstrated
+    business rejection or a saved mismatch, or blocked if the input or outcome cannot
+    be established.
+  scenario_fingerprint: 50a5a6174bcc0be0239a54a3d74e379bda1d094b2d65301fd9ecdc5ae64748a1
+  content_key: 50a5a6174bcc0be0239a54a3d74e379bda1d094b2d65301fd9ecdc5ae64748a1
+- id: final-anchor-test-12
+  parent_scenario_id: final-anchor-test-12
+  app: anchor
+  case_id: sweeper-008
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    variable_absent: ft12t
+  requested_changes:
+    Name: ft12t
+    Value: Theatre tickets revised notice
+  fixture:
+    title: Theatre tickets
+    name: ft12t
+    initial_value: Theatre tickets original notice
+    expected: Theatre tickets revised notice
+    category: preservation
+    object_id: custom_ft12t
+  task: Create a new Site Variable named 'ft12t'. Set Value to exactly 'Theatre tickets
+    revised notice', Save, then reopen that variable and inspect its full Value. The
+    ordinary valid save should succeed. Report pass if it persists, fail for a demonstrated
+    business rejection or a saved mismatch, or blocked if the input or outcome cannot
+    be established.
+  scenario_fingerprint: 44dc90e768b7e536e185de9546271f84453705495be499b04633f23d33c86585
+  content_key: 44dc90e768b7e536e185de9546271f84453705495be499b04633f23d33c86585
+- id: final-anchor-test-13
+  parent_scenario_id: final-anchor-test-13
+  app: anchor
+  case_id: sweeper-008
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - A
+  calibration: false
+  split: test
+  initial:
+    variable_absent: ft13t
+  requested_changes:
+    Name: ft13t
+    Value: Coffee deliveries revised notice
+  fixture:
+    title: Coffee deliveries
+    name: ft13t
+    initial_value: Coffee deliveries original notice
+    expected: Coffee deliveries revised notice
+    category: preservation
+    object_id: custom_ft13t
+  task: Create a new Site Variable named 'ft13t'. Set Value to exactly 'Coffee deliveries
+    revised notice', Save, then reopen that variable and inspect its full Value. The
+    ordinary valid save should succeed. Report pass if it persists, fail for a demonstrated
+    business rejection or a saved mismatch, or blocked if the input or outcome cannot
+    be established.
+  scenario_fingerprint: 4e6edaf6ab36bd4fd66368bcc987eae3cf5125ad28502c122cb198f995c03aa8
+  content_key: 4e6edaf6ab36bd4fd66368bcc987eae3cf5125ad28502c122cb198f995c03aa8
+- id: final-anchor-test-14
+  parent_scenario_id: final-anchor-test-14
+  app: anchor
+  case_id: sweeper-008
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    variable_absent: ft14t
+  requested_changes:
+    Name: ft14t
+    Value: Science club revised notice
+  fixture:
+    title: Science club
+    name: ft14t
+    initial_value: Science club original notice
+    expected: Science club revised notice
+    category: preservation
+    object_id: custom_ft14t
+  task: Create a new Site Variable named 'ft14t'. Set Value to exactly 'Science club
+    revised notice', Save, then reopen that variable and inspect its full Value. The
+    ordinary valid save should succeed. Report pass if it persists, fail for a demonstrated
+    business rejection or a saved mismatch, or blocked if the input or outcome cannot
+    be established.
+  scenario_fingerprint: 5dc94e6eae38d29e3783aa6ec2a7f1e9fb0e85c494b6dfcd0012b19aa50c178d
+  content_key: 5dc94e6eae38d29e3783aa6ec2a7f1e9fb0e85c494b6dfcd0012b19aa50c178d
+- id: final-anchor-test-15
+  parent_scenario_id: final-anchor-test-15
+  app: anchor
+  case_id: sweeper-008
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - A
+  calibration: false
+  split: test
+  initial:
+    variable_absent: ft15t
+  requested_changes:
+    Name: ft15t
+    Value: Trail guides revised notice
+  fixture:
+    title: Trail guides
+    name: ft15t
+    initial_value: Trail guides original notice
+    expected: Trail guides revised notice
+    category: preservation
+    object_id: custom_ft15t
+  task: Create a new Site Variable named 'ft15t'. Set Value to exactly 'Trail guides
+    revised notice', Save, then reopen that variable and inspect its full Value. The
+    ordinary valid save should succeed. Report pass if it persists, fail for a demonstrated
+    business rejection or a saved mismatch, or blocked if the input or outcome cannot
+    be established.
+  scenario_fingerprint: bf62fda158bc66f409acf24f8ea2384232fc964bfd84b633b3fe24df43bd2be1
+  content_key: bf62fda158bc66f409acf24f8ea2384232fc964bfd84b633b3fe24df43bd2be1
+- id: final-anchor-test-16
+  parent_scenario_id: final-anchor-test-16
+  app: anchor
+  case_id: sweeper-008
+  workflow: target
+  kind: blocked
+  variant: cancelled
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    variable_key: ft16t
+    value: Textile display original notice
+  requested_changes:
+    Name: ft16t
+    Value: Textile display revised notice
+  fixture:
+    title: Textile display
+    name: ft16t
+    initial_value: Textile display original notice
+    expected: Textile display revised notice
+    category: target
+    object_id: custom_ft16t
+  task: Edit the existing Site Variable named 'ft16t'. Its original Value is 'Textile
+    display original notice'; keep Name unchanged. Set Value to exactly 'Textile display
+    revised notice', Update, then reopen that variable and inspect its full Value.
+    The ordinary valid save should succeed. Report pass if it persists, fail for a
+    demonstrated business rejection or a saved mismatch, or blocked if the input or
+    outcome cannot be established.
+  scenario_fingerprint: e50ccbb2a0f0bc75d92a72df69750040e80520604112d9e76fac739e65ecb79e
+  content_key: e50ccbb2a0f0bc75d92a72df69750040e80520604112d9e76fac739e65ecb79e
+- id: final-anchor-test-17
+  parent_scenario_id: final-anchor-test-17
+  app: anchor
+  case_id: sweeper-008
+  workflow: target
+  kind: blocked
+  variant: cancelled
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    variable_key: ft17t
+    value: Pottery course original notice
+  requested_changes:
+    Name: ft17t
+    Value: Pottery course revised notice
+  fixture:
+    title: Pottery course
+    name: ft17t
+    initial_value: Pottery course original notice
+    expected: Pottery course revised notice
+    category: target
+    object_id: custom_ft17t
+  task: Edit the existing Site Variable named 'ft17t'. Its original Value is 'Pottery
+    course original notice'; keep Name unchanged. Set Value to exactly 'Pottery course
+    revised notice', Update, then reopen that variable and inspect its full Value.
+    The ordinary valid save should succeed. Report pass if it persists, fail for a
+    demonstrated business rejection or a saved mismatch, or blocked if the input or
+    outcome cannot be established.
+  scenario_fingerprint: 5b12875393c5085e34082c61c603cf79ccebc8cc3b638a132a2e6fd4134ddf99
+  content_key: 5b12875393c5085e34082c61c603cf79ccebc8cc3b638a132a2e6fd4134ddf99
+- id: final-anchor-test-18
+  parent_scenario_id: final-anchor-test-18
+  app: anchor
+  case_id: sweeper-008
+  workflow: target
+  kind: blocked
+  variant: cancelled
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    variable_key: ft18t
+    value: Book repairs original notice
+  requested_changes:
+    Name: ft18t
+    Value: Book repairs revised notice
+  fixture:
+    title: Book repairs
+    name: ft18t
+    initial_value: Book repairs original notice
+    expected: Book repairs revised notice
+    category: target
+    object_id: custom_ft18t
+  task: Edit the existing Site Variable named 'ft18t'. Its original Value is 'Book
+    repairs original notice'; keep Name unchanged. Set Value to exactly 'Book repairs
+    revised notice', Update, then reopen that variable and inspect its full Value.
+    The ordinary valid save should succeed. Report pass if it persists, fail for a
+    demonstrated business rejection or a saved mismatch, or blocked if the input or
+    outcome cannot be established.
+  scenario_fingerprint: 1621e74880cec5784d3756c64fb438267966b2eb075552e088fd1c1d3dd47b6d
+  content_key: 1621e74880cec5784d3756c64fb438267966b2eb075552e088fd1c1d3dd47b6d
+- id: final-anchor-test-19
+  parent_scenario_id: final-anchor-test-19
+  app: anchor
+  case_id: sweeper-008
+  workflow: target
+  kind: blocked
+  variant: input_not_established
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    variable_key: ft19t
+    value: Autumn exhibit original notice
+  requested_changes:
+    Name: ft19t
+    Value: Autumn exhibit revised notice
+  fixture:
+    title: Autumn exhibit
+    name: ft19t
+    initial_value: Autumn exhibit original notice
+    expected: Autumn exhibit revised notice
+    category: target
+    object_id: custom_ft19t
+  task: Edit the existing Site Variable named 'ft19t'. Its original Value is 'Autumn
+    exhibit original notice'; keep Name unchanged. Set Value to exactly 'Autumn exhibit
+    revised notice', Update, then reopen that variable and inspect its full Value.
+    The ordinary valid save should succeed. Report pass if it persists, fail for a
+    demonstrated business rejection or a saved mismatch, or blocked if the input or
+    outcome cannot be established.
+  scenario_fingerprint: 4863270de674be8bd92ae0b611f34e6a5d601ee190ba0f108e52b7accae7740d
+  content_key: 4863270de674be8bd92ae0b611f34e6a5d601ee190ba0f108e52b7accae7740d
+- id: final-anchor-test-20
+  parent_scenario_id: final-anchor-test-20
+  app: anchor
+  case_id: sweeper-008
+  workflow: target
+  kind: blocked
+  variant: input_not_established
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    variable_key: ft20t
+    value: Spring schedule original notice
+  requested_changes:
+    Name: ft20t
+    Value: Spring schedule revised notice
+  fixture:
+    title: Spring schedule
+    name: ft20t
+    initial_value: Spring schedule original notice
+    expected: Spring schedule revised notice
+    category: target
+    object_id: custom_ft20t
+  task: Edit the existing Site Variable named 'ft20t'. Its original Value is 'Spring
+    schedule original notice'; keep Name unchanged. Set Value to exactly 'Spring schedule
+    revised notice', Update, then reopen that variable and inspect its full Value.
+    The ordinary valid save should succeed. Report pass if it persists, fail for a
+    demonstrated business rejection or a saved mismatch, or blocked if the input or
+    outcome cannot be established.
+  scenario_fingerprint: c9822151801efcaeaeb54704cbded0a20e4be6c3ff784f53e7d626f2789f6e38
+  content_key: c9822151801efcaeaeb54704cbded0a20e4be6c3ff784f53e7d626f2789f6e38
+- id: final-anchor-calibration-31
+  parent_scenario_id: final-anchor-calibration-31
+  app: anchor
+  case_id: sweeper-008
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    variable_key: ft31c
+    value: Archive service calibration original notice
+  requested_changes:
+    Name: ft31c
+    Value: Archive service calibration revised notice
+  fixture:
+    title: Archive service calibration
+    name: ft31c
+    initial_value: Archive service calibration original notice
+    expected: Archive service calibration revised notice
+    category: target
+    object_id: custom_ft31c
+  task: Edit the existing Site Variable named 'ft31c'. Its original Value is 'Archive
+    service calibration original notice'; keep Name unchanged. Set Value to exactly
+    'Archive service calibration revised notice', Update, then reopen that variable
+    and inspect its full Value. The ordinary valid save should succeed. Report pass
+    if it persists, fail for a demonstrated business rejection or a saved mismatch,
+    or blocked if the input or outcome cannot be established.
+  scenario_fingerprint: 093476ea744b89f26046075d3fe4ad928541c05adb6009739a8a872b4c6a4726
+  content_key: 093476ea744b89f26046075d3fe4ad928541c05adb6009739a8a872b4c6a4726
+- id: final-anchor-calibration-32
+  parent_scenario_id: final-anchor-calibration-32
+  app: anchor
+  case_id: sweeper-008
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    variable_key: ft32c
+    value: Theatre tickets calibration original notice
+  requested_changes:
+    Name: ft32c
+    Value: Theatre tickets calibration revised notice
+  fixture:
+    title: Theatre tickets calibration
+    name: ft32c
+    initial_value: Theatre tickets calibration original notice
+    expected: Theatre tickets calibration revised notice
+    category: target
+    object_id: custom_ft32c
+  task: Edit the existing Site Variable named 'ft32c'. Its original Value is 'Theatre
+    tickets calibration original notice'; keep Name unchanged. Set Value to exactly
+    'Theatre tickets calibration revised notice', Update, then reopen that variable
+    and inspect its full Value. The ordinary valid save should succeed. Report pass
+    if it persists, fail for a demonstrated business rejection or a saved mismatch,
+    or blocked if the input or outcome cannot be established.
+  scenario_fingerprint: 103857836d9c9feea56ca01b651eba156745a544ed42461ff2495e16c32336c1
+  content_key: 103857836d9c9feea56ca01b651eba156745a544ed42461ff2495e16c32336c1
+- id: final-anchor-calibration-33
+  parent_scenario_id: final-anchor-calibration-33
+  app: anchor
+  case_id: sweeper-008
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    variable_absent: ft33c
+  requested_changes:
+    Name: ft33c
+    Value: Coffee deliveries calibration revised notice
+  fixture:
+    title: Coffee deliveries calibration
+    name: ft33c
+    initial_value: Coffee deliveries calibration original notice
+    expected: Coffee deliveries calibration revised notice
+    category: preservation
+    object_id: custom_ft33c
+  task: Create a new Site Variable named 'ft33c'. Set Value to exactly 'Coffee deliveries
+    calibration revised notice', Save, then reopen that variable and inspect its full
+    Value. The ordinary valid save should succeed. Report pass if it persists, fail
+    for a demonstrated business rejection or a saved mismatch, or blocked if the input
+    or outcome cannot be established.
+  scenario_fingerprint: afa2a99d34183e2f4d1d007e1844bc48ce9e32f78528b840cf28467e2dd63067
+  content_key: afa2a99d34183e2f4d1d007e1844bc48ce9e32f78528b840cf28467e2dd63067
+- id: final-anchor-calibration-34
+  parent_scenario_id: final-anchor-calibration-34
+  app: anchor
+  case_id: sweeper-008
+  workflow: target
+  kind: blocked
+  variant: cancelled
+  builds:
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    variable_key: ft34c
+    value: Science club calibration original notice
+  requested_changes:
+    Name: ft34c
+    Value: Science club calibration revised notice
+  fixture:
+    title: Science club calibration
+    name: ft34c
+    initial_value: Science club calibration original notice
+    expected: Science club calibration revised notice
+    category: target
+    object_id: custom_ft34c
+  task: Edit the existing Site Variable named 'ft34c'. Its original Value is 'Science
+    club calibration original notice'; keep Name unchanged. Set Value to exactly 'Science
+    club calibration revised notice', Update, then reopen that variable and inspect
+    its full Value. The ordinary valid save should succeed. Report pass if it persists,
+    fail for a demonstrated business rejection or a saved mismatch, or blocked if
+    the input or outcome cannot be established.
+  scenario_fingerprint: 97f540bc80bfa82b6be79d27a5067861e477c205db7b51a578fa8e2500f16f44
+  content_key: 97f540bc80bfa82b6be79d27a5067861e477c205db7b51a578fa8e2500f16f44
+- id: final-anchor-calibration-35
+  parent_scenario_id: final-anchor-calibration-35
+  app: anchor
+  case_id: sweeper-008
+  workflow: target
+  kind: blocked
+  variant: input_not_established
+  builds:
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    variable_key: ft35c
+    value: Trail guides calibration original notice
+  requested_changes:
+    Name: ft35c
+    Value: Trail guides calibration revised notice
+  fixture:
+    title: Trail guides calibration
+    name: ft35c
+    initial_value: Trail guides calibration original notice
+    expected: Trail guides calibration revised notice
+    category: target
+    object_id: custom_ft35c
+  task: Edit the existing Site Variable named 'ft35c'. Its original Value is 'Trail
+    guides calibration original notice'; keep Name unchanged. Set Value to exactly
+    'Trail guides calibration revised notice', Update, then reopen that variable and
+    inspect its full Value. The ordinary valid save should succeed. Report pass if
+    it persists, fail for a demonstrated business rejection or a saved mismatch, or
+    blocked if the input or outcome cannot be established.
+  scenario_fingerprint: a2ec25fabca17e4d586eca4d3255b88a05cfcd57623be8e11bbad8a45fc5ea1e
+  content_key: a2ec25fabca17e4d586eca4d3255b88a05cfcd57623be8e11bbad8a45fc5ea1e
+- id: final-appointments-test-01
+  parent_scenario_id: final-appointments-test-01
+  app: appointments
+  case_id: sweeper-040
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    provider_name: Harbor Provider
+    provider_email: provider1t@final.guiqa.test
+    Mobile Number: ''
+  requested_changes:
+    Mobile Number: '+15553000000'
+  fixture:
+    title: Harbor reading
+    object_id: 2
+    field: mobile_number
+    selector: '#mobile-number'
+    provider_name: Harbor Provider
+    provider_email: provider1t@final.guiqa.test
+    initial_value: ''
+    expected: '+15553000000'
+  task: Open provider Harbor Provider (provider1t@final.guiqa.test). Edit Mobile Number
+    from '' to exactly '+15553000000'. Save, reload and reopen the same provider.
+    Inspect Mobile Number. Report pass if it persisted, fail if an accepted save leaves
+    a different value, or blocked if the requested save is not established.
+  scenario_fingerprint: 961e785b9fa415ef116ccb2f7b5e9c22c167da0a3f628cc3656955e154a603ec
+  content_key: 961e785b9fa415ef116ccb2f7b5e9c22c167da0a3f628cc3656955e154a603ec
+- id: final-appointments-test-02
+  parent_scenario_id: final-appointments-test-02
+  app: appointments
+  case_id: sweeper-040
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    provider_name: Cedar Provider
+    provider_email: provider2t@final.guiqa.test
+    Mobile Number: '+15552000001'
+  requested_changes:
+    Mobile Number: '+15553000001'
+  fixture:
+    title: Cedar workshop
+    object_id: 2
+    field: mobile_number
+    selector: '#mobile-number'
+    provider_name: Cedar Provider
+    provider_email: provider2t@final.guiqa.test
+    initial_value: '+15552000001'
+    expected: '+15553000001'
+  task: Open provider Cedar Provider (provider2t@final.guiqa.test). Edit Mobile Number
+    from '+15552000001' to exactly '+15553000001'. Save, reload and reopen the same
+    provider. Inspect Mobile Number. Report pass if it persisted, fail if an accepted
+    save leaves a different value, or blocked if the requested save is not established.
+  scenario_fingerprint: 5b11ee45356bf4cbc665b505d526e945e180a3e128f90719c60fcb1c350286ef
+  content_key: 5b11ee45356bf4cbc665b505d526e945e180a3e128f90719c60fcb1c350286ef
+- id: final-appointments-test-03
+  parent_scenario_id: final-appointments-test-03
+  app: appointments
+  case_id: sweeper-040
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    provider_name: Museum Provider
+    provider_email: provider3t@final.guiqa.test
+    Mobile Number: ''
+  requested_changes:
+    Mobile Number: '+15553000002'
+  fixture:
+    title: Museum visits
+    object_id: 2
+    field: mobile_number
+    selector: '#mobile-number'
+    provider_name: Museum Provider
+    provider_email: provider3t@final.guiqa.test
+    initial_value: ''
+    expected: '+15553000002'
+  task: Open provider Museum Provider (provider3t@final.guiqa.test). Edit Mobile Number
+    from '' to exactly '+15553000002'. Save, reload and reopen the same provider.
+    Inspect Mobile Number. Report pass if it persisted, fail if an accepted save leaves
+    a different value, or blocked if the requested save is not established.
+  scenario_fingerprint: 4875b406d86340915153215f54a7ee8b9f871cda2e7ea0c2322111479fa45af2
+  content_key: 4875b406d86340915153215f54a7ee8b9f871cda2e7ea0c2322111479fa45af2
+- id: final-appointments-test-04
+  parent_scenario_id: final-appointments-test-04
+  app: appointments
+  case_id: sweeper-040
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    provider_name: Garden Provider
+    provider_email: provider4t@final.guiqa.test
+    Mobile Number: '+15552000003'
+  requested_changes:
+    Mobile Number: '+15553000003'
+  fixture:
+    title: Garden supplies
+    object_id: 2
+    field: mobile_number
+    selector: '#mobile-number'
+    provider_name: Garden Provider
+    provider_email: provider4t@final.guiqa.test
+    initial_value: '+15552000003'
+    expected: '+15553000003'
+  task: Open provider Garden Provider (provider4t@final.guiqa.test). Edit Mobile Number
+    from '+15552000003' to exactly '+15553000003'. Save, reload and reopen the same
+    provider. Inspect Mobile Number. Report pass if it persisted, fail if an accepted
+    save leaves a different value, or blocked if the requested save is not established.
+  scenario_fingerprint: 723eed9e71b0bb15c5ea0e6c471bd01d8af22c5decdd43649a3c084bcd67edd1
+  content_key: 723eed9e71b0bb15c5ea0e6c471bd01d8af22c5decdd43649a3c084bcd67edd1
+- id: final-appointments-test-05
+  parent_scenario_id: final-appointments-test-05
+  app: appointments
+  case_id: sweeper-040
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    provider_name: Studio Provider
+    provider_email: provider5t@final.guiqa.test
+    Mobile Number: ''
+  requested_changes:
+    Mobile Number: '+15553000004'
+  fixture:
+    title: Studio lighting
+    object_id: 2
+    field: mobile_number
+    selector: '#mobile-number'
+    provider_name: Studio Provider
+    provider_email: provider5t@final.guiqa.test
+    initial_value: ''
+    expected: '+15553000004'
+  task: Open provider Studio Provider (provider5t@final.guiqa.test). Edit Mobile Number
+    from '' to exactly '+15553000004'. Save, reload and reopen the same provider.
+    Inspect Mobile Number. Report pass if it persisted, fail if an accepted save leaves
+    a different value, or blocked if the requested save is not established.
+  scenario_fingerprint: 29d1700ae69db48db844291df34f566f00a431b4b6047d130e838b8931e4e51f
+  content_key: 29d1700ae69db48db844291df34f566f00a431b4b6047d130e838b8931e4e51f
+- id: final-appointments-test-06
+  parent_scenario_id: final-appointments-test-06
+  app: appointments
+  case_id: sweeper-040
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    provider_name: Library Provider
+    provider_email: provider6t@final.guiqa.test
+    Mobile Number: '+15552000005'
+  requested_changes:
+    Mobile Number: '+15553000005'
+  fixture:
+    title: Library desk
+    object_id: 2
+    field: mobile_number
+    selector: '#mobile-number'
+    provider_name: Library Provider
+    provider_email: provider6t@final.guiqa.test
+    initial_value: '+15552000005'
+    expected: '+15553000005'
+  task: Open provider Library Provider (provider6t@final.guiqa.test). Edit Mobile
+    Number from '+15552000005' to exactly '+15553000005'. Save, reload and reopen
+    the same provider. Inspect Mobile Number. Report pass if it persisted, fail if
+    an accepted save leaves a different value, or blocked if the requested save is
+    not established.
+  scenario_fingerprint: 37eb48fedf78eda7e99ec52b847c6faceb4a278b23333675dd8a52cbf86813a1
+  content_key: 37eb48fedf78eda7e99ec52b847c6faceb4a278b23333675dd8a52cbf86813a1
+- id: final-appointments-test-07
+  parent_scenario_id: final-appointments-test-07
+  app: appointments
+  case_id: sweeper-040
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    provider_name: Orchard Provider
+    provider_email: provider7t@final.guiqa.test
+    Mobile Number: ''
+  requested_changes:
+    Mobile Number: '+15553000006'
+  fixture:
+    title: Orchard tools
+    object_id: 2
+    field: mobile_number
+    selector: '#mobile-number'
+    provider_name: Orchard Provider
+    provider_email: provider7t@final.guiqa.test
+    initial_value: ''
+    expected: '+15553000006'
+  task: Open provider Orchard Provider (provider7t@final.guiqa.test). Edit Mobile
+    Number from '' to exactly '+15553000006'. Save, reload and reopen the same provider.
+    Inspect Mobile Number. Report pass if it persisted, fail if an accepted save leaves
+    a different value, or blocked if the requested save is not established.
+  scenario_fingerprint: c52a783a138db6c3cfb7d5e02b7c022a0fd870a0c7418108ef225dba05b23023
+  content_key: c52a783a138db6c3cfb7d5e02b7c022a0fd870a0c7418108ef225dba05b23023
+- id: final-appointments-test-08
+  parent_scenario_id: final-appointments-test-08
+  app: appointments
+  case_id: sweeper-040
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    provider_name: River Provider
+    provider_email: provider8t@final.guiqa.test
+    Mobile Number: '+15552000007'
+  requested_changes:
+    Mobile Number: '+15553000007'
+  fixture:
+    title: River concert
+    object_id: 2
+    field: mobile_number
+    selector: '#mobile-number'
+    provider_name: River Provider
+    provider_email: provider8t@final.guiqa.test
+    initial_value: '+15552000007'
+    expected: '+15553000007'
+  task: Open provider River Provider (provider8t@final.guiqa.test). Edit Mobile Number
+    from '+15552000007' to exactly '+15553000007'. Save, reload and reopen the same
+    provider. Inspect Mobile Number. Report pass if it persisted, fail if an accepted
+    save leaves a different value, or blocked if the requested save is not established.
+  scenario_fingerprint: c301ff2e0a9e45bc2e6ceaaea6721c81a0670336251a8e44b93c11a216b1a525
+  content_key: c301ff2e0a9e45bc2e6ceaaea6721c81a0670336251a8e44b93c11a216b1a525
+- id: final-appointments-test-09
+  parent_scenario_id: final-appointments-test-09
+  app: appointments
+  case_id: sweeper-040
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    provider_name: Market Provider
+    provider_email: provider9t@final.guiqa.test
+    Mobile Number: ''
+  requested_changes:
+    Mobile Number: '+15553000008'
+  fixture:
+    title: Market support
+    object_id: 2
+    field: mobile_number
+    selector: '#mobile-number'
+    provider_name: Market Provider
+    provider_email: provider9t@final.guiqa.test
+    initial_value: ''
+    expected: '+15553000008'
+  task: Open provider Market Provider (provider9t@final.guiqa.test). Edit Mobile Number
+    from '' to exactly '+15553000008'. Save, reload and reopen the same provider.
+    Inspect Mobile Number. Report pass if it persisted, fail if an accepted save leaves
+    a different value, or blocked if the requested save is not established.
+  scenario_fingerprint: fcdb8909aafbe86d7457d20df590b012036bfe4eb78056931a1493c4cfb427bb
+  content_key: fcdb8909aafbe86d7457d20df590b012036bfe4eb78056931a1493c4cfb427bb
+- id: final-appointments-test-10
+  parent_scenario_id: final-appointments-test-10
+  app: appointments
+  case_id: sweeper-040
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    provider_name: Lakeside Provider
+    provider_email: provider10t@final.guiqa.test
+    Mobile Number: '+15552000009'
+  requested_changes:
+    Mobile Number: '+15553000009'
+  fixture:
+    title: Lakeside lessons
+    object_id: 2
+    field: mobile_number
+    selector: '#mobile-number'
+    provider_name: Lakeside Provider
+    provider_email: provider10t@final.guiqa.test
+    initial_value: '+15552000009'
+    expected: '+15553000009'
+  task: Open provider Lakeside Provider (provider10t@final.guiqa.test). Edit Mobile
+    Number from '+15552000009' to exactly '+15553000009'. Save, reload and reopen
+    the same provider. Inspect Mobile Number. Report pass if it persisted, fail if
+    an accepted save leaves a different value, or blocked if the requested save is
+    not established.
+  scenario_fingerprint: 9800b89206f153e89ed37ef48ccf910dbb9f389c39481cd868c18e70233239a5
+  content_key: 9800b89206f153e89ed37ef48ccf910dbb9f389c39481cd868c18e70233239a5
+- id: final-appointments-test-11
+  parent_scenario_id: final-appointments-test-11
+  app: appointments
+  case_id: sweeper-040
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - A
+  calibration: false
+  split: test
+  initial:
+    provider_name: Archive Provider
+    provider_email: provider11t@final.guiqa.test
+    Phone Number: ''
+  requested_changes:
+    Phone Number: '+15553000010'
+  fixture:
+    title: Archive service
+    object_id: 2
+    field: phone_number
+    selector: '#phone-number'
+    provider_name: Archive Provider
+    provider_email: provider11t@final.guiqa.test
+    initial_value: ''
+    expected: '+15553000010'
+  task: Open provider Archive Provider (provider11t@final.guiqa.test). Edit Phone
+    Number from '' to exactly '+15553000010'. Save, reload and reopen the same provider.
+    Inspect Phone Number. Report pass if it persisted, fail if an accepted save leaves
+    a different value, or blocked if the requested save is not established.
+  scenario_fingerprint: 3513812db187f898653621766952c54c1f957dfa75058a7e2e5dc99390b71148
+  content_key: 3513812db187f898653621766952c54c1f957dfa75058a7e2e5dc99390b71148
+- id: final-appointments-test-12
+  parent_scenario_id: final-appointments-test-12
+  app: appointments
+  case_id: sweeper-040
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    provider_name: Theatre Provider
+    provider_email: provider12t@final.guiqa.test
+    Phone Number: '+15552000011'
+  requested_changes:
+    Phone Number: '+15553000011'
+  fixture:
+    title: Theatre tickets
+    object_id: 2
+    field: phone_number
+    selector: '#phone-number'
+    provider_name: Theatre Provider
+    provider_email: provider12t@final.guiqa.test
+    initial_value: '+15552000011'
+    expected: '+15553000011'
+  task: Open provider Theatre Provider (provider12t@final.guiqa.test). Edit Phone
+    Number from '+15552000011' to exactly '+15553000011'. Save, reload and reopen
+    the same provider. Inspect Phone Number. Report pass if it persisted, fail if
+    an accepted save leaves a different value, or blocked if the requested save is
+    not established.
+  scenario_fingerprint: 20ae287cf3aaecc485102d388bfb9af355f9ecbbd4324d91ac9f85cf36b1882e
+  content_key: 20ae287cf3aaecc485102d388bfb9af355f9ecbbd4324d91ac9f85cf36b1882e
+- id: final-appointments-test-13
+  parent_scenario_id: final-appointments-test-13
+  app: appointments
+  case_id: sweeper-040
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - A
+  calibration: false
+  split: test
+  initial:
+    provider_name: Coffee Provider
+    provider_email: provider13t@final.guiqa.test
+    Phone Number: ''
+  requested_changes:
+    Phone Number: '+15553000012'
+  fixture:
+    title: Coffee deliveries
+    object_id: 2
+    field: phone_number
+    selector: '#phone-number'
+    provider_name: Coffee Provider
+    provider_email: provider13t@final.guiqa.test
+    initial_value: ''
+    expected: '+15553000012'
+  task: Open provider Coffee Provider (provider13t@final.guiqa.test). Edit Phone Number
+    from '' to exactly '+15553000012'. Save, reload and reopen the same provider.
+    Inspect Phone Number. Report pass if it persisted, fail if an accepted save leaves
+    a different value, or blocked if the requested save is not established.
+  scenario_fingerprint: 755064a731b9f1c2ad76b1102ba897c2c4d90fdeed4efcb513e3ffce33415101
+  content_key: 755064a731b9f1c2ad76b1102ba897c2c4d90fdeed4efcb513e3ffce33415101
+- id: final-appointments-test-14
+  parent_scenario_id: final-appointments-test-14
+  app: appointments
+  case_id: sweeper-040
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    provider_name: Science Provider
+    provider_email: provider14t@final.guiqa.test
+    Phone Number: '+15552000013'
+  requested_changes:
+    Phone Number: '+15553000013'
+  fixture:
+    title: Science club
+    object_id: 2
+    field: phone_number
+    selector: '#phone-number'
+    provider_name: Science Provider
+    provider_email: provider14t@final.guiqa.test
+    initial_value: '+15552000013'
+    expected: '+15553000013'
+  task: Open provider Science Provider (provider14t@final.guiqa.test). Edit Phone
+    Number from '+15552000013' to exactly '+15553000013'. Save, reload and reopen
+    the same provider. Inspect Phone Number. Report pass if it persisted, fail if
+    an accepted save leaves a different value, or blocked if the requested save is
+    not established.
+  scenario_fingerprint: c5bebe12fd4f80f9ede6c4d9ec54356a93a2afd056103f00f7c76899541c569a
+  content_key: c5bebe12fd4f80f9ede6c4d9ec54356a93a2afd056103f00f7c76899541c569a
+- id: final-appointments-test-15
+  parent_scenario_id: final-appointments-test-15
+  app: appointments
+  case_id: sweeper-040
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - A
+  calibration: false
+  split: test
+  initial:
+    provider_name: Trail Provider
+    provider_email: provider15t@final.guiqa.test
+    Phone Number: ''
+  requested_changes:
+    Phone Number: '+15553000014'
+  fixture:
+    title: Trail guides
+    object_id: 2
+    field: phone_number
+    selector: '#phone-number'
+    provider_name: Trail Provider
+    provider_email: provider15t@final.guiqa.test
+    initial_value: ''
+    expected: '+15553000014'
+  task: Open provider Trail Provider (provider15t@final.guiqa.test). Edit Phone Number
+    from '' to exactly '+15553000014'. Save, reload and reopen the same provider.
+    Inspect Phone Number. Report pass if it persisted, fail if an accepted save leaves
+    a different value, or blocked if the requested save is not established.
+  scenario_fingerprint: 244c7473fb48cb2b67437613f5e9807279bb901eb0a956a033fd9f04ef5bd967
+  content_key: 244c7473fb48cb2b67437613f5e9807279bb901eb0a956a033fd9f04ef5bd967
+- id: final-appointments-test-16
+  parent_scenario_id: final-appointments-test-16
+  app: appointments
+  case_id: sweeper-040
+  workflow: target
+  kind: blocked
+  variant: cancelled
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    provider_name: Textile Provider
+    provider_email: provider16t@final.guiqa.test
+    Mobile Number: '+15552000015'
+  requested_changes:
+    Mobile Number: '+15553000015'
+  fixture:
+    title: Textile display
+    object_id: 2
+    field: mobile_number
+    selector: '#mobile-number'
+    provider_name: Textile Provider
+    provider_email: provider16t@final.guiqa.test
+    initial_value: '+15552000015'
+    expected: '+15553000015'
+  task: Open provider Textile Provider (provider16t@final.guiqa.test). Edit Mobile
+    Number from '+15552000015' to exactly '+15553000015'. Save, reload and reopen
+    the same provider. Inspect Mobile Number. Report pass if it persisted, fail if
+    an accepted save leaves a different value, or blocked if the requested save is
+    not established.
+  scenario_fingerprint: 5a5d2292622d9558688bbdccd1d1f9bd2072392063bd9e4626cf9b4437ae44d8
+  content_key: 5a5d2292622d9558688bbdccd1d1f9bd2072392063bd9e4626cf9b4437ae44d8
+- id: final-appointments-test-17
+  parent_scenario_id: final-appointments-test-17
+  app: appointments
+  case_id: sweeper-040
+  workflow: target
+  kind: blocked
+  variant: cancelled
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    provider_name: Pottery Provider
+    provider_email: provider17t@final.guiqa.test
+    Mobile Number: ''
+  requested_changes:
+    Mobile Number: '+15553000016'
+  fixture:
+    title: Pottery course
+    object_id: 2
+    field: mobile_number
+    selector: '#mobile-number'
+    provider_name: Pottery Provider
+    provider_email: provider17t@final.guiqa.test
+    initial_value: ''
+    expected: '+15553000016'
+  task: Open provider Pottery Provider (provider17t@final.guiqa.test). Edit Mobile
+    Number from '' to exactly '+15553000016'. Save, reload and reopen the same provider.
+    Inspect Mobile Number. Report pass if it persisted, fail if an accepted save leaves
+    a different value, or blocked if the requested save is not established.
+  scenario_fingerprint: 625e03aeedd6690b5e07200cbaed3abdcef35349dab24b8302e2af0b55f3f2b0
+  content_key: 625e03aeedd6690b5e07200cbaed3abdcef35349dab24b8302e2af0b55f3f2b0
+- id: final-appointments-test-18
+  parent_scenario_id: final-appointments-test-18
+  app: appointments
+  case_id: sweeper-040
+  workflow: target
+  kind: blocked
+  variant: cancelled
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    provider_name: Book Provider
+    provider_email: provider18t@final.guiqa.test
+    Mobile Number: '+15552000017'
+  requested_changes:
+    Mobile Number: '+15553000017'
+  fixture:
+    title: Book repairs
+    object_id: 2
+    field: mobile_number
+    selector: '#mobile-number'
+    provider_name: Book Provider
+    provider_email: provider18t@final.guiqa.test
+    initial_value: '+15552000017'
+    expected: '+15553000017'
+  task: Open provider Book Provider (provider18t@final.guiqa.test). Edit Mobile Number
+    from '+15552000017' to exactly '+15553000017'. Save, reload and reopen the same
+    provider. Inspect Mobile Number. Report pass if it persisted, fail if an accepted
+    save leaves a different value, or blocked if the requested save is not established.
+  scenario_fingerprint: ec352af206051974134c2a08dbcd322c69dd3c42d78eadbf1249d50cc3516605
+  content_key: ec352af206051974134c2a08dbcd322c69dd3c42d78eadbf1249d50cc3516605
+- id: final-appointments-test-19
+  parent_scenario_id: final-appointments-test-19
+  app: appointments
+  case_id: sweeper-040
+  workflow: target
+  kind: blocked
+  variant: input_not_established
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    provider_name: Autumn Provider
+    provider_email: provider19t@final.guiqa.test
+    Mobile Number: ''
+  requested_changes:
+    Mobile Number: '+15553000018'
+  fixture:
+    title: Autumn exhibit
+    object_id: 2
+    field: mobile_number
+    selector: '#mobile-number'
+    provider_name: Autumn Provider
+    provider_email: provider19t@final.guiqa.test
+    initial_value: ''
+    expected: '+15553000018'
+  task: Open provider Autumn Provider (provider19t@final.guiqa.test). Edit Mobile
+    Number from '' to exactly '+15553000018'. Save, reload and reopen the same provider.
+    Inspect Mobile Number. Report pass if it persisted, fail if an accepted save leaves
+    a different value, or blocked if the requested save is not established.
+  scenario_fingerprint: c6d0952a378092f5e87236a60dc4bb6713adb88861391dd5a89d2666a1e6ee87
+  content_key: c6d0952a378092f5e87236a60dc4bb6713adb88861391dd5a89d2666a1e6ee87
+- id: final-appointments-test-20
+  parent_scenario_id: final-appointments-test-20
+  app: appointments
+  case_id: sweeper-040
+  workflow: target
+  kind: blocked
+  variant: input_not_established
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    provider_name: Spring Provider
+    provider_email: provider20t@final.guiqa.test
+    Mobile Number: '+15552000019'
+  requested_changes:
+    Mobile Number: '+15553000019'
+  fixture:
+    title: Spring schedule
+    object_id: 2
+    field: mobile_number
+    selector: '#mobile-number'
+    provider_name: Spring Provider
+    provider_email: provider20t@final.guiqa.test
+    initial_value: '+15552000019'
+    expected: '+15553000019'
+  task: Open provider Spring Provider (provider20t@final.guiqa.test). Edit Mobile
+    Number from '+15552000019' to exactly '+15553000019'. Save, reload and reopen
+    the same provider. Inspect Mobile Number. Report pass if it persisted, fail if
+    an accepted save leaves a different value, or blocked if the requested save is
+    not established.
+  scenario_fingerprint: 4899b4b47a6550f9ef64524872d6713511a7271245faa3866148db213bed47c6
+  content_key: 4899b4b47a6550f9ef64524872d6713511a7271245faa3866148db213bed47c6
+- id: final-appointments-calibration-31
+  parent_scenario_id: final-appointments-calibration-31
+  app: appointments
+  case_id: sweeper-040
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    provider_name: Archive Calibration
+    provider_email: provider31c@final.guiqa.test
+    Mobile Number: ''
+  requested_changes:
+    Mobile Number: '+15553000030'
+  fixture:
+    title: Archive service calibration
+    object_id: 2
+    field: mobile_number
+    selector: '#mobile-number'
+    provider_name: Archive Calibration
+    provider_email: provider31c@final.guiqa.test
+    initial_value: ''
+    expected: '+15553000030'
+  task: Open provider Archive Calibration (provider31c@final.guiqa.test). Edit Mobile
+    Number from '' to exactly '+15553000030'. Save, reload and reopen the same provider.
+    Inspect Mobile Number. Report pass if it persisted, fail if an accepted save leaves
+    a different value, or blocked if the requested save is not established.
+  scenario_fingerprint: f80a438d9c51557df0c7b5197e1ef1627ece0f599ed34302df5428a3799c11f9
+  content_key: f80a438d9c51557df0c7b5197e1ef1627ece0f599ed34302df5428a3799c11f9
+- id: final-appointments-calibration-32
+  parent_scenario_id: final-appointments-calibration-32
+  app: appointments
+  case_id: sweeper-040
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    provider_name: Theatre Calibration
+    provider_email: provider32c@final.guiqa.test
+    Mobile Number: '+15552000031'
+  requested_changes:
+    Mobile Number: '+15553000031'
+  fixture:
+    title: Theatre tickets calibration
+    object_id: 2
+    field: mobile_number
+    selector: '#mobile-number'
+    provider_name: Theatre Calibration
+    provider_email: provider32c@final.guiqa.test
+    initial_value: '+15552000031'
+    expected: '+15553000031'
+  task: Open provider Theatre Calibration (provider32c@final.guiqa.test). Edit Mobile
+    Number from '+15552000031' to exactly '+15553000031'. Save, reload and reopen
+    the same provider. Inspect Mobile Number. Report pass if it persisted, fail if
+    an accepted save leaves a different value, or blocked if the requested save is
+    not established.
+  scenario_fingerprint: 87b20fdfe5fe1f26270b1f16830a434741d9493fb33ac9e5dce3421438d7e068
+  content_key: 87b20fdfe5fe1f26270b1f16830a434741d9493fb33ac9e5dce3421438d7e068
+- id: final-appointments-calibration-33
+  parent_scenario_id: final-appointments-calibration-33
+  app: appointments
+  case_id: sweeper-040
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    provider_name: Coffee Calibration
+    provider_email: provider33c@final.guiqa.test
+    Phone Number: ''
+  requested_changes:
+    Phone Number: '+15553000032'
+  fixture:
+    title: Coffee deliveries calibration
+    object_id: 2
+    field: phone_number
+    selector: '#phone-number'
+    provider_name: Coffee Calibration
+    provider_email: provider33c@final.guiqa.test
+    initial_value: ''
+    expected: '+15553000032'
+  task: Open provider Coffee Calibration (provider33c@final.guiqa.test). Edit Phone
+    Number from '' to exactly '+15553000032'. Save, reload and reopen the same provider.
+    Inspect Phone Number. Report pass if it persisted, fail if an accepted save leaves
+    a different value, or blocked if the requested save is not established.
+  scenario_fingerprint: 0dff4c66bb6d82fb2ffaea322e9739d53bb5fe8f720adceef49b824c19f2a3c1
+  content_key: 0dff4c66bb6d82fb2ffaea322e9739d53bb5fe8f720adceef49b824c19f2a3c1
+- id: final-appointments-calibration-34
+  parent_scenario_id: final-appointments-calibration-34
+  app: appointments
+  case_id: sweeper-040
+  workflow: target
+  kind: blocked
+  variant: cancelled
+  builds:
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    provider_name: Science Calibration
+    provider_email: provider34c@final.guiqa.test
+    Mobile Number: '+15552000033'
+  requested_changes:
+    Mobile Number: '+15553000033'
+  fixture:
+    title: Science club calibration
+    object_id: 2
+    field: mobile_number
+    selector: '#mobile-number'
+    provider_name: Science Calibration
+    provider_email: provider34c@final.guiqa.test
+    initial_value: '+15552000033'
+    expected: '+15553000033'
+  task: Open provider Science Calibration (provider34c@final.guiqa.test). Edit Mobile
+    Number from '+15552000033' to exactly '+15553000033'. Save, reload and reopen
+    the same provider. Inspect Mobile Number. Report pass if it persisted, fail if
+    an accepted save leaves a different value, or blocked if the requested save is
+    not established.
+  scenario_fingerprint: a0cc86f148b1b2427f62016b32f3a527da76d4b0666e2a586b650e11045991ae
+  content_key: a0cc86f148b1b2427f62016b32f3a527da76d4b0666e2a586b650e11045991ae
+- id: final-appointments-calibration-35
+  parent_scenario_id: final-appointments-calibration-35
+  app: appointments
+  case_id: sweeper-040
+  workflow: target
+  kind: blocked
+  variant: input_not_established
+  builds:
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    provider_name: Trail Calibration
+    provider_email: provider35c@final.guiqa.test
+    Mobile Number: ''
+  requested_changes:
+    Mobile Number: '+15553000034'
+  fixture:
+    title: Trail guides calibration
+    object_id: 2
+    field: mobile_number
+    selector: '#mobile-number'
+    provider_name: Trail Calibration
+    provider_email: provider35c@final.guiqa.test
+    initial_value: ''
+    expected: '+15553000034'
+  task: Open provider Trail Calibration (provider35c@final.guiqa.test). Edit Mobile
+    Number from '' to exactly '+15553000034'. Save, reload and reopen the same provider.
+    Inspect Mobile Number. Report pass if it persisted, fail if an accepted save leaves
+    a different value, or blocked if the requested save is not established.
+  scenario_fingerprint: c3b49c7598f3c6d46f3d0a0a447f42ce04574e3891aa1c26e177dba7ed995d4b
+  content_key: c3b49c7598f3c6d46f3d0a0a447f42ce04574e3891aa1c26e177dba7ed995d4b
+- id: final-emlog-test-01
+  parent_scenario_id: final-emlog-test-01
+  app: emlog
+  case_id: sweeper-041
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    role: writer
+    Nickname: Harbor old
+  requested_changes:
+    Nickname: Harbor editor
+    Username: unchanged
+  fixture:
+    title: Harbor reading
+    initial_value: Harbor old
+    expected: Harbor editor
+    role: writer
+    object_id: 2
+  task: On the signed-in writer's Profile, Nickname initially reads 'Harbor old'.
+    Change only Nickname to exactly 'Harbor editor'; keep Username unchanged. Save
+    and reopen the same Profile. This ordinary nickname edit should succeed. Report
+    pass if it persisted, fail for a visible business rejection of the valid edit
+    or a saved mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: 01d188a5fff5ff3e465ac941df459384eac501dbf1106d459a52e07d3e7deb94
+  content_key: 01d188a5fff5ff3e465ac941df459384eac501dbf1106d459a52e07d3e7deb94
+- id: final-emlog-test-02
+  parent_scenario_id: final-emlog-test-02
+  app: emlog
+  case_id: sweeper-041
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    role: writer
+    Nickname: Cedar old
+  requested_changes:
+    Nickname: Cedar editor
+    Username: unchanged
+  fixture:
+    title: Cedar workshop
+    initial_value: Cedar old
+    expected: Cedar editor
+    role: writer
+    object_id: 2
+  task: On the signed-in writer's Profile, Nickname initially reads 'Cedar old'. Change
+    only Nickname to exactly 'Cedar editor'; keep Username unchanged. Save and reopen
+    the same Profile. This ordinary nickname edit should succeed. Report pass if it
+    persisted, fail for a visible business rejection of the valid edit or a saved
+    mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: 53c25089b05bc46bc98adad2587f51a862e9392671a143ba70488bdfffdeb3a8
+  content_key: 53c25089b05bc46bc98adad2587f51a862e9392671a143ba70488bdfffdeb3a8
+- id: final-emlog-test-03
+  parent_scenario_id: final-emlog-test-03
+  app: emlog
+  case_id: sweeper-041
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    role: writer
+    Nickname: Museum old
+  requested_changes:
+    Nickname: Museum editor
+    Username: unchanged
+  fixture:
+    title: Museum visits
+    initial_value: Museum old
+    expected: Museum editor
+    role: writer
+    object_id: 2
+  task: On the signed-in writer's Profile, Nickname initially reads 'Museum old'.
+    Change only Nickname to exactly 'Museum editor'; keep Username unchanged. Save
+    and reopen the same Profile. This ordinary nickname edit should succeed. Report
+    pass if it persisted, fail for a visible business rejection of the valid edit
+    or a saved mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: f5a1b09f2e4e9f4b9281b2462acc67c3b43d3ec179b3083823c5ac694dba2ab9
+  content_key: f5a1b09f2e4e9f4b9281b2462acc67c3b43d3ec179b3083823c5ac694dba2ab9
+- id: final-emlog-test-04
+  parent_scenario_id: final-emlog-test-04
+  app: emlog
+  case_id: sweeper-041
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    role: writer
+    Nickname: Garden old
+  requested_changes:
+    Nickname: Garden editor
+    Username: unchanged
+  fixture:
+    title: Garden supplies
+    initial_value: Garden old
+    expected: Garden editor
+    role: writer
+    object_id: 2
+  task: On the signed-in writer's Profile, Nickname initially reads 'Garden old'.
+    Change only Nickname to exactly 'Garden editor'; keep Username unchanged. Save
+    and reopen the same Profile. This ordinary nickname edit should succeed. Report
+    pass if it persisted, fail for a visible business rejection of the valid edit
+    or a saved mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: cbb48ccce5ff3ae8bbefafa2b01b8f78ddf4e15d15c8d7ea8f3b2e95665a06d3
+  content_key: cbb48ccce5ff3ae8bbefafa2b01b8f78ddf4e15d15c8d7ea8f3b2e95665a06d3
+- id: final-emlog-test-05
+  parent_scenario_id: final-emlog-test-05
+  app: emlog
+  case_id: sweeper-041
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    role: writer
+    Nickname: Studio old
+  requested_changes:
+    Nickname: Studio editor
+    Username: unchanged
+  fixture:
+    title: Studio lighting
+    initial_value: Studio old
+    expected: Studio editor
+    role: writer
+    object_id: 2
+  task: On the signed-in writer's Profile, Nickname initially reads 'Studio old'.
+    Change only Nickname to exactly 'Studio editor'; keep Username unchanged. Save
+    and reopen the same Profile. This ordinary nickname edit should succeed. Report
+    pass if it persisted, fail for a visible business rejection of the valid edit
+    or a saved mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: 53d5b9ac0b39c5b789ae4cedec3e242fd57c15ebc0ff46ac66b9e89cd1f3ce20
+  content_key: 53d5b9ac0b39c5b789ae4cedec3e242fd57c15ebc0ff46ac66b9e89cd1f3ce20
+- id: final-emlog-test-06
+  parent_scenario_id: final-emlog-test-06
+  app: emlog
+  case_id: sweeper-041
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    role: writer
+    Nickname: Library old
+  requested_changes:
+    Nickname: Library editor
+    Username: unchanged
+  fixture:
+    title: Library desk
+    initial_value: Library old
+    expected: Library editor
+    role: writer
+    object_id: 2
+  task: On the signed-in writer's Profile, Nickname initially reads 'Library old'.
+    Change only Nickname to exactly 'Library editor'; keep Username unchanged. Save
+    and reopen the same Profile. This ordinary nickname edit should succeed. Report
+    pass if it persisted, fail for a visible business rejection of the valid edit
+    or a saved mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: 83e239d82700ecb83484f76f5e6d020a2ba60db45479422cc50e89737ccae26d
+  content_key: 83e239d82700ecb83484f76f5e6d020a2ba60db45479422cc50e89737ccae26d
+- id: final-emlog-test-07
+  parent_scenario_id: final-emlog-test-07
+  app: emlog
+  case_id: sweeper-041
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    role: writer
+    Nickname: Orchard old
+  requested_changes:
+    Nickname: Orchard editor
+    Username: unchanged
+  fixture:
+    title: Orchard tools
+    initial_value: Orchard old
+    expected: Orchard editor
+    role: writer
+    object_id: 2
+  task: On the signed-in writer's Profile, Nickname initially reads 'Orchard old'.
+    Change only Nickname to exactly 'Orchard editor'; keep Username unchanged. Save
+    and reopen the same Profile. This ordinary nickname edit should succeed. Report
+    pass if it persisted, fail for a visible business rejection of the valid edit
+    or a saved mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: ec4dd138e7568b1a58471467a334159cfb38e6b7bfbab6187900ae3369afb93b
+  content_key: ec4dd138e7568b1a58471467a334159cfb38e6b7bfbab6187900ae3369afb93b
+- id: final-emlog-test-08
+  parent_scenario_id: final-emlog-test-08
+  app: emlog
+  case_id: sweeper-041
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    role: writer
+    Nickname: River old
+  requested_changes:
+    Nickname: River editor
+    Username: unchanged
+  fixture:
+    title: River concert
+    initial_value: River old
+    expected: River editor
+    role: writer
+    object_id: 2
+  task: On the signed-in writer's Profile, Nickname initially reads 'River old'. Change
+    only Nickname to exactly 'River editor'; keep Username unchanged. Save and reopen
+    the same Profile. This ordinary nickname edit should succeed. Report pass if it
+    persisted, fail for a visible business rejection of the valid edit or a saved
+    mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: 98464e7520b8c2933c9dbc6470c902cd2c06ca1f16fd32b2c1c31ca219f859d8
+  content_key: 98464e7520b8c2933c9dbc6470c902cd2c06ca1f16fd32b2c1c31ca219f859d8
+- id: final-emlog-test-09
+  parent_scenario_id: final-emlog-test-09
+  app: emlog
+  case_id: sweeper-041
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    role: writer
+    Nickname: Market old
+  requested_changes:
+    Nickname: Market editor
+    Username: unchanged
+  fixture:
+    title: Market support
+    initial_value: Market old
+    expected: Market editor
+    role: writer
+    object_id: 2
+  task: On the signed-in writer's Profile, Nickname initially reads 'Market old'.
+    Change only Nickname to exactly 'Market editor'; keep Username unchanged. Save
+    and reopen the same Profile. This ordinary nickname edit should succeed. Report
+    pass if it persisted, fail for a visible business rejection of the valid edit
+    or a saved mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: de9c0232d6bcdd22ff55583ce580ee318fa5401d961e7ea7bc56db44cf451c41
+  content_key: de9c0232d6bcdd22ff55583ce580ee318fa5401d961e7ea7bc56db44cf451c41
+- id: final-emlog-test-10
+  parent_scenario_id: final-emlog-test-10
+  app: emlog
+  case_id: sweeper-041
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: false
+  split: test
+  initial:
+    role: writer
+    Nickname: Lakeside old
+  requested_changes:
+    Nickname: Lakeside editor
+    Username: unchanged
+  fixture:
+    title: Lakeside lessons
+    initial_value: Lakeside old
+    expected: Lakeside editor
+    role: writer
+    object_id: 2
+  task: On the signed-in writer's Profile, Nickname initially reads 'Lakeside old'.
+    Change only Nickname to exactly 'Lakeside editor'; keep Username unchanged. Save
+    and reopen the same Profile. This ordinary nickname edit should succeed. Report
+    pass if it persisted, fail for a visible business rejection of the valid edit
+    or a saved mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: 8ffe2ee0dd3fb052d1ac06575be6b6f43d7abb7eaf3850ec613259ca83c5bb34
+  content_key: 8ffe2ee0dd3fb052d1ac06575be6b6f43d7abb7eaf3850ec613259ca83c5bb34
+- id: final-emlog-test-11
+  parent_scenario_id: final-emlog-test-11
+  app: emlog
+  case_id: sweeper-041
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - A
+  calibration: false
+  split: test
+  initial:
+    role: admin
+    Nickname: Archive old
+  requested_changes:
+    Nickname: Archive editor
+    Username: unchanged
+  fixture:
+    title: Archive service
+    initial_value: Archive old
+    expected: Archive editor
+    role: admin
+    object_id: 1
+  task: On the signed-in admin's Profile, Nickname initially reads 'Archive old'.
+    Change only Nickname to exactly 'Archive editor'; keep Username unchanged. Save
+    and reopen the same Profile. This ordinary nickname edit should succeed. Report
+    pass if it persisted, fail for a visible business rejection of the valid edit
+    or a saved mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: 3f6f3f1660b0c057cfb430e16f58fdc1ce914bb8813822e5d0b49373cf8224bd
+  content_key: 3f6f3f1660b0c057cfb430e16f58fdc1ce914bb8813822e5d0b49373cf8224bd
+- id: final-emlog-test-12
+  parent_scenario_id: final-emlog-test-12
+  app: emlog
+  case_id: sweeper-041
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    role: admin
+    Nickname: Theatre old
+  requested_changes:
+    Nickname: Theatre editor
+    Username: unchanged
+  fixture:
+    title: Theatre tickets
+    initial_value: Theatre old
+    expected: Theatre editor
+    role: admin
+    object_id: 1
+  task: On the signed-in admin's Profile, Nickname initially reads 'Theatre old'.
+    Change only Nickname to exactly 'Theatre editor'; keep Username unchanged. Save
+    and reopen the same Profile. This ordinary nickname edit should succeed. Report
+    pass if it persisted, fail for a visible business rejection of the valid edit
+    or a saved mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: d15a271086d381d34d75cc5821166ec28bf411b3f1917276024c951f66820c43
+  content_key: d15a271086d381d34d75cc5821166ec28bf411b3f1917276024c951f66820c43
+- id: final-emlog-test-13
+  parent_scenario_id: final-emlog-test-13
+  app: emlog
+  case_id: sweeper-041
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - A
+  calibration: false
+  split: test
+  initial:
+    role: admin
+    Nickname: Coffee old
+  requested_changes:
+    Nickname: Coffee editor
+    Username: unchanged
+  fixture:
+    title: Coffee deliveries
+    initial_value: Coffee old
+    expected: Coffee editor
+    role: admin
+    object_id: 1
+  task: On the signed-in admin's Profile, Nickname initially reads 'Coffee old'. Change
+    only Nickname to exactly 'Coffee editor'; keep Username unchanged. Save and reopen
+    the same Profile. This ordinary nickname edit should succeed. Report pass if it
+    persisted, fail for a visible business rejection of the valid edit or a saved
+    mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: 59f8e94c48c4c5f63dcdefadf990a8570de945ac1df9c0864608a6ad256b7d55
+  content_key: 59f8e94c48c4c5f63dcdefadf990a8570de945ac1df9c0864608a6ad256b7d55
+- id: final-emlog-test-14
+  parent_scenario_id: final-emlog-test-14
+  app: emlog
+  case_id: sweeper-041
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    role: admin
+    Nickname: Science old
+  requested_changes:
+    Nickname: Science editor
+    Username: unchanged
+  fixture:
+    title: Science club
+    initial_value: Science old
+    expected: Science editor
+    role: admin
+    object_id: 1
+  task: On the signed-in admin's Profile, Nickname initially reads 'Science old'.
+    Change only Nickname to exactly 'Science editor'; keep Username unchanged. Save
+    and reopen the same Profile. This ordinary nickname edit should succeed. Report
+    pass if it persisted, fail for a visible business rejection of the valid edit
+    or a saved mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: e77975fc3d9aaba0beeff1176a97fafdbd176b1b9b0b8f811ade85c1e4c02546
+  content_key: e77975fc3d9aaba0beeff1176a97fafdbd176b1b9b0b8f811ade85c1e4c02546
+- id: final-emlog-test-15
+  parent_scenario_id: final-emlog-test-15
+  app: emlog
+  case_id: sweeper-041
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - A
+  calibration: false
+  split: test
+  initial:
+    role: admin
+    Nickname: Trail old
+  requested_changes:
+    Nickname: Trail editor
+    Username: unchanged
+  fixture:
+    title: Trail guides
+    initial_value: Trail old
+    expected: Trail editor
+    role: admin
+    object_id: 1
+  task: On the signed-in admin's Profile, Nickname initially reads 'Trail old'. Change
+    only Nickname to exactly 'Trail editor'; keep Username unchanged. Save and reopen
+    the same Profile. This ordinary nickname edit should succeed. Report pass if it
+    persisted, fail for a visible business rejection of the valid edit or a saved
+    mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: 86d601d4ffc420b93f49718d3be189c77c205aa9542790958128012e7d1567e1
+  content_key: 86d601d4ffc420b93f49718d3be189c77c205aa9542790958128012e7d1567e1
+- id: final-emlog-test-16
+  parent_scenario_id: final-emlog-test-16
+  app: emlog
+  case_id: sweeper-041
+  workflow: target
+  kind: blocked
+  variant: cancelled
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    role: writer
+    Nickname: Textile old
+  requested_changes:
+    Nickname: Textile editor
+    Username: unchanged
+  fixture:
+    title: Textile display
+    initial_value: Textile old
+    expected: Textile editor
+    role: writer
+    object_id: 2
+  task: On the signed-in writer's Profile, Nickname initially reads 'Textile old'.
+    Change only Nickname to exactly 'Textile editor'; keep Username unchanged. Save
+    and reopen the same Profile. This ordinary nickname edit should succeed. Report
+    pass if it persisted, fail for a visible business rejection of the valid edit
+    or a saved mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: 749f32c632a2f1eac5d00fb10780294e21f97861ac1635b2241c03a2d55bba19
+  content_key: 749f32c632a2f1eac5d00fb10780294e21f97861ac1635b2241c03a2d55bba19
+- id: final-emlog-test-17
+  parent_scenario_id: final-emlog-test-17
+  app: emlog
+  case_id: sweeper-041
+  workflow: target
+  kind: blocked
+  variant: cancelled
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    role: writer
+    Nickname: Pottery old
+  requested_changes:
+    Nickname: Pottery editor
+    Username: unchanged
+  fixture:
+    title: Pottery course
+    initial_value: Pottery old
+    expected: Pottery editor
+    role: writer
+    object_id: 2
+  task: On the signed-in writer's Profile, Nickname initially reads 'Pottery old'.
+    Change only Nickname to exactly 'Pottery editor'; keep Username unchanged. Save
+    and reopen the same Profile. This ordinary nickname edit should succeed. Report
+    pass if it persisted, fail for a visible business rejection of the valid edit
+    or a saved mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: 878bdb328d6f8687d122dd24537d8a7594a484d94c6776cd89b1d00cabe08cb4
+  content_key: 878bdb328d6f8687d122dd24537d8a7594a484d94c6776cd89b1d00cabe08cb4
+- id: final-emlog-test-18
+  parent_scenario_id: final-emlog-test-18
+  app: emlog
+  case_id: sweeper-041
+  workflow: target
+  kind: blocked
+  variant: cancelled
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    role: writer
+    Nickname: Book old
+  requested_changes:
+    Nickname: Book editor
+    Username: unchanged
+  fixture:
+    title: Book repairs
+    initial_value: Book old
+    expected: Book editor
+    role: writer
+    object_id: 2
+  task: On the signed-in writer's Profile, Nickname initially reads 'Book old'. Change
+    only Nickname to exactly 'Book editor'; keep Username unchanged. Save and reopen
+    the same Profile. This ordinary nickname edit should succeed. Report pass if it
+    persisted, fail for a visible business rejection of the valid edit or a saved
+    mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: 254074cf8c849abb433b3e6d5f07e995d3e9fdcc565e2b7af45ad45d0e6e2132
+  content_key: 254074cf8c849abb433b3e6d5f07e995d3e9fdcc565e2b7af45ad45d0e6e2132
+- id: final-emlog-test-19
+  parent_scenario_id: final-emlog-test-19
+  app: emlog
+  case_id: sweeper-041
+  workflow: target
+  kind: blocked
+  variant: input_not_established
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    role: writer
+    Nickname: Autumn old
+  requested_changes:
+    Nickname: Autumn editor
+    Username: unchanged
+  fixture:
+    title: Autumn exhibit
+    initial_value: Autumn old
+    expected: Autumn editor
+    role: writer
+    object_id: 2
+  task: On the signed-in writer's Profile, Nickname initially reads 'Autumn old'.
+    Change only Nickname to exactly 'Autumn editor'; keep Username unchanged. Save
+    and reopen the same Profile. This ordinary nickname edit should succeed. Report
+    pass if it persisted, fail for a visible business rejection of the valid edit
+    or a saved mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: 7a72b6fdc8e0d6e7c235d0420e9f8d62081945f8b3b97fe4d34c15908c1bfb6a
+  content_key: 7a72b6fdc8e0d6e7c235d0420e9f8d62081945f8b3b97fe4d34c15908c1bfb6a
+- id: final-emlog-test-20
+  parent_scenario_id: final-emlog-test-20
+  app: emlog
+  case_id: sweeper-041
+  workflow: target
+  kind: blocked
+  variant: input_not_established
+  builds:
+  - B
+  calibration: false
+  split: test
+  initial:
+    role: writer
+    Nickname: Spring old
+  requested_changes:
+    Nickname: Spring editor
+    Username: unchanged
+  fixture:
+    title: Spring schedule
+    initial_value: Spring old
+    expected: Spring editor
+    role: writer
+    object_id: 2
+  task: On the signed-in writer's Profile, Nickname initially reads 'Spring old'.
+    Change only Nickname to exactly 'Spring editor'; keep Username unchanged. Save
+    and reopen the same Profile. This ordinary nickname edit should succeed. Report
+    pass if it persisted, fail for a visible business rejection of the valid edit
+    or a saved mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: 30ed8b0ad184d9d5026fcef573e6cc0b0e3c42b718310b49069c5b9897fd7d9f
+  content_key: 30ed8b0ad184d9d5026fcef573e6cc0b0e3c42b718310b49069c5b9897fd7d9f
+- id: final-emlog-calibration-31
+  parent_scenario_id: final-emlog-calibration-31
+  app: emlog
+  case_id: sweeper-041
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    role: writer
+    Nickname: Archive cal old
+  requested_changes:
+    Nickname: Archive cal editor
+    Username: unchanged
+  fixture:
+    title: Archive service calibration
+    initial_value: Archive cal old
+    expected: Archive cal editor
+    role: writer
+    object_id: 2
+  task: On the signed-in writer's Profile, Nickname initially reads 'Archive cal old'.
+    Change only Nickname to exactly 'Archive cal editor'; keep Username unchanged.
+    Save and reopen the same Profile. This ordinary nickname edit should succeed.
+    Report pass if it persisted, fail for a visible business rejection of the valid
+    edit or a saved mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: b2273abd13ff952b9b050a373fb49ec57965ec12294ac657d29b16169f84aa48
+  content_key: b2273abd13ff952b9b050a373fb49ec57965ec12294ac657d29b16169f84aa48
+- id: final-emlog-calibration-32
+  parent_scenario_id: final-emlog-calibration-32
+  app: emlog
+  case_id: sweeper-041
+  workflow: target
+  kind: target
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    role: writer
+    Nickname: Theatre cal old
+  requested_changes:
+    Nickname: Theatre cal editor
+    Username: unchanged
+  fixture:
+    title: Theatre tickets calibration
+    initial_value: Theatre cal old
+    expected: Theatre cal editor
+    role: writer
+    object_id: 2
+  task: On the signed-in writer's Profile, Nickname initially reads 'Theatre cal old'.
+    Change only Nickname to exactly 'Theatre cal editor'; keep Username unchanged.
+    Save and reopen the same Profile. This ordinary nickname edit should succeed.
+    Report pass if it persisted, fail for a visible business rejection of the valid
+    edit or a saved mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: 249fe6ab8a31e60fc7af72b6b5cdf1ec7273ad01db0b2162525a424bc79b167c
+  content_key: 249fe6ab8a31e60fc7af72b6b5cdf1ec7273ad01db0b2162525a424bc79b167c
+- id: final-emlog-calibration-33
+  parent_scenario_id: final-emlog-calibration-33
+  app: emlog
+  case_id: sweeper-041
+  workflow: preservation
+  kind: preservation
+  variant: saved
+  builds:
+  - A
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    role: admin
+    Nickname: Coffee cal old
+  requested_changes:
+    Nickname: Coffee cal editor
+    Username: unchanged
+  fixture:
+    title: Coffee deliveries calibration
+    initial_value: Coffee cal old
+    expected: Coffee cal editor
+    role: admin
+    object_id: 1
+  task: On the signed-in admin's Profile, Nickname initially reads 'Coffee cal old'.
+    Change only Nickname to exactly 'Coffee cal editor'; keep Username unchanged.
+    Save and reopen the same Profile. This ordinary nickname edit should succeed.
+    Report pass if it persisted, fail for a visible business rejection of the valid
+    edit or a saved mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: 3dcf936dde6fd1d1f23957611311e00588a442ab5ffe2ef053e32fa279620945
+  content_key: 3dcf936dde6fd1d1f23957611311e00588a442ab5ffe2ef053e32fa279620945
+- id: final-emlog-calibration-34
+  parent_scenario_id: final-emlog-calibration-34
+  app: emlog
+  case_id: sweeper-041
+  workflow: target
+  kind: blocked
+  variant: cancelled
+  builds:
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    role: writer
+    Nickname: Science cal old
+  requested_changes:
+    Nickname: Science cal editor
+    Username: unchanged
+  fixture:
+    title: Science club calibration
+    initial_value: Science cal old
+    expected: Science cal editor
+    role: writer
+    object_id: 2
+  task: On the signed-in writer's Profile, Nickname initially reads 'Science cal old'.
+    Change only Nickname to exactly 'Science cal editor'; keep Username unchanged.
+    Save and reopen the same Profile. This ordinary nickname edit should succeed.
+    Report pass if it persisted, fail for a visible business rejection of the valid
+    edit or a saved mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: 0d855bc1478e9713c66d44de9aa1c8f1e05c9a78b6dcc7f0b511ec28d3b9aef9
+  content_key: 0d855bc1478e9713c66d44de9aa1c8f1e05c9a78b6dcc7f0b511ec28d3b9aef9
+- id: final-emlog-calibration-35
+  parent_scenario_id: final-emlog-calibration-35
+  app: emlog
+  case_id: sweeper-041
+  workflow: target
+  kind: blocked
+  variant: input_not_established
+  builds:
+  - B
+  calibration: true
+  split: calibration
+  initial:
+    role: writer
+    Nickname: Trail cal old
+  requested_changes:
+    Nickname: Trail cal editor
+    Username: unchanged
+  fixture:
+    title: Trail guides calibration
+    initial_value: Trail cal old
+    expected: Trail cal editor
+    role: writer
+    object_id: 2
+  task: On the signed-in writer's Profile, Nickname initially reads 'Trail cal old'.
+    Change only Nickname to exactly 'Trail cal editor'; keep Username unchanged. Save
+    and reopen the same Profile. This ordinary nickname edit should succeed. Report
+    pass if it persisted, fail for a visible business rejection of the valid edit
+    or a saved mismatch, or blocked if input or outcome cannot be established.
+  scenario_fingerprint: 0f2ea937dc3476181b8e39a0eacbbeb565f7439e29c118d1b5ff57a5d87f3cf6
+  content_key: 0f2ea937dc3476181b8e39a0eacbbeb565f7439e29c118d1b5ff57a5d87f3cf6

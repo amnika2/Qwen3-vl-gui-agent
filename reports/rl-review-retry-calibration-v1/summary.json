@@ -1,0 +1,35 @@
+{
+  "rules": "/home/fs_2026/qwen3-gui-agent/configs/rl-review-reward-rules-retry.yaml",
+  "rules_sha256": "d84e67249337e354d33f50e6751a61cb99d4b52814133e873413a92ec51abe67",
+  "sources": {
+    "/home/fs_2026/qwen3-gui-agent/configs/rl-review-reward-rules.yaml": "a1403fbc108dc9055e4e711bd1b4e23bdd82bb43e0d62b0b7f5857c9133f5b2b",
+    "/home/fs_2026/qwen3-gui-agent/reports/rl-review-retry-calibration-v1/php_oc_rules.yaml": "7d5f1d2106ad8477e7743d30391968c2726d4dad2b95ad4063a2fc154a1bafb4",
+    "/home/fs_2026/qwen3-gui-agent/reports/rl-review-retry-calibration-v1/other_rules.yaml": "b5a5f3fb3873f1cd1674a1cd4f2c70b3b80c4316af707731103e6f49e499ef34"
+  },
+  "selected_samples_bound": 32,
+  "training_only": true,
+  "before": {
+    "candidates": 168,
+    "numeric": 113,
+    "strict": 17,
+    "unscored": 55
+  },
+  "after": {
+    "candidates": 168,
+    "numeric": 165,
+    "strict": 33,
+    "unscored": 3
+  },
+  "strict_lost": 0,
+  "binary_eligible_groups": {
+    "pass": 9,
+    "fail": 2,
+    "blocked": 1
+  },
+  "binary_eligible_samples": {
+    "pass": 7,
+    "fail": 1,
+    "blocked": 1
+  },
+  "retry_config_sha256": "36ee3761a12e4882b8e17b6a42dbb8edf345dd123ad3050f6606061eecd990a9"
+}

@@ -1,0 +1,35 @@
+{
+  "experiment": "sft-lora-v1",
+  "planned_per_variant": 40,
+  "method": "qwen-controlled",
+  "baseline_experiments": [
+    "evaluation-092189cf",
+    "evaluation-40fa4011"
+  ],
+  "metrics": {
+    "base": {
+      "runs": 40,
+      "detected": 2,
+      "target_runs": 10,
+      "false_positives": 0,
+      "normal_runs": 30,
+      "inconclusive": 33,
+      "infra_error": 0,
+      "correct_cells": 6,
+      "correct_target_pairs": 1,
+      "median_actions": 7.0
+    },
+    "adapter": {
+      "runs": 40,
+      "detected": 3,
+      "target_runs": 10,
+      "false_positives": 1,
+      "normal_runs": 30,
+      "inconclusive": 5,
+      "infra_error": 8,
+      "correct_cells": 23,
+      "correct_target_pairs": 0,
+      "median_actions": 16.0
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "procedure": [
+    "Click on the field where you want to enter or modify text (e.g., 'Variable name' or 'Value').",
+    "Select all existing content in the active field by pressing Ctrl+A (or Cmd+A on Mac).",
+    "Type the desired new value into the selected field to overwrite the current content completely. Ensure it matches your intended variable or value format (e.g., alphanumeric, no special characters unless allowed).",
+    "Click outside the field or on another control to confirm entry and lose focus from the input box — this often triggers validation or auto-save behavior depending on context (e.g., form submission or editor save).",
+    "Repeat steps 1–4 for any additional fields if needed (e.g., entering a second variable/value pair).",
+    "Press Ctrl+R (or Cmd+R) twice consecutively to refresh/reload the interface after making changes — this may be required to apply updates or trigger backend sync in some systems. Avoid using F5 or other reload methods if "
+  ],
+  "lessons": [
+    "Always verify that the correct field is focused before selecting and replacing its contents — misfocusing can lead to unintended edits elsewhere in the UI or system state corruption if multiple inputs are modified at the",
+    "Use consistent keyboard shortcuts like Ctrl+A + type instead of manual deletion to reduce risk of accidental keystrokes or partial data loss during editing cycles. This also ensures full replacement rather than appending",
+    "Double-check that both fields ('Variable name', 'Value') have been properly filled before triggering refresh actions — incomplete entries might cause errors or unexpected behaviors when reloading or submitting",
+    "Avoid relying solely on automatic saves or browser-level refreshes — explicitly use application-defined commands such as Ctrl+R only if documented as safe within the tool’s workflow. Some tools require specific sequences",
+    "If refreshing doesn’t yield expected results, consider reopening the page or restarting the session entirely — sometimes cached states interfere with applied changes until fully cleared"
+  ],
+  "experience_id": 2,
+  "source_run_id": "20261109T032326Z-3c8ffe57"
+}

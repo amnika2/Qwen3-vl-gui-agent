@@ -1,0 +1,15 @@
+{
+  "case_id": "sweeper-005",
+  "start_path": "/1/common/items/create",
+  "setup": "An authenticated synthetic company account and an empty New Item form are prepared.",
+  "workflows": {
+    "target": {
+      "task": "Create a product item named exactly Ceramic Table Lamp. Enter the Sale Price exactly as 1.234.567,89 and Purchase Price as 100. Save, then inspect Ceramic Table Lamp on the saved Items list. The expected sale price is the full amount $1,234,567.89. Report pass if that full amount is displayed, fail if the saved amount differs, or blocked if you cannot complete the check. Cite screenshots of the saved item row.",
+      "expected": "1234567.89"
+    },
+    "preservation": {
+      "task": "Create a product item named exactly Linen Throw Pillow. Enter the Sale Price exactly as 1.234,56 and Purchase Price as 100. Save, then inspect Linen Throw Pillow on the saved Items list. The expected sale price is $1,234.56. Report pass if that amount is displayed, fail if the saved amount differs, or blocked if you cannot complete the check. Cite screenshots of the saved item row.",
+      "expected": "1234.56"
+    }
+  }
+}

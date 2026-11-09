@@ -1,0 +1,67 @@
+version: 1
+frozen_on: '2026-11-08'
+group_ordered_variants: true
+case_id: sweeper-125
+app: opencart
+build: B
+groups:
+- id: rex1-train-copy-001
+  parent_scenario_id: rex1-train-copy-001
+  split: train
+  name: Harbour task lamp
+  model: REX-COPY-101
+  edited_name: Harbour task lamp revised
+- id: rex1-train-copy-002
+  parent_scenario_id: rex1-train-copy-002
+  split: train
+  name: Archive reading stand
+  model: REX-COPY-102
+  edited_name: Archive reading stand revised
+- id: rex1-train-copy-003
+  parent_scenario_id: rex1-train-copy-003
+  split: train
+  name: Workshop storage tray
+  model: REX-COPY-103
+  edited_name: Workshop storage tray revised
+- id: rex1-train-copy-004
+  parent_scenario_id: rex1-train-copy-004
+  split: train
+  name: Parcel label holder
+  model: REX-COPY-104
+  edited_name: Parcel label holder revised
+- id: rex1-train-copy-005
+  parent_scenario_id: rex1-train-copy-005
+  split: train
+  name: Reception document rack
+  model: REX-COPY-105
+  edited_name: Reception document rack revised
+- id: rex1-train-copy-006
+  parent_scenario_id: rex1-train-copy-006
+  split: train
+  name: Library desk organiser
+  model: REX-COPY-106
+  edited_name: Library desk organiser revised
+- id: rex1-train-copy-007
+  parent_scenario_id: rex1-train-copy-007
+  split: train
+  name: Dispatch cable shelf
+  model: REX-COPY-107
+  edited_name: Dispatch cable shelf revised
+- id: rex1-train-copy-008
+  parent_scenario_id: rex1-train-copy-008
+  split: train
+  name: Warehouse clip board
+  model: REX-COPY-108
+  edited_name: Warehouse clip board revised
+- id: rex1-train-copy-009
+  parent_scenario_id: rex1-train-copy-009
+  split: train
+  name: Office corner light
+  model: REX-COPY-109
+  edited_name: Office corner light revised
+- id: rex1-train-copy-010
+  parent_scenario_id: rex1-train-copy-010
+  split: train
+  name: Equipment check panel
+  model: REX-COPY-110
+  edited_name: Equipment check panel revised

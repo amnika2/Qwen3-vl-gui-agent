@@ -1,0 +1,20 @@
+{
+  "archive": "reports/guiqa-source-and-demo.tar.gz",
+  "bytes": 6606573,
+  "sha256": "6ae385dcddf37d455e97393dd6cb359ab0bf335f6f83d1947cfde4caae7cb933",
+  "source_hash": "9e65085b2361b8fd7abc1f4382d30d495e593074ae3f325d28614bd8acc29e9c",
+  "files": 290,
+  "demo_runs": [
+    "20261106T162453Z-228f4963",
+    "20261106T162624Z-9cad3d6f",
+    "20261106T163802Z-a2b71478",
+    "20261106T164551Z-0516b110",
+    "20261107T042614Z-6a7449fc"
+  ],
+  "external_downloads": "Pinned model, dataset, application sources and dependencies are prepared by README commands",
+  "formal_protocols": [
+    "docs/protocol-freeze.json",
+    "docs/protocol-extension-round1-freeze.json",
+    "docs/protocol-extension-freeze.json"
+  ]
+}

@@ -1,0 +1,5 @@
+split: sft-supplementary
+# 基础固定流程校准；丰富场景采集使用 scripts/collect_supplementary.py。
+cases: [sweeper-034, sweeper-053]
+builds: [A, B]
+repeats: 1

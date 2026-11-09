@@ -1,0 +1,26 @@
+[
+  {
+    "path": "vendor/apps/impresscms/base",
+    "url": "https://codeload.github.com/ImpressCMS/impresscms/tar.gz/4b8128ed5ede9b2dea929828dd87a6b98ddcc3e8",
+    "sha256": "c3e53a475a5530720dfd3ffed227d7bee949a4e0bae31e153ed2e4b6514bc44d",
+    "bytes": 21765740
+  },
+  {
+    "path": "vendor/apps/impresscms/fixed",
+    "url": "https://codeload.github.com/ImpressCMS/impresscms/tar.gz/5a19c202f3ab5324ea882330fc918ae7088ffb69",
+    "sha256": "78b12848b348cdc2591b7ba2d5245583103f1a613104ad28a761aecbd9c3ce3e",
+    "bytes": 21766484
+  },
+  {
+    "path": "vendor/apps/opencart/base",
+    "url": "https://codeload.github.com/opencart/opencart/tar.gz/0dea7746a52a8e627e392283f4df0ad36e24023c",
+    "sha256": "00cae00d0673b181d1ff7b5e11cea91b51f266dd63de2a44cb9c5d0dfc644c22",
+    "bytes": 28999005
+  },
+  {
+    "path": "vendor/apps/opencart/fixed",
+    "url": "https://codeload.github.com/opencart/opencart/tar.gz/f5c93549411ee95aad08a9b386bf6878ec0838ec",
+    "sha256": "4bc40094ddd35ab0af1331cc17cd54812546a5715d00adf737916ae3149ffc27",
+    "bytes": 28999938
+  }
+]

@@ -1,0 +1,150 @@
+{
+  "dataset": "datasets/sft-main-10apps-v1",
+  "device": "cpu",
+  "transformers_version": "4.57.6",
+  "model_path": "vendor/models/Qwen3-VL-8B-Instruct",
+  "processor_class": "Qwen3VLProcessor",
+  "tokenizer_class": "Qwen2TokenizerFast",
+  "min_pixels": 200704,
+  "max_pixels": 802816,
+  "image_size": [
+    1280,
+    900
+  ],
+  "image_grid_thw": [
+    1,
+    46,
+    66
+  ],
+  "visual_tokens_per_image": 759,
+  "length_method": "Tokenize the unchanged rendered chat template after expanding each image_pad to the real processor grid token count. All dataset screenshots are 1280x900; the grid was measured with actual CPU image processing.",
+  "truncation": false,
+  "padding_side": "right",
+  "label_policy": "Only final assistant JSON plus first im_end EOS; prompt, image tokens, assistant header, trailing newline and padding are -100.",
+  "mask_checks": {
+    "samples_checked": 1398,
+    "all_expanded_prefix_token_sequences_exact": true,
+    "all_supervised_target_token_sequences_exact": true,
+    "eos_included": true,
+    "trailing_newline_excluded": true
+  },
+  "statistics": {
+    "all": {
+      "samples": 1398,
+      "total_tokens": 2372444,
+      "min": 1124,
+      "p50": 1460.0,
+      "p90": 1597.0,
+      "p95": 4922.8,
+      "p99": 6582.12,
+      "max": 10170,
+      "supervised_tokens": 33698,
+      "max_supervised_tokens": 194,
+      "max_tail_logits_to_keep": 196,
+      "max_images": 11
+    },
+    "train": {
+      "samples": 1164,
+      "total_tokens": 1971151,
+      "min": 1124,
+      "p50": 1458.0,
+      "p90": 1585.7,
+      "p95": 4945.2,
+      "p99": 6575.33,
+      "max": 10170,
+      "supervised_tokens": 28212,
+      "max_supervised_tokens": 194,
+      "max_tail_logits_to_keep": 196,
+      "max_images": 11
+    },
+    "validation": {
+      "samples": 234,
+      "total_tokens": 401293,
+      "min": 1129,
+      "p50": 1472.0,
+      "p90": 1636.7,
+      "p95": 4638.5,
+      "p99": 6691.88,
+      "max": 9284,
+      "supervised_tokens": 5486,
+      "max_supervised_tokens": 151,
+      "max_tail_logits_to_keep": 153,
+      "max_images": 10
+    },
+    "operation": {
+      "samples": 1296,
+      "total_tokens": 1829456,
+      "min": 1124,
+      "p50": 1446.0,
+      "p90": 1552.0,
+      "p95": 1577.0,
+      "p99": 1643.0,
+      "max": 1827,
+      "supervised_tokens": 22554,
+      "max_supervised_tokens": 70,
+      "max_tail_logits_to_keep": 72,
+      "max_images": 1
+    },
+    "review": {
+      "samples": 102,
+      "total_tokens": 542988,
+      "min": 3163,
+      "p50": 5054.5,
+      "p90": 6673.6,
+      "p95": 6792.6,
+      "p99": 9268.96,
+      "max": 10170,
+      "supervised_tokens": 11144,
+      "max_supervised_tokens": 194,
+      "max_tail_logits_to_keep": 196,
+      "max_images": 11
+    }
+  },
+  "longest_samples": [
+    {
+      "id": "20261107T160224Z-3f8a4aa7:19",
+      "partition": "train",
+      "phase": "review",
+      "tokens": 10170,
+      "supervised_tokens": 147,
+      "images": 11,
+      "tail_logits_to_keep": 149
+    },
+    {
+      "id": "20261107T160305Z-34ca338f:18",
+      "partition": "validation",
+      "phase": "review",
+      "tokens": 9284,
+      "supervised_tokens": 137,
+      "images": 10,
+      "tail_logits_to_keep": 139
+    },
+    {
+      "id": "20261107T160058Z-345f86c1:16",
+      "partition": "validation",
+      "phase": "review",
+      "tokens": 7780,
+      "supervised_tokens": 121,
+      "images": 8,
+      "tail_logits_to_keep": 123
+    },
+    {
+      "id": "20261107T160158Z-025e0607:14",
+      "partition": "train",
+      "phase": "review",
+      "tokens": 7585,
+      "supervised_tokens": 143,
+      "images": 8,
+      "tail_logits_to_keep": 145
+    },
+    {
+      "id": "20261107T160135Z-316b5886:22",
+      "partition": "train",
+      "phase": "review",
+      "tokens": 6940,
+      "supervised_tokens": 115,
+      "images": 7,
+      "tail_logits_to_keep": 117
+    }
+  ]
+}

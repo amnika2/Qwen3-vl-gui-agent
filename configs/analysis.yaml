@@ -1,0 +1,35 @@
+experiments:
+- evaluation-7d602e1f
+- evaluation-0215199c
+- evaluation-bad4974a
+- evaluation-fdaa18ed
+- evaluation-c2fde5d1
+aborted_experiments:
+- evaluation-866f0006
+- evaluation-072cb9fa
+- evaluation-075e36a6
+- evaluation-e2204e99
+- evaluation-616e92c0
+- evaluation-eaee5537
+- evaluation-4050024b
+aborted_reasons:
+  evaluation-866f0006: NFS 初始化过慢，改用本地临时盘
+  evaluation-072cb9fa: NFS 初始化过慢，改用本地临时盘
+  evaluation-075e36a6: 独立判据被未保存编辑覆盖，修正后重跑
+  evaluation-e2204e99: 独立判据被未保存编辑覆盖，修正后重跑
+  evaluation-616e92c0: Ampache 详情容器与列表行同 ID 导致判据超时，修正选择器后重跑
+  evaluation-eaee5537: Ampache 判据漏认 hash 路由和 AJAX 重开，修正后完整重跑，控制器不变
+  evaluation-4050024b: Ampache Continue 使用 POST 读取列表，补齐该观察路径后两卡完整重跑，控制器不变
+primary_attempt: 1
+development_rounds:
+- evaluation-8db9d71b
+- evaluation-d70aab0e
+- evaluation-092189cf
+- evaluation-40fa4011
+development_rounds_note: qwen-controlled 开发轮次，复用开发与原留出案例，仅作开发参考，不并入正式对照；前两批为循环打断与证据门槛，后两批为动作效果反馈；中间迭代见 docs/experiment-loop-control.md 与 docs/experiment-action-feedback.md
+calibrations:
+- calibration-67017ff4
+- calibration-e3907693
+- calibration-928458dc
+- calibration-61bcc58a
+- calibration-b28d8479

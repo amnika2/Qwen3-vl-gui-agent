@@ -1,0 +1,10 @@
+{
+  "v2_preserved": true,
+  "v2_artifacts_checked": 8,
+  "v3_trained_data_matches_frozen_release": true,
+  "exported_adapter_sha256_matches": true,
+  "selection_used_training_app_validation": true,
+  "selected_epoch": 2.0,
+  "selected_validation_loss": 0.11586669087409973,
+  "training_exit_code": 0
+}

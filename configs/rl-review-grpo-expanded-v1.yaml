@@ -1,0 +1,12 @@
+dataset: datasets/rl-review-expanded-v1
+model_config: configs/agent-review-evidence-expanded-v1.yaml
+reward_rules: configs/rl-review-reward-rules-retry.yaml
+max_steps: 100
+save_steps: 20
+groups_per_update: 3
+num_generations: 4
+learning_rate: 0.000002
+beta: 0.02
+max_completion_length: 1024
+temperature: 0.8
+seed: 42

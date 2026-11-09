@@ -1,0 +1,117 @@
+{
+  "run_id": "20261109T032123Z-4735918a",
+  "case_id": "sweeper-008",
+  "workflow": "target",
+  "method": "qwen-controlled",
+  "build": "B",
+  "experiment": "agent-runtime-20261109-verified",
+  "repeat": 0,
+  "attempt_id": 1,
+  "task": "In Site Variables, open greeting, whose initial value is Hello Anchor. Keep its name greeting, replace Value with exactly Hello Quillmere, and click Update. Reopen greeting and inspect Value. Report pass if it is Hello Quillmere, fail if the old value remains, or blocked if the check could not be completed. Cite the reopened edit form.",
+  "expected": "Hello Quillmere",
+  "matrix_expected": "pass",
+  "actual": "Hello Quillmere",
+  "agent_verdict": "pass",
+  "oracle_verdict": "pass",
+  "actions": 8,
+  "model_calls": 14,
+  "config_hash": "f4fe85f4e37da28812e0d185b1bcb3e9fa1c8b85ca05433193ec3858d5e0fd06",
+  "model_revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+  "termination_reason": "controlled_review",
+  "started": true,
+  "reproduce": "python -m guiqa run --case sweeper-008 --build B --workflow target --method qwen-controlled --config /home/fs_2026/qwen3-gui-agent/runs/20261109T032123Z-4735918a/agent-config.json",
+  "review_format": "evidence_facts_v1",
+  "browser_version": "156.0.8078.4",
+  "control_trigger": "model_proposed_finish",
+  "intervention_step": 7,
+  "operation_actions": 7,
+  "review_evidence": [
+    {
+      "step": 0,
+      "roles": [
+        "before_input_candidate"
+      ]
+    },
+    {
+      "step": 5,
+      "roles": [
+        "input_candidate"
+      ]
+    },
+    {
+      "step": 6,
+      "roles": [
+        "submission_response_candidate"
+      ]
+    },
+    {
+      "step": 7,
+      "roles": [
+        "outcome_candidate"
+      ]
+    },
+    {
+      "step": 8,
+      "roles": [
+        "after_reload"
+      ]
+    }
+  ],
+  "review_calls": 1,
+  "review_images": 5,
+  "review_model_verdict": "pass",
+  "observation": "Submission: accepted. Final record observed: true. Final field comparisons: 1 matching, 0 mismatching, 0 unestablished. Verdict: pass.",
+  "evidence_steps": [
+    0,
+    5,
+    6,
+    7,
+    8
+  ],
+  "field_readings": [
+    {
+      "field": "Value",
+      "intent": "edit",
+      "requested_value": "Hello Quillmere",
+      "before": {
+        "value": "Hello Quillmere",
+        "step": 5
+      },
+      "after": {
+        "value": "Hello Quillmere",
+        "step": 8
+      },
+      "input_matches_request": true,
+      "result_matches_request": true
+    }
+  ],
+  "task_kind": "edit",
+  "submission": {
+    "status": "accepted",
+    "evidence": {
+      "step": 6,
+      "observation": "Submission status: accepted; screenshot step 6."
+    }
+  },
+  "result_observed": true,
+  "result_steps": [
+    8
+  ],
+  "expected_rejection": false,
+  "agent_runtime": {
+    "context_updates": 4,
+    "compacted_through_step": 4,
+    "retrieved_experiences": 0,
+    "external_tool_calls": 0,
+    "memory_namespace": "runtime-validation"
+  },
+  "oracle_reason": "persisted_value_matches",
+  "gpu": {
+    "load_seconds": 5.836137308971956,
+    "torch": "2.14.1+cu130",
+    "device": "NVIDIA GeForce RTX 4090",
+    "peak_allocated_mib": 18878.63525390625,
+    "peak_reserved_mib": 19696.0
+  },
+  "elapsed_seconds": 123.2027161209844
+}

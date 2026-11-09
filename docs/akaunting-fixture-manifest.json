@@ -1,0 +1,7 @@
+{
+  "image": "ghcr.io/evigbyen/sweeper-005@sha256:e887abc1b3b156277bcd51ae44ea885d9c117dae9549816915e9b606b21a6a6c",
+  "fixtures": {
+    "akaunting-router.php": "4c77eee429cbaced640ec0e2b22145cc39f1795b20e0adc38cca01a2730e09bd",
+    "akaunting-seed-caches.php": "54adc040aaeb4aadd158dd02aeb86681738361f4c23cc4934bd5c5cd3a5fa285"
+  }
+}

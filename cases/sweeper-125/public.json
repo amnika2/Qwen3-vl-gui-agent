@@ -1,0 +1,14 @@
+{
+  "case_id": "sweeper-125",
+  "workflows": {
+    "target": {
+      "task": "In Apple Cinema 30 product Options, edit the Green Select value Weight to 0.6. Save the modal and product, then reload and reopen Option. Report pass only if the same Green row displays +0.6, fail if the reopened displayed weight is rounded, or blocked if unable to complete the check.",
+      "expected": "{\"weight\": \"0.6\"}"
+    },
+    "preservation": {
+      "task": "In Apple Cinema 30 product Options, change the Radio Medium value Weight to 25. Save the modal and product, reload and reopen Option. Report pass if Medium displays +25, fail if the reopened weight differs, or blocked if unable to check.",
+      "expected": "{\"weight\": \"25\"}"
+    }
+  },
+  "start_path": "/admin/"
+}

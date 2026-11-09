@@ -1,0 +1,14 @@
+{
+  "case_id": "sweeper-053",
+  "start_path": "/admin.php?p=static&action=write&page=about",
+  "workflows": {
+    "target": {
+      "task": "Edit the FlatPress static page 'about': replace the entire content text with 'GUIQA edited about page body', save, then reopen the page editor. Report pass if the reopened editor shows the new text, fail if it still shows the old text, or blocked if you cannot complete the edit.",
+      "expected": "GUIQA edited about page body"
+    },
+    "preservation": {
+      "task": "Edit the FlatPress static page 'menu': replace the entire content text with 'GUIQA edited menu page body', save, then reopen the page editor. Report pass if the reopened editor shows the new text, fail if it still shows the old text, or blocked if you cannot complete the edit.",
+      "expected": "GUIQA edited menu page body"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "package": "fonts-noto-cjk_1%3a20230817+repack1-3_all.deb",
+  "archive_sha256": "7d64b985f6fe128c99eae5610d5c047338e572bdcfb2bb09736be01b824a7f6c",
+  "installed_fonts": [
+    {
+      "path": "/home/fs_2026/.local/share/fonts/guiqa-noto-cjk/NotoSerifCJK-Bold.ttc",
+      "sha256": "9d3c0d769c703cfe41c49cbe2b14d4718e26545593dc247485486335b783fe94"
+    },
+    {
+      "path": "/home/fs_2026/.local/share/fonts/guiqa-noto-cjk/NotoSansCJK-Bold.ttc",
+      "sha256": "faa5f3656a78b2e2d450d27fe8382c778bc2b6bb5ea29c986664a6a435056ceb"
+    },
+    {
+      "path": "/home/fs_2026/.local/share/fonts/guiqa-noto-cjk/NotoSansCJK-Regular.ttc",
+      "sha256": "b76b0433203017ca80401b2ee0dd69350349871c4b19d504c34dbdd80541690a"
+    },
+    {
+      "path": "/home/fs_2026/.local/share/fonts/guiqa-noto-cjk/NotoSerifCJK-Regular.ttc",
+      "sha256": "93069d8e9e45d515cc421c971a79e6a5777704b348e36a9ef86578bf58adef77"
+    }
+  ],
+  "license": "/home/fs_2026/qwen3-gui-agent/vendor/runtime/cjk-fonts/usr/share/doc/fonts-noto-cjk/copyright"
+}

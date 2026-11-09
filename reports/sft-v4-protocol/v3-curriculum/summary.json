@@ -1,0 +1,74 @@
+{
+  "completed": true,
+  "planned": 2,
+  "metrics": {
+    "samples": 2,
+    "correct": 0,
+    "accuracy": 0.0,
+    "format_errors": 1,
+    "guarded": 0,
+    "false_pass": 0,
+    "false_fail": 0,
+    "pass_on_blocked_label": 0,
+    "field_value_exact": {
+      "correct": 2,
+      "total": 7
+    },
+    "confusion": {
+      "pass->blocked": 1,
+      "blocked->fail": 1
+    }
+  },
+  "cohorts": {
+    "new_curriculum": {
+      "samples": 2,
+      "correct": 0,
+      "accuracy": 0.0,
+      "format_errors": 1,
+      "guarded": 0,
+      "false_pass": 0,
+      "false_fail": 0,
+      "pass_on_blocked_label": 0,
+      "field_value_exact": {
+        "correct": 2,
+        "total": 7
+      },
+      "confusion": {
+        "pass->blocked": 1,
+        "blocked->fail": 1
+      }
+    }
+  },
+  "cases": {
+    "sweeper-125": {
+      "samples": 2,
+      "correct": 0,
+      "accuracy": 0.0,
+      "format_errors": 1,
+      "guarded": 0,
+      "false_pass": 0,
+      "false_fail": 0,
+      "pass_on_blocked_label": 0,
+      "field_value_exact": {
+        "correct": 2,
+        "total": 7
+      },
+      "confusion": {
+        "pass->blocked": 1,
+        "blocked->fail": 1
+      }
+    }
+  },
+  "model": {
+    "load_seconds": 7.409216694999486,
+    "torch": "2.14.1+cu130",
+    "device": "NVIDIA GeForce RTX 4090",
+    "peak_allocated_mib": 18851.69384765625,
+    "peak_reserved_mib": 19464.0
+  },
+  "metric_definitions": {
+    "false_pass": "fail label predicted pass",
+    "false_fail": "pass label predicted fail",
+    "field_value_exact": "literal equality on non-null labelled readings; empty string is included"
+  }
+}

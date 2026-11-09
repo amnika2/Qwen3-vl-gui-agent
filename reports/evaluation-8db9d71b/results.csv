@@ -1,0 +1,17 @@
+case_id,build,workflow,method,repeat,run_id,started,agent_verdict,oracle_verdict,elapsed_seconds,actions,model_calls,termination_reason
+sweeper-041,A,target,qwen-controlled,0,20261107T062352Z-519ba037,True,blocked,inconclusive,19.513568002032116,6,6,controlled_review
+sweeper-041,A,target,qwen-controlled,1,20261107T062411Z-95f11fbf,True,blocked,inconclusive,11.657888459041715,6,6,controlled_review
+sweeper-041,A,preservation,qwen-controlled,0,20261107T062423Z-5ad01056,True,blocked,inconclusive,13.757940071984194,5,6,controlled_review_guarded
+sweeper-041,A,preservation,qwen-controlled,1,20261107T062437Z-6eb990ff,True,blocked,inconclusive,13.620271402061917,5,6,controlled_review_guarded
+sweeper-041,B,target,qwen-controlled,0,20261107T062451Z-c937e250,True,blocked,inconclusive,12.245429223054089,6,6,controlled_review_guarded
+sweeper-041,B,target,qwen-controlled,1,20261107T062503Z-efccbc93,True,blocked,inconclusive,12.525175747927278,5,6,controlled_review_guarded
+sweeper-041,B,preservation,qwen-controlled,0,20261107T062516Z-7eafa50a,True,blocked,inconclusive,14.036496913991868,5,6,controlled_review_guarded
+sweeper-041,B,preservation,qwen-controlled,1,20261107T062530Z-5d186191,True,blocked,inconclusive,13.886996235931292,5,6,controlled_review_guarded
+sweeper-005,A,target,qwen-controlled,0,20261107T062544Z-96031a75,True,blocked,inconclusive,35.05774099403061,7,7,controlled_review
+sweeper-005,A,target,qwen-controlled,1,20261107T062619Z-feb5c959,True,blocked,inconclusive,30.002116761985235,7,7,controlled_review
+sweeper-005,A,preservation,qwen-controlled,0,20261107T062649Z-ef3782d4,True,blocked,inconclusive,28.52597112802323,5,5,controlled_review
+sweeper-005,A,preservation,qwen-controlled,1,20261107T062718Z-695b2f8a,True,blocked,inconclusive,42.3076053900877,5,5,controlled_review
+sweeper-005,B,target,qwen-controlled,0,20261107T062800Z-efc7801a,True,blocked,inconclusive,28.232912143925205,7,7,controlled_review
+sweeper-005,B,target,qwen-controlled,1,20261107T062828Z-5561b6a7,True,blocked,inconclusive,27.462703551980667,7,7,controlled_review
+sweeper-005,B,preservation,qwen-controlled,0,20261107T062856Z-7547a654,True,blocked,inconclusive,31.30805578501895,5,5,controlled_review
+sweeper-005,B,preservation,qwen-controlled,1,20261107T062927Z-43b9a207,True,blocked,inconclusive,26.807482223026454,5,5,controlled_review

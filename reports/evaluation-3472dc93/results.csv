@@ -1,0 +1,9 @@
+case_id,build,workflow,method,repeat,run_id,started,agent_verdict,oracle_verdict,elapsed_seconds,actions,model_calls,termination_reason
+sweeper-040,A,target,qwen-controlled,0,20261107T055757Z-649ea9d4,True,fail,fail,49.601379040046595,30,30,controlled_review
+sweeper-040,A,target,qwen-controlled,1,20261107T055847Z-c4418977,True,fail,fail,41.79180065996479,30,30,controlled_review
+sweeper-040,A,preservation,qwen-controlled,0,20261107T055929Z-954eaa0a,True,fail,inconclusive,35.990505182067864,30,30,controlled_review
+sweeper-040,A,preservation,qwen-controlled,1,20261107T060005Z-ba2d3193,True,fail,inconclusive,36.007766949012876,30,30,controlled_review
+sweeper-040,B,target,qwen-controlled,0,20261107T060041Z-8ccfc585,True,fail,inconclusive,22.143443595967256,12,12,controlled_review
+sweeper-040,B,target,qwen-controlled,1,20261107T060103Z-27c97fcf,True,pass,inconclusive,21.57420740299858,12,12,controlled_review
+sweeper-040,B,preservation,qwen-controlled,0,20261107T060125Z-31931721,True,fail,inconclusive,36.36763364600483,30,30,controlled_review
+sweeper-040,B,preservation,qwen-controlled,1,20261107T060202Z-4e8609f0,True,blocked,inconclusive,17.136688207974657,8,8,controlled_review

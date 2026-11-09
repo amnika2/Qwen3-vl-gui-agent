@@ -1,0 +1,5 @@
+case_id,build,workflow,method,repeat,run_id,started,agent_verdict,oracle_verdict,elapsed_seconds,actions,model_calls,termination_reason
+sweeper-040,A,target,sft,0,20261107T082300Z-a7a11669,True,blocked,fail,13.015969199012034,10,0,sft_recorded
+sweeper-040,A,preservation,sft,0,20261107T082313Z-bb47de34,True,blocked,pass,11.901264360989444,10,0,sft_recorded
+sweeper-040,B,target,sft,0,20261107T082325Z-ece96847,True,blocked,pass,10.774694152059965,10,0,sft_recorded
+sweeper-040,B,preservation,sft,0,20261107T082336Z-1ae12b4d,True,blocked,pass,9.791765628033318,10,0,sft_recorded

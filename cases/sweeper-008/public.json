@@ -1,0 +1,14 @@
+{
+  "case_id": "sweeper-008",
+  "start_path": "/index.php/admin/extend/variables",
+  "workflows": {
+    "target": {
+      "task": "In Site Variables, open greeting, whose initial value is Hello Anchor. Keep its name greeting, replace Value with exactly Hello Quillmere, and click Update. Reopen greeting and inspect Value. Report pass if it is Hello Quillmere, fail if the old value remains, or blocked if the check could not be completed. Cite the reopened edit form.",
+      "expected": "Hello Quillmere"
+    },
+    "preservation": {
+      "task": "Create a Site Variable named hoursnote with Value exactly Desk hours. Save and inspect the Site Variables list. Report pass if hoursnote is listed with Desk hours, fail if the submitted variable is missing or has a different value, or blocked if you cannot complete the check. Cite the saved list entry.",
+      "expected": "Desk hours"
+    }
+  }
+}

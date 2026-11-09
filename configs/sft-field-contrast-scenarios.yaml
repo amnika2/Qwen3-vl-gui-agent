@@ -1,0 +1,180 @@
+version: 1
+scenarios:
+- id: fc-lite-description-country
+  case_id: sweeper-105
+  build: A
+  workflow: target
+  data_split: train
+  family: adjacent_geo_zone_fields
+  start: editor
+  initial: {code: hd1, name: Harbour dispatch, description: Warehouse window}
+  code: hd1
+  name: Harbour dispatch
+  description: Counter collection only
+  field_order: [description]
+  country_code: DZ
+  country: Algeria
+  country_index: 4
+  city: Dock 6
+  task: >-
+    Edit the displayed Harbour dispatch geo zone. Its adjacent Code, Name and Description
+    fields have different meanings: keep Code hd1 and Name Harbour dispatch unchanged,
+    and replace only Description with Counter collection only. In the pending zone row,
+    choose Country Algeria and set City to Dock 6; do not click Add. Click Save, reopen
+    this same geo zone and compare all three labeled fields separately. The saved
+    country table must contain Algeria with City Dock 6; the pending dropdown does not
+    prove persistence. Report pass only if the requested description, preserved code/name
+    and saved country/city all match, fail for a demonstrated difference after the real
+    save and reopen, or blocked if submission or the final record cannot be established.
+- id: fc-wolf-visitor-breadcrumb
+  case_id: sweeper-195
+  build: B
+  workflow: target
+  data_split: train
+  family: adjacent_slug_breadcrumb
+  start: editor
+  kind: edit
+  initial_title: About us
+  fields: {breadcrumb: Visitor welcome, slug: about-us}
+  task: >-
+    Edit the existing About us page (page 3), keeping its Title unchanged. Open Metadata.
+    Breadcrumb and Slug are adjacent fields with different requested values: set Breadcrumb
+    to Visitor welcome, then confirm Slug is exactly about-us. Do not put the breadcrumb
+    text into Slug. Click Save and Continue Editing and inspect the actual response.
+    Preserve any self-collision error as evidence. Return through Pages to reopen the same
+    About us page, open Metadata again and compare both labeled fields. Report pass only
+    for a completed save with Slug about-us and Breadcrumb Visitor welcome persisted;
+    report fail for an actual self-collision rejection or a persisted field mismatch,
+    or blocked if the real submission or outcome cannot be established.
+- id: fc-lite-name-country
+  case_id: sweeper-105
+  build: B
+  workflow: target
+  data_split: train
+  family: adjacent_geo_zone_fields
+  start: list
+  initial: {code: ap2, name: Airport packets, description: Delivery before 17:00}
+  code: ap2
+  name: Airport evening route
+  description: Delivery before 17:00
+  field_order: [name]
+  country_code: AS
+  country: American Samoa
+  country_index: 5
+  city: Terminal 3
+  task: >-
+    Open the existing Airport packets geo zone. Change only Name to Airport evening route.
+    Keep the neighboring Code ap2 and Description Delivery before 17:00 unchanged;
+    Description is not the zone name. Choose American Samoa in the pending Country row
+    and enter Terminal 3 in City, without clicking Add. Save and reopen this same geo zone.
+    Verify Name, Code and Description by their labels, then inspect the saved table body
+    for American Samoa and Terminal 3. Report pass if all saved values match, fail for a
+    demonstrated mismatch after the actual save and reopen, or blocked if the check
+    cannot be completed.
+- id: fc-wolf-route-breadcrumb
+  case_id: sweeper-195
+  build: A
+  workflow: target
+  data_split: train
+  family: adjacent_slug_breadcrumb
+  start: list
+  kind: edit
+  initial_title: About us
+  fields: {slug: about-us, breadcrumb: contact-desk}
+  task: >-
+    Open the existing About us page (page 3). Keep its Title unchanged. In Metadata,
+    confirm Slug remains about-us, and set the adjacent Breadcrumb field to contact-desk.
+    These are different fields: contact-desk must not replace the existing URL slug.
+    Click Save and Continue Editing and inspect the actual response. Preserve any
+    self-collision error as evidence, then return through Pages and reopen page 3.
+    In Metadata, inspect Slug and Breadcrumb separately. Report pass only if the save
+    succeeds and the reopened values are Slug about-us and Breadcrumb contact-desk;
+    report fail for an actual self-collision rejection or persisted mismatch, and blocked
+    if the submit or business outcome cannot be established.
+- id: fc-lite-code-country
+  case_id: sweeper-105
+  build: A
+  workflow: target
+  data_split: validation
+  family: adjacent_geo_zone_fields
+  start: editor
+  initial: {code: rd3, name: Riverside collection, description: Bring the pickup reference}
+  code: rv3
+  name: Riverside collection
+  description: Bring the pickup reference
+  field_order: [code]
+  country_code: AL
+  country: Albania
+  country_index: 3
+  city: Riverside desk
+  task: >-
+    In the Riverside collection geo zone, replace only Code rd3 with rv3. Preserve Name
+    Riverside collection and Description Bring the pickup reference in their neighboring
+    fields. Select pending Country Albania and type Riverside desk into City; do not
+    click Add. Save, reopen the same geo zone and verify each labeled input independently.
+    Also inspect its saved country table for Albania and Riverside desk. A correct Code
+    alone does not establish that the country was saved. Report pass only when all
+    requested and preserved values match, fail for a demonstrated saved-value mismatch,
+    or blocked if the actual save and reopened record cannot be established.
+- id: fc-wolf-association-breadcrumb
+  case_id: sweeper-195
+  build: A
+  workflow: target
+  data_split: train
+  family: adjacent_slug_breadcrumb
+  start: editor
+  kind: edit
+  initial_title: About us
+  fields: {breadcrumb: Accueil association, slug: about-us}
+  task: >-
+    Keep the existing About us page and its Title. In Metadata, replace Breadcrumb with
+    Accueil association, while preserving the adjacent Slug as about-us. Confirm those
+    two labeled fields show different values immediately before Save and Continue Editing.
+    Inspect the real save response, retaining any self-collision error. Use Pages to
+    reopen the same existing page and inspect Metadata again. Pass requires a successful
+    save with Breadcrumb Accueil association and Slug about-us persisted. Report fail
+    if the valid edit is rejected for its own slug or the reopened values differ; report
+    blocked if the real submission or outcome cannot be established.
+- id: fc-lite-preserve-neighbor
+  case_id: sweeper-105
+  build: A
+  workflow: preservation
+  data_split: train
+  family: adjacent_geo_zone_fields
+  start: list
+  initial: {code: bk4, name: Bakery returns, description: Previous instructions}
+  code: bk4
+  name: Bakery exchanges
+  description: Keep the receipt with the parcel
+  field_order: [description, name]
+  country_code: ''
+  country: ''
+  country_index: 0
+  city: ''
+  task: >-
+    Open Bakery returns. Set Description to Keep the receipt with the parcel, and set
+    Name to Bakery exchanges. Keep Code bk4 unchanged. Name is the short label;
+    Description is the parcel instruction, so do not exchange their values. Leave the
+    pending Country unselected and do not click Add. Save, reopen this same geo zone and
+    separately compare Code, Name and Description; confirm there is no saved country row.
+    Report pass only if every requested and preserved field matches after the real save
+    and reopen, fail for a demonstrated persisted mismatch, or blocked if the operation
+    cannot be established.
+- id: fc-wolf-service-breadcrumb
+  case_id: sweeper-195
+  build: B
+  workflow: target
+  data_split: validation
+  family: adjacent_slug_breadcrumb
+  start: list
+  kind: edit
+  initial_title: About us
+  fields: {slug: about-us, breadcrumb: 服务与预约}
+  task: >-
+    Open the existing About us page without changing its Title. In Metadata, keep Slug
+    about-us and set the adjacent Breadcrumb field to 服务与预约. The Chinese navigation
+    label belongs in Breadcrumb, not in Slug. Click Save and Continue Editing and inspect
+    the response. Preserve any self-collision error, then use Pages to reopen this same
+    page and inspect Metadata. Report pass only if the save succeeds and Slug about-us
+    and Breadcrumb 服务与预约 both persist; report fail for an actual self-collision rejection
+    or persisted mismatch, or blocked if the submission or outcome cannot be established.

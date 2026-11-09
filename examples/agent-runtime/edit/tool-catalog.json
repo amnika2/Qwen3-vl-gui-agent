@@ -1,0 +1,206 @@
+{
+  "tools": [
+    {
+      "name": "browser__click",
+      "description": "Browser click",
+      "action": "click",
+      "transport": "browser",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "coordinate": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1000
+            }
+          }
+        },
+        "required": [
+          "coordinate"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "browser__type",
+      "description": "Browser type",
+      "action": "type",
+      "transport": "browser",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "maxLength": 2000
+          }
+        },
+        "required": [
+          "text"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "browser__press",
+      "description": "Browser press",
+      "action": "press",
+      "transport": "browser",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "enum": [
+              "ArrowDown",
+              "ArrowLeft",
+              "ArrowRight",
+              "ArrowUp",
+              "Backspace",
+              "Control+a",
+              "Control+r",
+              "Delete",
+              "End",
+              "Enter",
+              "Escape",
+              "Home",
+              "PageDown",
+              "PageUp",
+              "Tab"
+            ]
+          }
+        },
+        "required": [
+          "key"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "browser__scroll",
+      "description": "Browser scroll",
+      "action": "scroll",
+      "transport": "browser",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "pixels": {
+            "type": "integer",
+            "minimum": -1800,
+            "maximum": 1800
+          }
+        },
+        "required": [
+          "pixels"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "browser__wait",
+      "description": "Browser wait",
+      "action": "wait",
+      "transport": "browser",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "seconds": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 5
+          }
+        },
+        "required": [
+          "seconds"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "memory__search_experiences",
+      "description": "Find previous GUI procedures and lessons. Prior values and verdicts are not current evidence.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "task": {
+            "title": "Task",
+            "type": "string"
+          },
+          "case_id": {
+            "title": "Case Id",
+            "type": "string"
+          },
+          "workflow": {
+            "title": "Workflow",
+            "type": "string"
+          },
+          "limit": {
+            "default": 3,
+            "maximum": 10,
+            "minimum": 1,
+            "title": "Limit",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "task",
+          "case_id",
+          "workflow"
+        ],
+        "title": "search_experiencesArguments"
+      },
+      "transport": "mcp"
+    },
+    {
+      "name": "memory__save_experience",
+      "description": "Save an episode's procedural lessons after final review; omit product verdicts and private evidence.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "case_id": {
+            "title": "Case Id",
+            "type": "string"
+          },
+          "workflow": {
+            "title": "Workflow",
+            "type": "string"
+          },
+          "task": {
+            "title": "Task",
+            "type": "string"
+          },
+          "procedure": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Procedure",
+            "type": "array"
+          },
+          "lessons": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Lessons",
+            "type": "array"
+          },
+          "source_run_id": {
+            "title": "Source Run Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "case_id",
+          "workflow",
+          "task",
+          "procedure",
+          "lessons",
+          "source_run_id"
+        ],
+        "title": "save_experienceArguments"
+      },
+      "transport": "mcp"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "project": "Qwen3-VL GUI Agent",
+  "verified_on": "2026-11-09",
+  "data": {
+    "sft_training_samples": 800,
+    "training_reviews": 655,
+    "development_reviews": 150,
+    "final_test_reviews": 150,
+    "final_test_parent_scenarios": 100
+  },
+  "sft": {
+    "optimizer_steps": 100,
+    "selected_epoch": 2.0,
+    "train_samples": 800,
+    "validation_samples": 150,
+    "adapter_sha256": "590426643a2ef9f7732e8a4db854fac4ab2bc50ded418c818ef12eea179aa443"
+  },
+  "grpo": {
+    "optimizer_steps": 100,
+    "pool_samples": 655,
+    "question_exposures": 300,
+    "unique_scheduled_questions": 241,
+    "reward_groups": 300,
+    "task_differential_groups": 40,
+    "reference_unchanged": true,
+    "adapter_sha256": "1a0a78947efca8218412e2660b6788cfc2767e4bd9f05c226d841671b005c743"
+  },
+  "evaluation": {
+    "validation": {
+      "sft": {
+        "samples": 150,
+        "terminal_verdict_correct": 138,
+        "terminal_verdict_accuracy": 0.92,
+        "macro_f1": 0.9199326599326599,
+        "strict_correct": 126,
+        "strict_accuracy": 0.84,
+        "defects_detected": 49,
+        "defect_recall": 0.98,
+        "defects_false_passed": 1,
+        "normal_false_alarms": 1
+      },
+      "grpo": {
+        "samples": 150,
+        "terminal_verdict_correct": 134,
+        "terminal_verdict_accuracy": 0.8933333333333333,
+        "macro_f1": 0.8922861417108662,
+        "strict_correct": 123,
+        "strict_accuracy": 0.82,
+        "defects_detected": 49,
+        "defect_recall": 0.98,
+        "defects_false_passed": 1,
+        "normal_false_alarms": 1
+      }
+    },
+    "test": {
+      "sft": {
+        "samples": 150,
+        "terminal_verdict_correct": 124,
+        "terminal_verdict_accuracy": 0.8266666666666667,
+        "macro_f1": 0.7373444421492344,
+        "strict_correct": 66,
+        "strict_accuracy": 0.44,
+        "defects_detected": 39,
+        "defect_recall": 0.7959183673469388,
+        "defects_false_passed": 1,
+        "normal_false_alarms": 0
+      },
+      "grpo": {
+        "samples": 150,
+        "terminal_verdict_correct": 124,
+        "terminal_verdict_accuracy": 0.8266666666666667,
+        "macro_f1": 0.7299919870681469,
+        "strict_correct": 67,
+        "strict_accuracy": 0.44666666666666666,
+        "defects_detected": 40,
+        "defect_recall": 0.8163265306122449,
+        "defects_false_passed": 0,
+        "normal_false_alarms": 0
+      }
+    }
+  },
+  "runtime": {
+    "architecture_verified": true,
+    "tests": {
+      "passed": 334,
+      "failed": 0
+    },
+    "cross_task_memory_verified": true,
+    "context_compaction_verified": true,
+    "mcp_verified": true,
+    "episodes": [
+      {
+        "run_id": "20261109T032123Z-4735918a",
+        "workflow": "target",
+        "agent_verdict": "pass",
+        "oracle_verdict": "pass",
+        "actions": 8,
+        "model_calls": 14,
+        "context_updates": 4,
+        "compacted_through_step": 4,
+        "recalled_run_ids": [],
+        "elapsed_seconds": 123.2027161209844
+      },
+      {
+        "run_id": "20261109T032326Z-3c8ffe57",
+        "workflow": "preservation",
+        "agent_verdict": "blocked",
+        "oracle_verdict": "inconclusive",
+        "actions": 8,
+        "model_calls": 15,
+        "context_updates": 5,
+        "compacted_through_step": 4,
+        "recalled_run_ids": [
+          "20261109T032123Z-4735918a"
+        ],
+        "elapsed_seconds": 150.9044600019697
+      }
+    ]
+  },
+  "source_sha256": {
+    "runs/review-expansion-v1/completion.json": "9e559831e75fc7109bb788a1ee50c46e774e46da2e2a8616ff7f15ab86227987",
+    "runs/sft-qwen3vl-review-expanded-v1/completion.json": "55670cc774bd0149efefac684fc13254fc303d14a0c6a66f9443dbca0e1f448f",
+    "runs/rl-review-grpo-expanded-v1/completion.json": "273ba5e3c262caf1bf86e77becc85ffc9d14ced8fd54868cd2aacde08c799cd0",
+    "reports/rl-review-grpo-expanded-v1/comparison.json": "2d516aa98194edf2c7d13f7f07a70e14abfb2fc08af83eea51bdd7fa46cf5e2b",
+    "reports/agent-runtime-20261109-verified/summary.json": "b35b09a2fe8e0a854ba0c9303fff7df2a2b5c317f89b03f04e938a793f694275",
+    "reports/agent-runtime-20261109-verified/runtime-verification.json": "2f2df23d076df936ff1e8ac8e12d55913de11f39e1d4fcc89321c1f5620bf191"
+  }
+}

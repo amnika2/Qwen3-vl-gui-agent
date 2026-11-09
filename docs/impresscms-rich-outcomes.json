@@ -1,0 +1,232 @@
+{
+  "scenarios": 12,
+  "by_build": {
+    "A": 6,
+    "B": 6
+  },
+  "review_labels": {
+    "fail": 6,
+    "pass": 6
+  },
+  "all_valid_inputs_submitted_once": true,
+  "all_business_errors_visibly_established": true,
+  "all_successes_reopened_after_matching_save": true,
+  "all_review_flags_truthful": true,
+  "all_typed_values_cited_in_review": true,
+  "review_profile": "business_outcome_v1",
+  "outcomes": [
+    {
+      "scenario_id": "impress-archive-name",
+      "run_id": "20261107T161011Z-afdb216f",
+      "build": "A",
+      "data_split": "train",
+      "requested": {
+        "sitename": "Cedar Community Archive"
+      },
+      "submit_step": 6,
+      "actual_label": "fail",
+      "business_error": "getConfig() on null",
+      "error_step": 6,
+      "reopened": null
+    },
+    {
+      "scenario_id": "impress-makers-hub",
+      "run_id": "20261107T161019Z-a7c97dbf",
+      "build": "B",
+      "data_split": "train",
+      "requested": {
+        "sitename": "Riverside Makers Hub",
+        "slogan": "Repair, learn, and share practical skills"
+      },
+      "submit_step": 11,
+      "actual_label": "pass",
+      "business_error": null,
+      "reopened": {
+        "sitename": "Riverside Makers Hub",
+        "slogan": "Repair, learn, and share practical skills"
+      },
+      "reopen_steps": [
+        12
+      ]
+    },
+    {
+      "scenario_id": "impress-library-mail",
+      "run_id": "20261107T161030Z-a99b0303",
+      "build": "A",
+      "data_split": "train",
+      "requested": {
+        "sitename": "Oak Street Library",
+        "adminmail": "library-admin@example.test"
+      },
+      "submit_step": 11,
+      "actual_label": "fail",
+      "business_error": "getConfig() on null",
+      "error_step": 11,
+      "reopened": null
+    },
+    {
+      "scenario_id": "impress-three-fields",
+      "run_id": "20261107T161040Z-6d913666",
+      "build": "B",
+      "data_split": "train",
+      "requested": {
+        "sitename": "Harbour History Centre",
+        "slogan": "Discover the stories behind our waterfront",
+        "adminmail": "harbour-team@example.test"
+      },
+      "submit_step": 14,
+      "actual_label": "pass",
+      "business_error": null,
+      "reopened": {
+        "adminmail": "harbour-team@example.test",
+        "sitename": "Harbour History Centre",
+        "slogan": "Discover the stories behind our waterfront"
+      },
+      "reopen_steps": [
+        15
+      ]
+    },
+    {
+      "scenario_id": "impress-chinese-site",
+      "run_id": "20261107T161053Z-5de53c3f",
+      "build": "A",
+      "data_split": "train",
+      "requested": {
+        "sitename": "城北社区资料馆",
+        "slogan": "保存街区记忆，分享本地故事"
+      },
+      "submit_step": 10,
+      "actual_label": "fail",
+      "business_error": "getConfig() on null",
+      "error_step": 10,
+      "reopened": null
+    },
+    {
+      "scenario_id": "impress-french-site",
+      "run_id": "20261107T161103Z-cfb6d9d2",
+      "build": "B",
+      "data_split": "train",
+      "requested": {
+        "sitename": "Atelier du quartier",
+        "slogan": "Réparer ensemble et transmettre les savoir-faire"
+      },
+      "submit_step": 11,
+      "actual_label": "pass",
+      "business_error": null,
+      "reopened": {
+        "sitename": "Atelier du quartier",
+        "slogan": "Réparer ensemble et transmettre les savoir-faire"
+      },
+      "reopen_steps": [
+        12
+      ]
+    },
+    {
+      "scenario_id": "impress-descriptive-name",
+      "run_id": "20261107T161114Z-9b669aa4",
+      "build": "A",
+      "data_split": "train",
+      "requested": {
+        "sitename": "Westfield Volunteer Network for Neighbourhood Events and Community Support"
+      },
+      "submit_step": 7,
+      "actual_label": "fail",
+      "business_error": "getConfig() on null",
+      "error_step": 7,
+      "reopened": null
+    },
+    {
+      "scenario_id": "impress-punctuation",
+      "run_id": "20261107T161121Z-015ca958",
+      "build": "B",
+      "data_split": "train",
+      "requested": {
+        "sitename": "Cedar & Grove Community Hub",
+        "slogan": "What's on: talks, walks & workshops"
+      },
+      "submit_step": 10,
+      "actual_label": "pass",
+      "business_error": null,
+      "reopened": {
+        "sitename": "Cedar & Grove Community Hub",
+        "slogan": "What's on: talks, walks & workshops"
+      },
+      "reopen_steps": [
+        11
+      ]
+    },
+    {
+      "scenario_id": "impress-mail-first",
+      "run_id": "20261107T161132Z-79ce4ef7",
+      "build": "A",
+      "data_split": "train",
+      "requested": {
+        "adminmail": "events-desk@example.test",
+        "sitename": "Northgate Events Desk",
+        "slogan": "Plan local events with the neighbourhood team"
+      },
+      "submit_step": 14,
+      "actual_label": "fail",
+      "business_error": "getConfig() on null",
+      "error_step": 14,
+      "reopened": null
+    },
+    {
+      "scenario_id": "impress-slogan-first",
+      "run_id": "20261107T161142Z-cf73649a",
+      "build": "B",
+      "data_split": "train",
+      "requested": {
+        "slogan": "Local collections and a welcoming reading room",
+        "adminmail": "reading-room@example.test",
+        "sitename": "Birch Reading Room"
+      },
+      "submit_step": 15,
+      "actual_label": "pass",
+      "business_error": null,
+      "reopened": {
+        "adminmail": "reading-room@example.test",
+        "sitename": "Birch Reading Room",
+        "slogan": "Local collections and a welcoming reading room"
+      },
+      "reopen_steps": [
+        16
+      ]
+    },
+    {
+      "scenario_id": "impress-validation-office",
+      "run_id": "20261107T161155Z-906d8e6c",
+      "build": "A",
+      "data_split": "validation",
+      "requested": {
+        "sitename": "Community Advice Office",
+        "adminmail": "advice-office@example.test"
+      },
+      "submit_step": 11,
+      "actual_label": "fail",
+      "business_error": "getConfig() on null",
+      "error_step": 11,
+      "reopened": null
+    },
+    {
+      "scenario_id": "impress-validation-garden",
+      "run_id": "20261107T161205Z-21e5d6ba",
+      "build": "B",
+      "data_split": "validation",
+      "requested": {
+        "sitename": "Meadow Garden Group",
+        "slogan": "Grow useful plants and share seasonal knowledge"
+      },
+      "submit_step": 10,
+      "actual_label": "pass",
+      "business_error": null,
+      "reopened": {
+        "sitename": "Meadow Garden Group",
+        "slogan": "Grow useful plants and share seasonal knowledge"
+      },
+      "reopen_steps": [
+        11
+      ]
+    }
+  ]
+}

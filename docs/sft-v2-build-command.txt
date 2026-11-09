@@ -1,0 +1,12 @@
+cd /home/fs_2026/qwen3-gui-agent
+.venv/bin/python scripts/build_sft_v2.py \
+  --output datasets/sft-main-10apps-v2 \
+  --extra-experiment field-contrast-aeebb101 \
+  --extra-review-jsonl runs/unsubmitted-667db84e/reviews.jsonl \
+  --extra-review-jsonl runs/unsubmitted-58a2cc49/reviews.jsonl \
+  --visible-proofs docs/sft-v2-impress-opencart-visible-proofs.json \
+  --visible-proofs docs/sft-v2-supplementary-visible-proofs.json \
+  --visible-proofs docs/sft-v2-mantis-phpipam-visible-proofs.json \
+  --visible-proofs docs/sft-v2-litecart-wolf-visible-proofs.json \
+  --prefix-annotations docs/sft-v2-unsubmitted-visible-record-annotations.json \
+  > docs/sft-v2-build.log 2>&1

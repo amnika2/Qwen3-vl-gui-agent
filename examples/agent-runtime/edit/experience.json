@@ -1,0 +1,18 @@
+{
+  "procedure": [
+    "Click on the target field to focus it",
+    "Select all existing content using Ctrl+A (or Cmd+A on Mac) before typing new value",
+    "Type the desired replacement text into the focused field",
+    "Confirm changes by clicking the Submit button or equivalent action",
+    "Refresh the page using Ctrl+R (or Cmd+R on Mac) to ensure updates are applied"
+  ],
+  "lessons": [
+    "Always select current content before replacing it to prevent accidental partial edits",
+    "Verify submission is triggered correctly after editing — some interfaces require explicit confirmation",
+    "Refreshing the page post-edit ensures state consistency across client-server interactions",
+    "Use keyboard shortcuts for efficiency: Ctrl+A for selection, Ctrl+R for refresh",
+    "Avoid relying solely on visual cues — confirm data has persisted in backend if critical"
+  ],
+  "experience_id": 1,
+  "source_run_id": "20261109T032123Z-4735918a"
+}

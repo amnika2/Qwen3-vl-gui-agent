@@ -1,0 +1,154 @@
+{
+  "examples/agent-runtime/edit/report.md": {
+    "source": "runs/20261109T032123Z-4735918a/report.md",
+    "sha256": "d29b25f1200fe688494246c26c133ef5b8a19380dc2f8e04307df7a51f3d49c3"
+  },
+  "examples/agent-runtime/edit/result.json": {
+    "source": "runs/20261109T032123Z-4735918a/result.json",
+    "sha256": "2046c88a021fbd2f5d496a4b0dbd169d9b8885d75a09d848051e33075fbe7725"
+  },
+  "examples/agent-runtime/edit/task-state.json": {
+    "source": "runs/20261109T032123Z-4735918a/task-state.json",
+    "sha256": "8ed8325d7c5cba99b0c4c53943055cc7a36b340793575b377fc4ad7facc37194"
+  },
+  "examples/agent-runtime/edit/trace.jsonl": {
+    "source": "runs/20261109T032123Z-4735918a/trace.jsonl",
+    "sha256": "4c3e181e4d2cd1fcf017eb6b51bbac1ca8f56e6cf4a75b4249b5e80ec5b4ece2"
+  },
+  "examples/agent-runtime/edit/model.jsonl": {
+    "source": "runs/20261109T032123Z-4735918a/model.jsonl",
+    "sha256": "37a11a287e245aaf21f6328ca495c64cd1bd669b1c0d5d17c96a762c21758b42"
+  },
+  "examples/agent-runtime/edit/context-events.jsonl": {
+    "source": "runs/20261109T032123Z-4735918a/context-events.jsonl",
+    "sha256": "45dffcbe74dc74c32afc4b3fd123bf807eaec0b6c916ca65ef13ce8e1ce1c70b"
+  },
+  "examples/agent-runtime/edit/tool-calls.jsonl": {
+    "source": "runs/20261109T032123Z-4735918a/tool-calls.jsonl",
+    "sha256": "43b0ce01331db113c5f4040e77beb02fa11f1abbd70c7f98d53669d03fdf580a"
+  },
+  "examples/agent-runtime/edit/tool-catalog.json": {
+    "source": "runs/20261109T032123Z-4735918a/tool-catalog.json",
+    "sha256": "6e734a4c01f400623c16825b2678b2896f6ff37942f7bcef71da2130547994e0"
+  },
+  "examples/agent-runtime/edit/experience.json": {
+    "source": "runs/20261109T032123Z-4735918a/experience.json",
+    "sha256": "0615afb61df178b1afbe7b03f7539757afbac2eb3cfaa1d4790ed1db91a8e681"
+  },
+  "examples/agent-runtime/edit/junit.xml": {
+    "source": "runs/20261109T032123Z-4735918a/junit.xml",
+    "sha256": "a12bda3d75d1ab6b1767b410d307f75aa5a2afda55040e299a42fb0b4fc214b3"
+  },
+  "examples/agent-runtime/edit/screenshots/000.png": {
+    "source": "runs/20261109T032123Z-4735918a/screenshots/000.png",
+    "sha256": "68eaca49a5f4ebf3ebb1ec47b318dcb4f9b520e7365c06ded9374b31167ca9f7"
+  },
+  "examples/agent-runtime/edit/screenshots/001.png": {
+    "source": "runs/20261109T032123Z-4735918a/screenshots/001.png",
+    "sha256": "dc4f9bc0df228d6ef15eb7ca0935bf4ccb165638067c585db9374f40ba920b5f"
+  },
+  "examples/agent-runtime/edit/screenshots/002.png": {
+    "source": "runs/20261109T032123Z-4735918a/screenshots/002.png",
+    "sha256": "cddd6624fe40a0865f54807597350c2d7c7573ebf69adc051abc3d1b264e9fdd"
+  },
+  "examples/agent-runtime/edit/screenshots/003.png": {
+    "source": "runs/20261109T032123Z-4735918a/screenshots/003.png",
+    "sha256": "e34c75c1e4cc3105169826d052665c874f18f65fdcb3bbbb980e15aa0a2ace87"
+  },
+  "examples/agent-runtime/edit/screenshots/004.png": {
+    "source": "runs/20261109T032123Z-4735918a/screenshots/004.png",
+    "sha256": "3a65f8468b0224ecc647c802f8940e3dc2127de1ebf31720c52d7596e53a6026"
+  },
+  "examples/agent-runtime/edit/screenshots/005.png": {
+    "source": "runs/20261109T032123Z-4735918a/screenshots/005.png",
+    "sha256": "c241d2a78a52423e80d204037e8eb11df20b93541a9516cf600d15e37b18035b"
+  },
+  "examples/agent-runtime/edit/screenshots/006.png": {
+    "source": "runs/20261109T032123Z-4735918a/screenshots/006.png",
+    "sha256": "bf1fe258561c1cd0881372a084b4d57ecf79ee979498e435bfe8a1493e327598"
+  },
+  "examples/agent-runtime/edit/screenshots/007.png": {
+    "source": "runs/20261109T032123Z-4735918a/screenshots/007.png",
+    "sha256": "b1e780a3a5f0cfcfba161c8d85d8f8bb728092e74e6473a42e292650778ee3e3"
+  },
+  "examples/agent-runtime/edit/screenshots/008.png": {
+    "source": "runs/20261109T032123Z-4735918a/screenshots/008.png",
+    "sha256": "b1e780a3a5f0cfcfba161c8d85d8f8bb728092e74e6473a42e292650778ee3e3"
+  },
+  "examples/agent-runtime/create/report.md": {
+    "source": "runs/20261109T032326Z-3c8ffe57/report.md",
+    "sha256": "afab4f1ca18affc8c6baee5e2d25f44bdeb01477b12b73838bc4a328393170b8"
+  },
+  "examples/agent-runtime/create/result.json": {
+    "source": "runs/20261109T032326Z-3c8ffe57/result.json",
+    "sha256": "3f3e76e8253dcb40e3c4fd1b5d1b2a36b2ed5a9c484a506c64e49e1b9fb02549"
+  },
+  "examples/agent-runtime/create/task-state.json": {
+    "source": "runs/20261109T032326Z-3c8ffe57/task-state.json",
+    "sha256": "46f396d6cb2b25a300755b4c7e974c53c6db10d62cef6fbaef29f550a6fd2b29"
+  },
+  "examples/agent-runtime/create/trace.jsonl": {
+    "source": "runs/20261109T032326Z-3c8ffe57/trace.jsonl",
+    "sha256": "947100cc244f59780c74960331cd2e852f9a24ef6515e183f20c4be0d85ad05a"
+  },
+  "examples/agent-runtime/create/model.jsonl": {
+    "source": "runs/20261109T032326Z-3c8ffe57/model.jsonl",
+    "sha256": "984f9e3b373c720ad8e9aa3b14c9adc82bdd936ee211acb2fdbbd3878bf4264c"
+  },
+  "examples/agent-runtime/create/context-events.jsonl": {
+    "source": "runs/20261109T032326Z-3c8ffe57/context-events.jsonl",
+    "sha256": "af37c85d710e2ef87e63c5d1cee00f48e988dbe18966bd3f4170873cae3e68cc"
+  },
+  "examples/agent-runtime/create/tool-calls.jsonl": {
+    "source": "runs/20261109T032326Z-3c8ffe57/tool-calls.jsonl",
+    "sha256": "a1675cc89e226c2b6888cd212567231475747d2d3fc2bcabf8fdf9bc16c34492"
+  },
+  "examples/agent-runtime/create/tool-catalog.json": {
+    "source": "runs/20261109T032326Z-3c8ffe57/tool-catalog.json",
+    "sha256": "6e734a4c01f400623c16825b2678b2896f6ff37942f7bcef71da2130547994e0"
+  },
+  "examples/agent-runtime/create/experience.json": {
+    "source": "runs/20261109T032326Z-3c8ffe57/experience.json",
+    "sha256": "a2c98944400b93345649083b4bd48f83301dfed31ccd93d7b18424babc4280bb"
+  },
+  "examples/agent-runtime/create/junit.xml": {
+    "source": "runs/20261109T032326Z-3c8ffe57/junit.xml",
+    "sha256": "998e92b6328ade4409d98c2e7e733bf5a207926559e5f252bf5ad9337d2a19ef"
+  },
+  "examples/agent-runtime/create/screenshots/000.png": {
+    "source": "runs/20261109T032326Z-3c8ffe57/screenshots/000.png",
+    "sha256": "a315880716d9360e8771f7c18959ececf73e0c570c2d82f1520bc65a41fba584"
+  },
+  "examples/agent-runtime/create/screenshots/001.png": {
+    "source": "runs/20261109T032326Z-3c8ffe57/screenshots/001.png",
+    "sha256": "21064d608193f388c616f2c26ea640e38f014bd986cc8d52b103b98dcc9030b1"
+  },
+  "examples/agent-runtime/create/screenshots/002.png": {
+    "source": "runs/20261109T032326Z-3c8ffe57/screenshots/002.png",
+    "sha256": "2e3e7eadf8fd6d3bc382518c056cfede336a77ba2d83a7616731a0537c92e74d"
+  },
+  "examples/agent-runtime/create/screenshots/003.png": {
+    "source": "runs/20261109T032326Z-3c8ffe57/screenshots/003.png",
+    "sha256": "e5936795c97f5315027b26111c9d9e27e326094a37fecf5574c25272d79ff83a"
+  },
+  "examples/agent-runtime/create/screenshots/004.png": {
+    "source": "runs/20261109T032326Z-3c8ffe57/screenshots/004.png",
+    "sha256": "a7215a05fea44fcb7847b9714a05871c5dcb48b1aeb9d613e83517d3b7cbf855"
+  },
+  "examples/agent-runtime/create/screenshots/005.png": {
+    "source": "runs/20261109T032326Z-3c8ffe57/screenshots/005.png",
+    "sha256": "d0c0465bc5ea66f08019168440ff6f26763aa6bfb78a2c9562a1df57939744a6"
+  },
+  "examples/agent-runtime/create/screenshots/006.png": {
+    "source": "runs/20261109T032326Z-3c8ffe57/screenshots/006.png",
+    "sha256": "d0c0465bc5ea66f08019168440ff6f26763aa6bfb78a2c9562a1df57939744a6"
+  },
+  "examples/agent-runtime/create/screenshots/007.png": {
+    "source": "runs/20261109T032326Z-3c8ffe57/screenshots/007.png",
+    "sha256": "a315880716d9360e8771f7c18959ececf73e0c570c2d82f1520bc65a41fba584"
+  },
+  "examples/agent-runtime/create/screenshots/008.png": {
+    "source": "runs/20261109T032326Z-3c8ffe57/screenshots/008.png",
+    "sha256": "a315880716d9360e8771f7c18959ececf73e0c570c2d82f1520bc65a41fba584"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "image": "ghcr.io/evigbyen/sweeper-005:alpha",
+  "token_request_status": 200,
+  "manifest_status": 200,
+  "manifest": {
+    "schemaVersion": 2,
+    "mediaType": "application/vnd.oci.image.index.v1+json",
+    "manifests": [
+      {
+        "mediaType": "application/vnd.oci.image.manifest.v1+json",
+        "digest": "sha256:e887abc1b3b156277bcd51ae44ea885d9c117dae9549816915e9b606b21a6a6c",
+        "size": 5049,
+        "platform": {
+          "architecture": "amd64",
+          "os": "linux"
+        }
+      },
+      {
+        "mediaType": "application/vnd.oci.image.manifest.v1+json",
+        "digest": "sha256:e248c76e035f7cdc12385e39cb08c1c3d0a9aae87792eecc31f73c7c6063829d",
+        "size": 566,
+        "annotations": {
+          "vnd.docker.reference.digest": "sha256:e887abc1b3b156277bcd51ae44ea885d9c117dae9549816915e9b606b21a6a6c",
+          "vnd.docker.reference.type": "attestation-manifest"
+        },
+        "platform": {
+          "architecture": "unknown",
+          "os": "unknown"
+        }
+      }
+    ]
+  }
+}

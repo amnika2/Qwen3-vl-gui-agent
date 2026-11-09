@@ -1,0 +1,213 @@
+{
+  "stage": "data_generation",
+  "training_started": false,
+  "complete": true,
+  "apps": [
+    {
+      "name": "LiteCart",
+      "case_id": "sweeper-105",
+      "experiment": "litecart-wolf-12fb9a41",
+      "dataset": "datasets/sft-litecart-12fb9a41",
+      "trajectories": 12,
+      "samples": 198,
+      "operation_samples": 186,
+      "review_samples": 12,
+      "train_samples": 163,
+      "validation_samples": 35,
+      "train_trajectories": 10,
+      "validation_trajectories": 2,
+      "images": 116,
+      "review_labels": {
+        "fail": 3,
+        "pass": 9
+      },
+      "scenario_family_counts": {
+        "pending_country": 4,
+        "pending_country_city": 2,
+        "create_without_country": 3,
+        "edit_existing_fields": 3
+      },
+      "review_profile": "persistence",
+      "matrix": {
+        "planned": 12,
+        "attempts": 12,
+        "successful_scenarios": 12,
+        "passed": true,
+        "pending_scenarios": []
+      },
+      "verification": "datasets/sft-litecart-12fb9a41/verification.json",
+      "verified": true,
+      "critical_business_source_checks": [
+        {
+          "run_id": "20261107T160242Z-ba2b5faf",
+          "hash_manifest": "runs/20261107T160242Z-ba2b5faf/private/instance/business-source.json"
+        },
+        {
+          "run_id": "20261107T160253Z-cabd3bc5",
+          "hash_manifest": "runs/20261107T160253Z-cabd3bc5/private/instance/business-source.json"
+        },
+        {
+          "run_id": "20261107T160303Z-336e8c29",
+          "hash_manifest": "runs/20261107T160303Z-336e8c29/private/instance/business-source.json"
+        },
+        {
+          "run_id": "20261107T160315Z-1229a387",
+          "hash_manifest": "runs/20261107T160315Z-1229a387/private/instance/business-source.json"
+        },
+        {
+          "run_id": "20261107T160326Z-a1fa52a1",
+          "hash_manifest": "runs/20261107T160326Z-a1fa52a1/private/instance/business-source.json"
+        },
+        {
+          "run_id": "20261107T160338Z-271fec5b",
+          "hash_manifest": "runs/20261107T160338Z-271fec5b/private/instance/business-source.json"
+        },
+        {
+          "run_id": "20261107T160349Z-a7bbc992",
+          "hash_manifest": "runs/20261107T160349Z-a7bbc992/private/instance/business-source.json"
+        },
+        {
+          "run_id": "20261107T160357Z-aaecefbe",
+          "hash_manifest": "runs/20261107T160357Z-aaecefbe/private/instance/business-source.json"
+        },
+        {
+          "run_id": "20261107T160406Z-63125f7b",
+          "hash_manifest": "runs/20261107T160406Z-63125f7b/private/instance/business-source.json"
+        },
+        {
+          "run_id": "20261107T160414Z-5805323a",
+          "hash_manifest": "runs/20261107T160414Z-5805323a/private/instance/business-source.json"
+        },
+        {
+          "run_id": "20261107T160423Z-1d4caba6",
+          "hash_manifest": "runs/20261107T160423Z-1d4caba6/private/instance/business-source.json"
+        },
+        {
+          "run_id": "20261107T160432Z-3cb98e50",
+          "hash_manifest": "runs/20261107T160432Z-3cb98e50/private/instance/business-source.json"
+        }
+      ],
+      "source_samples_sha256": "4cea30aa335fd68b9f38d37caf73b2398dd475f408857bcf03757646f136966f",
+      "validation_sha256": "be58d3646d9c0d70af3319b8e897eebab60f84a9e136fb20e413527a5eac4db6"
+    },
+    {
+      "name": "Wolf CMS",
+      "case_id": "sweeper-195",
+      "experiment": "litecart-wolf-9c21067e",
+      "dataset": "datasets/sft-wolfcms-9c21067e",
+      "trajectories": 12,
+      "samples": 154,
+      "operation_samples": 142,
+      "review_samples": 12,
+      "train_samples": 128,
+      "validation_samples": 26,
+      "train_trajectories": 10,
+      "validation_trajectories": 2,
+      "images": 104,
+      "review_labels": {
+        "fail": 3,
+        "pass": 9
+      },
+      "scenario_family_counts": {
+        "title_only": 1,
+        "title_and_metadata": 5,
+        "duplicate_slug_validation": 3,
+        "duplicate_slug_with_metadata": 3
+      },
+      "review_profile": "business_outcome_v1",
+      "matrix": {
+        "planned": 12,
+        "attempts": 12,
+        "successful_scenarios": 12,
+        "passed": true,
+        "pending_scenarios": []
+      },
+      "verification": "datasets/sft-wolfcms-9c21067e/verification.json",
+      "verified": true,
+      "critical_business_source_checks": [
+        {
+          "run_id": "20261107T161340Z-7b6d223e",
+          "hash_manifest": "runs/20261107T161340Z-7b6d223e/private/instance/business-source.json"
+        },
+        {
+          "run_id": "20261107T161347Z-4fef05d8",
+          "hash_manifest": "runs/20261107T161347Z-4fef05d8/private/instance/business-source.json"
+        },
+        {
+          "run_id": "20261107T161356Z-7a4d3ffd",
+          "hash_manifest": "runs/20261107T161356Z-7a4d3ffd/private/instance/business-source.json"
+        },
+        {
+          "run_id": "20261107T161404Z-86d22963",
+          "hash_manifest": "runs/20261107T161404Z-86d22963/private/instance/business-source.json"
+        },
+        {
+          "run_id": "20261107T161412Z-3658f179",
+          "hash_manifest": "runs/20261107T161412Z-3658f179/private/instance/business-source.json"
+        },
+        {
+          "run_id": "20261107T161421Z-098c22ae",
+          "hash_manifest": "runs/20261107T161421Z-098c22ae/private/instance/business-source.json"
+        },
+        {
+          "run_id": "20261107T161429Z-ca81b597",
+          "hash_manifest": "runs/20261107T161429Z-ca81b597/private/instance/business-source.json"
+        },
+        {
+          "run_id": "20261107T161436Z-70b1859d",
+          "hash_manifest": "runs/20261107T161436Z-70b1859d/private/instance/business-source.json"
+        },
+        {
+          "run_id": "20261107T161443Z-1400e4cd",
+          "hash_manifest": "runs/20261107T161443Z-1400e4cd/private/instance/business-source.json"
+        },
+        {
+          "run_id": "20261107T161450Z-9faad4a6",
+          "hash_manifest": "runs/20261107T161450Z-9faad4a6/private/instance/business-source.json"
+        },
+        {
+          "run_id": "20261107T161458Z-6442c8ea",
+          "hash_manifest": "runs/20261107T161458Z-6442c8ea/private/instance/business-source.json"
+        },
+        {
+          "run_id": "20261107T161505Z-079b0f5f",
+          "hash_manifest": "runs/20261107T161505Z-079b0f5f/private/instance/business-source.json"
+        }
+      ],
+      "source_samples_sha256": "97b823c2d93eccc11b1391fc16b4465a2fca9cf58066cfb0592c01487b238884",
+      "validation_sha256": "88b59dbaf5a5d9639be4bcb7fc571233cb078e8f8475cecb06387c9acb5038e9"
+    }
+  ],
+  "totals": {
+    "trajectories": 24,
+    "samples": 352,
+    "operation_samples": 328,
+    "review_samples": 24,
+    "train_samples": 291,
+    "validation_samples": 61,
+    "train_trajectories": 20,
+    "validation_trajectories": 4,
+    "images": 220
+  },
+  "source_manifest": "docs/litecart-wolf-source-manifest.json",
+  "source_archives_verified": 4,
+  "calibration_record": "docs/litecart-wolf-calibration.md",
+  "calibration_only_experiments": {
+    "litecart-wolf-c665ddcf": "Wolf trajectories before business review profile; not exported",
+    "litecart-wolf-608e9271": "Business review calibration before matching operation prompt and complete input review screenshots; not exported",
+    "litecart-wolf-ccb9e8df": "Post-native-setting script calibration; not exported"
+  },
+  "runtime_adjustments": {
+    "litecart": "Instance-local external updater socket shim; pinned business files unchanged",
+    "wolfcms": "Native allow_html_title=on applied equally to A and B; plain-text title and breadcrumb tasks; business source unchanged"
+  },
+  "tests": {
+    "command": ".venv/bin/python -m pytest -q tests/test_litecart_wolf.py",
+    "passed": 4,
+    "log": "docs/litecart-wolf-tests.log"
+  },
+  "case_private_sha256": {
+    "sweeper-105": "e23fcde2f2847c9b3840d33bc7e3194ac9b43658851291bfd1bd7f68d2cab9d4",
+    "sweeper-195": "9d423e940841bd17adb3599bc452c82b58d5d29376d5b1c6522b54f610712561"
+  }
+}

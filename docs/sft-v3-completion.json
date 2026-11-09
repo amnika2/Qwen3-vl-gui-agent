@@ -1,0 +1,105 @@
+{
+  "completed": true,
+  "dataset": "datasets/sft-main-10apps-v3",
+  "samples": 1636,
+  "train_samples": 1350,
+  "validation_samples": 286,
+  "preserved_operation_samples": 1512,
+  "review_samples": 124,
+  "review_labels": {
+    "blocked": 30,
+    "fail": 26,
+    "pass": 68
+  },
+  "review_labels_by_split": {
+    "train": {
+      "blocked": 23,
+      "fail": 21,
+      "pass": 57
+    },
+    "validation": {
+      "pass": 11,
+      "blocked": 7,
+      "fail": 5
+    }
+  },
+  "model": "runs/sft-qwen3vl-10apps-v3/adapter",
+  "inference_config": "configs/agent-review-evidence-v3.yaml",
+  "training": {
+    "completed": true,
+    "optimizer_steps": 170,
+    "epoch": 2.0,
+    "train_metrics": {
+      "train_runtime": 2003.9723,
+      "train_samples_per_second": 1.347,
+      "train_steps_per_second": 0.085,
+      "train_loss": 0.23586368061163845,
+      "epoch": 2.0
+    },
+    "validation_metrics": {
+      "eval_loss": 0.11586669087409973,
+      "epoch": 2.0
+    },
+    "epoch_validation": [
+      {
+        "epoch": 1.0,
+        "step": 85,
+        "eval_loss": 0.18556587398052216,
+        "checkpoint": "/home/fs_2026/qwen3-gui-agent/runs/sft-qwen3vl-10apps-v3/checkpoint-85"
+      },
+      {
+        "epoch": 2.0,
+        "step": 170,
+        "eval_loss": 0.11586669087409973,
+        "checkpoint": "/home/fs_2026/qwen3-gui-agent/runs/sft-qwen3vl-10apps-v3/checkpoint-170"
+      }
+    ],
+    "best_checkpoint": "/home/fs_2026/qwen3-gui-agent/runs/sft-qwen3vl-10apps-v3/checkpoint-170",
+    "selected_epoch": 2.0,
+    "selection_metric": "eval_loss",
+    "adapter": "/home/fs_2026/qwen3-gui-agent/runs/sft-qwen3vl-10apps-v3/adapter",
+    "adapter_sha256": "11188ed55c92cc62d65c0248cb85b898174a916b1cab3fa3a761b63f67da290c",
+    "base_model": {
+      "repo": "Qwen/Qwen3-VL-8B-Instruct",
+      "revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+      "path": "/home/fs_2026/qwen3-gui-agent/vendor/models/Qwen3-VL-8B-Instruct",
+      "config_sha256": "5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661",
+      "weights_index_sha256": "520b2e05079402e9468a8701d03d1154d14b2599593afb6effa7fb60c1bff070"
+    },
+    "data_sha256": {
+      "train.jsonl": "7175eb06794d2152f3d47b69b40f99db934633539e3da57f42ce0f7af2e2f7d3",
+      "validation.jsonl": "7617fc1fccce56849f32dbcb6a13ae020746d9917711d08c3723efde20140a13",
+      "manifest.json": "352268f76f670da7750ee00b4729fc452d6153496891f5cb9827875a9f88287f"
+    },
+    "world_size": 2,
+    "effective_batch_size": 16,
+    "train_samples": 1350,
+    "validation_samples": 286,
+    "validation_case_ids": [
+      "sweeper-034",
+      "sweeper-053",
+      "sweeper-084",
+      "sweeper-105",
+      "sweeper-107",
+      "sweeper-125",
+      "sweeper-142",
+      "sweeper-195"
+    ],
+    "activation_storage": "torch.autograd.graph.save_on_cpu(pin_memory=True)",
+    "trainable_parameters": 43646976,
+    "vision_trainable_parameters": 0
+  },
+  "verification": {
+    "v2_preserved": true,
+    "v2_artifacts_checked": 8,
+    "v3_trained_data_matches_frozen_release": true,
+    "exported_adapter_sha256_matches": true,
+    "selection_used_training_app_validation": true,
+    "selected_epoch": 2.0,
+    "selected_validation_loss": 0.11586669087409973,
+    "training_exit_code": 0
+  },
+  "training_source": "runs/sft-qwen3vl-10apps-v3/training-source.json",
+  "five_application_evaluation_started": true,
+  "five_application_evaluation_completed": true
+}

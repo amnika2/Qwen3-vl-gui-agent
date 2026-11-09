@@ -1,0 +1,93 @@
+{
+  "completed": true,
+  "dataset": "datasets/sft-main-10apps-v2",
+  "samples": 1636,
+  "train_samples": 1350,
+  "validation_samples": 286,
+  "sample_kinds": {
+    "operation_action": 1402,
+    "operation_finish": 110,
+    "terminal_review": 110,
+    "prefix_review": 14
+  },
+  "review_labels": {
+    "blocked": 40,
+    "fail": 18,
+    "pass": 66
+  },
+  "epoch_validation": [
+    {
+      "epoch": 1.0,
+      "step": 85,
+      "eval_loss": 0.15327966213226318,
+      "checkpoint": "/home/fs_2026/qwen3-gui-agent/runs/sft-qwen3vl-10apps-v2/checkpoint-85"
+    },
+    {
+      "epoch": 2.0,
+      "step": 170,
+      "eval_loss": 0.07856239378452301,
+      "checkpoint": "/home/fs_2026/qwen3-gui-agent/runs/sft-qwen3vl-10apps-v2/checkpoint-170"
+    }
+  ],
+  "selected_epoch": 2.0,
+  "adapter": "/home/fs_2026/qwen3-gui-agent/runs/sft-qwen3vl-10apps-v2/adapter",
+  "adapter_sha256": "fa713fac95769e1a5e552eb7f0e3414d321526894f390d18a340875d63dd4faf",
+  "evaluation_metrics": {
+    "base": {
+      "runs": 40,
+      "completed_runs": 40,
+      "detected": 2,
+      "target_runs": 10,
+      "false_positives": 1,
+      "normal_runs": 30,
+      "correct_cells": 8,
+      "correct_four_cell_sets": 0,
+      "correct_target_pairs": 1,
+      "active_finish": 7,
+      "active_finish_rate": 0.175,
+      "active_finish_correct": 3,
+      "active_finish_blocked_or_inconclusive": 4,
+      "active_finish_infra_error": 0,
+      "guard_reasons": {
+        "review_evidence_not_established:requested_value_entered,submission_succeeded": 2,
+        "review_evidence_not_established:requested_value_entered": 6
+      },
+      "agent_blocked": 30,
+      "inconclusive": 30,
+      "infra_error": 0,
+      "median_actions": 7.0
+    },
+    "adapter": {
+      "runs": 40,
+      "completed_runs": 40,
+      "detected": 2,
+      "target_runs": 10,
+      "false_positives": 0,
+      "normal_runs": 30,
+      "correct_cells": 25,
+      "correct_four_cell_sets": 2,
+      "correct_target_pairs": 2,
+      "active_finish": 35,
+      "active_finish_rate": 0.875,
+      "active_finish_correct": 23,
+      "active_finish_blocked_or_inconclusive": 12,
+      "active_finish_infra_error": 0,
+      "guard_reasons": {
+        "last_edit_not_submitted": 5
+      },
+      "agent_blocked": 15,
+      "inconclusive": 5,
+      "infra_error": 0,
+      "median_actions": 9.0
+    }
+  },
+  "matched_inference_core": true,
+  "v1_preservation": {
+    "v1_preserved": true,
+    "v1_artifacts_checked": 8,
+    "v2_trained_data_matches_frozen_release": true,
+    "selected_epoch": 2.0,
+    "selected_validation_loss": 0.07856239378452301
+  },
+  "report": "reports/sft-lora-v2/findings.md"
+}

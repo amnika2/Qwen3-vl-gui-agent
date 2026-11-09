@@ -1,0 +1,4 @@
+split: sft-smoke
+cases: [sweeper-041, sweeper-040]
+builds: [A, B]
+repeats: 1

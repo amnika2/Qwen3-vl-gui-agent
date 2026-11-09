@@ -1,0 +1,198 @@
+{
+  "completed": true,
+  "planned": 9,
+  "metrics": {
+    "samples": 9,
+    "correct": 6,
+    "accuracy": 0.6666666666666666,
+    "format_errors": 0,
+    "guarded": 2,
+    "false_pass": 0,
+    "false_fail": 0,
+    "pass_on_blocked_label": 0,
+    "field_value_exact": {
+      "correct": 22,
+      "total": 30
+    },
+    "confusion": {
+      "pass->pass": 4,
+      "fail->blocked": 1,
+      "blocked->blocked": 2,
+      "blocked->fail": 2
+    }
+  },
+  "cohorts": {
+    "matched_validation": {
+      "samples": 8,
+      "correct": 6,
+      "accuracy": 0.75,
+      "format_errors": 0,
+      "guarded": 2,
+      "false_pass": 0,
+      "false_fail": 0,
+      "pass_on_blocked_label": 0,
+      "field_value_exact": {
+        "correct": 20,
+        "total": 28
+      },
+      "confusion": {
+        "pass->pass": 4,
+        "fail->blocked": 1,
+        "blocked->blocked": 2,
+        "blocked->fail": 1
+      }
+    },
+    "new_curriculum": {
+      "samples": 1,
+      "correct": 0,
+      "accuracy": 0.0,
+      "format_errors": 0,
+      "guarded": 0,
+      "false_pass": 0,
+      "false_fail": 0,
+      "pass_on_blocked_label": 0,
+      "field_value_exact": {
+        "correct": 2,
+        "total": 2
+      },
+      "confusion": {
+        "blocked->fail": 1
+      }
+    }
+  },
+  "cases": {
+    "sweeper-034": {
+      "samples": 2,
+      "correct": 1,
+      "accuracy": 0.5,
+      "format_errors": 0,
+      "guarded": 0,
+      "false_pass": 0,
+      "false_fail": 0,
+      "pass_on_blocked_label": 0,
+      "field_value_exact": {
+        "correct": 4,
+        "total": 4
+      },
+      "confusion": {
+        "pass->pass": 1,
+        "blocked->fail": 1
+      }
+    },
+    "sweeper-053": {
+      "samples": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "format_errors": 0,
+      "guarded": 0,
+      "false_pass": 0,
+      "false_fail": 0,
+      "pass_on_blocked_label": 0,
+      "field_value_exact": {
+        "correct": 2,
+        "total": 4
+      },
+      "confusion": {
+        "pass->pass": 1
+      }
+    },
+    "sweeper-084": {
+      "samples": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "format_errors": 0,
+      "guarded": 0,
+      "false_pass": 0,
+      "false_fail": 0,
+      "pass_on_blocked_label": 0,
+      "field_value_exact": {
+        "correct": 4,
+        "total": 4
+      },
+      "confusion": {
+        "pass->pass": 1
+      }
+    },
+    "sweeper-107": {
+      "samples": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "format_errors": 0,
+      "guarded": 1,
+      "false_pass": 0,
+      "false_fail": 0,
+      "pass_on_blocked_label": 0,
+      "field_value_exact": {
+        "correct": 1,
+        "total": 4
+      },
+      "confusion": {
+        "blocked->blocked": 1
+      }
+    },
+    "sweeper-125": {
+      "samples": 2,
+      "correct": 1,
+      "accuracy": 0.5,
+      "format_errors": 0,
+      "guarded": 0,
+      "false_pass": 0,
+      "false_fail": 0,
+      "pass_on_blocked_label": 0,
+      "field_value_exact": {
+        "correct": 2,
+        "total": 5
+      },
+      "confusion": {
+        "blocked->blocked": 1,
+        "blocked->fail": 1
+      }
+    },
+    "sweeper-142": {
+      "samples": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "format_errors": 0,
+      "guarded": 0,
+      "false_pass": 0,
+      "false_fail": 0,
+      "pass_on_blocked_label": 0,
+      "field_value_exact": {
+        "correct": 6,
+        "total": 6
+      },
+      "confusion": {
+        "pass->pass": 1
+      }
+    },
+    "sweeper-195": {
+      "samples": 1,
+      "correct": 0,
+      "accuracy": 0.0,
+      "format_errors": 0,
+      "guarded": 1,
+      "false_pass": 0,
+      "false_fail": 0,
+      "pass_on_blocked_label": 0,
+      "field_value_exact": {
+        "correct": 3,
+        "total": 3
+      },
+      "confusion": {
+        "fail->blocked": 1
+      }
+    }
+  },
+  "model": {
+    "load_seconds": 2.969505792018026,
+    "torch": "2.14.1+cu130",
+    "device": "NVIDIA GeForce RTX 4090",
+    "peak_allocated_mib": 19079.85302734375,
+    "peak_reserved_mib": 19594.0
+  },
+  "metric_definitions": {
+    "false_pass": "fail label predicted pass",
+    "false_fail": "pass label predicted fail",
+    "field_value_exact": "literal equality on non-null labelled readings; empty string is included"
+  }
+}

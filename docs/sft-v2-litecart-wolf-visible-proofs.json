@@ -1,0 +1,1029 @@
+{
+  "audit_basis": "Only personally viewed original screenshots; no source images or data edited.",
+  "reviewed_runs": 32,
+  "runs": {
+    "20261107T173220Z-98690651": {
+      "frames": [
+        {
+          "step": 12,
+          "input_proof_steps": [
+            3,
+            12
+          ],
+          "result_proof_steps": [],
+          "observation": "Same input frame shows Code hd1, Name Harbour dispatch, Description Counter collection only, pending Country Algeria and City Dock 6 completely.",
+          "screenshot_sha256": "955a73a7a1ccac9cc99e4b48cea293bf4175ceb46a18094f8b3f62719c6bc594"
+        },
+        {
+          "step": 14,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            14
+          ],
+          "observation": "Reopened Edit Geo Zone shows those three text fields, but an empty saved country table; pending row is reset.",
+          "screenshot_sha256": "2c77b0d81beabda65c37a47e53dfb8587463951e19555b82aa7931f93b04bccc"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        12,
+        13,
+        14
+      ]
+    },
+    "20261107T173229Z-b6af7212": {
+      "frames": [
+        {
+          "step": 7,
+          "input_proof_steps": [
+            4,
+            7
+          ],
+          "result_proof_steps": [],
+          "observation": "Same Metadata input frame shows Slug about-us and Breadcrumb Visitor welcome completely.",
+          "screenshot_sha256": "e0a4ad0001f33e9f6f24da7d16d587266a0f3f4d26b8ed5d0f6b2a7f76df45b3"
+        },
+        {
+          "step": 13,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            13
+          ],
+          "observation": "Reopened Metadata shows both Slug about-us and Breadcrumb Visitor welcome in their labeled fields.",
+          "screenshot_sha256": "b7d09938e953cecea464fb7886ef0d01c4c5aaaa12afabf05b1475510c029ac2"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        7,
+        8,
+        13
+      ]
+    },
+    "20261107T173306Z-341da193": {
+      "frames": [
+        {
+          "step": 14,
+          "input_proof_steps": [
+            4,
+            14
+          ],
+          "result_proof_steps": [],
+          "observation": "Same input frame shows Code ap2, Name Airport evening route, Description Delivery before 17:00, pending Country American Samoa and City Terminal 3.",
+          "screenshot_sha256": "0fba68547dccb34ba1f6bac3c71c8d682ed7450be8ea2a51caf7ad94a1c9a4a5"
+        },
+        {
+          "step": 16,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            16
+          ],
+          "observation": "Reopened Edit Geo Zone shows all three text fields plus the actual saved American Samoa / Terminal 3 country table row.",
+          "screenshot_sha256": "fbb712f8163d1609f0616559a34ee482a5bfb7f925fb1444bb6aaaaba499c93c"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        14,
+        15,
+        16
+      ]
+    },
+    "20261107T173316Z-c732f64f": {
+      "frames": [
+        {
+          "step": 8,
+          "input_proof_steps": [
+            5,
+            8
+          ],
+          "result_proof_steps": [],
+          "observation": "Same Metadata input frame shows Slug about-us and Breadcrumb contact-desk completely.",
+          "screenshot_sha256": "f05511a0f0e375d399b9d48a08ea00c255344b9288ef7ab962bd409455dcdedf"
+        },
+        {
+          "step": 14,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            14
+          ],
+          "observation": "Reopened original page Metadata shows Slug about-us and blank Breadcrumb; no red rejection banner is present in this selected final frame.",
+          "screenshot_sha256": "aad8d49ee9eab7118b0441fc1ae4c01a78701f4c5a3dd224b7345cf30b17a722"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        8,
+        9,
+        14
+      ],
+      "business_outcome_note": "Raw self-collision error screenshots are not selected. Same-record original values are visible after reopening, but the rejected submit must not be relabeled as accepted."
+    },
+    "20261107T173325Z-f31f3153": {
+      "frames": [
+        {
+          "step": 11,
+          "input_proof_steps": [
+            3,
+            11
+          ],
+          "result_proof_steps": [],
+          "observation": "Same input frame shows Code rv3, Name Riverside collection, Description Bring the pickup reference, pending Country Albania and City Riverside desk.",
+          "screenshot_sha256": "ca7cf1108c86cf9ac39b6db80c58c2c48a40108554b613e0dc02b534ca6be220"
+        },
+        {
+          "step": 13,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            13
+          ],
+          "observation": "Reopened Edit Geo Zone shows the requested text fields, but the saved country table is empty; pending row is reset.",
+          "screenshot_sha256": "9c297dafc846fc0a902ba2d85c528d01e4b7fbbcf6764acc5dab987adbbe85b9"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        11,
+        12,
+        13
+      ]
+    },
+    "20261107T173334Z-318871a5": {
+      "frames": [
+        {
+          "step": 7,
+          "input_proof_steps": [
+            4,
+            7
+          ],
+          "result_proof_steps": [],
+          "observation": "Same Metadata input frame shows Slug about-us and Breadcrumb Accueil association completely.",
+          "screenshot_sha256": "2467a3774e47e3449b5300e422f57885f12b2b913ffde905d2c5e815656766bc"
+        },
+        {
+          "step": 13,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            13
+          ],
+          "observation": "Reopened original page Metadata shows Slug about-us and blank Breadcrumb; the earlier red rejection banner is outside the selected window.",
+          "screenshot_sha256": "aad8d49ee9eab7118b0441fc1ae4c01a78701f4c5a3dd224b7345cf30b17a722"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        7,
+        8,
+        13
+      ],
+      "business_outcome_note": "Raw self-collision error screenshots are not selected. Same-record original values are visible after reopening, but the rejected submit must not be relabeled as accepted."
+    },
+    "20261107T173342Z-0646b58a": {
+      "frames": [
+        {
+          "step": 7,
+          "input_proof_steps": [
+            4,
+            7
+          ],
+          "result_proof_steps": [],
+          "observation": "Same input frame shows Code bk4, Name Bakery exchanges and Description Keep the receipt with the parcel, with pending Country unselected.",
+          "screenshot_sha256": "ccb903b73e7b685ece3984b9829eef09db578ab92fc34dbe7d4894f1d0794b96"
+        },
+        {
+          "step": 9,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            9
+          ],
+          "observation": "Reopened Edit Geo Zone shows exactly those three fields and an empty saved country table.",
+          "screenshot_sha256": "c01005dc8ae99f6dfe4e19e34744c87908c6e4ac2ac0193364cfc617e92f1448"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        7,
+        8,
+        9
+      ]
+    },
+    "20261107T173350Z-2483793e": {
+      "frames": [
+        {
+          "step": 8,
+          "input_proof_steps": [
+            5,
+            8
+          ],
+          "result_proof_steps": [],
+          "observation": "Same Metadata input frame shows Slug about-us and Breadcrumb 服务与预约 completely; Chinese characters are legible.",
+          "screenshot_sha256": "dd547306c9b98f0b1cde7ac911a6e9bcb79a0dd6680f7a405a8777efb5b01add"
+        },
+        {
+          "step": 14,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            14
+          ],
+          "observation": "Reopened Metadata shows Slug about-us and Breadcrumb 服务与预约 in their separate labeled fields.",
+          "screenshot_sha256": "2b30d7f38fcf67668d3240c5bc96082ffd0ce64ccf0bbbef22be152c06a3e79a"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        8,
+        9,
+        14
+      ]
+    },
+    "20261107T160242Z-ba2b5faf": {
+      "frames": [
+        {
+          "step": 10,
+          "input_proof_steps": [
+            4,
+            7,
+            10
+          ],
+          "result_proof_steps": [],
+          "observation": "Personally viewed all three complete adjacent text values: Code 'af1'; Name 'Afghanistan regional shipping'; Description 'Standard weekday delivery'. Pending Country is visibly still -- Select -- at the last typed frame.",
+          "screenshot_sha256": "f303a71c01212075fa26af0b5ad93c475f46308d7242a0f11280ddd2fc57ffdb"
+        },
+        {
+          "step": 16,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            16
+          ],
+          "observation": "Personally viewed reopened Edit Geo Zone with complete Code/Name/Description 'af1'; 'Afghanistan regional shipping'; 'Standard weekday delivery'; saved country table rows [], cities []. The reset pending dropdown is not a saved row.",
+          "screenshot_sha256": "9dea64c6a163ae97a714daf0a8d5e066aae16909ee69c38d08d895ce007f12f0"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        10,
+        11,
+        15,
+        16
+      ],
+      "unestablished_required_fields": [
+        "pending Country selection before Save"
+      ],
+      "limitation": "Personally viewed last_type and post_type screenshots: the pending Country remains -- Select --, and its popup highlights -- Select --. No selected pre-Save frame shows the later requested Country; history key presses or a persisted final country cannot replace typed-state evidence."
+    },
+    "20261107T160253Z-cabd3bc5": {
+      "frames": [
+        {
+          "step": 9,
+          "input_proof_steps": [
+            3,
+            6,
+            9
+          ],
+          "result_proof_steps": [],
+          "observation": "Personally viewed all three complete adjacent text values: Code 'al2'; Name 'Albania regional shipping'; Description 'Dispatch from the regional hub'. Pending Country is visibly still -- Select -- at the last typed frame.",
+          "screenshot_sha256": "004aa5152c3db667c8b1b5971245c11870c790584fb375dcea5281a2e4347d58"
+        },
+        {
+          "step": 17,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            17
+          ],
+          "observation": "Personally viewed reopened Edit Geo Zone with complete Code/Name/Description 'al2'; 'Albania regional shipping'; 'Dispatch from the regional hub'; saved country table rows ['Albania'], cities ['-- All Cities --']. The reset pending dropdown is not a saved row.",
+          "screenshot_sha256": "7f4366587e38bc88ec8049bbb947975aee0aa470cb08459c7ab0c21831b2b2c6"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        9,
+        10,
+        16,
+        17
+      ],
+      "unestablished_required_fields": [
+        "pending Country selection before Save"
+      ],
+      "limitation": "Personally viewed last_type and post_type screenshots: the pending Country remains -- Select --, and its popup highlights -- Select --. No selected pre-Save frame shows the later requested Country; history key presses or a persisted final country cannot replace typed-state evidence."
+    },
+    "20261107T160303Z-336e8c29": {
+      "frames": [
+        {
+          "step": 19,
+          "input_proof_steps": [
+            4,
+            7,
+            10,
+            19
+          ],
+          "result_proof_steps": [],
+          "observation": "Personally viewed all three complete adjacent text values: Code 'dz3'; Name 'Algeria regional shipping'; Description 'Customer collection route'. Pending Country 'Algeria' and City 'Central depot' are also fully visible.",
+          "screenshot_sha256": "8bac6b7bceb581da4acdca9abcde195b7c1aec4d4c9d84f6ee1460c6e7e0740b"
+        },
+        {
+          "step": 21,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            21
+          ],
+          "observation": "Personally viewed reopened Edit Geo Zone with complete Code/Name/Description 'dz3'; 'Algeria regional shipping'; 'Customer collection route'; saved country table rows [], cities []. The reset pending dropdown is not a saved row.",
+          "screenshot_sha256": "155f2b0a261d9366d9e110d8011e91b28c2c36ec52e0022a76e1fea359767ece"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        19,
+        20,
+        21
+      ]
+    },
+    "20261107T160315Z-1229a387": {
+      "frames": [
+        {
+          "step": 9,
+          "input_proof_steps": [
+            3,
+            6,
+            9
+          ],
+          "result_proof_steps": [],
+          "observation": "Personally viewed all three complete adjacent text values: Code 'as4'; Name 'American Samoa regional shipping'; Description 'Island parcel service'. Pending Country is visibly still -- Select -- at the last typed frame.",
+          "screenshot_sha256": "05dfd9f30a81f0fbf593c091c32e657b4096212d25b6b82ec1b9761e1bb66d5e"
+        },
+        {
+          "step": 19,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            19
+          ],
+          "observation": "Personally viewed reopened Edit Geo Zone with complete Code/Name/Description 'as4'; 'American Samoa regional shipping'; 'Island parcel service'; saved country table rows ['American Samoa'], cities ['-- All Cities --']. The reset pending dropdown is not a saved row.",
+          "screenshot_sha256": "b322e4d77930979ed30fc7372502f080d9e44b12423e24a56965d99fba68cc08"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        9,
+        10,
+        18,
+        19
+      ],
+      "unestablished_required_fields": [
+        "pending Country selection before Save"
+      ],
+      "limitation": "Personally viewed last_type and post_type screenshots: the pending Country remains -- Select --, and its popup highlights -- Select --. No selected pre-Save frame shows the later requested Country; history key presses or a persisted final country cannot replace typed-state evidence."
+    },
+    "20261107T160326Z-a1fa52a1": {
+      "frames": [
+        {
+          "step": 21,
+          "input_proof_steps": [
+            4,
+            7,
+            10,
+            21
+          ],
+          "result_proof_steps": [],
+          "observation": "Personally viewed all three complete adjacent text values: Code 'ad5'; Name 'Andorra regional shipping'; Description 'Warehouse deliveries'. Pending Country 'Andorra' and City 'Central depot' are also fully visible.",
+          "screenshot_sha256": "5ad2b9e7b10904ede26edef3b142fcbb1e85d86aa5b82460fbdb860751e5322d"
+        },
+        {
+          "step": 23,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            23
+          ],
+          "observation": "Personally viewed reopened Edit Geo Zone with complete Code/Name/Description 'ad5'; 'Andorra regional shipping'; 'Warehouse deliveries'; saved country table rows [], cities []. The reset pending dropdown is not a saved row.",
+          "screenshot_sha256": "dfd6926a24eced67be6a182bb1214d87f5c60d62ba38dbafd6509b12c28bc96b"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        21,
+        22,
+        23
+      ]
+    },
+    "20261107T160338Z-271fec5b": {
+      "frames": [
+        {
+          "step": 9,
+          "input_proof_steps": [
+            3,
+            6,
+            9
+          ],
+          "result_proof_steps": [],
+          "observation": "Personally viewed all three complete adjacent text values: Code 'ao6'; Name 'Angola regional shipping'; Description 'Priority local route'. Pending Country is visibly still -- Select -- at the last typed frame.",
+          "screenshot_sha256": "c6e2ee61f1aadf391cd9a0703269f46e73fdc1170ac0575a002ac71e9e518cc9"
+        },
+        {
+          "step": 21,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            21
+          ],
+          "observation": "Personally viewed reopened Edit Geo Zone with complete Code/Name/Description 'ao6'; 'Angola regional shipping'; 'Priority local route'; saved country table rows ['Angola'], cities ['-- All Cities --']. The reset pending dropdown is not a saved row.",
+          "screenshot_sha256": "98517d3c7e6ce71bd0cf832894f12fd8828bb35fbeafdedb0479fa158fe05a29"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        9,
+        10,
+        20,
+        21
+      ],
+      "unestablished_required_fields": [
+        "pending Country selection before Save"
+      ],
+      "limitation": "Personally viewed last_type and post_type screenshots: the pending Country remains -- Select --, and its popup highlights -- Select --. No selected pre-Save frame shows the later requested Country; history key presses or a persisted final country cannot replace typed-state evidence."
+    },
+    "20261107T160349Z-a7bbc992": {
+      "frames": [
+        {
+          "step": 9,
+          "input_proof_steps": [
+            3,
+            6,
+            9
+          ],
+          "result_proof_steps": [],
+          "observation": "Personally viewed all three complete adjacent text values: Code 'wh'; Name 'Warehouse collection'; Description 'Collect after the confirmation email.'. Pending Country is visibly still -- Select -- at the last typed frame.",
+          "screenshot_sha256": "6df9ad49e16ae269592f7db8a31e8f47d8cd3fdff0a6e936cb5e64cd1083fd4b"
+        },
+        {
+          "step": 11,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            11
+          ],
+          "observation": "Personally viewed reopened Edit Geo Zone with complete Code/Name/Description 'wh'; 'Warehouse collection'; 'Collect after the confirmation email.'; saved country table rows [], cities []. The reset pending dropdown is not a saved row.",
+          "screenshot_sha256": "32d623aca6a5d244ff42853c001ddc708a0a2d75ec8e4961db589c55a1cc6052"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        9,
+        10,
+        11
+      ]
+    },
+    "20261107T160357Z-aaecefbe": {
+      "frames": [
+        {
+          "step": 10,
+          "input_proof_steps": [
+            4,
+            7,
+            10
+          ],
+          "result_proof_steps": [],
+          "observation": "Personally viewed all three complete adjacent text values: Code 'ret'; Name 'Returns hub'; Description 'Use the return reference on every parcel.'. Pending Country is visibly still -- Select -- at the last typed frame.",
+          "screenshot_sha256": "f75edd6df3b796f2672f6d27c4592481b0549df1c4312474b418c60f8af5eb44"
+        },
+        {
+          "step": 12,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            12
+          ],
+          "observation": "Personally viewed reopened Edit Geo Zone with complete Code/Name/Description 'ret'; 'Returns hub'; 'Use the return reference on every parcel.'; saved country table rows [], cities []. The reset pending dropdown is not a saved row.",
+          "screenshot_sha256": "f28f8ded1fb876ede877b972be825833e5d92ed4d13c928356810f01cd9c41e7"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        10,
+        11,
+        12
+      ]
+    },
+    "20261107T160406Z-63125f7b": {
+      "frames": [
+        {
+          "step": 9,
+          "input_proof_steps": [
+            3,
+            6,
+            9
+          ],
+          "result_proof_steps": [],
+          "observation": "Personally viewed all three complete adjacent text values: Code 'std'; Name 'Standard domestic shipping'; Description 'Ships on working days.'. Pending Country is visibly still -- Select -- at the last typed frame.",
+          "screenshot_sha256": "389165368c78d9eb2dfd32ae5d6130b495dbe73a55d2d5a7a9a46ff1abb6a06d"
+        },
+        {
+          "step": 11,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            11
+          ],
+          "observation": "Personally viewed reopened Edit Geo Zone with complete Code/Name/Description 'std'; 'Standard domestic shipping'; 'Ships on working days.'; saved country table rows [], cities []. The reset pending dropdown is not a saved row.",
+          "screenshot_sha256": "48071d51339cf4d462510e7fe0a1f6e7861615dd7afa0f346a3d8884389dffcd"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        9,
+        10,
+        11
+      ]
+    },
+    "20261107T160414Z-5805323a": {
+      "frames": [
+        {
+          "step": 10,
+          "input_proof_steps": [
+            4,
+            7,
+            10
+          ],
+          "result_proof_steps": [],
+          "observation": "Personally viewed all three complete adjacent text values: Code 'exp'; Name 'Express delivery'; Description 'Place orders before noon.'. Pending Country is visibly still -- Select -- at the last typed frame.",
+          "screenshot_sha256": "0b78ce93df05e65f9f3692a1a08ab331fac4a295e2e64270f456cabcdebbdea2"
+        },
+        {
+          "step": 12,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            12
+          ],
+          "observation": "Personally viewed reopened Edit Geo Zone with complete Code/Name/Description 'exp'; 'Express delivery'; 'Place orders before noon.'; saved country table rows [], cities []. The reset pending dropdown is not a saved row.",
+          "screenshot_sha256": "3a78cb857e8616f7c8a1209012e9de7d4682b7e2d873f15db139fc0331be48b9"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        10,
+        11,
+        12
+      ]
+    },
+    "20261107T160423Z-1d4caba6": {
+      "frames": [
+        {
+          "step": 9,
+          "input_proof_steps": [
+            3,
+            6,
+            9
+          ],
+          "result_proof_steps": [],
+          "observation": "Personally viewed all three complete adjacent text values: Code 'fr'; Name 'Livraisons locales'; Description 'Livraison du mardi au samedi.'. Pending Country is visibly still -- Select -- at the last typed frame.",
+          "screenshot_sha256": "b906904c06696f928f478eabab8a7e5ffbf62e3f1f07a7fa0d55dd7a379c1663"
+        },
+        {
+          "step": 11,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            11
+          ],
+          "observation": "Personally viewed reopened Edit Geo Zone with complete Code/Name/Description 'fr'; 'Livraisons locales'; 'Livraison du mardi au samedi.'; saved country table rows [], cities []. The reset pending dropdown is not a saved row.",
+          "screenshot_sha256": "f7d5e3b9f87670215c8c46b1037ca34fd4e34b0aeef30e25798f4103557a21a2"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        9,
+        10,
+        11
+      ]
+    },
+    "20261107T160432Z-3cb98e50": {
+      "frames": [
+        {
+          "step": 10,
+          "input_proof_steps": [
+            4,
+            7,
+            10
+          ],
+          "result_proof_steps": [],
+          "observation": "Personally viewed all three complete adjacent text values: Code 'cn'; Name '城市配送'; Description '请在发货前确认收件地址。'. Pending Country is visibly still -- Select -- at the last typed frame.",
+          "screenshot_sha256": "b4a329c10c225f24bb4e0d3fcd46fc523a05342b2416813f99d8cedc78ef624f"
+        },
+        {
+          "step": 12,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            12
+          ],
+          "observation": "Personally viewed reopened Edit Geo Zone with complete Code/Name/Description 'cn'; '城市配送'; '请在发货前确认收件地址。'; saved country table rows [], cities []. The reset pending dropdown is not a saved row.",
+          "screenshot_sha256": "86f9951c78392f2c09b80a9919e949d4e85d197489c44a1929cea65abfc975f5"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        10,
+        11,
+        12
+      ]
+    },
+    "20261107T161340Z-7b6d223e": {
+      "frames": [
+        {
+          "step": 4,
+          "input_proof_steps": [
+            4
+          ],
+          "result_proof_steps": [],
+          "observation": "Personally viewed the complete Page Title input 'About the community archive' before submission.",
+          "screenshot_sha256": "9f5dc624f97fa91a469a7e48919f23790dfb816affe0e3bec4cdeb96c0b72cae"
+        },
+        {
+          "step": 8,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            8
+          ],
+          "observation": "Personally viewed the existing-page self-collision rejection Page with slug about-us already exists, retaining Title 'About the community archive'.",
+          "screenshot_sha256": "830894f682689a560867082e3fefcf5c225dbace4237f0223a21c2a68a30ce25"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        4,
+        5,
+        8
+      ]
+    },
+    "20261107T161347Z-4fef05d8": {
+      "frames": [
+        {
+          "step": 7,
+          "input_proof_steps": [
+            7
+          ],
+          "result_proof_steps": [],
+          "observation": "Personally viewed complete Breadcrumb 'Opening hours, access arrangements and contact details.' and Slug about-us on Metadata. The requested Page Title input is hidden in this selected frame.",
+          "screenshot_sha256": "7f0578e94f37b0e5c52090f52f3325ee2324d751e828e9b8370606698e14b9dd"
+        },
+        {
+          "step": 12,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            12
+          ],
+          "observation": "Personally viewed reopened Metadata with full Breadcrumb 'Opening hours, access arrangements and contact details.' and Slug about-us. Reopened Title is on an absent Page Title frame, so this does not establish its result.",
+          "screenshot_sha256": "df75b885cd9ba1cd16214ae6bef322803785552d18f535f47496c0cf870c5dd2"
+        }
+      ],
+      "unestablished_input_proof_steps": [
+        3
+      ],
+      "unestablished_result_proof_steps": [
+        9,
+        10,
+        11
+      ],
+      "selected_screenshot_steps": [
+        7,
+        8,
+        12
+      ]
+    },
+    "20261107T161356Z-7a4d3ffd": {
+      "frames": [
+        {
+          "step": 8,
+          "input_proof_steps": [
+            8
+          ],
+          "result_proof_steps": [],
+          "observation": "Personally viewed complete Breadcrumb 'association, accueil, activités' and Slug about-us on Metadata. The requested Page Title input is hidden in this selected frame.",
+          "screenshot_sha256": "a42c9bc60f5ae6ea84b7feeff7c71076013ecb663f2a37588ef3faa9d6e3896b"
+        },
+        {
+          "step": 13,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            13
+          ],
+          "observation": "Personally viewed the red self-collision rejection and retained Breadcrumb 'association, accueil, activités' on Metadata. Page Title remains hidden; its input proof cannot be established by this window.",
+          "screenshot_sha256": "f81ff0a973384c2c541b74cd6f518c04c8eba49aaecfe5d3bb59b65f20c7b594"
+        }
+      ],
+      "unestablished_input_proof_steps": [
+        4
+      ],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        8,
+        9,
+        13
+      ]
+    },
+    "20261107T161404Z-86d22963": {
+      "frames": [
+        {
+          "step": 7,
+          "input_proof_steps": [
+            7
+          ],
+          "result_proof_steps": [],
+          "observation": "Personally viewed complete Breadcrumb 'Workshop information' and Slug about-us on Metadata. The requested Page Title input is hidden in this selected frame.",
+          "screenshot_sha256": "7671f44e80eb4db7364fcb763f8c885c7d813f4bc9c40a03557aaca1734e8abf"
+        },
+        {
+          "step": 12,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            12
+          ],
+          "observation": "Personally viewed reopened Metadata with full Breadcrumb 'Workshop information' and Slug about-us. Reopened Title is on an absent Page Title frame, so this does not establish its result.",
+          "screenshot_sha256": "adac0d69439eb61bfccd7b8a9b55bedca938c104543537331680e3a6a670690c"
+        }
+      ],
+      "unestablished_input_proof_steps": [
+        3
+      ],
+      "unestablished_result_proof_steps": [
+        9,
+        10,
+        11
+      ],
+      "selected_screenshot_steps": [
+        7,
+        8,
+        12
+      ]
+    },
+    "20261107T161412Z-3658f179": {
+      "frames": [
+        {
+          "step": 8,
+          "input_proof_steps": [
+            8
+          ],
+          "result_proof_steps": [],
+          "observation": "Personally viewed complete Breadcrumb '本页介绍服务范围、开放时间和联系方式。' and Slug about-us on Metadata. The requested Page Title input is hidden in this selected frame.",
+          "screenshot_sha256": "3378518884d974b7bcae24bf8a353a43ff2b62003411a48033d2f0f1e8ba52c2"
+        },
+        {
+          "step": 13,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            13
+          ],
+          "observation": "Personally viewed the red self-collision rejection and retained Breadcrumb '本页介绍服务范围、开放时间和联系方式。' on Metadata. Page Title remains hidden; its input proof cannot be established by this window.",
+          "screenshot_sha256": "60674535a2a277d626a5a4977ea1708c53a906429986d64f7bc8448c31a15df7"
+        }
+      ],
+      "unestablished_input_proof_steps": [
+        4
+      ],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        8,
+        9,
+        13
+      ]
+    },
+    "20261107T161421Z-098c22ae": {
+      "frames": [
+        {
+          "step": 7,
+          "input_proof_steps": [
+            7
+          ],
+          "result_proof_steps": [],
+          "observation": "Personally viewed complete Breadcrumb 'archive, local history, research' and Slug about-us on Metadata. The requested Page Title input is hidden in this selected frame.",
+          "screenshot_sha256": "93fe644e096884deb1b3492609ad24457e7adbb1280c9add737284f1ba40ce05"
+        },
+        {
+          "step": 12,
+          "input_proof_steps": [],
+          "result_proof_steps": [
+            12
+          ],
+          "observation": "Personally viewed reopened Metadata with full Breadcrumb 'archive, local history, research' and Slug about-us. Reopened Title is on an absent Page Title frame, so this does not establish its result.",
+          "screenshot_sha256": "d829c2f9e7ba6ee83b44677e31f13a4266b3681badcdddd47c62243c0f6bd3eb"
+        }
+      ],
+      "unestablished_input_proof_steps": [
+        3
+      ],
+      "unestablished_result_proof_steps": [
+        9,
+        10,
+        11
+      ],
+      "selected_screenshot_steps": [
+        7,
+        8,
+        12
+      ]
+    },
+    "20261107T161429Z-ca81b597": {
+      "frames": [
+        {
+          "step": 8,
+          "input_proof_steps": [
+            8
+          ],
+          "result_proof_steps": [],
+          "observation": "Personally viewed the complete labeled Metadata inputs: Slug about-us. Title is on a different tab, so it is not inferred from Breadcrumb.",
+          "screenshot_sha256": "1e13720fa5f539255249a0b71486c31a971d470e3e2104faeae5690666e2415f"
+        },
+        {
+          "step": 11,
+          "input_proof_steps": [
+            4
+          ],
+          "result_proof_steps": [
+            11
+          ],
+          "observation": "Personally viewed the red Page with slug about-us already exists rejection and the same unsaved Add Page form retaining the full Title 'About Copy'. No later Title edit occurred; this is retained rejected-form input evidence, not inference from a persisted result.",
+          "screenshot_sha256": "5bd20267dedb0d70a37286dab5036e1f595ce688e8de97897c0238e8e04f0b0e"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        8,
+        9,
+        11
+      ]
+    },
+    "20261107T161436Z-70b1859d": {
+      "frames": [
+        {
+          "step": 10,
+          "input_proof_steps": [
+            7,
+            10
+          ],
+          "result_proof_steps": [],
+          "observation": "Personally viewed the complete labeled Metadata inputs: Slug about-us and Breadcrumb 'This draft deliberately uses an existing sibling slug.'. Title is on a different tab, so it is not inferred from Breadcrumb.",
+          "screenshot_sha256": "a562d9fc5ae9eb79753b13cdc2632e764cf014174bf359ad636c19dd5a449e35"
+        },
+        {
+          "step": 13,
+          "input_proof_steps": [
+            3
+          ],
+          "result_proof_steps": [
+            13
+          ],
+          "observation": "Personally viewed the red Page with slug about-us already exists rejection and the same unsaved Add Page form retaining the full Title 'Archive visitor page'. No later Title edit occurred; this is retained rejected-form input evidence, not inference from a persisted result.",
+          "screenshot_sha256": "86228ed8f53256cfd93d90b652d8fcf20fcb0cd440b21bc4bec0558bc47c855d"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        10,
+        11,
+        13
+      ]
+    },
+    "20261107T161443Z-1400e4cd": {
+      "frames": [
+        {
+          "step": 8,
+          "input_proof_steps": [
+            8
+          ],
+          "result_proof_steps": [],
+          "observation": "Personally viewed the complete labeled Metadata inputs: Slug about-us. Title is on a different tab, so it is not inferred from Breadcrumb.",
+          "screenshot_sha256": "c16c2a72f58e4ac341decf6a711eade5aa6a27b2f165ac8fcf34a2f3cc2ec3b1"
+        },
+        {
+          "step": 11,
+          "input_proof_steps": [
+            4
+          ],
+          "result_proof_steps": [
+            11
+          ],
+          "observation": "Personally viewed the red Page with slug about-us already exists rejection and the same unsaved Add Page form retaining the full Title 'Services overview'. No later Title edit occurred; this is retained rejected-form input evidence, not inference from a persisted result.",
+          "screenshot_sha256": "ff81da5a6dc9acd3048aa1ab21e4ad90ec76148e77f0ba44aff717058c8d8c0f"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        8,
+        9,
+        11
+      ]
+    },
+    "20261107T161450Z-9faad4a6": {
+      "frames": [
+        {
+          "step": 10,
+          "input_proof_steps": [
+            7,
+            10
+          ],
+          "result_proof_steps": [],
+          "observation": "Personally viewed the complete labeled Metadata inputs: Slug about-us and Breadcrumb 'This draft deliberately uses an existing sibling slug.'. Title is on a different tab, so it is not inferred from Breadcrumb.",
+          "screenshot_sha256": "a562d9fc5ae9eb79753b13cdc2632e764cf014174bf359ad636c19dd5a449e35"
+        },
+        {
+          "step": 13,
+          "input_proof_steps": [
+            3
+          ],
+          "result_proof_steps": [
+            13
+          ],
+          "observation": "Personally viewed the red Page with slug about-us already exists rejection and the same unsaved Add Page form retaining the full Title 'Informations pratiques'. No later Title edit occurred; this is retained rejected-form input evidence, not inference from a persisted result.",
+          "screenshot_sha256": "66650bd90248d84f0cea879032f6ed7350eeaf47b2e1d026ef2675b1892046d7"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        10,
+        11,
+        13
+      ]
+    },
+    "20261107T161458Z-6442c8ea": {
+      "frames": [
+        {
+          "step": 8,
+          "input_proof_steps": [
+            8
+          ],
+          "result_proof_steps": [],
+          "observation": "Personally viewed the complete labeled Metadata inputs: Slug about-us. Title is on a different tab, so it is not inferred from Breadcrumb.",
+          "screenshot_sha256": "215e20ad4f2b5badc3bb59b26243b8d57489065906a7c33fcd877e61b2fbbd63"
+        },
+        {
+          "step": 11,
+          "input_proof_steps": [
+            4
+          ],
+          "result_proof_steps": [
+            11
+          ],
+          "observation": "Personally viewed the red Page with slug about-us already exists rejection and the same unsaved Add Page form retaining the full Title '预约说明'. No later Title edit occurred; this is retained rejected-form input evidence, not inference from a persisted result.",
+          "screenshot_sha256": "7356a279295a448859b6c04e350f91aa2f66f608b09ff02a798abd794dfac027"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        8,
+        9,
+        11
+      ]
+    },
+    "20261107T161505Z-079b0f5f": {
+      "frames": [
+        {
+          "step": 10,
+          "input_proof_steps": [
+            7,
+            10
+          ],
+          "result_proof_steps": [],
+          "observation": "Personally viewed the complete labeled Metadata inputs: Slug about-us and Breadcrumb 'This draft deliberately uses an existing sibling slug.'. Title is on a different tab, so it is not inferred from Breadcrumb.",
+          "screenshot_sha256": "a562d9fc5ae9eb79753b13cdc2632e764cf014174bf359ad636c19dd5a449e35"
+        },
+        {
+          "step": 13,
+          "input_proof_steps": [
+            3
+          ],
+          "result_proof_steps": [
+            13
+          ],
+          "observation": "Personally viewed the red Page with slug about-us already exists rejection and the same unsaved Add Page form retaining the full Title 'Community catalogue'. No later Title edit occurred; this is retained rejected-form input evidence, not inference from a persisted result.",
+          "screenshot_sha256": "4ad932f7cfe5056bb224f7bb36f07fc1a9df97690b31c8e78a37b1da5dea1d5c"
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": [],
+      "selected_screenshot_steps": [
+        10,
+        11,
+        13
+      ]
+    }
+  },
+  "scope_complete": true,
+  "notes": "Fixed 32-run scope: 12 v1 LiteCart, 12 v1 Wolf, 8 new field contrasts. Only selected existing frames carry positive proof. Missing Country and hidden Title evidence remain unestablished. Raw screenshots and reviews unchanged."
+}

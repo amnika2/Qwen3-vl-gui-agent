@@ -1,0 +1,25 @@
+{
+  "sweeper-107": {
+    "lock_sha256": "ee759511b1b0971cdf35a6b1daa8382a477f35bc17210d5865a6e984b3ea8e75",
+    "base_commit": "148cc34a4ae57848eabd103638642e203f79c72a",
+    "reference_commit": "4cfa980d9ed086ee6bbeb34c2450724dcec4c8bb"
+  },
+  "sweeper-142": {
+    "submodules": [
+      " 2be13fddff68a72dee2c68196dbce7c8f825bcc1 app/login/captcha (3.6.8-5-g2be13fd)",
+      " 505c2af8337b559b33557f37cda38e5f843f3768 functions/GoogleAuthenticator (v1.0.1-4-g505c2af)",
+      " 17e1daca04bfee46116eabd1587ed754d0c00877 functions/LdapRecord (v3.6.1)",
+      " 829def33886c827e1622f965a8813d7bf453f15a functions/PHPMailer (v6.9.1-46-g829def33)",
+      " b3e2fa192cea1d45404acc14598c41969df84a97 functions/parsedown (1.8.0-beta-7-49-gb3e2fa1)",
+      " 5fbf3486704ac9835b68184023ab54862c95f213 functions/php-saml (v1.0.0-482-g5fbf348)",
+      " 04f46c6a0708418cb7b96fc563eacae0fbf77674 functions/qrcodejs (heads/master)",
+      " cf50b5023964550d714df76ba9adf21eb6fdaa35 functions/xmlseclibs (3.1.1-7-gcf50b50)"
+    ],
+    "runtime_packages": {
+      "php8.3-gmp_8.3.6-0ubuntu0.24.04.13_amd64.deb": "007374a81b8e349e3f7b5a8bf2d739ceffa7db69470c48f4d458554542d0d6c7",
+      "php-pear_1%3a1.10.13+submodules+notgz+2022032202-2build1_all.deb": "29f07123ac81e8fff9982b16d812bbd419e57712b145fe17a77139af379c96f2"
+    },
+    "base_commit": "81bf8abc4bae32261cf471f3e72f94f1e4a854bb",
+    "reference_commit": "d7885fa11d29598cf170f682a5966a7194e4f04e"
+  }
+}

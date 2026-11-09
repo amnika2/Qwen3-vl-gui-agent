@@ -1,0 +1,75 @@
+{
+  "_id": "6ac69df68313fc0cb73eb9fe",
+  "id": "zlab-princeton/SWEeper-Bench",
+  "author": "zlab-princeton",
+  "sha": "f10cd684be52322667f1373c8295624e13791b8f",
+  "lastModified": "2026-10-16T15:35:04.000Z",
+  "private": false,
+  "gated": false,
+  "disabled": false,
+  "tags": [
+    "task_categories:other",
+    "language:en",
+    "license:cc-by-4.0",
+    "size_categories:n<1K",
+    "arxiv:2610.14096",
+    "region:us",
+    "code",
+    "agents",
+    "software-engineering",
+    "software-testing",
+    "web-applications",
+    "benchmark"
+  ],
+  "description": "\n\t\n\t\t\n\t\n\t\n\t\t\ud83e\uddf9 SWEeper-Bench\n\t\n\n\n\t\n\t\t\n\t\n\t\n\t\tCan Agents Discover Bugs in Interactive Software?\n\t\n\nPaper \u00b7 Blog \u00b7 Code \u00b7 Agent traces\nSWEeper-Bench tests whether coding agents can find and fix bugs that nobody has reported yet. It has 200 tasks, each built from a real bug fix in a different open-source web app. The agent gets the codebase and an open-ended request such as \"Find and fix issues in SearXNG's search suggestion interface.\" It is not told what the bug is. The bugs only appear after a\u2026 See the full description on the dataset page: https://huggingface.co/datasets/zlab-princeton/SWEeper-Bench.",
+  "downloads": 475,
+  "likes": 2,
+  "cardData": {
+    "language": [
+      "en"
+    ],
+    "license": "cc-by-4.0",
+    "size_categories": [
+      "n<1K"
+    ],
+    "pretty_name": "SWEeper-Bench",
+    "task_categories": [
+      "other"
+    ],
+    "tags": [
+      "code",
+      "agents",
+      "software-engineering",
+      "software-testing",
+      "web-applications",
+      "benchmark"
+    ],
+    "configs": [
+      {
+        "config_name": "default",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "data/test.parquet"
+          }
+        ]
+      }
+    ]
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes"
+    },
+    {
+      "rfilename": "README.md"
+    },
+    {
+      "rfilename": "data/test.jsonl"
+    },
+    {
+      "rfilename": "data/test.parquet"
+    }
+  ],
+  "createdAt": "2026-10-07T19:31:02.000Z",
+  "usedStorage": 410013
+}

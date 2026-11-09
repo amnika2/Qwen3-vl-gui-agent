@@ -1,0 +1,13 @@
+{
+  "case_id": "sweeper-142",
+  "workflows": {
+    "target": {
+      "task": "Edit address 10.10.1.3: set {'description': ''}, preserve the other field, save and reopen the same address dialog. Check the saved fields.",
+      "expected": "{\"description\": \"\", \"hostname\": \"server1.cust1.local\"}"
+    },
+    "preservation": {
+      "task": "Edit address 10.10.1.4: set {'hostname': 'server2-preserved.cust1.local'}, preserve the other field, save and reopen the same address dialog. Check the saved fields.",
+      "expected": "{\"description\": \"Server2\", \"hostname\": \"server2-preserved.cust1.local\"}"
+    }
+  }
+}

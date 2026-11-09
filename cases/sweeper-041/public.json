@@ -1,0 +1,15 @@
+{
+  "case_id": "sweeper-041",
+  "start_path": "/admin/blogger.php",
+  "setup": "A fresh test instance and an authenticated profile session are prepared for each run.",
+  "workflows": {
+    "target": {
+      "task": "On the signed-in user's Profile page, change only Nickname to Saved Pen Name. Keep Username unchanged. Click Save, then reload or reopen the same Profile page. Check whether Nickname still reads Saved Pen Name. Report pass if it persisted, fail if it did not persist, or blocked if you could not complete the check. Cite screenshots from after reopening.",
+      "expected": "Saved Pen Name"
+    },
+    "preservation": {
+      "task": "On the signed-in user's Profile page, change only Nickname to Board Pen Name. Keep Username unchanged. Click Save, then reload or reopen the same Profile page. Check whether Nickname still reads Board Pen Name. Report pass if it persisted, fail if it did not persist, or blocked if you could not complete the check. Cite screenshots from after reopening.",
+      "expected": "Board Pen Name"
+    }
+  }
+}

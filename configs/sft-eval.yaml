@@ -1,0 +1,17 @@
+split: frozen-five-sft-comparison
+agent_config: configs/agent.yaml
+adapter_path: runs/sft-qwen3vl-10apps-v1/adapter
+method: qwen-controlled
+cases: [sweeper-005, sweeper-007, sweeper-008, sweeper-040, sweeper-041]
+builds: [A, B]
+workflows: [target, preservation]
+repeats: 2
+baseline_experiments:
+- evaluation-092189cf
+- evaluation-40fa4011
+baseline_implementation_hash: b5e494ce2b052e202e770344f0c7b2a8badf3c78f45b41e8897ff07e6c9ce8f1
+note: >-
+  每种权重40格。复用上述40条未微调qwen-controlled结果，adapter只新增40格；
+  按应用分5个worker，每个worker只加载一次模型，执行该应用全部A/B与workflow的8格，
+  共享同一agent配置和persistence提示词。
+  blocked、inconclusive和infra_error均保留，续跑只补未开始或interrupted的格。

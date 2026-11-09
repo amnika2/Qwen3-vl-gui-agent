@@ -1,0 +1,9 @@
+case_id,build,workflow,method,repeat,run_id,started,agent_verdict,oracle_verdict,elapsed_seconds,actions,model_calls,termination_reason
+sweeper-196,A,target,script,0,20261107T110049Z-3f2ebab5,True,blocked,infra_error,11.831555320997722,0,0,infrastructure_failure
+sweeper-196,A,target,script,1,20261107T110101Z-f7d5c061,True,blocked,infra_error,12.006040464970283,0,0,infrastructure_failure
+sweeper-196,A,preservation,script,0,20261107T110113Z-8b4cf5a8,True,blocked,infra_error,11.900299944914877,0,0,infrastructure_failure
+sweeper-196,A,preservation,script,1,20261107T110125Z-c69c1c64,True,blocked,infra_error,11.847259038011543,0,0,infrastructure_failure
+sweeper-196,B,target,script,0,20261107T110137Z-5ab9fff2,True,blocked,infra_error,11.845170421991497,0,0,infrastructure_failure
+sweeper-196,B,target,script,1,20261107T110148Z-ef1bdff1,True,blocked,infra_error,11.83826247008983,0,0,infrastructure_failure
+sweeper-196,B,preservation,script,0,20261107T110200Z-916471b1,True,blocked,infra_error,12.220414525945671,0,0,infrastructure_failure
+sweeper-196,B,preservation,script,1,20261107T110212Z-9b430395,True,blocked,infra_error,12.502297996077687,0,0,infrastructure_failure

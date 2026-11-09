@@ -1,0 +1,9 @@
+case_id,build,workflow,method,repeat,run_id,started,agent_verdict,oracle_verdict,elapsed_seconds,actions,model_calls,termination_reason
+sweeper-150,A,target,sft,0,20261107T094135Z-7c87c261,True,fail,fail,9.06025790493004,15,0,sft_recorded
+sweeper-150,A,target,sft,1,20261107T094144Z-2d16ba74,True,fail,fail,8.482788168941624,15,0,sft_recorded
+sweeper-150,A,preservation,sft,0,20261107T094152Z-2149222f,True,pass,pass,9.848945662961341,17,0,sft_recorded
+sweeper-150,A,preservation,sft,1,20261107T094202Z-46b1c5c7,True,pass,pass,9.791162622044794,17,0,sft_recorded
+sweeper-150,B,target,sft,0,20261107T094212Z-4446f596,True,pass,pass,8.383934929966927,15,0,sft_recorded
+sweeper-150,B,target,sft,1,20261107T094220Z-124a75e2,True,pass,pass,8.563925993978046,15,0,sft_recorded
+sweeper-150,B,preservation,sft,0,20261107T094229Z-e059db77,True,pass,pass,9.634979391936213,17,0,sft_recorded
+sweeper-150,B,preservation,sft,1,20261107T094238Z-70904132,True,pass,pass,9.931865212041885,17,0,sft_recorded

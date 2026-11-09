@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "guiqa"
+version = "0.1.0"
+description = "Screenshot-driven GUI regression tests with independent evidence"
+requires-python = ">=3.10"
+dependencies = ["playwright>=1.50", "PyYAML>=6", "requests>=2.32", "Pillow>=11"]
+
+[project.optional-dependencies]
+model = ["torch>=2.6", "torchvision>=0.21", "transformers>=4.57,<5", "accelerate>=1.10", "peft>=0.17,<1", "lm-format-enforcer==0.11.3"]
+agent = ["mcp==2.3.0"]
+test = ["pytest>=8"]
+
+[project.scripts]
+guiqa = "guiqa.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

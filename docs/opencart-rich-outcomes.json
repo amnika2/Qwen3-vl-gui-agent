@@ -1,0 +1,223 @@
+{
+  "scenarios": 12,
+  "by_build": {
+    "A": 6,
+    "B": 6
+  },
+  "by_family": {
+    "decimal_weight": 2,
+    "weight_and_quantity": 2,
+    "quantity_then_weight": 3,
+    "precise_decimal": 2,
+    "integer_weight": 2,
+    "integer_and_quantity": 1
+  },
+  "outcomes": [
+    {
+      "scenario_id": "opencart-green-decimal",
+      "build": "A",
+      "workflow": "target",
+      "data_split": "train",
+      "requested": {
+        "weight": "0.6"
+      },
+      "reopened": {
+        "weight": "1"
+      },
+      "actual_label": "fail",
+      "option_label": "Green",
+      "submit_step": 9,
+      "reopen_step": 13
+    },
+    {
+      "scenario_id": "opencart-green-three-quarter",
+      "build": "B",
+      "workflow": "target",
+      "data_split": "train",
+      "requested": {
+        "weight": "0.75"
+      },
+      "reopened": {
+        "weight": "0.75"
+      },
+      "actual_label": "pass",
+      "option_label": "Green",
+      "submit_step": 10,
+      "reopen_step": 14
+    },
+    {
+      "scenario_id": "opencart-blue-stock",
+      "build": "A",
+      "workflow": "target",
+      "data_split": "train",
+      "requested": {
+        "quantity": 123,
+        "weight": "1.25"
+      },
+      "reopened": {
+        "quantity": 123,
+        "weight": "1"
+      },
+      "actual_label": "fail",
+      "option_label": "Blue",
+      "submit_step": 12,
+      "reopen_step": 16
+    },
+    {
+      "scenario_id": "opencart-red-stock-first",
+      "build": "B",
+      "workflow": "target",
+      "data_split": "train",
+      "requested": {
+        "quantity": 87,
+        "weight": "1.5"
+      },
+      "reopened": {
+        "quantity": 87,
+        "weight": "1.5"
+      },
+      "actual_label": "pass",
+      "option_label": "Red",
+      "submit_step": 13,
+      "reopen_step": 17
+    },
+    {
+      "scenario_id": "opencart-yellow-eighth",
+      "build": "A",
+      "workflow": "target",
+      "data_split": "train",
+      "requested": {
+        "weight": "0.125"
+      },
+      "reopened": {
+        "weight": "0"
+      },
+      "actual_label": "fail",
+      "option_label": "Yellow",
+      "submit_step": 10,
+      "reopen_step": 14
+    },
+    {
+      "scenario_id": "opencart-yellow-seven-eighth",
+      "build": "B",
+      "workflow": "target",
+      "data_split": "train",
+      "requested": {
+        "weight": "0.875"
+      },
+      "reopened": {
+        "weight": "0.875"
+      },
+      "actual_label": "pass",
+      "option_label": "Yellow",
+      "submit_step": 9,
+      "reopen_step": 13
+    },
+    {
+      "scenario_id": "opencart-red-replenish",
+      "build": "A",
+      "workflow": "target",
+      "data_split": "train",
+      "requested": {
+        "quantity": 146,
+        "weight": "2.25"
+      },
+      "reopened": {
+        "quantity": 146,
+        "weight": "2"
+      },
+      "actual_label": "fail",
+      "option_label": "Red",
+      "submit_step": 12,
+      "reopen_step": 16
+    },
+    {
+      "scenario_id": "opencart-blue-bulk",
+      "build": "B",
+      "workflow": "target",
+      "data_split": "train",
+      "requested": {
+        "quantity": 235,
+        "weight": "4.125"
+      },
+      "reopened": {
+        "quantity": 235,
+        "weight": "4.125"
+      },
+      "actual_label": "pass",
+      "option_label": "Blue",
+      "submit_step": 13,
+      "reopen_step": 17
+    },
+    {
+      "scenario_id": "opencart-radio-medium",
+      "build": "A",
+      "workflow": "preservation",
+      "data_split": "train",
+      "requested": {
+        "weight": "25"
+      },
+      "reopened": {
+        "weight": "25"
+      },
+      "actual_label": "pass",
+      "option_label": "Medium",
+      "submit_step": 10,
+      "reopen_step": 13
+    },
+    {
+      "scenario_id": "opencart-radio-small",
+      "build": "B",
+      "workflow": "preservation",
+      "data_split": "train",
+      "requested": {
+        "quantity": 62,
+        "weight": "12"
+      },
+      "reopened": {
+        "quantity": 62,
+        "weight": "12"
+      },
+      "actual_label": "pass",
+      "option_label": "Small",
+      "submit_step": 12,
+      "reopen_step": 15
+    },
+    {
+      "scenario_id": "opencart-validation-green",
+      "build": "A",
+      "workflow": "target",
+      "data_split": "validation",
+      "requested": {
+        "quantity": 174,
+        "weight": "0.375"
+      },
+      "reopened": {
+        "quantity": 174,
+        "weight": "0"
+      },
+      "actual_label": "fail",
+      "option_label": "Green",
+      "submit_step": 13,
+      "reopen_step": 17
+    },
+    {
+      "scenario_id": "opencart-validation-large",
+      "build": "B",
+      "workflow": "preservation",
+      "data_split": "validation",
+      "requested": {
+        "weight": "42"
+      },
+      "reopened": {
+        "weight": "42"
+      },
+      "actual_label": "pass",
+      "option_label": "Large",
+      "submit_step": 9,
+      "reopen_step": 12
+    }
+  ],
+  "all_final_values_read_after_the_matching_product_save": true,
+  "same_product_and_option_verified": true
+}

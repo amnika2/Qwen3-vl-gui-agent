@@ -1,0 +1,3 @@
+split: reuse-former-holdout
+cases: [sweeper-040, sweeper-007, sweeper-008]
+repeats: 2

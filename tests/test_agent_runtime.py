@@ -1,0 +1,197 @@
+import json
+from pathlib import Path
+import sys
+
+import pytest
+from playwright.sync_api import sync_playwright
+
+from guiqa.actions import parse_action
+from guiqa.agent_memory import ExperienceStore
+from guiqa.agent_tools import MCPConnections, ToolRegistry
+from guiqa.cli import load_config
+from guiqa.model import FakeModel, Qwen
+from guiqa.runner import RunContext, agent
+
+
+def memory_server(database, namespace="test"):
+    return {"name": "memory", "command": sys.executable,
+            "args": ["-m", "guiqa.mcp_server", "--database", str(database), "--namespace", namespace]}
+
+
+def test_memory_survives_restart_and_keeps_namespaces_separate(tmp_path):
+    database = tmp_path / "memory.sqlite3"
+    ExperienceStore(database).save("interactive", "008", "target", "Edit a site variable",
+        ["Open the variable, replace Value, save and reopen"], ["Check the reopened value"], "first-run")
+    restarted = ExperienceStore(database)
+    assert restarted.search("frozen-evaluation", "Edit a site variable", "008", "target")["experiences"] == []
+    recalled = restarted.search("interactive", "Create a site variable", "008", "preservation")["experiences"]
+    assert len(recalled) == 1
+    assert recalled[0]["source_run_id"] == "first-run"
+    assert "task" not in recalled[0]
+    assert recalled[0]["procedure"] == ["Open the variable, replace Value, save and reopen"]
+
+
+def test_real_mcp_discovery_write_restart_and_read(tmp_path):
+    server = memory_server(tmp_path / "memory.sqlite3")
+    with MCPConnections([server]) as tools:
+        assert set(tools.catalog) == {"memory__search_experiences", "memory__save_experience"}
+        saved = tools.call("memory__save_experience", {
+            "case_id": "008", "workflow": "target", "task": "Edit a variable",
+            "procedure": ["Select all before replacing"], "lessons": ["Reopen after Save"],
+            "source_run_id": "episode-one"})
+        assert not saved["is_error"]
+        assert saved["data"]["experience_id"] == 1
+        catalog = tools.catalog
+    with MCPConnections([server]) as restarted:
+        result = restarted.call("memory__search_experiences", {
+            "task": "Create another variable", "case_id": "008", "workflow": "preservation"})
+        assert result["data"]["experiences"][0]["source_run_id"] == "episode-one"
+    with pytest.raises(ValueError, match="minimum"):
+        parse_action(json.dumps({"action": "tool", "name": "memory__search_experiences", "arguments": {
+            "task": "Edit a variable", "case_id": "008", "workflow": "target", "limit": 0}}),
+            {0}, tools=catalog)
+    with pytest.raises(ValueError, match="available tool"):
+        parse_action('{"action":"tool","name":"missing","arguments":{}}', {0}, tools=catalog)
+
+
+class ContextModel(FakeModel):
+    def __init__(self, responses):
+        super().__init__(responses)
+        self.progress = []
+        self.reasons = []
+        self.compacted = []
+
+    def generate(self, task, screenshot, history, remaining, progress=None, **kwargs):
+        self.progress.append(json.loads(json.dumps({"history": history[-2:], "progress": progress})))
+        return super().generate(task, screenshot, history, remaining, progress=progress, **kwargs)
+
+    def update_context(self, task, screenshot, previous, compacted, recent, reason, remaining):
+        self.reasons.append(reason)
+        self.compacted.extend(compacted)
+        entered = [row["action"]["text"] for row in self.compacted
+                   if row.get("action") and row["action"]["action"] == "type"]
+        update = {"summary": "Earlier typed values: " + repr(entered),
+                  "reflection": reason, "next_goal": "Inspect the current page"}
+        if previous["plan"]:
+            update["statuses"] = ["done" if entered else "in_progress", "pending"]
+        else:
+            update.update(plan=[{"step": "Enter requested value", "status": "in_progress"},
+                                {"step": "Save and reopen", "status": "pending"}], summary="", reflection="")
+        return json.dumps(update)
+
+    def learn_episode(self, episode, remaining):
+        assert "PRIVATE_ORACLE" not in json.dumps(episode)
+        assert "Important earlier target" not in json.dumps(episode)
+        assert "task" not in episode
+        return json.dumps({"procedure": ["Focus the field, select all, replace, Save, then reopen"],
+                           "lessons": ["Verify the current saved value rather than reusing a previous result"]})
+
+
+def test_browser_context_compaction_mcp_feedback_and_final_memory(tmp_path):
+    class Observer:
+        def capture(self, step, screenshot):
+            pass
+
+    database = tmp_path / "memory.sqlite3"
+    ExperienceStore(database).save("test", "synthetic", "target", "Replace a field",
+                                 ["Select all before typing"], ["Reopen to verify"], "previous-episode")
+    lookup = {"action": "tool", "name": "memory__search_experiences", "arguments": {
+        "task": "Replace a field", "case_id": "synthetic", "workflow": "target"}}
+    actions = [lookup, {"action": "click", "coordinate": [200, 100]},
+               {"action": "press", "key": "Control+a"},
+               {"action": "type", "text": "Important earlier target"},
+               *[{"action": "press", "key": "ArrowRight"}] * 3,
+               {"action": "finish", "verdict": "blocked", "observation": "No Save exists", "evidence_steps": [6]},
+               {"action": "finish", "verdict": "blocked", "observation": "No Save exists", "evidence_steps": [7]}]
+    model = ContextModel([json.dumps(action) for action in actions])
+    config = {"wall_seconds": 60, "max_actions": 30, "history_actions": 2,
+              "agent_runtime": {"enabled": True, "refresh_actions": 2, "memory_database": str(database),
+                                "memory_namespace": "test", "memory_top_k": 3, "max_tool_calls": 3}}
+    with sync_playwright() as playwright:
+        with playwright.chromium.launch() as browser:
+            page = browser.new_page(viewport={"width": 1280, "height": 900})
+            page.route("http://guiqa.test/", lambda route: route.fulfill(
+                body='<input value="Old" style="position:absolute;left:150px;top:75px;width:300px">'))
+            page.goto("http://guiqa.test/")
+            result = dict(run_id="new-episode", case_id="synthetic", workflow="target", method="qwen-controlled",
+                          actions=0, model_calls=0, agent_verdict="blocked", actual="PRIVATE_ORACLE")
+            context = RunContext(tmp_path, result, Observer(), page)
+            context.capture("initial")
+            agent(context, "Replace a field and Save", model, config)
+    state = json.loads((tmp_path / "task-state.json").read_text())
+    assert state["phase"] == "finished"
+    assert [step["step"] for step in state["plan"]] == ["Enter requested value", "Save and reopen"]
+    assert state["compacted_through_step"] >= 3
+    assert "Important earlier target" in state["summary"]
+    assert any("action_cycle" in reason for reason in model.reasons)
+    assert "tool_result: memory__search_experiences" in model.reasons
+    assert any(item["progress"]["tool_observations"] for item in model.progress)
+    assert any("Important earlier target" in item["progress"]["task_state"]["summary"]
+               and not any(row.get("action", {}).get("action") == "type" for row in item["history"])
+               for item in model.progress if all(row.get("action") for row in item["history"]))
+    calls = [json.loads(line) for line in (tmp_path / "tool-calls.jsonl").read_text().splitlines()]
+    assert any(row["name"].startswith("browser__") for row in calls)
+    assert any(row["name"] == "memory__search_experiences" and row["caller"] == "agent" for row in calls)
+    assert result["agent_runtime"]["retrieved_experiences"] == 1
+    assert result["agent_runtime"]["external_tool_calls"] == 1
+    recalled = ExperienceStore(database).search("test", "Replace another field", "synthetic", "target")
+    assert {row["source_run_id"] for row in recalled["experiences"]} == {"previous-episode", "new-episode"}
+
+
+def test_model_prompt_contains_summary_plan_and_discovered_tools(tmp_path):
+    from PIL import Image
+
+    image = tmp_path / "screen.png"
+    Image.new("RGB", (8, 8), "white").save(image)
+    model = Qwen({"agent_runtime": {"enabled": True}, "history_actions": 2})
+    model.load = lambda: None
+    captured = []
+    model._generate = lambda messages, *args, **kwargs: captured.append(messages) or "response"
+    model.generate("Update a variable", image, [], 30,
+                   progress={"summary": "Earlier Save was accepted", "tools": [{"name": "memory__search_experiences"}]})
+    text = "\n".join(block["text"] for message in captured[0] for block in message["content"] if block["type"] == "text")
+    assert "Earlier Save was accepted" in text
+    assert '"action":"tool"' in text
+    assert "memory__search_experiences" in text
+
+
+def test_browser_tool_format_uses_existing_action_validation(tmp_path):
+    class Connections:
+        catalog = {}
+
+    registry = ToolRegistry(None, tmp_path, Connections())
+    action = parse_action(json.dumps({"action": "tool", "name": "browser__click",
+                                      "arguments": {"coordinate": [180, 300]}}), {0}, tools=registry.catalog)
+    assert action == {"action": "click", "coordinate": [180, 300]}
+    with pytest.raises(ValueError, match="coordinate"):
+        parse_action(json.dumps({"action": "tool", "name": "browser__click",
+                                 "arguments": {"coordinate": [180, 1001]}}), {0}, tools=registry.catalog)
+
+
+def test_external_mcp_tool_error_is_returned_to_the_caller(tmp_path):
+    server = tmp_path / "external.py"
+    server.write_text('''from mcp.server import MCPServer
+from mcp.server.mcpserver.exceptions import ToolError
+server = MCPServer("external-demo")
+@server.tool()
+def lookup_hint(topic: str) -> str:
+    if topic != "replace":
+        raise ToolError("Unknown topic; use replace")
+    return "Select all before replacing text"
+server.run()
+''')
+    with MCPConnections([{"name": "external", "command": sys.executable, "args": [str(server)]}]) as tools:
+        assert "external__lookup_hint" in tools.catalog
+        failed = tools.call("external__lookup_hint", {"topic": "missing"})
+        assert failed["is_error"]
+        assert "Unknown topic" in failed["text"]
+        corrected = tools.call("external__lookup_hint", {"topic": "replace"})
+        assert not corrected["is_error"]
+        assert corrected["text"] == "Select all before replacing text"
+
+
+def test_full_config_resolves_persistent_database():
+    root = Path(__file__).resolve().parents[1]
+    config = load_config(root / "configs/agent-full-grpo.yaml")
+    assert config["agent_runtime"]["memory_database"] == str(root / ".runtime/agent-memory.sqlite3")
+    assert config["adapter_path"].endswith("rl-review-grpo-expanded-v1/adapter")

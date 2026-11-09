@@ -1,0 +1,4 @@
+split: holdout
+cases: [sweeper-007]
+builds: [B]
+repeats: 2

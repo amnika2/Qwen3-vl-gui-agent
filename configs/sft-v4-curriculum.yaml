@@ -1,0 +1,19 @@
+case_id: sweeper-125
+app: opencart
+build: B
+groups:
+  - id: cedar
+    split: train
+    name: Cedar Harbor Lamp
+    model: CEDAR-11
+    edited_name: Cedar Harbor Lamp Revised
+  - id: willow
+    split: train
+    name: Willow Finch Stand
+    model: WILLOW-22
+    edited_name: Willow Finch Stand Revised
+  - id: maple
+    split: validation
+    name: Maple Coast Clock
+    model: MAPLE-33
+    edited_name: Maple Coast Clock Revised

@@ -1,0 +1,354 @@
+{
+  "reviewer": "impress_opencart: direct inspection of unchanged source screenshots",
+  "runs": {
+    "20261107T161423Z-7273639a": {
+      "frames": [
+        {
+          "step": 9,
+          "input_proof_steps": [
+            5,
+            9
+          ],
+          "result_proof_steps": [],
+          "visible_values": {
+            "sitename": "Riverside Makers Hub",
+            "slogan": "Repair, learn, and share practical skills"
+          },
+          "screenshot_sha256": "45a75b1da65a96e18055fe1d3439eb95f3719416bdd38d12d3458afdf328e2d9",
+          "observation": "All listed labeled input fields and complete values are simultaneously visible in this selected typed-state screenshot; each earlier field remains visible after typing the final field."
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    },
+    "20261107T161434Z-727c715f": {
+      "frames": [
+        {
+          "step": 9,
+          "input_proof_steps": [
+            5,
+            9
+          ],
+          "result_proof_steps": [],
+          "visible_values": {
+            "sitename": "Oak Street Library",
+            "adminmail": "library-admin@example.test"
+          },
+          "screenshot_sha256": "6133da5e59882b7e8646307d2a3504078a3d19ce3d67ad7293978d39c6ba6e95",
+          "observation": "All listed labeled input fields and complete values are simultaneously visible in this selected typed-state screenshot; each earlier field remains visible after typing the final field."
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    },
+    "20261107T161443Z-ae57a139": {
+      "frames": [
+        {
+          "step": 12,
+          "input_proof_steps": [
+            4,
+            8,
+            12
+          ],
+          "result_proof_steps": [],
+          "visible_values": {
+            "sitename": "Harbour History Centre",
+            "slogan": "Discover the stories behind our waterfront",
+            "adminmail": "harbour-team@example.test"
+          },
+          "screenshot_sha256": "1b810e8022a062aec183619f7a002419f0ba06d70ac077f8680f709ff5bdb18f",
+          "observation": "All listed labeled input fields and complete values are simultaneously visible in this selected typed-state screenshot; each earlier field remains visible after typing the final field."
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    },
+    "20261107T161455Z-52302093": {
+      "frames": [
+        {
+          "step": 8,
+          "input_proof_steps": [
+            4,
+            8
+          ],
+          "result_proof_steps": [],
+          "visible_values": {
+            "sitename": "城北社区资料馆",
+            "slogan": "保存街区记忆，分享本地故事"
+          },
+          "screenshot_sha256": "03d41851b2139c17328ca30932099cad9ca5fd4fbcb62abf74d12dcb3b829248",
+          "observation": "All listed labeled input fields and complete values are simultaneously visible in this selected typed-state screenshot; each earlier field remains visible after typing the final field."
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    },
+    "20261107T161504Z-9537fd5f": {
+      "frames": [
+        {
+          "step": 9,
+          "input_proof_steps": [
+            5,
+            9
+          ],
+          "result_proof_steps": [],
+          "visible_values": {
+            "sitename": "Atelier du quartier",
+            "slogan": "Réparer ensemble et transmettre les savoir-faire"
+          },
+          "screenshot_sha256": "5838577cfa048b8885abff3bb6f2a6ef517e5b87b45727f720fc31e58c04014b",
+          "observation": "All listed labeled input fields and complete values are simultaneously visible in this selected typed-state screenshot; each earlier field remains visible after typing the final field."
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    },
+    "20261107T161523Z-c9c8de68": {
+      "frames": [
+        {
+          "step": 8,
+          "input_proof_steps": [
+            4,
+            8
+          ],
+          "result_proof_steps": [],
+          "visible_values": {
+            "sitename": "Cedar & Grove Community Hub",
+            "slogan": "What's on: talks, walks & workshops"
+          },
+          "screenshot_sha256": "8f99f321ffff9552e80a8ea5a68e58fcf965b7c2534c41fd29dcedae7007e640",
+          "observation": "All listed labeled input fields and complete values are simultaneously visible in this selected typed-state screenshot; each earlier field remains visible after typing the final field."
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    },
+    "20261107T161534Z-a21187b6": {
+      "frames": [
+        {
+          "step": 12,
+          "input_proof_steps": [
+            4,
+            8,
+            12
+          ],
+          "result_proof_steps": [],
+          "visible_values": {
+            "sitename": "Northgate Events Desk",
+            "slogan": "Plan local events with the neighbourhood team",
+            "adminmail": "events-desk@example.test"
+          },
+          "screenshot_sha256": "7f08388d84c5024c4e920ee83b22711c3379d00d2e059c3173ffb0c718b4d742",
+          "observation": "All listed labeled input fields and complete values are simultaneously visible in this selected typed-state screenshot; each earlier field remains visible after typing the final field."
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    },
+    "20261107T161545Z-8deb5ca2": {
+      "frames": [
+        {
+          "step": 13,
+          "input_proof_steps": [
+            5,
+            9,
+            13
+          ],
+          "result_proof_steps": [],
+          "visible_values": {
+            "sitename": "Birch Reading Room",
+            "slogan": "Local collections and a welcoming reading room",
+            "adminmail": "reading-room@example.test"
+          },
+          "screenshot_sha256": "43e1a75c2de5b5a076d34e8fefff4ac8edebb6781d3c5e1ee43bc13a15fbecf3",
+          "observation": "All listed labeled input fields and complete values are simultaneously visible in this selected typed-state screenshot; each earlier field remains visible after typing the final field."
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    },
+    "20261107T161557Z-48e0fac3": {
+      "frames": [
+        {
+          "step": 9,
+          "input_proof_steps": [
+            5,
+            9
+          ],
+          "result_proof_steps": [],
+          "visible_values": {
+            "sitename": "Community Advice Office",
+            "adminmail": "advice-office@example.test"
+          },
+          "screenshot_sha256": "c073ea2119630bdb9365124923099d0eafcae5781402bc95ac17211943dbafad",
+          "observation": "All listed labeled input fields and complete values are simultaneously visible in this selected typed-state screenshot; each earlier field remains visible after typing the final field."
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    },
+    "20261107T161606Z-0a4329ea": {
+      "frames": [
+        {
+          "step": 8,
+          "input_proof_steps": [
+            4,
+            8
+          ],
+          "result_proof_steps": [],
+          "visible_values": {
+            "sitename": "Meadow Garden Group",
+            "slogan": "Grow useful plants and share seasonal knowledge"
+          },
+          "screenshot_sha256": "c730df6ce23220efe56bde1ffb1ec05701f7c0ab6a921e9bac64bdd24928c4d1",
+          "observation": "All listed labeled input fields and complete values are simultaneously visible in this selected typed-state screenshot; each earlier field remains visible after typing the final field."
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    },
+    "20261107T160418Z-4d4606ef": {
+      "frames": [
+        {
+          "step": 8,
+          "input_proof_steps": [
+            5,
+            8
+          ],
+          "result_proof_steps": [],
+          "visible_values": {
+            "option": "Blue",
+            "quantity": "123",
+            "weight": "1.25",
+            "prefix": "+"
+          },
+          "screenshot_sha256": "aeb203f28077a877e89f67b87821b4688d36bc5077d966798a533bf8d653acd1",
+          "observation": "All listed labeled input fields and complete values are simultaneously visible in this selected typed-state screenshot; each earlier field remains visible after typing the final field."
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    },
+    "20261107T160430Z-082c91ee": {
+      "frames": [
+        {
+          "step": 9,
+          "input_proof_steps": [
+            6,
+            9
+          ],
+          "result_proof_steps": [],
+          "visible_values": {
+            "option": "Red",
+            "quantity": "87",
+            "weight": "1.5",
+            "prefix": "+"
+          },
+          "screenshot_sha256": "6262f04187d94094216e562e8bd979c86636c798f5bf4de663f82769d7c97ab9",
+          "observation": "All listed labeled input fields and complete values are simultaneously visible in this selected typed-state screenshot; each earlier field remains visible after typing the final field."
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    },
+    "20261107T160506Z-afd9b8bc": {
+      "frames": [
+        {
+          "step": 8,
+          "input_proof_steps": [
+            5,
+            8
+          ],
+          "result_proof_steps": [],
+          "visible_values": {
+            "option": "Red",
+            "quantity": "146",
+            "weight": "2.25",
+            "prefix": "+"
+          },
+          "screenshot_sha256": "4873f98e932b0ab4b32ac88bff283921ef6552c8928b7d10145280e107a7abb2",
+          "observation": "All listed labeled input fields and complete values are simultaneously visible in this selected typed-state screenshot; each earlier field remains visible after typing the final field."
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    },
+    "20261107T160519Z-b19c593a": {
+      "frames": [
+        {
+          "step": 9,
+          "input_proof_steps": [
+            6,
+            9
+          ],
+          "result_proof_steps": [],
+          "visible_values": {
+            "option": "Blue",
+            "quantity": "235",
+            "weight": "4.125",
+            "prefix": "+"
+          },
+          "screenshot_sha256": "2ff0aef2d8e5e3994440917f3724515e6dd841bd5c1151299cebdaa86e38f7ad",
+          "observation": "All listed labeled input fields and complete values are simultaneously visible in this selected typed-state screenshot; each earlier field remains visible after typing the final field."
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    },
+    "20261107T160547Z-7b21fd70": {
+      "frames": [
+        {
+          "step": 8,
+          "input_proof_steps": [
+            5,
+            8
+          ],
+          "result_proof_steps": [],
+          "visible_values": {
+            "option": "Small",
+            "quantity": "62",
+            "weight": "12",
+            "prefix": "+"
+          },
+          "screenshot_sha256": "1a658dee97b5e556f58654f625d1a6475f9738710b78581fcec58c3345787b7e",
+          "observation": "All listed labeled input fields and complete values are simultaneously visible in this selected typed-state screenshot; each earlier field remains visible after typing the final field."
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    },
+    "20261107T160603Z-c8477069": {
+      "frames": [
+        {
+          "step": 9,
+          "input_proof_steps": [
+            6,
+            9
+          ],
+          "result_proof_steps": [],
+          "visible_values": {
+            "option": "Green",
+            "quantity": "174",
+            "weight": "0.375",
+            "prefix": "+"
+          },
+          "screenshot_sha256": "2fd97ea865a913c84b21af265c11aab7c47bab6571ca0d8e2efb133d2bbdb2aa",
+          "observation": "All listed labeled input fields and complete values are simultaneously visible in this selected typed-state screenshot; each earlier field remains visible after typing the final field."
+        }
+      ],
+      "unestablished_input_proof_steps": [],
+      "unestablished_result_proof_steps": []
+    },
+    "20261107T161515Z-b2c97ecb": {
+      "frames": [],
+      "unestablished_input_proof_steps": [
+        5
+      ],
+      "unestablished_result_proof_steps": [],
+      "unestablished_required_fields": [
+        "the complete Site name"
+      ],
+      "observation": "Step 5 horizontally clips the start of the long Site name. Only its ending (Neighbourhood Events and Community Support) is visible. The remaining selected frame is the error page, so the full requested input is not established in this review window."
+    }
+  }
+}

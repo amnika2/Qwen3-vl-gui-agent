@@ -1,0 +1,5 @@
+frozen_before_first_model_run: true
+development: [sweeper-041, sweeper-005]
+holdout: [sweeper-040, sweeper-007, sweeper-008]
+pending_environment_calibration: []
+note: The two original pending candidates were admitted after 8/8 independent calibrations each, with controller byte equality checked against round 3 before model evaluation.

@@ -1,0 +1,1986 @@
+version: 1
+frozen_before_collection: true
+quota:
+  train: 160
+  validation: 18
+groups:
+- app: mantis
+  parent_scenario_id: expanded-v1-mantis-museum
+  data_split: train
+  workflow: target
+  family: released_version_multifield
+  builds:
+  - A
+  - B
+  fixture:
+    version: 1.1.0
+    summary: Museum badge loses saved details
+    description: The visitor badge panel loses the selected entrance. Check the west
+      entrance badge queue.
+    field_order:
+    - summary
+    - description
+- app: mantis
+  parent_scenario_id: expanded-v1-mantis-garden
+  data_split: train
+  workflow: target
+  family: released_version_multifield
+  builds:
+  - A
+  - B
+  fixture:
+    version: 1.1.0
+    summary: Garden booking loses saved details
+    description: The workshop booking shows the previous room. Book the seed exchange
+      in the greenhouse.
+    field_order:
+    - description
+    - summary
+- app: mantis
+  parent_scenario_id: expanded-v1-mantis-harvest
+  data_split: train
+  workflow: target
+  family: released_version_with_steps
+  builds:
+  - A
+  - B
+  fixture:
+    version: 1.1.0
+    summary: Harvest delivery loses saved details
+    description: The delivery window omits the collection address. Use the orchard
+      loading gate for collections.
+    field_order:
+    - summary
+    - description
+    - steps_to_reproduce
+    steps_to_reproduce: '1. Open the entry.
+
+      2. Change the selection.
+
+      3. Submit and reopen.'
+- app: mantis
+  parent_scenario_id: expanded-v1-mantis-marina
+  data_split: train
+  workflow: target
+  family: released_version_multifield
+  builds:
+  - A
+  - B
+  fixture:
+    version: 1.1.0
+    summary: Marina permit loses saved details
+    description: The berth permit preview drops the vessel length. Collect the permit
+      at the marina office.
+    field_order:
+    - description
+    - summary
+- app: mantis
+  parent_scenario_id: expanded-v1-mantis-trail
+  data_split: train
+  workflow: target
+  family: released_version_multifield
+  builds:
+  - A
+  - B
+  fixture:
+    version: 1.1.0
+    summary: Trail access loses saved details
+    description: The access map resets the selected walking route. Start the guided
+      walk from the south shelter.
+    field_order:
+    - summary
+    - description
+- app: mantis
+  parent_scenario_id: expanded-v1-mantis-library
+  data_split: train
+  workflow: target
+  family: released_version_with_steps
+  builds:
+  - A
+  - B
+  fixture:
+    version: 1.1.0
+    summary: Library shelf loses saved details
+    description: The shelf request form loses its collection code. Return reserved
+      volumes to the staffed desk.
+    field_order:
+    - description
+    - summary
+    - steps_to_reproduce
+    steps_to_reproduce: '1. Open the entry.
+
+      2. Change the selection.
+
+      3. Submit and reopen.'
+- app: mantis
+  parent_scenario_id: expanded-v1-mantis-market
+  data_split: train
+  workflow: target
+  family: released_version_multifield
+  builds:
+  - A
+  - B
+  fixture:
+    version: 1.1.0
+    summary: Market stall loses saved details
+    description: The stall allocation card repeats the old location. Unload stall
+      equipment beside the covered hall.
+    field_order:
+    - summary
+    - description
+- app: mantis
+  parent_scenario_id: expanded-v1-mantis-clinic
+  data_split: train
+  workflow: target
+  family: released_version_multifield
+  builds:
+  - A
+  - B
+  fixture:
+    version: 1.1.0
+    summary: Clinic visit loses saved details
+    description: The visit confirmation hides the room number. Report to reception
+      before the health session.
+    field_order:
+    - description
+    - summary
+- app: mantis
+  parent_scenario_id: expanded-v1-mantis-rehearsal
+  data_split: train
+  workflow: target
+  family: released_version_with_steps
+  builds:
+  - A
+  - B
+  fixture:
+    version: 1.1.0
+    summary: Rehearsal slot loses saved details
+    description: The rehearsal schedule omits the piano request. Reserve the rehearsal
+      studio for the quartet.
+    field_order:
+    - summary
+    - description
+    - steps_to_reproduce
+    steps_to_reproduce: '1. Open the entry.
+
+      2. Change the selection.
+
+      3. Submit and reopen.'
+- app: mantis
+  parent_scenario_id: expanded-v1-mantis-ferry
+  data_split: train
+  workflow: target
+  family: released_version_multifield
+  builds:
+  - A
+  - B
+  fixture:
+    version: 1.1.0
+    summary: Ferry cargo loses saved details
+    description: The cargo docket reverts the selected sailing. Present the cargo
+      label at the ferry desk.
+    field_order:
+    - description
+    - summary
+- app: mantis
+  parent_scenario_id: expanded-v1-mantis-weather
+  data_split: train
+  workflow: target
+  family: released_version_multifield
+  builds:
+  - A
+  - B
+  fixture:
+    version: 1.1.0
+    summary: Weather sensor loses saved details
+    description: The sensor detail resets the alert threshold. Record the sensor reading
+      before calibration.
+    field_order:
+    - summary
+    - description
+- app: mantis
+  parent_scenario_id: expanded-v1-mantis-festival
+  data_split: train
+  workflow: target
+  family: released_version_with_steps
+  builds:
+  - A
+  - B
+  fixture:
+    version: 1.1.0
+    summary: Festival entry loses saved details
+    description: The entry confirmation loses the companion count. Exchange the booking
+      code at the festival gate.
+    field_order:
+    - description
+    - summary
+    - steps_to_reproduce
+    steps_to_reproduce: '1. Open the entry.
+
+      2. Change the selection.
+
+      3. Submit and reopen.'
+- app: mantis
+  parent_scenario_id: expanded-v1-mantis-bicycle
+  data_split: train
+  workflow: target
+  family: released_version_multifield
+  builds:
+  - A
+  - B
+  fixture:
+    version: 1.1.0
+    summary: Bicycle locker loses saved details
+    description: The locker assignment displays the earlier rack. Leave the bicycle
+      key at the transport desk.
+    field_order:
+    - summary
+    - description
+- app: mantis
+  parent_scenario_id: expanded-v1-mantis-archive
+  data_split: train
+  workflow: target
+  family: released_version_multifield
+  builds:
+  - A
+  - B
+  fixture:
+    version: 1.1.0
+    summary: Archive scan loses saved details
+    description: The scan request drops its document reference. Use the archive reading
+      room for scanned records.
+    field_order:
+    - description
+    - summary
+- app: mantis
+  parent_scenario_id: expanded-v1-mantis-observatory
+  data_split: train
+  workflow: target
+  family: released_version_with_steps
+  builds:
+  - A
+  - B
+  fixture:
+    version: 1.1.0
+    summary: Observatory tour loses saved details
+    description: The tour ticket omits the selected telescope. Meet the astronomer
+      inside the east dome.
+    field_order:
+    - summary
+    - description
+    - steps_to_reproduce
+    steps_to_reproduce: '1. Open the entry.
+
+      2. Change the selection.
+
+      3. Submit and reopen.'
+- app: mantis
+  parent_scenario_id: expanded-v1-mantis-bakery
+  data_split: train
+  workflow: target
+  family: released_version_multifield
+  builds:
+  - A
+  - B
+  fixture:
+    version: 1.1.0
+    summary: Bakery order loses saved details
+    description: The order receipt repeats the previous pickup time. Collect reserved
+      bread from the side counter.
+    field_order:
+    - description
+    - summary
+- app: mantis
+  parent_scenario_id: expanded-v1-mantis-sailing
+  data_split: train
+  workflow: target
+  family: released_version_multifield
+  builds:
+  - A
+  - B
+  fixture:
+    version: 1.1.0
+    summary: Sailing lesson loses saved details
+    description: The lesson overview loses the equipment size. Check the life jacket
+      size before the lesson.
+    field_order:
+    - summary
+    - description
+- app: mantis
+  parent_scenario_id: expanded-v1-mantis-wildlife
+  data_split: train
+  workflow: target
+  family: released_version_with_steps
+  builds:
+  - A
+  - B
+  fixture:
+    version: 1.1.0
+    summary: Wildlife survey loses saved details
+    description: The survey sheet omits the observation sector. Record the bird survey
+      from the river hide.
+    field_order:
+    - description
+    - summary
+    - steps_to_reproduce
+    steps_to_reproduce: '1. Open the entry.
+
+      2. Change the selection.
+
+      3. Submit and reopen.'
+- app: mantis
+  parent_scenario_id: expanded-v1-mantis-repair
+  data_split: train
+  workflow: target
+  family: released_version_multifield
+  builds:
+  - A
+  - B
+  fixture:
+    version: 1.1.0
+    summary: Repair ticket loses saved details
+    description: The ticket header reverts its equipment category. Leave labelled
+      equipment at the repair bench.
+    field_order:
+    - summary
+    - description
+- app: mantis
+  parent_scenario_id: expanded-v1-mantis-choir
+  data_split: train
+  workflow: target
+  family: released_version_multifield
+  builds:
+  - A
+  - B
+  fixture:
+    version: 1.1.0
+    summary: Choir seating loses saved details
+    description: The seating preview drops the accessible aisle. Keep the accessible
+      choir aisle clear.
+    field_order:
+    - description
+    - summary
+- app: mantis
+  parent_scenario_id: expanded-v1-mantis-reservoir
+  data_split: validation
+  workflow: target
+  family: released_version_multifield
+  builds:
+  - A
+  - B
+  fixture:
+    version: 1.1.0
+    summary: Reservoir inspection loses saved details
+    description: The inspection page loses the overflow setting. Inspect the eastern
+      spillway control.
+    field_order:
+    - summary
+    - description
+- app: mantis
+  parent_scenario_id: expanded-v1-mantis-tram
+  data_split: validation
+  workflow: target
+  family: released_version_multifield
+  builds:
+  - A
+  - B
+  fixture:
+    version: 1.1.0
+    summary: Tram timetable loses saved details
+    description: The service card omits the requested platform. Meet the tram inspection
+      team at the depot.
+    field_order:
+    - description
+    - summary
+- app: mantis
+  parent_scenario_id: expanded-v1-mantis-quarry
+  data_split: validation
+  workflow: target
+  family: released_version_with_steps
+  builds:
+  - A
+  - B
+  fixture:
+    version: 1.1.0
+    summary: Quarry shipment loses saved details
+    description: The shipment card reverts the safety checklist. Collect the checklist
+      at the quarry weighbridge.
+    field_order:
+    - summary
+    - description
+    - steps_to_reproduce
+    steps_to_reproduce: '1. Open the entry.
+
+      2. Change the selection.
+
+      3. Submit and reopen.'
+- app: impress
+  parent_scenario_id: expanded-v1-impress-museum
+  data_split: train
+  workflow: target
+  family: preferences_sitename
+  builds:
+  - A
+  - B
+  fixture:
+    values:
+      sitename: Museum badge Centre
+    field_order:
+    - sitename
+    initial:
+      sitename: Museum badge Office
+      slogan: Information is being revised
+      adminmail: museum-old@service.example.test
+    start: editor
+- app: impress
+  parent_scenario_id: expanded-v1-impress-garden
+  data_split: train
+  workflow: target
+  family: preferences_slogan
+  builds:
+  - A
+  - B
+  fixture:
+    values:
+      slogan: Book the seed exchange in the greenhouse
+    field_order:
+    - slogan
+    initial:
+      sitename: Garden booking Office
+      slogan: Information is being revised
+      adminmail: garden-old@service.example.test
+    start: list
+- app: impress
+  parent_scenario_id: expanded-v1-impress-harvest
+  data_split: train
+  workflow: target
+  family: preferences_adminmail
+  builds:
+  - A
+  - B
+  fixture:
+    values:
+      adminmail: harvest-desk@service.example.test
+    field_order:
+    - adminmail
+    initial:
+      sitename: Harvest delivery Office
+      slogan: Information is being revised
+      adminmail: harvest-old@service.example.test
+    start: editor
+- app: impress
+  parent_scenario_id: expanded-v1-impress-marina
+  data_split: train
+  workflow: target
+  family: preferences_sitename_slogan
+  builds:
+  - A
+  - B
+  fixture:
+    values:
+      sitename: Marina permit Centre
+      slogan: Collect the permit at the marina office
+    field_order:
+    - slogan
+    - sitename
+    initial:
+      sitename: Marina permit Office
+      slogan: Information is being revised
+      adminmail: marina-old@service.example.test
+    start: list
+- app: impress
+  parent_scenario_id: expanded-v1-impress-trail
+  data_split: train
+  workflow: target
+  family: preferences_adminmail_sitename
+  builds:
+  - A
+  - B
+  fixture:
+    values:
+      adminmail: trail-desk@service.example.test
+      sitename: Trail access Centre
+    field_order:
+    - adminmail
+    - sitename
+    initial:
+      sitename: Trail access Office
+      slogan: Information is being revised
+      adminmail: trail-old@service.example.test
+    start: editor
+- app: impress
+  parent_scenario_id: expanded-v1-impress-library
+  data_split: train
+  workflow: target
+  family: preferences_sitename_slogan_adminmail
+  builds:
+  - A
+  - B
+  fixture:
+    values:
+      sitename: Library shelf Centre
+      slogan: Return reserved volumes to the staffed desk
+      adminmail: library-desk@service.example.test
+    field_order:
+    - adminmail
+    - slogan
+    - sitename
+    initial:
+      sitename: Library shelf Office
+      slogan: Information is being revised
+      adminmail: library-old@service.example.test
+    start: list
+- app: impress
+  parent_scenario_id: expanded-v1-impress-market
+  data_split: train
+  workflow: target
+  family: preferences_sitename
+  builds:
+  - A
+  - B
+  fixture:
+    values:
+      sitename: Market stall Centre
+    field_order:
+    - sitename
+    initial:
+      sitename: Market stall Office
+      slogan: Information is being revised
+      adminmail: market-old@service.example.test
+    start: editor
+- app: impress
+  parent_scenario_id: expanded-v1-impress-clinic
+  data_split: train
+  workflow: target
+  family: preferences_slogan
+  builds:
+  - A
+  - B
+  fixture:
+    values:
+      slogan: Report to reception before the health session
+    field_order:
+    - slogan
+    initial:
+      sitename: Clinic visit Office
+      slogan: Information is being revised
+      adminmail: clinic-old@service.example.test
+    start: list
+- app: impress
+  parent_scenario_id: expanded-v1-impress-rehearsal
+  data_split: train
+  workflow: target
+  family: preferences_adminmail
+  builds:
+  - A
+  - B
+  fixture:
+    values:
+      adminmail: rehearsal-desk@service.example.test
+    field_order:
+    - adminmail
+    initial:
+      sitename: Rehearsal slot Office
+      slogan: Information is being revised
+      adminmail: rehearsal-old@service.example.test
+    start: editor
+- app: impress
+  parent_scenario_id: expanded-v1-impress-ferry
+  data_split: train
+  workflow: target
+  family: preferences_sitename_slogan
+  builds:
+  - A
+  - B
+  fixture:
+    values:
+      sitename: Ferry cargo Centre
+      slogan: Present the cargo label at the ferry desk
+    field_order:
+    - slogan
+    - sitename
+    initial:
+      sitename: Ferry cargo Office
+      slogan: Information is being revised
+      adminmail: ferry-old@service.example.test
+    start: list
+- app: impress
+  parent_scenario_id: expanded-v1-impress-weather
+  data_split: train
+  workflow: target
+  family: preferences_adminmail_sitename
+  builds:
+  - A
+  - B
+  fixture:
+    values:
+      adminmail: weather-desk@service.example.test
+      sitename: Weather sensor Centre
+    field_order:
+    - adminmail
+    - sitename
+    initial:
+      sitename: Weather sensor Office
+      slogan: Information is being revised
+      adminmail: weather-old@service.example.test
+    start: editor
+- app: impress
+  parent_scenario_id: expanded-v1-impress-festival
+  data_split: train
+  workflow: target
+  family: preferences_sitename_slogan_adminmail
+  builds:
+  - A
+  - B
+  fixture:
+    values:
+      sitename: Festival entry Centre
+      slogan: Exchange the booking code at the festival gate
+      adminmail: festival-desk@service.example.test
+    field_order:
+    - adminmail
+    - slogan
+    - sitename
+    initial:
+      sitename: Festival entry Office
+      slogan: Information is being revised
+      adminmail: festival-old@service.example.test
+    start: list
+- app: impress
+  parent_scenario_id: expanded-v1-impress-bicycle
+  data_split: train
+  workflow: target
+  family: preferences_sitename
+  builds:
+  - A
+  - B
+  fixture:
+    values:
+      sitename: Bicycle locker Centre
+    field_order:
+    - sitename
+    initial:
+      sitename: Bicycle locker Office
+      slogan: Information is being revised
+      adminmail: bicycle-old@service.example.test
+    start: editor
+- app: impress
+  parent_scenario_id: expanded-v1-impress-archive
+  data_split: train
+  workflow: target
+  family: preferences_slogan
+  builds:
+  - A
+  - B
+  fixture:
+    values:
+      slogan: Use the archive reading room for scanned records
+    field_order:
+    - slogan
+    initial:
+      sitename: Archive scan Office
+      slogan: Information is being revised
+      adminmail: archive-old@service.example.test
+    start: list
+- app: impress
+  parent_scenario_id: expanded-v1-impress-observatory
+  data_split: train
+  workflow: target
+  family: preferences_adminmail
+  builds:
+  - A
+  - B
+  fixture:
+    values:
+      adminmail: observatory-desk@service.example.test
+    field_order:
+    - adminmail
+    initial:
+      sitename: Observatory tour Office
+      slogan: Information is being revised
+      adminmail: observatory-old@service.example.test
+    start: editor
+- app: impress
+  parent_scenario_id: expanded-v1-impress-bakery
+  data_split: train
+  workflow: target
+  family: preferences_sitename_slogan
+  builds:
+  - A
+  - B
+  fixture:
+    values:
+      sitename: Bakery order Centre
+      slogan: Collect reserved bread from the side counter
+    field_order:
+    - slogan
+    - sitename
+    initial:
+      sitename: Bakery order Office
+      slogan: Information is being revised
+      adminmail: bakery-old@service.example.test
+    start: list
+- app: impress
+  parent_scenario_id: expanded-v1-impress-sailing
+  data_split: train
+  workflow: target
+  family: preferences_adminmail_sitename
+  builds:
+  - A
+  - B
+  fixture:
+    values:
+      adminmail: sailing-desk@service.example.test
+      sitename: Sailing lesson Centre
+    field_order:
+    - adminmail
+    - sitename
+    initial:
+      sitename: Sailing lesson Office
+      slogan: Information is being revised
+      adminmail: sailing-old@service.example.test
+    start: editor
+- app: impress
+  parent_scenario_id: expanded-v1-impress-wildlife
+  data_split: train
+  workflow: target
+  family: preferences_sitename_slogan_adminmail
+  builds:
+  - A
+  - B
+  fixture:
+    values:
+      sitename: Wildlife survey Centre
+      slogan: Record the bird survey from the river hide
+      adminmail: wildlife-desk@service.example.test
+    field_order:
+    - adminmail
+    - slogan
+    - sitename
+    initial:
+      sitename: Wildlife survey Office
+      slogan: Information is being revised
+      adminmail: wildlife-old@service.example.test
+    start: list
+- app: impress
+  parent_scenario_id: expanded-v1-impress-repair
+  data_split: train
+  workflow: target
+  family: preferences_sitename
+  builds:
+  - A
+  - B
+  fixture:
+    values:
+      sitename: Repair ticket Centre
+    field_order:
+    - sitename
+    initial:
+      sitename: Repair ticket Office
+      slogan: Information is being revised
+      adminmail: repair-old@service.example.test
+    start: editor
+- app: impress
+  parent_scenario_id: expanded-v1-impress-choir
+  data_split: train
+  workflow: target
+  family: preferences_slogan
+  builds:
+  - A
+  - B
+  fixture:
+    values:
+      slogan: Keep the accessible choir aisle clear
+    field_order:
+    - slogan
+    initial:
+      sitename: Choir seating Office
+      slogan: Information is being revised
+      adminmail: choir-old@service.example.test
+    start: list
+- app: impress
+  parent_scenario_id: expanded-v1-impress-reservoir
+  data_split: validation
+  workflow: target
+  family: preferences_sitename
+  builds:
+  - A
+  - B
+  fixture:
+    values:
+      sitename: Reservoir inspection Centre
+    field_order:
+    - sitename
+    initial:
+      sitename: Reservoir inspection Office
+      slogan: Information is being revised
+      adminmail: reservoir-old@service.example.test
+    start: editor
+- app: impress
+  parent_scenario_id: expanded-v1-impress-tram
+  data_split: validation
+  workflow: target
+  family: preferences_slogan
+  builds:
+  - A
+  - B
+  fixture:
+    values:
+      slogan: Meet the tram inspection team at the depot
+    field_order:
+    - slogan
+    initial:
+      sitename: Tram timetable Office
+      slogan: Information is being revised
+      adminmail: tram-old@service.example.test
+    start: list
+- app: impress
+  parent_scenario_id: expanded-v1-impress-quarry
+  data_split: validation
+  workflow: target
+  family: preferences_adminmail
+  builds:
+  - A
+  - B
+  fixture:
+    values:
+      adminmail: quarry-desk@service.example.test
+    field_order:
+    - adminmail
+    initial:
+      sitename: Quarry shipment Office
+      slogan: Information is being revised
+      adminmail: quarry-old@service.example.test
+    start: editor
+- app: litecart
+  parent_scenario_id: expanded-v1-litecart-museum
+  data_split: train
+  workflow: target
+  family: pending_country_city_create
+  builds:
+  - A
+  - B
+  fixture:
+    code: museum
+    name: Museum badge route
+    description: Check the west entrance badge queue.
+    country_code: AF
+    country: Afghanistan
+    country_index: 1
+    city: ''
+    field_order:
+    - code
+    - name
+    - description
+    start: editor
+- app: litecart
+  parent_scenario_id: expanded-v1-litecart-garden
+  data_split: train
+  workflow: target
+  family: pending_country_city_edit
+  builds:
+  - A
+  - B
+  fixture:
+    code: garden
+    name: Garden booking route
+    description: Book the seed exchange in the greenhouse.
+    country_code: AL
+    country: Albania
+    country_index: 2
+    city: Tirana
+    field_order:
+    - name
+    - description
+    - code
+    start: list
+    initial:
+      code: old-garden
+      name: Garden booking former route
+      description: Previous local collection note
+- app: litecart
+  parent_scenario_id: expanded-v1-litecart-harvest
+  data_split: train
+  workflow: target
+  family: pending_country_city_create
+  builds:
+  - A
+  - B
+  fixture:
+    code: harvest
+    name: Harvest delivery route
+    description: Use the orchard loading gate for collections.
+    country_code: DZ
+    country: Algeria
+    country_index: 3
+    city: Algiers
+    field_order:
+    - code
+    - name
+    - description
+    start: editor
+- app: litecart
+  parent_scenario_id: expanded-v1-litecart-marina
+  data_split: train
+  workflow: target
+  family: pending_country_city_edit
+  builds:
+  - A
+  - B
+  fixture:
+    code: marina
+    name: Marina permit route
+    description: Collect the permit at the marina office.
+    country_code: AS
+    country: American Samoa
+    country_index: 4
+    city: ''
+    field_order:
+    - name
+    - description
+    - code
+    start: list
+    initial:
+      code: old-marina
+      name: Marina permit former route
+      description: Previous local collection note
+- app: litecart
+  parent_scenario_id: expanded-v1-litecart-trail
+  data_split: train
+  workflow: target
+  family: pending_country_city_create
+  builds:
+  - A
+  - B
+  fixture:
+    code: trail
+    name: Trail access route
+    description: Start the guided walk from the south shelter.
+    country_code: AD
+    country: Andorra
+    country_index: 5
+    city: Andorra la Vella
+    field_order:
+    - code
+    - name
+    - description
+    start: editor
+- app: litecart
+  parent_scenario_id: expanded-v1-litecart-library
+  data_split: train
+  workflow: target
+  family: pending_country_city_edit
+  builds:
+  - A
+  - B
+  fixture:
+    code: library
+    name: Library shelf route
+    description: Return reserved volumes to the staffed desk.
+    country_code: AF
+    country: Afghanistan
+    country_index: 1
+    city: Kabul
+    field_order:
+    - name
+    - description
+    - code
+    start: list
+    initial:
+      code: old-librar
+      name: Library shelf former route
+      description: Previous local collection note
+- app: litecart
+  parent_scenario_id: expanded-v1-litecart-market
+  data_split: train
+  workflow: target
+  family: pending_country_city_create
+  builds:
+  - A
+  - B
+  fixture:
+    code: market
+    name: Market stall route
+    description: Unload stall equipment beside the covered hall.
+    country_code: AL
+    country: Albania
+    country_index: 2
+    city: ''
+    field_order:
+    - code
+    - name
+    - description
+    start: editor
+- app: litecart
+  parent_scenario_id: expanded-v1-litecart-clinic
+  data_split: train
+  workflow: target
+  family: pending_country_city_edit
+  builds:
+  - A
+  - B
+  fixture:
+    code: clinic
+    name: Clinic visit route
+    description: Report to reception before the health session.
+    country_code: DZ
+    country: Algeria
+    country_index: 3
+    city: Oran
+    field_order:
+    - name
+    - description
+    - code
+    start: list
+    initial:
+      code: old-clinic
+      name: Clinic visit former route
+      description: Previous local collection note
+- app: litecart
+  parent_scenario_id: expanded-v1-litecart-rehearsal
+  data_split: train
+  workflow: target
+  family: pending_country_city_create
+  builds:
+  - A
+  - B
+  fixture:
+    code: rehearsa
+    name: Rehearsal slot route
+    description: Reserve the rehearsal studio for the quartet.
+    country_code: AS
+    country: American Samoa
+    country_index: 4
+    city: Fagatogo
+    field_order:
+    - code
+    - name
+    - description
+    start: editor
+- app: litecart
+  parent_scenario_id: expanded-v1-litecart-ferry
+  data_split: train
+  workflow: target
+  family: pending_country_city_edit
+  builds:
+  - A
+  - B
+  fixture:
+    code: ferry
+    name: Ferry cargo route
+    description: Present the cargo label at the ferry desk.
+    country_code: AD
+    country: Andorra
+    country_index: 5
+    city: ''
+    field_order:
+    - name
+    - description
+    - code
+    start: list
+    initial:
+      code: old-ferry
+      name: Ferry cargo former route
+      description: Previous local collection note
+- app: litecart
+  parent_scenario_id: expanded-v1-litecart-weather
+  data_split: train
+  workflow: target
+  family: pending_country_city_create
+  builds:
+  - A
+  - B
+  fixture:
+    code: weather
+    name: Weather sensor route
+    description: Record the sensor reading before calibration.
+    country_code: AF
+    country: Afghanistan
+    country_index: 1
+    city: Herat
+    field_order:
+    - code
+    - name
+    - description
+    start: editor
+- app: litecart
+  parent_scenario_id: expanded-v1-litecart-festival
+  data_split: train
+  workflow: target
+  family: pending_country_city_edit
+  builds:
+  - A
+  - B
+  fixture:
+    code: festival
+    name: Festival entry route
+    description: Exchange the booking code at the festival gate.
+    country_code: AL
+    country: Albania
+    country_index: 2
+    city: Vlore
+    field_order:
+    - name
+    - description
+    - code
+    start: list
+    initial:
+      code: old-festiv
+      name: Festival entry former route
+      description: Previous local collection note
+- app: litecart
+  parent_scenario_id: expanded-v1-litecart-bicycle
+  data_split: train
+  workflow: target
+  family: pending_country_city_create
+  builds:
+  - A
+  - B
+  fixture:
+    code: bicycle
+    name: Bicycle locker route
+    description: Leave the bicycle key at the transport desk.
+    country_code: DZ
+    country: Algeria
+    country_index: 3
+    city: ''
+    field_order:
+    - code
+    - name
+    - description
+    start: editor
+- app: litecart
+  parent_scenario_id: expanded-v1-litecart-archive
+  data_split: train
+  workflow: target
+  family: pending_country_city_edit
+  builds:
+  - A
+  - B
+  fixture:
+    code: archive
+    name: Archive scan route
+    description: Use the archive reading room for scanned records.
+    country_code: AS
+    country: American Samoa
+    country_index: 4
+    city: Tafuna
+    field_order:
+    - name
+    - description
+    - code
+    start: list
+    initial:
+      code: old-archiv
+      name: Archive scan former route
+      description: Previous local collection note
+- app: litecart
+  parent_scenario_id: expanded-v1-litecart-observatory
+  data_split: train
+  workflow: target
+  family: pending_country_city_create
+  builds:
+  - A
+  - B
+  fixture:
+    code: observat
+    name: Observatory tour route
+    description: Meet the astronomer inside the east dome.
+    country_code: AD
+    country: Andorra
+    country_index: 5
+    city: La Massana
+    field_order:
+    - code
+    - name
+    - description
+    start: editor
+- app: litecart
+  parent_scenario_id: expanded-v1-litecart-bakery
+  data_split: train
+  workflow: target
+  family: pending_country_city_edit
+  builds:
+  - A
+  - B
+  fixture:
+    code: bakery
+    name: Bakery order route
+    description: Collect reserved bread from the side counter.
+    country_code: AF
+    country: Afghanistan
+    country_index: 1
+    city: ''
+    field_order:
+    - name
+    - description
+    - code
+    start: list
+    initial:
+      code: old-bakery
+      name: Bakery order former route
+      description: Previous local collection note
+- app: litecart
+  parent_scenario_id: expanded-v1-litecart-sailing
+  data_split: train
+  workflow: target
+  family: pending_country_city_create
+  builds:
+  - A
+  - B
+  fixture:
+    code: sailing
+    name: Sailing lesson route
+    description: Check the life jacket size before the lesson.
+    country_code: AL
+    country: Albania
+    country_index: 2
+    city: Shkoder
+    field_order:
+    - code
+    - name
+    - description
+    start: editor
+- app: litecart
+  parent_scenario_id: expanded-v1-litecart-wildlife
+  data_split: train
+  workflow: target
+  family: pending_country_city_edit
+  builds:
+  - A
+  - B
+  fixture:
+    code: wildlife
+    name: Wildlife survey route
+    description: Record the bird survey from the river hide.
+    country_code: DZ
+    country: Algeria
+    country_index: 3
+    city: Annaba
+    field_order:
+    - name
+    - description
+    - code
+    start: list
+    initial:
+      code: old-wildli
+      name: Wildlife survey former route
+      description: Previous local collection note
+- app: litecart
+  parent_scenario_id: expanded-v1-litecart-repair
+  data_split: train
+  workflow: target
+  family: pending_country_city_create
+  builds:
+  - A
+  - B
+  fixture:
+    code: repair
+    name: Repair ticket route
+    description: Leave labelled equipment at the repair bench.
+    country_code: AS
+    country: American Samoa
+    country_index: 4
+    city: ''
+    field_order:
+    - code
+    - name
+    - description
+    start: editor
+- app: litecart
+  parent_scenario_id: expanded-v1-litecart-choir
+  data_split: train
+  workflow: target
+  family: pending_country_city_edit
+  builds:
+  - A
+  - B
+  fixture:
+    code: choir
+    name: Choir seating route
+    description: Keep the accessible choir aisle clear.
+    country_code: AD
+    country: Andorra
+    country_index: 5
+    city: Ordino
+    field_order:
+    - name
+    - description
+    - code
+    start: list
+    initial:
+      code: old-choir
+      name: Choir seating former route
+      description: Previous local collection note
+- app: litecart
+  parent_scenario_id: expanded-v1-litecart-reservoir
+  data_split: validation
+  workflow: target
+  family: pending_country_city_create
+  builds:
+  - A
+  - B
+  fixture:
+    code: reservoi
+    name: Reservoir inspection route
+    description: Inspect the eastern spillway control.
+    country_code: AF
+    country: Afghanistan
+    country_index: 1
+    city: ''
+    field_order:
+    - code
+    - name
+    - description
+    start: editor
+- app: litecart
+  parent_scenario_id: expanded-v1-litecart-tram
+  data_split: validation
+  workflow: target
+  family: pending_country_city_edit
+  builds:
+  - A
+  - B
+  fixture:
+    code: tram
+    name: Tram timetable route
+    description: Meet the tram inspection team at the depot.
+    country_code: AL
+    country: Albania
+    country_index: 2
+    city: Berat
+    field_order:
+    - name
+    - description
+    - code
+    start: list
+    initial:
+      code: old-tram
+      name: Tram timetable former route
+      description: Previous local collection note
+- app: litecart
+  parent_scenario_id: expanded-v1-litecart-quarry
+  data_split: validation
+  workflow: target
+  family: pending_country_city_create
+  builds:
+  - A
+  - B
+  fixture:
+    code: quarry
+    name: Quarry shipment route
+    description: Collect the checklist at the quarry weighbridge.
+    country_code: DZ
+    country: Algeria
+    country_index: 3
+    city: Setif
+    field_order:
+    - code
+    - name
+    - description
+    start: editor
+- app: dokuwiki
+  parent_scenario_id: expanded-v1-dokuwiki-museum
+  data_split: train
+  workflow: target
+  family: replace
+  builds:
+  - A
+  scenario:
+    family: replace
+    start: editor
+    edit: replace
+    initial: 'Museum badge: arrangements are pending.'
+    input: Check the west entrance badge queue.
+- app: dokuwiki
+  parent_scenario_id: expanded-v1-dokuwiki-garden
+  data_split: train
+  workflow: target
+  family: append
+  builds:
+  - B
+  scenario:
+    family: append
+    start: view
+    edit: append
+    initial: 'Garden booking: arrangements are pending.'
+    input: '
+
+      Book the seed exchange in the greenhouse.'
+- app: dokuwiki
+  parent_scenario_id: expanded-v1-dokuwiki-harvest
+  data_split: train
+  workflow: target
+  family: suffix
+  builds:
+  - A
+  scenario:
+    family: suffix
+    start: editor
+    edit: replace_suffix
+    initial: 'Harvest delivery: desk closes at 15:00.'
+    input: '17:30.'
+    old_suffix: '15:00.'
+- app: dokuwiki
+  parent_scenario_id: expanded-v1-dokuwiki-marina
+  data_split: train
+  workflow: target
+  family: preview_then_save
+  builds:
+  - B
+  scenario:
+    family: preview_then_save
+    start: view
+    edit: replace
+    initial: 'Marina permit: arrangements are pending.'
+    input: Collect the permit at the marina office.
+    preview: true
+- app: dokuwiki
+  parent_scenario_id: expanded-v1-dokuwiki-trail
+  data_split: train
+  workflow: target
+  family: consecutive_saves
+  builds:
+  - A
+  scenario:
+    family: consecutive_saves
+    start: editor
+    edit: replace
+    initial: 'Trail access: arrangements are pending.'
+    input: Start the guided walk from the south shelter.
+    intermediate: 'Trail access: provisional location is the front desk.'
+- app: dokuwiki
+  parent_scenario_id: expanded-v1-dokuwiki-library
+  data_split: train
+  workflow: target
+  family: summary_and_minor
+  builds:
+  - B
+  scenario:
+    family: summary_and_minor
+    start: view
+    edit: replace
+    initial: 'Library shelf: arrangements are pending.'
+    input: Return reserved volumes to the staffed desk.
+    summary: Publish library instructions
+    minor: true
+- app: dokuwiki
+  parent_scenario_id: expanded-v1-dokuwiki-market
+  data_split: train
+  workflow: target
+  family: multiline
+  builds:
+  - A
+  scenario:
+    family: multiline
+    start: editor
+    edit: replace
+    initial: 'Market stall: arrangements are pending.'
+    input: 'Market stall guidance
+
+      Unload stall equipment beside the covered hall.
+
+      Ask the duty officer for assistance.'
+    summary: Add market guidance
+- app: dokuwiki
+  parent_scenario_id: expanded-v1-dokuwiki-clinic
+  data_split: train
+  workflow: target
+  family: replace
+  builds:
+  - B
+  scenario:
+    family: replace
+    start: view
+    edit: replace
+    initial: 'Clinic visit: arrangements are pending.'
+    input: Report to reception before the health session.
+- app: dokuwiki
+  parent_scenario_id: expanded-v1-dokuwiki-rehearsal
+  data_split: train
+  workflow: target
+  family: append
+  builds:
+  - A
+  scenario:
+    family: append
+    start: editor
+    edit: append
+    initial: 'Rehearsal slot: arrangements are pending.'
+    input: '
+
+      Reserve the rehearsal studio for the quartet.'
+- app: dokuwiki
+  parent_scenario_id: expanded-v1-dokuwiki-ferry
+  data_split: train
+  workflow: target
+  family: suffix
+  builds:
+  - B
+  scenario:
+    family: suffix
+    start: view
+    edit: replace_suffix
+    initial: 'Ferry cargo: desk closes at 15:00.'
+    input: '17:30.'
+    old_suffix: '15:00.'
+- app: dokuwiki
+  parent_scenario_id: expanded-v1-dokuwiki-weather
+  data_split: train
+  workflow: target
+  family: preview_then_save
+  builds:
+  - A
+  scenario:
+    family: preview_then_save
+    start: editor
+    edit: replace
+    initial: 'Weather sensor: arrangements are pending.'
+    input: Record the sensor reading before calibration.
+    preview: true
+- app: dokuwiki
+  parent_scenario_id: expanded-v1-dokuwiki-festival
+  data_split: train
+  workflow: target
+  family: consecutive_saves
+  builds:
+  - B
+  scenario:
+    family: consecutive_saves
+    start: view
+    edit: replace
+    initial: 'Festival entry: arrangements are pending.'
+    input: Exchange the booking code at the festival gate.
+    intermediate: 'Festival entry: provisional location is the front desk.'
+- app: dokuwiki
+  parent_scenario_id: expanded-v1-dokuwiki-bicycle
+  data_split: train
+  workflow: target
+  family: summary_and_minor
+  builds:
+  - A
+  scenario:
+    family: summary_and_minor
+    start: editor
+    edit: replace
+    initial: 'Bicycle locker: arrangements are pending.'
+    input: Leave the bicycle key at the transport desk.
+    summary: Publish bicycle instructions
+    minor: true
+- app: dokuwiki
+  parent_scenario_id: expanded-v1-dokuwiki-archive
+  data_split: train
+  workflow: target
+  family: multiline
+  builds:
+  - B
+  scenario:
+    family: multiline
+    start: view
+    edit: replace
+    initial: 'Archive scan: arrangements are pending.'
+    input: 'Archive scan guidance
+
+      Use the archive reading room for scanned records.
+
+      Ask the duty officer for assistance.'
+    summary: Add archive guidance
+- app: dokuwiki
+  parent_scenario_id: expanded-v1-dokuwiki-observatory
+  data_split: train
+  workflow: target
+  family: replace
+  builds:
+  - A
+  scenario:
+    family: replace
+    start: editor
+    edit: replace
+    initial: 'Observatory tour: arrangements are pending.'
+    input: Meet the astronomer inside the east dome.
+- app: dokuwiki
+  parent_scenario_id: expanded-v1-dokuwiki-bakery
+  data_split: train
+  workflow: target
+  family: append
+  builds:
+  - B
+  scenario:
+    family: append
+    start: view
+    edit: append
+    initial: 'Bakery order: arrangements are pending.'
+    input: '
+
+      Collect reserved bread from the side counter.'
+- app: dokuwiki
+  parent_scenario_id: expanded-v1-dokuwiki-sailing
+  data_split: train
+  workflow: target
+  family: suffix
+  builds:
+  - A
+  scenario:
+    family: suffix
+    start: editor
+    edit: replace_suffix
+    initial: 'Sailing lesson: desk closes at 15:00.'
+    input: '17:30.'
+    old_suffix: '15:00.'
+- app: dokuwiki
+  parent_scenario_id: expanded-v1-dokuwiki-wildlife
+  data_split: train
+  workflow: target
+  family: preview_then_save
+  builds:
+  - B
+  scenario:
+    family: preview_then_save
+    start: view
+    edit: replace
+    initial: 'Wildlife survey: arrangements are pending.'
+    input: Record the bird survey from the river hide.
+    preview: true
+- app: dokuwiki
+  parent_scenario_id: expanded-v1-dokuwiki-repair
+  data_split: train
+  workflow: target
+  family: consecutive_saves
+  builds:
+  - A
+  scenario:
+    family: consecutive_saves
+    start: editor
+    edit: replace
+    initial: 'Repair ticket: arrangements are pending.'
+    input: Leave labelled equipment at the repair bench.
+    intermediate: 'Repair ticket: provisional location is the front desk.'
+- app: dokuwiki
+  parent_scenario_id: expanded-v1-dokuwiki-choir
+  data_split: train
+  workflow: target
+  family: summary_and_minor
+  builds:
+  - B
+  scenario:
+    family: summary_and_minor
+    start: view
+    edit: replace
+    initial: 'Choir seating: arrangements are pending.'
+    input: Keep the accessible choir aisle clear.
+    summary: Publish choir instructions
+    minor: true
+- app: flatpress
+  parent_scenario_id: expanded-v1-flatpress-museum
+  data_split: train
+  workflow: target
+  family: replace
+  builds:
+  - A
+  scenario:
+    family: replace
+    start: editor
+    edit: replace
+    initial: 'Museum badge: arrangements are pending.'
+    input: Check the west entrance badge queue.
+    initial_subject: Museum badge notice
+    subject: Museum badge guide
+    field_order: body_first
+- app: flatpress
+  parent_scenario_id: expanded-v1-flatpress-garden
+  data_split: train
+  workflow: target
+  family: append
+  builds:
+  - B
+  scenario:
+    family: append
+    start: list
+    edit: append
+    initial: 'Garden booking: arrangements are pending.'
+    input: '
+
+      Book the seed exchange in the greenhouse.'
+    initial_subject: Garden booking notice
+- app: flatpress
+  parent_scenario_id: expanded-v1-flatpress-harvest
+  data_split: train
+  workflow: target
+  family: suffix
+  builds:
+  - A
+  scenario:
+    family: suffix
+    start: editor
+    edit: replace_suffix
+    initial: 'Harvest delivery: desk closes at 15:00.'
+    input: '17:30.'
+    old_suffix: '15:00.'
+    initial_subject: Harvest delivery notice
+- app: flatpress
+  parent_scenario_id: expanded-v1-flatpress-marina
+  data_split: train
+  workflow: target
+  family: preview_then_save
+  builds:
+  - B
+  scenario:
+    family: preview_then_save
+    start: list
+    edit: replace
+    initial: 'Marina permit: arrangements are pending.'
+    input: Collect the permit at the marina office.
+    preview: true
+    initial_subject: Marina permit notice
+    subject: Marina permit guide
+    field_order: subject_first
+- app: flatpress
+  parent_scenario_id: expanded-v1-flatpress-trail
+  data_split: train
+  workflow: target
+  family: consecutive_saves
+  builds:
+  - A
+  scenario:
+    family: consecutive_saves
+    start: editor
+    edit: replace
+    initial: 'Trail access: arrangements are pending.'
+    input: Start the guided walk from the south shelter.
+    intermediate: 'Trail access: provisional location is the front desk.'
+    initial_subject: Trail access notice
+- app: flatpress
+  parent_scenario_id: expanded-v1-flatpress-library
+  data_split: train
+  workflow: target
+  family: subject_only_preserve_body
+  builds:
+  - B
+  scenario:
+    family: subject_only_preserve_body
+    start: list
+    edit: keep
+    initial: 'Library shelf: arrangements are pending.'
+    input: ''
+    initial_subject: Library shelf notice
+    subject: Library shelf information
+- app: flatpress
+  parent_scenario_id: expanded-v1-flatpress-market
+  data_split: train
+  workflow: target
+  family: replace
+  builds:
+  - A
+  scenario:
+    family: replace
+    start: editor
+    edit: replace
+    initial: 'Market stall: arrangements are pending.'
+    input: Unload stall equipment beside the covered hall.
+    initial_subject: Market stall notice
+    subject: Market stall guide
+    field_order: body_first
+- app: flatpress
+  parent_scenario_id: expanded-v1-flatpress-clinic
+  data_split: train
+  workflow: target
+  family: append
+  builds:
+  - B
+  scenario:
+    family: append
+    start: list
+    edit: append
+    initial: 'Clinic visit: arrangements are pending.'
+    input: '
+
+      Report to reception before the health session.'
+    initial_subject: Clinic visit notice
+- app: flatpress
+  parent_scenario_id: expanded-v1-flatpress-rehearsal
+  data_split: train
+  workflow: target
+  family: suffix
+  builds:
+  - A
+  scenario:
+    family: suffix
+    start: editor
+    edit: replace_suffix
+    initial: 'Rehearsal slot: desk closes at 15:00.'
+    input: '17:30.'
+    old_suffix: '15:00.'
+    initial_subject: Rehearsal slot notice
+- app: flatpress
+  parent_scenario_id: expanded-v1-flatpress-ferry
+  data_split: train
+  workflow: target
+  family: preview_then_save
+  builds:
+  - B
+  scenario:
+    family: preview_then_save
+    start: list
+    edit: replace
+    initial: 'Ferry cargo: arrangements are pending.'
+    input: Present the cargo label at the ferry desk.
+    preview: true
+    initial_subject: Ferry cargo notice
+    subject: Ferry cargo guide
+    field_order: subject_first
+- app: flatpress
+  parent_scenario_id: expanded-v1-flatpress-weather
+  data_split: train
+  workflow: target
+  family: consecutive_saves
+  builds:
+  - A
+  scenario:
+    family: consecutive_saves
+    start: editor
+    edit: replace
+    initial: 'Weather sensor: arrangements are pending.'
+    input: Record the sensor reading before calibration.
+    intermediate: 'Weather sensor: provisional location is the front desk.'
+    initial_subject: Weather sensor notice
+- app: flatpress
+  parent_scenario_id: expanded-v1-flatpress-festival
+  data_split: train
+  workflow: target
+  family: subject_only_preserve_body
+  builds:
+  - B
+  scenario:
+    family: subject_only_preserve_body
+    start: list
+    edit: keep
+    initial: 'Festival entry: arrangements are pending.'
+    input: ''
+    initial_subject: Festival entry notice
+    subject: Festival entry information
+- app: flatpress
+  parent_scenario_id: expanded-v1-flatpress-bicycle
+  data_split: train
+  workflow: target
+  family: replace
+  builds:
+  - A
+  scenario:
+    family: replace
+    start: editor
+    edit: replace
+    initial: 'Bicycle locker: arrangements are pending.'
+    input: Leave the bicycle key at the transport desk.
+    initial_subject: Bicycle locker notice
+    subject: Bicycle locker guide
+    field_order: body_first
+- app: flatpress
+  parent_scenario_id: expanded-v1-flatpress-archive
+  data_split: train
+  workflow: target
+  family: append
+  builds:
+  - B
+  scenario:
+    family: append
+    start: list
+    edit: append
+    initial: 'Archive scan: arrangements are pending.'
+    input: '
+
+      Use the archive reading room for scanned records.'
+    initial_subject: Archive scan notice
+- app: flatpress
+  parent_scenario_id: expanded-v1-flatpress-observatory
+  data_split: train
+  workflow: target
+  family: suffix
+  builds:
+  - A
+  scenario:
+    family: suffix
+    start: editor
+    edit: replace_suffix
+    initial: 'Observatory tour: desk closes at 15:00.'
+    input: '17:30.'
+    old_suffix: '15:00.'
+    initial_subject: Observatory tour notice
+- app: flatpress
+  parent_scenario_id: expanded-v1-flatpress-bakery
+  data_split: train
+  workflow: target
+  family: preview_then_save
+  builds:
+  - B
+  scenario:
+    family: preview_then_save
+    start: list
+    edit: replace
+    initial: 'Bakery order: arrangements are pending.'
+    input: Collect reserved bread from the side counter.
+    preview: true
+    initial_subject: Bakery order notice
+    subject: Bakery order guide
+    field_order: subject_first
+- app: flatpress
+  parent_scenario_id: expanded-v1-flatpress-sailing
+  data_split: train
+  workflow: target
+  family: consecutive_saves
+  builds:
+  - A
+  scenario:
+    family: consecutive_saves
+    start: editor
+    edit: replace
+    initial: 'Sailing lesson: arrangements are pending.'
+    input: Check the life jacket size before the lesson.
+    intermediate: 'Sailing lesson: provisional location is the front desk.'
+    initial_subject: Sailing lesson notice
+- app: flatpress
+  parent_scenario_id: expanded-v1-flatpress-wildlife
+  data_split: train
+  workflow: target
+  family: subject_only_preserve_body
+  builds:
+  - B
+  scenario:
+    family: subject_only_preserve_body
+    start: list
+    edit: keep
+    initial: 'Wildlife survey: arrangements are pending.'
+    input: ''
+    initial_subject: Wildlife survey notice
+    subject: Wildlife survey information
+- app: flatpress
+  parent_scenario_id: expanded-v1-flatpress-repair
+  data_split: train
+  workflow: target
+  family: replace
+  builds:
+  - A
+  scenario:
+    family: replace
+    start: editor
+    edit: replace
+    initial: 'Repair ticket: arrangements are pending.'
+    input: Leave labelled equipment at the repair bench.
+    initial_subject: Repair ticket notice
+    subject: Repair ticket guide
+    field_order: body_first
+- app: flatpress
+  parent_scenario_id: expanded-v1-flatpress-choir
+  data_split: train
+  workflow: target
+  family: append
+  builds:
+  - B
+  scenario:
+    family: append
+    start: list
+    edit: append
+    initial: 'Choir seating: arrangements are pending.'
+    input: '
+
+      Keep the accessible choir aisle clear.'
+    initial_subject: Choir seating notice

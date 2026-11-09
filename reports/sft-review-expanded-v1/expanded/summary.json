@@ -1,0 +1,419 @@
+{
+  "completed": true,
+  "planned_samples": 150,
+  "all": {
+    "samples": 150,
+    "terminal_verdict_correct": 124,
+    "reported_guarded_correct": 126,
+    "terminal_verdict_accuracy": 0.8266666666666667,
+    "macro_f1": 0.7373444421492344,
+    "class_metrics": {
+      "pass": {
+        "precision": 0.9736842105263158,
+        "recall": 1.0,
+        "f1": 0.9866666666666666
+      },
+      "fail": {
+        "precision": 0.7222222222222222,
+        "recall": 0.7959183673469388,
+        "f1": 0.7572815533980582
+      },
+      "blocked": {
+        "precision": 0.55,
+        "recall": 0.4074074074074074,
+        "f1": 0.46808510638297873
+      }
+    },
+    "strict_correct": 66,
+    "strict_accuracy": 0.44,
+    "format_errors": 1,
+    "guard_errors": 17,
+    "truncated": 0,
+    "blocked_predictions": 20,
+    "normal_samples": 74,
+    "normal_false_alarms": 0,
+    "normal_false_alarm_rate": 0.0,
+    "defect_samples": 49,
+    "defects_detected": 39,
+    "defect_recall": 0.7959183673469388,
+    "defects_false_passed": 1,
+    "defect_false_pass_rate": 0.02040816326530612,
+    "numeric_rewards": 144,
+    "mean_numeric_reward": 0.056211419999999714,
+    "confusion": {
+      "fail->fail": 39,
+      "pass->pass": 74,
+      "fail->pass": 1,
+      "blocked->blocked": 11,
+      "blocked->fail": 15,
+      "blocked->pass": 1,
+      "fail->blocked": 9
+    }
+  },
+  "label": {
+    "pass": {
+      "samples": 74,
+      "terminal_verdict_correct": 74,
+      "reported_guarded_correct": 73,
+      "terminal_verdict_accuracy": 1.0,
+      "macro_f1": 0.3333333333333333,
+      "class_metrics": {
+        "pass": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "fail": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "blocked": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "strict_correct": 52,
+      "strict_accuracy": 0.7027027027027027,
+      "format_errors": 1,
+      "guard_errors": 0,
+      "truncated": 0,
+      "blocked_predictions": 0,
+      "normal_samples": 74,
+      "normal_false_alarms": 0,
+      "normal_false_alarm_rate": 0.0,
+      "defect_samples": 0,
+      "defects_detected": 0,
+      "defect_recall": null,
+      "defects_false_passed": 0,
+      "defect_false_pass_rate": null,
+      "numeric_rewards": 68,
+      "mean_numeric_reward": 0.6869281047058828,
+      "confusion": {
+        "pass->pass": 74
+      }
+    },
+    "fail": {
+      "samples": 49,
+      "terminal_verdict_correct": 39,
+      "reported_guarded_correct": 32,
+      "terminal_verdict_accuracy": 0.7959183673469388,
+      "macro_f1": 0.29545454545454547,
+      "class_metrics": {
+        "pass": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "fail": {
+          "precision": 1.0,
+          "recall": 0.7959183673469388,
+          "f1": 0.8863636363636364
+        },
+        "blocked": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "strict_correct": 13,
+      "strict_accuracy": 0.2653061224489796,
+      "format_errors": 0,
+      "guard_errors": 7,
+      "truncated": 0,
+      "blocked_predictions": 9,
+      "normal_samples": 0,
+      "normal_false_alarms": 0,
+      "normal_false_alarm_rate": null,
+      "defect_samples": 49,
+      "defects_detected": 39,
+      "defect_recall": 0.7959183673469388,
+      "defects_false_passed": 1,
+      "defect_false_pass_rate": 0.02040816326530612,
+      "numeric_rewards": 49,
+      "mean_numeric_reward": -0.3401360538775511,
+      "confusion": {
+        "fail->fail": 39,
+        "fail->pass": 1,
+        "fail->blocked": 9
+      }
+    },
+    "blocked": {
+      "samples": 27,
+      "terminal_verdict_correct": 11,
+      "reported_guarded_correct": 21,
+      "terminal_verdict_accuracy": 0.4074074074074074,
+      "macro_f1": 0.19298245614035084,
+      "class_metrics": {
+        "pass": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "fail": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "blocked": {
+          "precision": 1.0,
+          "recall": 0.4074074074074074,
+          "f1": 0.5789473684210525
+        }
+      },
+      "strict_correct": 1,
+      "strict_accuracy": 0.037037037037037035,
+      "format_errors": 0,
+      "guard_errors": 10,
+      "truncated": 0,
+      "blocked_predictions": 11,
+      "normal_samples": 0,
+      "normal_false_alarms": 0,
+      "normal_false_alarm_rate": null,
+      "defect_samples": 0,
+      "defects_detected": 0,
+      "defect_recall": null,
+      "defects_false_passed": 0,
+      "defect_false_pass_rate": null,
+      "numeric_rewards": 27,
+      "mean_numeric_reward": -0.8129629629629629,
+      "confusion": {
+        "blocked->blocked": 11,
+        "blocked->fail": 15,
+        "blocked->pass": 1
+      }
+    }
+  },
+  "case_id": {
+    "sweeper-005": {
+      "samples": 30,
+      "terminal_verdict_correct": 27,
+      "reported_guarded_correct": 27,
+      "terminal_verdict_accuracy": 0.9,
+      "macro_f1": 0.8582949308755761,
+      "class_metrics": {
+        "pass": {
+          "precision": 0.9375,
+          "recall": 1.0,
+          "f1": 0.967741935483871
+        },
+        "fail": {
+          "precision": 0.8181818181818182,
+          "recall": 0.9,
+          "f1": 0.8571428571428572
+        },
+        "blocked": {
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.7499999999999999
+        }
+      },
+      "strict_correct": 0,
+      "strict_accuracy": 0.0,
+      "format_errors": 0,
+      "guard_errors": 0,
+      "truncated": 0,
+      "blocked_predictions": 3,
+      "normal_samples": 15,
+      "normal_false_alarms": 0,
+      "normal_false_alarm_rate": 0.0,
+      "defect_samples": 10,
+      "defects_detected": 9,
+      "defect_recall": 0.9,
+      "defects_false_passed": 1,
+      "defect_false_pass_rate": 0.1,
+      "numeric_rewards": 28,
+      "mean_numeric_reward": -1.0,
+      "confusion": {
+        "fail->fail": 9,
+        "pass->pass": 15,
+        "fail->pass": 1,
+        "blocked->blocked": 3,
+        "blocked->fail": 2
+      }
+    },
+    "sweeper-007": {
+      "samples": 30,
+      "terminal_verdict_correct": 21,
+      "reported_guarded_correct": 20,
+      "terminal_verdict_accuracy": 0.7,
+      "macro_f1": 0.5238095238095238,
+      "class_metrics": {
+        "pass": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "fail": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "blocked": {
+          "precision": 0.4,
+          "recall": 1.0,
+          "f1": 0.5714285714285715
+        }
+      },
+      "strict_correct": 10,
+      "strict_accuracy": 0.3333333333333333,
+      "format_errors": 1,
+      "guard_errors": 0,
+      "truncated": 0,
+      "blocked_predictions": 15,
+      "normal_samples": 15,
+      "normal_false_alarms": 0,
+      "normal_false_alarm_rate": 0.0,
+      "defect_samples": 9,
+      "defects_detected": 0,
+      "defect_recall": 0.0,
+      "defects_false_passed": 0,
+      "defect_false_pass_rate": 0.0,
+      "numeric_rewards": 26,
+      "mean_numeric_reward": -0.10705128192307695,
+      "confusion": {
+        "fail->blocked": 9,
+        "pass->pass": 15,
+        "blocked->blocked": 6
+      }
+    },
+    "sweeper-008": {
+      "samples": 30,
+      "terminal_verdict_correct": 25,
+      "reported_guarded_correct": 29,
+      "terminal_verdict_accuracy": 0.8333333333333334,
+      "macro_f1": 0.6,
+      "class_metrics": {
+        "pass": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "fail": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8
+        },
+        "blocked": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "strict_correct": 13,
+      "strict_accuracy": 0.43333333333333335,
+      "format_errors": 0,
+      "guard_errors": 4,
+      "truncated": 0,
+      "blocked_predictions": 0,
+      "normal_samples": 15,
+      "normal_false_alarms": 0,
+      "normal_false_alarm_rate": 0.0,
+      "defect_samples": 10,
+      "defects_detected": 10,
+      "defect_recall": 1.0,
+      "defects_false_passed": 0,
+      "defect_false_pass_rate": 0.0,
+      "numeric_rewards": 30,
+      "mean_numeric_reward": 0.05037037133333326,
+      "confusion": {
+        "fail->fail": 10,
+        "pass->pass": 15,
+        "blocked->fail": 5
+      }
+    },
+    "sweeper-040": {
+      "samples": 30,
+      "terminal_verdict_correct": 26,
+      "reported_guarded_correct": 27,
+      "terminal_verdict_accuracy": 0.8666666666666667,
+      "macro_f1": 0.7783608195902049,
+      "class_metrics": {
+        "pass": {
+          "precision": 0.9333333333333333,
+          "recall": 1.0,
+          "f1": 0.9655172413793104
+        },
+        "fail": {
+          "precision": 0.7692307692307693,
+          "recall": 1.0,
+          "f1": 0.8695652173913044
+        },
+        "blocked": {
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f1": 0.5
+        }
+      },
+      "strict_correct": 25,
+      "strict_accuracy": 0.8333333333333334,
+      "format_errors": 0,
+      "guard_errors": 1,
+      "truncated": 0,
+      "blocked_predictions": 2,
+      "normal_samples": 14,
+      "normal_false_alarms": 0,
+      "normal_false_alarm_rate": 0.0,
+      "defect_samples": 10,
+      "defects_detected": 10,
+      "defect_recall": 1.0,
+      "defects_false_passed": 0,
+      "defect_false_pass_rate": 0.0,
+      "numeric_rewards": 30,
+      "mean_numeric_reward": 0.8644444439999996,
+      "confusion": {
+        "fail->fail": 10,
+        "pass->pass": 14,
+        "blocked->pass": 1,
+        "blocked->fail": 3,
+        "blocked->blocked": 2
+      }
+    },
+    "sweeper-041": {
+      "samples": 30,
+      "terminal_verdict_correct": 25,
+      "reported_guarded_correct": 23,
+      "terminal_verdict_accuracy": 0.8333333333333334,
+      "macro_f1": 0.6,
+      "class_metrics": {
+        "pass": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "fail": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8
+        },
+        "blocked": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "strict_correct": 18,
+      "strict_accuracy": 0.6,
+      "format_errors": 0,
+      "guard_errors": 12,
+      "truncated": 0,
+      "blocked_predictions": 0,
+      "normal_samples": 15,
+      "normal_false_alarms": 0,
+      "normal_false_alarm_rate": 0.0,
+      "defect_samples": 10,
+      "defects_detected": 10,
+      "defect_recall": 1.0,
+      "defects_false_passed": 0,
+      "defect_false_pass_rate": 0.0,
+      "numeric_rewards": 30,
+      "mean_numeric_reward": 0.3811111116666665,
+      "confusion": {
+        "fail->fail": 10,
+        "pass->pass": 15,
+        "blocked->fail": 5
+      }
+    }
+  }
+}

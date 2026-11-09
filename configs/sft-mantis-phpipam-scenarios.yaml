@@ -1,0 +1,338 @@
+version: 1
+updated_on: '2026-11-08'
+scenarios:
+- id: mantis-search-crash
+  case_id: sweeper-107
+  build: A
+  workflow: target
+  data_split: train
+  family: issue_report
+  fixture:
+    version: 1.1.0
+    summary: Search results crash after changing filters
+    description: Open the search panel, change the date filter and run the query.
+      The browser shows an empty result panel.
+- id: mantis-profile-save
+  case_id: sweeper-107
+  build: B
+  workflow: target
+  data_split: train
+  family: description_first
+  fixture:
+    version: 1.1.0
+    summary: Profile changes do not update the header
+    description: Change the display name to Avery Chen, save the profile, then open
+      the dashboard. The old name remains in the header.
+    field_order:
+    - description
+    - summary
+- id: mantis-keyboard-focus
+  case_id: sweeper-107
+  build: A
+  workflow: preservation
+  data_split: train
+  family: issue_report
+  fixture:
+    version: ''
+    summary: Keyboard focus skips the confirmation button
+    description: Use Tab from the project selector through the report form. Focus
+      moves directly to the page footer.
+- id: mantis-export-range
+  case_id: sweeper-107
+  build: B
+  workflow: preservation
+  data_split: train
+  family: issue_report
+  fixture:
+    version: ''
+    summary: Export range includes one extra day
+    description: Choose 1-7 November and export the report. The generated preview
+      also contains records from 8 November.
+- id: mantis-invoice-message
+  case_id: sweeper-107
+  build: A
+  workflow: target
+  data_split: train
+  family: multifield_with_steps
+  fixture:
+    version: 1.1.0
+    summary: Invoice validation message is missing
+    description: Submit an invoice with an invalid billing postcode. The page remains
+      on the form without explaining which field needs correction.
+    steps_to_reproduce: '1. Open the affected page.
+
+      2. Apply the change described above.
+
+      3. Save and inspect the result.'
+    field_order:
+    - summary
+    - description
+    - steps_to_reproduce
+- id: mantis-attachment-label
+  case_id: sweeper-107
+  build: B
+  workflow: target
+  data_split: train
+  family: description_first
+  fixture:
+    version: 1.1.0
+    summary: Attachment label overlaps the filename
+    description: Add a document with a long descriptive name. The attachment label
+      covers the beginning of the filename in the details panel.
+    field_order:
+    - description
+    - summary
+- id: mantis-unicode-summary
+  case_id: sweeper-107
+  build: A
+  workflow: preservation
+  data_split: train
+  family: multilingual
+  fixture:
+    version: ''
+    summary: 中文标题在历史记录中显示异常
+    description: 将项目备注改为“设备检修已完成”，保存后打开历史记录，检查中文内容和标点是否完整显示。
+- id: mantis-accented-notice
+  case_id: sweeper-107
+  build: B
+  workflow: preservation
+  data_split: train
+  family: multifield_with_steps
+  fixture:
+    version: ''
+    summary: Accented characters disappear from the notification
+    description: Enter Réservation confirmée in the notification subject, save it,
+      and reopen the notification preview.
+    steps_to_reproduce: '1. Open the affected page.
+
+      2. Apply the change described above.
+
+      3. Save and inspect the result.'
+    field_order:
+    - summary
+    - description
+    - steps_to_reproduce
+- id: mantis-batch-review
+  case_id: sweeper-107
+  build: A
+  workflow: target
+  data_split: train
+  family: issue_report
+  fixture:
+    version: 1.1.0
+    summary: Batch review loses the selected assignee
+    description: Select three pending records and assign them to Jordan Park. After
+      the confirmation, the records still show the previous assignee.
+- id: mantis-table-sort
+  case_id: sweeper-107
+  build: B
+  workflow: target
+  data_split: train
+  family: description_first
+  fixture:
+    version: 1.1.0
+    summary: Table order resets when returning from details
+    description: Sort the tasks by due date, open a task and return to the list. The
+      rows revert to the default title order.
+    field_order:
+    - description
+    - summary
+- id: mantis-timeout-banner
+  case_id: sweeper-107
+  build: A
+  workflow: target
+  data_split: validation
+  family: multifield_with_steps
+  fixture:
+    version: 1.1.0
+    summary: Timeout banner covers the retry control
+    description: Let the status request time out, then inspect the warning panel.
+      The Retry control cannot be reached with the mouse.
+    steps_to_reproduce: '1. Open the affected page.
+
+      2. Apply the change described above.
+
+      3. Save and inspect the result.'
+    field_order:
+    - summary
+    - description
+    - steps_to_reproduce
+- id: mantis-comment-spacing
+  case_id: sweeper-107
+  build: B
+  workflow: preservation
+  data_split: validation
+  family: issue_report
+  fixture:
+    version: ''
+    summary: Comment preview removes paragraph spacing
+    description: Write two paragraphs in a comment and open Preview. The blank line
+      between the paragraphs is removed.
+- id: phpipam-clear-server-description
+  case_id: sweeper-142
+  build: A
+  workflow: target
+  data_split: train
+  family: clear_fields
+  fixture:
+    object_id: 1
+    address: 10.10.1.3
+    description: Server1
+    hostname: server1.cust1.local
+    changes:
+      description: ''
+- id: phpipam-clear-printer-description
+  case_id: sweeper-142
+  build: B
+  workflow: target
+  data_split: train
+  family: clear_fields
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Shared printer
+    hostname: printer.cust1.local
+    changes:
+      description: ''
+- id: phpipam-rename-server
+  case_id: sweeper-142
+  build: A
+  workflow: preservation
+  data_split: train
+  family: rename_hostname
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Application server
+    hostname: app01.cust1.local
+    changes:
+      hostname: app01-prod.cust1.local
+- id: phpipam-two-field-maintenance
+  case_id: sweeper-142
+  build: B
+  workflow: preservation
+  data_split: train
+  family: multifield
+  fixture:
+    object_id: 1
+    address: 10.10.1.3
+    description: Old gateway note
+    hostname: gateway-old.cust1.local
+    changes:
+      description: Gateway after maintenance
+      hostname: gateway-prod.cust1.local
+    field_order:
+    - hostname
+    - description
+- id: phpipam-clear-hostname
+  case_id: sweeper-142
+  build: A
+  workflow: target
+  data_split: train
+  family: clear_fields
+  fixture:
+    object_id: 3
+    address: 10.10.1.5
+    description: Reserved workstation
+    hostname: workstation.cust1.local
+    changes:
+      hostname: ''
+- id: phpipam-clear-both-fields
+  case_id: sweeper-142
+  build: B
+  workflow: target
+  data_split: train
+  family: clear_fields
+  fixture:
+    object_id: 4
+    address: 10.10.1.6
+    description: Temporary test host
+    hostname: testhost.cust1.local
+    changes:
+      description: ''
+      hostname: ''
+- id: phpipam-append-inventory-note
+  case_id: sweeper-142
+  build: A
+  workflow: preservation
+  data_split: train
+  family: append
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: Finance workstation
+    hostname: finance02.cust1.local
+    changes:
+      description: Finance workstation - checked 08 Nov
+    append:
+      description: ' - checked 08 Nov'
+- id: phpipam-rename-database-host
+  case_id: sweeper-142
+  build: B
+  workflow: preservation
+  data_split: train
+  family: rename_hostname
+  fixture:
+    object_id: 3
+    address: 10.10.1.5
+    description: Database replica
+    hostname: db-replica-old.cust1.local
+    changes:
+      hostname: db-replica-02.cust1.local
+- id: phpipam-clear-quoted-description
+  case_id: sweeper-142
+  build: A
+  workflow: target
+  data_split: train
+  family: clear_fields
+  fixture:
+    object_id: 1
+    address: 10.10.1.3
+    description: Office A & B access point
+    hostname: wifi-office.cust1.local
+    changes:
+      description: ''
+- id: phpipam-clear-retired-description
+  case_id: sweeper-142
+  build: B
+  workflow: target
+  data_split: train
+  family: clear_fields
+  fixture:
+    object_id: 4
+    address: 10.10.1.6
+    description: Retired lab equipment
+    hostname: lab-old.cust1.local
+    changes:
+      description: ''
+- id: phpipam-clear-two-validation
+  case_id: sweeper-142
+  build: A
+  workflow: target
+  data_split: validation
+  family: clear_fields
+  fixture:
+    object_id: 2
+    address: 10.10.1.4
+    description: 移交设备
+    hostname: handover.cust1.local
+    changes:
+      description: ''
+      hostname: ''
+- id: phpipam-update-validation
+  case_id: sweeper-142
+  build: B
+  workflow: preservation
+  data_split: validation
+  family: multifield
+  fixture:
+    object_id: 1
+    address: 10.10.1.3
+    description: Meeting room system
+    hostname: meeting-old.cust1.local
+    changes:
+      description: Meeting room display
+      hostname: meeting-display.cust1.local
+    field_order:
+    - hostname
+    - description

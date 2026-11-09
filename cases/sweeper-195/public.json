@@ -1,0 +1,13 @@
+{
+  "case_id": "sweeper-195",
+  "workflows": {
+    "target": {
+      "task": "Edit the existing About us page (page 3), preserving its slug about-us. Set Title to 'About the community archive'. Use Metadata for the extra fields when needed. Click Save and Continue Editing. Report fail if this existing page is rejected because its own slug already exists. If Save succeeds, reload the editor and verify every requested field, reporting pass only when they persist. Report blocked if the actual save or result cannot be observed.",
+      "expected": "{\"title\": \"About the community archive\"}"
+    },
+    "preservation": {
+      "task": "Add a new child page under Home Page. Set Title to 'About Copy'. In Metadata, set Slug to about-us, which is already used by the About us sibling. Click Save and Continue Editing. Report pass if this true duplicate slug is visibly rejected with the duplicate-slug error, fail if a second page with that slug is saved, or blocked if you cannot complete the check.",
+      "expected": "duplicate_slug_rejected"
+    }
+  }
+}

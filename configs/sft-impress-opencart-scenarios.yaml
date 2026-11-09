@@ -1,0 +1,26 @@
+version: 1
+scenarios:
+- {id: impress-archive-name, app: impresscms, build: A, split: train, family: site_name, start: editor, values: {sitename: Cedar Community Archive}}
+- {id: impress-makers-hub, app: impresscms, build: B, split: train, family: name_and_slogan, start: list, values: {sitename: Riverside Makers Hub, slogan: "Repair, learn, and share practical skills"}}
+- {id: impress-library-mail, app: impresscms, build: A, split: train, family: name_and_email, start: list, values: {sitename: Oak Street Library, adminmail: library-admin@example.test}}
+- {id: impress-three-fields, app: impresscms, build: B, split: train, family: three_fields, start: editor, values: {sitename: Harbour History Centre, slogan: Discover the stories behind our waterfront, adminmail: harbour-team@example.test}}
+- {id: impress-chinese-site, app: impresscms, build: A, split: train, family: multilingual, start: editor, values: {sitename: 城北社区资料馆, slogan: 保存街区记忆，分享本地故事}}
+- {id: impress-french-site, app: impresscms, build: B, split: train, family: multilingual, start: list, values: {sitename: Atelier du quartier, slogan: Réparer ensemble et transmettre les savoir-faire}}
+- {id: impress-descriptive-name, app: impresscms, build: A, split: train, family: descriptive_name, start: list, values: {sitename: Westfield Volunteer Network for Neighbourhood Events and Community Support}}
+- {id: impress-punctuation, app: impresscms, build: B, split: train, family: punctuation, start: editor, values: {sitename: Cedar & Grove Community Hub, slogan: "What's on: talks, walks & workshops"}}
+- {id: impress-mail-first, app: impresscms, build: A, split: train, family: reversed_field_order, start: editor, values: {adminmail: events-desk@example.test, sitename: Northgate Events Desk, slogan: Plan local events with the neighbourhood team}}
+- {id: impress-slogan-first, app: impresscms, build: B, split: train, family: reversed_field_order, start: list, values: {slogan: Local collections and a welcoming reading room, adminmail: reading-room@example.test, sitename: Birch Reading Room}}
+- {id: impress-validation-office, app: impresscms, build: A, split: validation, family: name_and_email, start: list, values: {sitename: Community Advice Office, adminmail: advice-office@example.test}}
+- {id: impress-validation-garden, app: impresscms, build: B, split: validation, family: name_and_slogan, start: editor, values: {sitename: Meadow Garden Group, slogan: Grow useful plants and share seasonal knowledge}}
+- {id: opencart-green-decimal, app: opencart, build: A, split: train, family: decimal_weight, start: options, label: Green, values: {weight: '0.6'}}
+- {id: opencart-green-three-quarter, app: opencart, build: B, split: train, family: decimal_weight, start: product, label: Green, values: {weight: '0.75'}}
+- {id: opencart-blue-stock, app: opencart, build: A, split: train, family: weight_and_quantity, start: options, label: Blue, values: {weight: '1.25', quantity: 123}}
+- {id: opencart-red-stock-first, app: opencart, build: B, split: train, family: quantity_then_weight, start: product, label: Red, values: {quantity: 87, weight: '1.5'}}
+- {id: opencart-yellow-eighth, app: opencart, build: A, split: train, family: precise_decimal, start: product, label: Yellow, values: {weight: '0.125'}}
+- {id: opencart-yellow-seven-eighth, app: opencart, build: B, split: train, family: precise_decimal, start: options, label: Yellow, values: {weight: '0.875'}}
+- {id: opencart-red-replenish, app: opencart, build: A, split: train, family: weight_and_quantity, start: options, label: Red, values: {weight: '2.25', quantity: 146}}
+- {id: opencart-blue-bulk, app: opencart, build: B, split: train, family: quantity_then_weight, start: product, label: Blue, values: {quantity: 235, weight: '4.125'}}
+- {id: opencart-radio-medium, app: opencart, build: A, split: train, family: integer_weight, start: product, label: Medium, values: {weight: '25'}}
+- {id: opencart-radio-small, app: opencart, build: B, split: train, family: integer_and_quantity, start: options, label: Small, values: {weight: '12', quantity: 62}}
+- {id: opencart-validation-green, app: opencart, build: A, split: validation, family: quantity_then_weight, start: product, label: Green, values: {quantity: 174, weight: '0.375'}}
+- {id: opencart-validation-large, app: opencart, build: B, split: validation, family: integer_weight, start: options, label: Large, values: {weight: '42'}}

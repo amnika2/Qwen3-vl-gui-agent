@@ -1,0 +1,10 @@
+{
+  "repo": "zlab-princeton/SWEeper-Bench",
+  "revision": "f10cd684be52322667f1373c8295624e13791b8f",
+  "source_url": "https://huggingface.co/datasets/zlab-princeton/SWEeper-Bench/resolve/f10cd684be52322667f1373c8295624e13791b8f/data/test.jsonl",
+  "sha256": "be3ef86ae63efbb139cf977a507f0c2da4ad0ef12da5cfb1fdf285ffb9560c31",
+  "rows": 200,
+  "license": "CC-BY-4.0",
+  "authors": "SWEeper-Bench authors (Z Lab, Princeton)",
+  "modifications": "Original JSONL bytes preserved; candidate metadata extracted separately."
+}

@@ -1,0 +1,14 @@
+{
+  "case_id": "sweeper-084",
+  "workflows": {
+    "target": {
+      "task": "Change Site name in ImpressCMS General Settings to Cedar Community Archive, submit Go, and reopen General Settings. Report pass when the saved name matches, fail when a completed valid save gives an internal error or reopens with a different name, or blocked when the check cannot be completed.",
+      "expected": "{\"sitename\": \"Cedar Community Archive\"}"
+    },
+    "preservation": {
+      "task": "Open ImpressCMS Preferences and General Settings. Report pass if the Site name and other settings fields are visible without a PHP error, fail if the page is broken, or blocked if you cannot reach it.",
+      "expected": "general_settings_visible"
+    }
+  },
+  "start_path": "/modules/system/admin.php?fct=preferences&op=show&confcat_id=1"
+}
