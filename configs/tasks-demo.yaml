@@ -1,0 +1,15 @@
+name: Web GUI Agent 业务任务演示
+config: configs/agent-full-base.yaml
+tasks:
+  - id: edit-variable
+    case: sweeper-008
+    build: B
+    workflow: target
+  - id: create-variable
+    case: sweeper-008
+    build: B
+    workflow: preservation
+  - id: edit-profile
+    case: sweeper-041
+    build: B
+    workflow: target

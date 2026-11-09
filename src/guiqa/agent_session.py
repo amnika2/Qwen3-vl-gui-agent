@@ -4,7 +4,7 @@ import json
 import sys
 import time
 
-from jsonschema import validate
+from jsonschema import ValidationError, validate
 
 from .agent_tools import MCPConnections, ToolRegistry
 from .artifacts import write_json
@@ -56,6 +56,7 @@ class AgentSession:
                       "summary": "", "reflection": "", "next_goal": "Plan the task",
                       "compacted_through_step": None, "retrieved_experiences": [],
                       "context_updates": 0, "external_tool_calls": 0,
+                      "finish_deferrals": 0,
                       "planner_adapter": self.settings.get("planner_adapter", "actor")}
         memory = {"name": "memory", "command": sys.executable,
                   "args": ["-m", "guiqa.mcp_server", "--database", self.settings["memory_database"],
@@ -85,12 +86,15 @@ class AgentSession:
                 "tool_observations": self.tool_observations[-3:]}
 
     def refresh(self, reason):
+        remaining = self.deadline - time.monotonic()
+        if remaining <= 0:
+            return
         window = self.config["history_actions"]
         cutoff = max(self.summarized_count, len(self.context.history) - window)
         forgotten = self.context.history[self.summarized_count:cutoff]
         raw = self.model.update_context(
             self.task, self.screenshot(), {**self.state, "tool_observations": self.tool_observations[-3:]}, forgotten,
-            self.context.history[cutoff:], reason, self.deadline - time.monotonic())
+            self.context.history[cutoff:], reason, remaining)
         self.context.result["model_calls"] += 1
         self.context.event({"phase": "context", "reason": reason,
                             "step": self.context.result["actions"], "raw_output": raw,
@@ -113,10 +117,30 @@ class AgentSession:
                                      "raw": raw}, ensure_ascii=False) + "\n")
         self.persist()
 
-    def after_action(self):
+    def after_action(self, execution_error=None):
         self.persist()
-        if self.context.result["actions"] - self.last_refresh_step >= self.settings["refresh_actions"]:
+        if execution_error:
+            self.refresh("execution_error: " + execution_error)
+        elif self.context.result["actions"] - self.last_refresh_step >= self.settings["refresh_actions"]:
             self.refresh("periodic_context_update")
+
+    def defer_finish(self, action):
+        if (action["verdict"] == "blocked" or self.state["finish_deferrals"]
+                or self.context.result["actions"] >= self.config["max_actions"] - 1):
+            return False
+        self.refresh("finish_requested: " + action["observation"])
+        unfinished = [step["step"] for step in self.state["plan"] if step["status"] != "done"]
+        if not unfinished or time.monotonic() >= self.deadline:
+            return False
+        feedback = ("Finish postponed: the current plan still requires " + "; ".join(unfinished)
+                    + ". Continue with next_goal and verify the submitted result. "
+                      "If an actual obstacle prevents completion, report blocked and explain it.")
+        self.state["finish_deferrals"] += 1
+        self.context.history.append({"step": self.context.result["actions"], "result": feedback})
+        self.context.event({"phase": "finish_deferred", "step": self.context.result["actions"],
+                            "unfinished_steps": unfinished, "proposed_finish": action})
+        self.persist()
+        return True
 
     def call_tool(self, action):
         result = self.tools.call(action["name"], action["arguments"])
@@ -127,13 +151,17 @@ class AgentSession:
         self.persist()
 
     def finish(self):
+        completed = self.context.result["termination_reason"] in {
+            "model_finished", "controlled_review", "controlled_review_guarded"}
+        self.finalize_state("finished" if completed else "stopped")
+        if not completed:
+            return
         if time.monotonic() < self.deadline:
             self.state["final_observation"] = self.context.result.get("observation", "")
-            self.refresh("final_review_completed: " + self.context.result["agent_verdict"])
-        self.state["phase"] = "finished"
-        self.state["termination_reason"] = self.context.result["termination_reason"]
-        self.state["final_verdict"] = self.context.result["agent_verdict"]
-        self.state["step"] = self.context.result["actions"]
+            try:
+                self.refresh("final_review_completed: " + self.context.result["agent_verdict"])
+            except (ValueError, ValidationError, RuntimeError) as error:
+                self.state["context_error"] = f"{type(error).__name__}: {error}"
         if time.monotonic() < self.deadline:
             public_episode = {
                 "task_kind": self.context.result.get("task_kind", "unknown"),
@@ -145,29 +173,39 @@ class AgentSession:
                 "execution_feedback": [row["result"] for row in self.context.history if row["result"] != "executed"],
                 "submission_status": self.context.result.get("submission", {}).get("status", "unknown"),
                 "result_observed": self.context.result.get("result_observed", False)}
-            raw = self.model.learn_episode(public_episode, self.deadline - time.monotonic())
-            self.context.result["model_calls"] += 1
-            self.context.event({"phase": "learn", "raw_output": raw})
-            experience = json.loads(raw)
-            validate(experience, EXPERIENCE_SCHEMA)
-            saved = self.tools.call("memory__save_experience", {
-                "case_id": self.context.result["case_id"], "workflow": self.context.result["workflow"],
-                "task": self.task, "source_run_id": self.context.result["run_id"], **experience},
-                caller="runtime_learn")
-            if saved["is_error"]:
-                raise RuntimeError(saved["text"])
-            write_json(self.context.directory / "experience.json", {**experience, **saved["data"]})
-            self.state["saved_experience"] = saved["data"]
-        self.context.result["agent_runtime"] = {
-            "context_updates": self.state["context_updates"],
-            "compacted_through_step": self.state["compacted_through_step"],
-            "retrieved_experiences": len(self.state["retrieved_experiences"]),
-            "external_tool_calls": self.state["external_tool_calls"],
-            "memory_namespace": self.settings["memory_namespace"]}
+            try:
+                raw = self.model.learn_episode(public_episode, self.deadline - time.monotonic())
+                self.context.result["model_calls"] += 1
+                self.context.event({"phase": "learn", "raw_output": raw})
+                experience = json.loads(raw)
+                validate(experience, EXPERIENCE_SCHEMA)
+                saved = self.tools.call("memory__save_experience", {
+                    "case_id": self.context.result["case_id"], "workflow": self.context.result["workflow"],
+                    "task": self.task, "source_run_id": self.context.result["run_id"], **experience},
+                    caller="runtime_learn")
+                if saved["is_error"]:
+                    raise RuntimeError(saved["text"])
+                write_json(self.context.directory / "experience.json", {**experience, **saved["data"]})
+                self.state["saved_experience"] = saved["data"]
+            except (ValueError, ValidationError, RuntimeError) as error:
+                self.state["experience_error"] = f"{type(error).__name__}: {error}"
+        self.finalize_state("finished")
+
+    def finalize_state(self, phase):
+        self.state.update(phase=phase, termination_reason=self.context.result["termination_reason"],
+                          final_verdict=self.context.result["agent_verdict"])
         self.persist()
 
     def persist(self):
         self.state["step"] = self.context.result["actions"]
+        self.context.result["agent_runtime"] = {
+            "phase": self.state["phase"],
+            "context_updates": self.state["context_updates"],
+            "compacted_through_step": self.state["compacted_through_step"],
+            "retrieved_experiences": len(self.state["retrieved_experiences"]),
+            "external_tool_calls": self.state["external_tool_calls"],
+            "finish_deferrals": self.state["finish_deferrals"],
+            "memory_namespace": self.settings["memory_namespace"]}
         write_json(self.context.directory / "task-state.json", self.state)
 
     def screenshot(self):
@@ -175,8 +213,9 @@ class AgentSession:
 
     def __exit__(self, *exc):
         if exc[0] is not None:
-            self.state["phase"] = "interrupted"
-            self.persist()
+            interrupted = isinstance(exc[1], KeyboardInterrupt)
+            self.context.result["termination_reason"] = "interrupted" if interrupted else "infrastructure_failure"
+            self.finalize_state("interrupted" if interrupted else "error")
         self.context.tools = None
         self.context.agent_session = None
         self.connections.__exit__(*exc)

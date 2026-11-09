@@ -32,7 +32,9 @@ flowchart LR
 
 ## 已验证结果
 
-截至 2026-11-09，本地完整测试 **334 项通过**；发布前从待提交文件导出的干净副本通过 **86 项 CPU、浏览器与 MCP 测试**。最新数据包包含 800 条 SFT 训练样本，其中审查训练池为 655 条；新开发集 150 条，五个留出应用的最终测试集 150 条、100 个底层场景。
+2026-11-09 项目交付验收：**110 项 CPU、浏览器与 MCP 测试通过**；编辑变量、创建变量、编辑资料三个真实业务任务均完成，追加的计划提示修正后创建任务也完成，四次运行均为 Agent 与独立判据 `pass`。创建任务实际读取了前一任务保存的程序经验。功能清单、命令和本次记录见 [项目验收说明](docs/AGENT_DELIVERY.md)。
+
+最新训练数据包包含 800 条 SFT 训练样本，其中审查训练池为 655 条；新开发集 150 条，五个留出应用的最终测试集 150 条、100 个底层场景。
 
 最新 GRPO 完成 100 次优化更新，采样 300 个问题组、覆盖 241 道不同问题，其中 40 组产生正误奖励差异。
 
@@ -45,7 +47,7 @@ flowchart LR
 
 这组结果对应给定截图和动作记录的审查评估。最新 GRPO 的测试集总正确数持平。
 
-完整运行时另做了两项真实浏览器任务：
+此前保留的两项真实浏览器联调示例：
 
 | 任务 | Agent 判定 | 独立判据 | 运行记录 |
 | --- | --- | --- | --- |
@@ -86,6 +88,13 @@ python -m venv .model-venv
 
 ## 运行完整 Agent
 
+先按所选配置检查浏览器、PHP、模型文件、CUDA 和 Agent 依赖：
+
+```bash
+CUDA_VISIBLE_DEVICES=2 LD_LIBRARY_PATH="$PWD/vendor/runtime/root/usr/lib/x86_64-linux-gnu" \
+  .model-venv/bin/python -m guiqa doctor --config configs/agent-full-base.yaml
+```
+
 下载底座后可以直接运行带计划、记忆和 MCP 的配置：
 
 ```bash
@@ -102,11 +111,32 @@ CUDA_VISIBLE_DEVICES=2 LD_LIBRARY_PATH="$PWD/vendor/runtime/root/usr/lib/x86_64-
 | 配置 | 用途 |
 | --- | --- |
 | `configs/agent-full-base.yaml` | 底座 + 完整 Agent 运行时 |
+| `configs/agent-full-sft.yaml` | SFT adapter + 完整 Agent 运行时 |
 | `configs/agent-full-grpo.yaml` | GRPO adapter + 完整 Agent 运行时 |
 | `configs/agent-review-evidence-expanded-v1.yaml` | 扩充审查 SFT adapter |
 | `configs/rl-review-grpo-expanded-v1.yaml` | 最新 GRPO 训练配方 |
 
 [MCP 配置与上下文机制](docs/AGENT_RUNTIME.md) · [训练与实验流程](docs/REVIEW_TRAINING_WORKFLOW.md) · [历史开发记录](docs/PROJECT_HISTORY.md)
+
+一次运行编辑变量、创建变量和编辑用户资料三个业务任务：
+
+```bash
+CUDA_VISIBLE_DEVICES=2 LD_LIBRARY_PATH="$PWD/vendor/runtime/root/usr/lib/x86_64-linux-gnu" OMP_NUM_THREADS=4 \
+  .model-venv/bin/python -m guiqa tasks --task-file configs/tasks-demo.yaml --port 13381
+```
+
+命令启动时输出任务清单目录，每个任务使用新应用实例，同一清单共享独立经验库。通过 `--config configs/agent-full-sft.yaml` 或 `--config configs/agent-full-grpo.yaml` 切换权重。
+
+运行期间查看状态，或在中断后继续任务清单：
+
+```bash
+.venv/bin/python -m guiqa status --limit 5
+.venv/bin/python -m guiqa status --run-dir runs/<session_id>
+CUDA_VISIBLE_DEVICES=2 LD_LIBRARY_PATH="$PWD/vendor/runtime/root/usr/lib/x86_64-linux-gnu" OMP_NUM_THREADS=4 \
+  .model-venv/bin/python -m guiqa tasks --resume runs/<session_id> --port 13381
+```
+
+续跑跳过已有结果的任务，重新执行中断项及未开始项。添加 `--retry-failed` 可重跑未成功的任务，各次运行记录分别保留。任务清单的 `report.md` 汇总结果，单次运行报告包含截图、计划、终止原因和原始轨迹。[任务配置与项目验收](docs/AGENT_DELIVERY.md)
 
 ## 训练、评估与测试
 

@@ -128,7 +128,14 @@ class Qwen:
         plan_instruction = (
             "Return statuses, an array in exactly the existing plan's order. Preserve every plan "
             "step; only update its status. " if previous["plan"] else
-            "Return plan, 3-5 short steps each with step and status. ")
+            "Return plan with 3-5 concrete GUI subtasks. Each step is a short imperative sentence "
+            "describing work on the task's record, field or control; status holds its progress. "
+            "Example initial response: "
+            '{"plan":[{"step":"Open the requested record or creation form","status":"in_progress"},'
+            '{"step":"Enter the requested field values and click Save","status":"pending"},'
+            '{"step":"Reopen the saved record and compare its values","status":"pending"}],'
+            '"summary":"","reflection":"","next_goal":"Open the requested form"}. '
+            "Adapt these subtask descriptions and next_goal to the actual task and screenshot. ")
         messages = [{"role": "system", "content": [{"type": "text", "text": (
             "Maintain the working memory and plan of a screenshot GUI agent. " + plan_instruction +
             "Status values are pending/in_progress/done. Also return summary, reflection and "

@@ -14,9 +14,9 @@ def main(argv=None):
     try:
         if args.command == "doctor":
             from .doctor import doctor
-            result = doctor(root)
+            result = doctor(root, load_config(root / args.config) if args.config else None)
             print(json.dumps(result, ensure_ascii=False, indent=2))
-            return 0 if result["checks"]["browser"]["ok"] and result["checks"]["native_php"]["ok"] else 3
+            return 0 if result["ready"] else 3
         if args.command == "prepare":
             from .dataset import prepare
             sources = yaml.safe_load((root / "configs/sources.yaml").read_text())
@@ -30,6 +30,24 @@ def main(argv=None):
             from .evaluate import summarize
             print(summarize(root, args.run_dir.resolve()))
             return 0
+        if args.command == "status":
+            from .tasks import status
+            print(json.dumps(status(root, args.run_dir.resolve() if args.run_dir else None, args.limit),
+                             ensure_ascii=False, indent=2))
+            return 0
+        if args.command == "tasks":
+            from .tasks import create_session, run_tasks
+            if args.resume:
+                directory = args.resume.resolve()
+                session = json.loads((directory / "session.json").read_text())
+            else:
+                directory, session = create_session(root, args.task_file.resolve(), args.config)
+            model = load_model("qwen-controlled", session["config"])
+            session = run_tasks(root, directory, session, model, args.port, args.retry_failed)
+            print(json.dumps({"session_dir": str(directory), "status": session["status"],
+                              "successful": session["successful"], "report": str(directory / "report.md")},
+                             ensure_ascii=False, indent=2))
+            return 130 if session["status"] == "interrupted" else (0 if session["successful"] else 4)
         config = load_config(root / args.config)
         if args.command == "run":
             from .runner import run_case
@@ -37,7 +55,7 @@ def main(argv=None):
             directory, result = run_case(root, args.case, args.build, args.workflow, args.method, config,
                                          port=args.port, model=model)
             print(json.dumps({"run_dir": str(directory), **result}, ensure_ascii=False, indent=2))
-            return EXIT_CODES[result["oracle_verdict"]]
+            return 130 if result["termination_reason"] == "interrupted" else EXIT_CODES[result["oracle_verdict"]]
         from .evaluate import evaluate
         if args.command == "calibrate":
             suite = {"cases": [args.case], "repeats": 2, "split": "calibration"}
@@ -58,7 +76,7 @@ def main(argv=None):
         print(json.dumps({"experiment": str(directory), "reports": str(reports)}, indent=2))
         matrix = json.loads((directory / "matrix.json").read_text())
         return 0 if matrix["passed"] else 4
-    except (ValueError, FileNotFoundError) as error:
+    except (ValueError, FileNotFoundError, yaml.YAMLError) as error:
         print(f"guiqa: {error}")
         return 3
 
@@ -112,8 +130,18 @@ def arguments(argv):
     parser = argparse.ArgumentParser(prog="guiqa")
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[2])
     commands = parser.add_subparsers(dest="command", required=True)
-    commands.add_parser("doctor")
+    commands.add_parser("doctor").add_argument("--config", type=Path)
     commands.add_parser("prepare")
+    status = commands.add_parser("status")
+    status.add_argument("--run-dir", type=Path)
+    status.add_argument("--limit", type=int, default=10)
+    tasks = commands.add_parser("tasks")
+    source = tasks.add_mutually_exclusive_group(required=True)
+    source.add_argument("--task-file", type=Path)
+    source.add_argument("--resume", type=Path)
+    tasks.add_argument("--config", type=Path)
+    tasks.add_argument("--retry-failed", action="store_true")
+    tasks.add_argument("--port", type=int, default=13200)
     for command in ("report", "summarize"):
         commands.add_parser(command).add_argument("--run-dir", type=Path, required=True)
     calibrate = commands.add_parser("calibrate")
@@ -132,4 +160,7 @@ def arguments(argv):
     evaluate.add_argument("--methods", default="script,qwen-base")
     evaluate.add_argument("--config", type=Path, default=Path("configs/agent.yaml"))
     evaluate.add_argument("--port", type=int, default=13200)
-    return parser.parse_args(argv)
+    args = parser.parse_args(argv)
+    if args.command == "tasks" and args.resume and args.config:
+        parser.error("tasks --resume uses the saved config; --config is only valid with --task-file")
+    return args

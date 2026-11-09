@@ -36,16 +36,23 @@ def render(directory: Path):
                                            for value in values) + " |")
         lines.extend(["", f"- 提交：{json.dumps(result.get('submission'), ensure_ascii=False)}",
                       f"- 审查选图：{json.dumps(result.get('review_evidence', []), ensure_ascii=False)}", ""])
-    if result.get("agent_runtime"):
-        state = json.loads((directory / "task-state.json").read_text())
+    state_path = directory / "task-state.json"
+    if state_path.exists():
+        state = json.loads(state_path.read_text())
         lines.extend(["## 任务状态与记忆", "", f"- 状态：{state['phase']}",
+                      f"- 终止原因：{result['termination_reason']}",
+                      f"- 下一步目标：{state['next_goal']}",
                       f"- 上下文更新：{state['context_updates']} 次",
                       f"- 已压缩至步骤：{state['compacted_through_step']}",
                       f"- 检索经验：{len(state['retrieved_experiences'])} 条",
                       f"- 历史摘要：{state['summary']}", f"- 最近反思：{state['reflection']}", ""])
         lines.extend(f"- [{step['status']}] {step['step']}" for step in state["plan"])
-        lines.extend(["", "[任务状态](task-state.json) · [上下文更新](context-events.jsonl) · "
-                      "[工具调用](tool-calls.jsonl) · [本次经验](experience.json)", ""])
+        unfinished = [step["step"] for step in state["plan"] if step["status"] != "done"]
+        lines.extend(["", "待完成步骤：" + ("；".join(unfinished) if unfinished else "无"), ""])
+        artifacts = [("任务状态", "task-state.json"), ("上下文更新", "context-events.jsonl"),
+                     ("工具调用", "tool-calls.jsonl"), ("本次经验", "experience.json")]
+        lines.extend([" · ".join(f"[{label}]({name})" for label, name in artifacts
+                                if (directory / name).exists()), ""])
     lines.extend(["## 步骤证据", ""])
     trace = directory / "trace.jsonl"
     if trace.exists():

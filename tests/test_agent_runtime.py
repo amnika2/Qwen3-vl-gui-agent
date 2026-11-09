@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
 import sys
+from types import SimpleNamespace
 
 import pytest
 from playwright.sync_api import sync_playwright
@@ -85,6 +86,185 @@ class ContextModel(FakeModel):
         assert "task" not in episode
         return json.dumps({"procedure": ["Focus the field, select all, replace, Save, then reopen"],
                            "lessons": ["Verify the current saved value rather than reusing a previous result"]})
+
+
+@pytest.fixture
+def runtime_episode(tmp_path):
+    class Observer:
+        def capture(self, step, screenshot):
+            pass
+
+    config = {"wall_seconds": 60, "max_actions": 30, "history_actions": 4,
+              "agent_runtime": {"enabled": True, "refresh_actions": 3,
+                                "memory_database": str(tmp_path / "memory.sqlite3"),
+                                "memory_namespace": "test", "memory_top_k": 3, "max_tool_calls": 3}}
+    with sync_playwright() as playwright:
+        with playwright.chromium.launch() as browser:
+            page = browser.new_page(viewport={"width": 1280, "height": 900})
+            page.route("http://guiqa.test/", lambda route: route.fulfill(content_type="text/html", body='''
+<input id="value" style="position:absolute;left:150px;top:75px;width:300px">
+<button style="position:absolute;left:150px;top:160px;width:300px;height:50px"
+ onclick="localStorage.setItem('saved', document.getElementById('value').value)">Save</button>
+<script>document.getElementById('value').value = localStorage.getItem('saved') || 'Old';</script>'''))
+            page.goto("http://guiqa.test/")
+            result = dict(run_id="test-runtime", case_id="synthetic", workflow="target", method="qwen-controlled",
+                          actions=0, model_calls=0, agent_verdict="blocked", termination_reason="interrupted")
+            context = RunContext(tmp_path, result, Observer(), page)
+            context.capture("initial")
+            yield context, config
+
+
+def test_unfinished_plan_continues_before_reloading_unsaved_form(runtime_episode):
+    context, config = runtime_episode
+
+    class SaveModel(ContextModel):
+        def update_context(self, *args, **kwargs):
+            raw = super().update_context(*args, **kwargs)
+            update = json.loads(raw)
+            if "statuses" in update:
+                saved = context.page.evaluate("localStorage.getItem('saved')") == "New"
+                update["statuses"] = ["done", "done" if saved else "pending"]
+                update["next_goal"] = "Finish" if saved else "Click Save"
+            return json.dumps(update)
+
+    actions = [{"action": "click", "coordinate": [200, 100]},
+               {"action": "press", "key": "Control+a"}, {"action": "type", "text": "New"},
+               {"action": "finish", "verdict": "fail", "observation": "Old value remains", "evidence_steps": [3]},
+               {"action": "click", "coordinate": [200, 200]},
+               {"action": "finish", "verdict": "pass", "observation": "Saved New", "evidence_steps": [4]},
+               {"action": "finish", "verdict": "pass", "observation": "Reopened New", "evidence_steps": [5],
+                "requested_value_entered": True, "submission_succeeded": True, "final_record_visible": True}]
+    model = SaveModel([json.dumps(action) for action in actions])
+    agent(context, "Replace Old with New, save and reopen", model, config)
+    assert context.page.locator("#value").input_value() == "New"
+    assert context.result["agent_verdict"] == "pass"
+    assert context.result["agent_runtime"]["finish_deferrals"] == 1
+    trace = [json.loads(line) for line in (context.directory / "trace.jsonl").read_text().splitlines()]
+    assert trace[4]["action"]["action"] == "click"
+    assert trace[5]["action"]["key"] == "Control+r"
+    events = [json.loads(line) for line in (context.directory / "model.jsonl").read_text().splitlines()]
+    assert len([event for event in events if event.get("phase") == "finish_deferred"]) == 1
+
+
+def test_execution_timeout_triggers_reflection_then_allows_blocked_exit(runtime_episode, monkeypatch):
+    from playwright.sync_api import TimeoutError
+
+    context, config = runtime_episode
+    execute = context.execute
+
+    def timeout_on_click(action, caller="agent"):
+        if action["action"] == "click":
+            raise TimeoutError("The button did not become ready")
+        return execute(action, caller)
+
+    monkeypatch.setattr(context, "execute", timeout_on_click)
+    model = ContextModel([json.dumps(action) for action in [
+        {"action": "click", "coordinate": [200, 200]},
+        {"action": "finish", "verdict": "blocked", "observation": "Save is unavailable", "evidence_steps": [1]},
+        {"action": "finish", "verdict": "blocked", "observation": "Save is unavailable", "evidence_steps": [2]}]])
+    agent(context, "Save a value", model, config)
+    assert any(reason.startswith("execution_error: The button") for reason in model.reasons)
+    assert context.result["agent_verdict"] == "blocked"
+    assert context.result["agent_runtime"]["finish_deferrals"] == 0
+    assert context.result["agent_runtime"]["phase"] == "finished"
+
+
+def test_unfinished_plan_only_defers_finish_once(runtime_episode):
+    context, config = runtime_episode
+    finish = {"action": "finish", "verdict": "fail", "observation": "Save did not succeed", "evidence_steps": [0]}
+    review = {"action": "finish", "verdict": "blocked", "observation": "Submission was not established", "evidence_steps": [1]}
+    model = ContextModel([json.dumps(action) for action in [finish, finish, review]])
+    agent(context, "Save and inspect a value", model, config)
+    assert context.result["termination_reason"] == "controlled_review"
+    assert context.result["agent_runtime"]["finish_deferrals"] == 1
+    assert context.result["actions"] == 1
+    assert len([reason for reason in model.reasons if reason.startswith("finish_requested")]) == 1
+
+
+def test_action_budget_has_a_stopped_state_without_learning(runtime_episode):
+    context, config = runtime_episode
+    context.result["method"] = "qwen-base"
+    config["max_actions"] = 1
+    click = json.dumps({"action": "click", "coordinate": [200, 100]})
+    model = ContextModel([click, click])
+    agent(context, "Save and inspect a value", model, config)
+    state = json.loads((context.directory / "task-state.json").read_text())
+    assert state["phase"] == context.result["agent_runtime"]["phase"] == "stopped"
+    assert state["termination_reason"] == "action_budget"
+    assert context.result["actions"] == 1
+    assert not (context.directory / "experience.json").exists()
+
+
+@pytest.mark.parametrize("error,phase,reason", [(KeyboardInterrupt(), "interrupted", "interrupted"),
+                                               (RuntimeError("generation failed"), "error", "infrastructure_failure")])
+def test_interrupted_and_failed_tasks_persist_terminal_state(runtime_episode, error, phase, reason):
+    context, config = runtime_episode
+
+    class FailingModel(ContextModel):
+        def generate(self, *args, **kwargs):
+            raise error
+
+    with pytest.raises(type(error)):
+        agent(context, "Save a value", FailingModel([]), config)
+    state = json.loads((context.directory / "task-state.json").read_text())
+    assert state["phase"] == context.result["agent_runtime"]["phase"] == phase
+    assert state["termination_reason"] == context.result["termination_reason"] == reason
+    assert state["final_verdict"] == "blocked"
+    assert context.tools is context.agent_session is None
+
+
+def test_wall_budget_stops_without_post_budget_context_or_learning(runtime_episode, monkeypatch):
+    import guiqa.agent_session as session_module
+    import guiqa.runner as runner_module
+
+    context, config = runtime_episode
+    clock = SimpleNamespace(now=0)
+    time_source = SimpleNamespace(monotonic=lambda: clock.now)
+    monkeypatch.setattr(session_module, "time", time_source)
+    monkeypatch.setattr(runner_module, "time", time_source)
+
+    class ExpiringModel(ContextModel):
+        def update_context(self, *args, **kwargs):
+            raw = super().update_context(*args, **kwargs)
+            clock.now = 61
+            return raw
+
+        def learn_episode(self, *args, **kwargs):
+            pytest.fail("learning must not run after the task budget")
+
+    model = ExpiringModel([])
+    agent(context, "Save a value", model, config)
+    state = json.loads((context.directory / "task-state.json").read_text())
+    assert state["phase"] == context.result["agent_runtime"]["phase"] == "stopped"
+    assert state["termination_reason"] == "wall_clock_budget"
+    assert context.result["model_calls"] == 1
+    assert model.reasons == ["initial_plan"]
+
+
+def test_optional_context_and_experience_errors_preserve_task_result(runtime_episode):
+    context, config = runtime_episode
+
+    class BrokenFinalizationModel(ContextModel):
+        def update_context(self, *args, **kwargs):
+            if args[5].startswith("final_review_completed"):
+                return "unfinished JSON"
+            return super().update_context(*args, **kwargs)
+
+        def learn_episode(self, episode, remaining):
+            raise RuntimeError("summary generation failed")
+
+    model = BrokenFinalizationModel([json.dumps(action) for action in [
+        {"action": "click", "coordinate": [200, 100]},
+        {"action": "finish", "verdict": "blocked", "observation": "No change needed", "evidence_steps": [1]},
+        {"action": "finish", "verdict": "pass", "observation": "Saved value is present", "evidence_steps": [2],
+         "requested_value_entered": True, "submission_succeeded": True, "final_record_visible": True}]])
+    agent(context, "Inspect the saved value", model, config)
+    state = json.loads((context.directory / "task-state.json").read_text())
+    assert state["phase"] == context.result["agent_runtime"]["phase"] == "finished"
+    assert context.result["agent_verdict"] == "pass"
+    assert context.result["termination_reason"] == "controlled_review"
+    assert "JSONDecodeError" in state["context_error"]
+    assert "summary generation failed" in state["experience_error"]
 
 
 def test_browser_context_compaction_mcp_feedback_and_final_memory(tmp_path):

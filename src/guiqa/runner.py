@@ -36,7 +36,8 @@ from .sft_scenarios import SupplementaryObserver
 IMPLEMENTATION_HASH = source_digest(Path(__file__).resolve().parents[2])
 
 
-def run_case(root, case_id, build, workflow, method, config, port=13200, model=None, repeat=0, experiment="pilot", scenario=None):
+def run_case(root, case_id, build, workflow, method, config, port=13200, model=None, repeat=0, experiment="pilot", scenario=None,
+             on_started=None):
     if method == "sft" and config.get("review_format") in {"evidence_v1", "evidence_v2", "evidence_facts_v1"}:
         raise ValueError("collect raw SFT with configs/agent.yaml, then supply visible field annotations to scripts/build_review_evidence.py")
     public, fixture = load_case(root, case_id, workflow)
@@ -67,7 +68,7 @@ def run_case(root, case_id, build, workflow, method, config, port=13200, model=N
               "task": public["task"], "expected": public["expected"], "matrix_expected": matrix_expected, "actual": None,
               "agent_verdict": "blocked", "oracle_verdict": "inconclusive", "actions": 0,
               "model_calls": 0, "config_hash": config_hash, "model_revision": config.get("model_revision"),
-              "termination_reason": "interrupted", "started": True,
+              "termination_reason": "running", "started": True,
               "reproduce": f"python -m guiqa run --case {case_id} --build {build} --workflow {workflow} --method {method}"}
     if config.get("review_format") in {"evidence_v1", "evidence_v2", "evidence_facts_v1"}:
         result["review_format"] = config["review_format"]
@@ -83,6 +84,8 @@ def run_case(root, case_id, build, workflow, method, config, port=13200, model=N
     instance = adapter.instance(root, directory / "private/instance", build, port)
     observer = None
     write_json(directory / "result.json", {**result, "elapsed_seconds": 0})
+    if on_started is not None:
+        on_started(directory)
     try:
         instance.start()
         if scenario is not None:
@@ -304,6 +307,10 @@ def agent_loop(context, task, model, config, deadline):
             session.call_tool(action)
             continue
         if action["action"] == "finish":
+            if session and session.defer_finish(action):
+                continue
+            if time.monotonic() >= deadline:
+                break
             if control:
                 controlled_review(context, task, model, control, available, deadline,
                                   "model_proposed_finish", action["evidence_steps"])
@@ -336,12 +343,14 @@ def agent_loop(context, task, model, config, deadline):
                 context.event({"step": step, "effect": "no_visible_change", "difference": control.difference,
                                "feedback": feedback})
         if session:
-            session.after_action()
+            session.after_action(execution_error)
             if reason:
                 session.refresh(reason)
                 control.actions.clear()
                 control.static_clicks = 0
                 reason = None
+        if time.monotonic() >= deadline:
+            break
         if control and (reason or step == config["max_actions"] - 1):
             controlled_review(context, task, model, control, available, deadline, reason or "reserved_review_step")
             return
