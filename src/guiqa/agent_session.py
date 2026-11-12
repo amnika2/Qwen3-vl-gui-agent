@@ -158,7 +158,7 @@ class AgentSession:
         if not unfinished or time.monotonic() >= self.deadline:
             return False
         feedback = ("Finish postponed: the current plan still requires " + "; ".join(unfinished)
-                    + ". Continue with next_goal and verify the submitted result. "
+                    + ". Continue with next_goal and verify the required business result. "
                       "If an actual obstacle prevents completion, report blocked and explain it.")
         self.state["finish_deferrals"] += 1
         self.context.history.append({"step": self.context.result["actions"], "result": feedback})
@@ -201,6 +201,12 @@ class AgentSession:
                 "execution_feedback": [row["result"] for row in self.context.history if row["result"] != "executed"],
                 "submission_status": self.context.result.get("submission", {}).get("status", "unknown"),
                 "result_observed": self.context.result.get("result_observed", False)}
+            if self.context.result.get("review_format") == "business_evidence_v1":
+                public_episode.pop("fields")
+                public_episode.pop("submission_status")
+                public_episode.pop("result_observed")
+                public_episode["business_checks"] = [{key: item[key] for key in ("id", "object", "status")}
+                                                     for item in self.context.result.get("checks", [])]
             try:
                 raw = self.model.learn_episode(public_episode, self.deadline - time.monotonic())
                 self.context.result["model_calls"] += 1

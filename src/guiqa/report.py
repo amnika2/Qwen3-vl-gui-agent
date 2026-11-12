@@ -36,6 +36,14 @@ def render(directory: Path):
                                            for value in values) + " |")
         lines.extend(["", f"- 提交：{json.dumps(result.get('submission'), ensure_ascii=False)}",
                       f"- 审查选图：{json.dumps(result.get('review_evidence', []), ensure_ascii=False)}", ""])
+    if result.get("review_format") == "business_evidence_v1":
+        lines.extend(["## 业务检查", "", "| 检查 | 对象 | 预期 | 观测 | 结果 | 证据步骤 |",
+                      "|---|---|---|---|---|---|"])
+        for check in result.get("checks", []):
+            values = [check[key] for key in ("id", "object", "expected", "observed", "status", "evidence_steps")]
+            lines.append("| " + " | ".join(str(value).replace("|", "\\|").replace("\n", "<br>")
+                                          for value in values) + " |")
+        lines.append("")
     state_path = directory / "task-state.json"
     if state_path.exists():
         state = json.loads(state_path.read_text())

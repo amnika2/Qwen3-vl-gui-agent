@@ -1,0 +1,49 @@
+version: 1
+dataset: dataset26-v1
+source: vendor/SWEeper-Bench/test.jsonl
+output: datasets/dataset26-v1
+runs: runs/dataset26-v1
+builds:
+  A: base_commit
+  B: reference_commit
+samples_per_trajectory:
+  operation: 5
+  review: 1
+quotas:
+  train: {applications: 12, trajectories_per_app: 50}
+  validation: {applications: 6, trajectories_per_app: 30}
+  test: {applications: 8, trajectories_per_app: 20}
+applications:
+  train:
+    F: [sweeper-125, sweeper-142]
+    V: [sweeper-195, sweeper-151]
+    O: [sweeper-004, sweeper-146]
+    L: [sweeper-196, sweeper-055]
+    N: [sweeper-034, sweeper-053]
+    X: [sweeper-049, sweeper-102]
+  validation:
+    F: [sweeper-083]
+    V: [sweeper-020]
+    O: [sweeper-101]
+    L: [sweeper-025]
+    N: [sweeper-037]
+    X: [sweeper-001]
+  test:
+    F: [sweeper-005]
+    V: [sweeper-192]
+    O: [sweeper-045]
+    L: [sweeper-009]
+    N: [sweeper-027]
+    X: [sweeper-043]
+    A: [sweeper-087]
+    B: [sweeper-074]
+e2e:
+  executions: 16
+  per_test_application: {A: 1, B: 1}
+  reserved_instance_prefix: d26-e2e
+boundaries:
+  unseen_training_categories: [A, B]
+  authentication_is_environment_setup_outside_category_A: true
+  preserve_existing_datasets: true
+  trajectory_count_is_total_across_both_builds: true
+  task_family_is_separate_from_parameter_instance: true

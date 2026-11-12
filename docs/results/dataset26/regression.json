@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "exit_code": 0,
+  "environment": ".rl-venv",
+  "cuda_visible_devices": "",
+  "passed": 430,
+  "scope": "Full repository regression before final Oracle follow-up tests",
+  "dataset_manifest_sha256": "35bc98196f8b524a811645f8c9564fa4b2f0b0a7f04f63aaa81de750dbf7d293",
+  "clean_checkout_ci": {
+    "passed": 184,
+    "test_files": 26,
+    "exit_code": 0,
+    "datasets_runs_vendor_absent": true
+  }
+}

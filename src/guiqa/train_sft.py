@@ -14,6 +14,7 @@ from transformers import (AutoProcessor, Qwen3VLForConditionalGeneration, Traine
 
 from .artifacts import write_json
 from .sft_collator import QwenSftCollator
+from .dataset26_training import load_training_partitions
 
 
 def main():
@@ -27,6 +28,8 @@ def main():
     dataset = root / config["dataset"]
     output = root / config["output_dir"]
     model_path = root / config["model_path"]
+    train_data, validation_data, dataset_check = load_training_partitions(
+        dataset, config.get("dataset_format"))
     torch.set_num_threads(4)
     set_seed(config["seed"])
     training_args = TrainingArguments(
@@ -59,8 +62,6 @@ def main():
     model.config.use_cache = False
     model.enable_input_require_grads()
     model, init_adapter = initialize_language_adapter(model, config, root)
-    train_data = [json.loads(line) for line in (dataset / "train.jsonl").read_text().splitlines()]
-    validation_data = [json.loads(line) for line in (dataset / "validation.jsonl").read_text().splitlines()]
     trainer = AssistantTrainer(
         model=model, args=training_args, train_dataset=train_data, eval_dataset=validation_data,
         data_collator=QwenSftCollator(processor, dataset), processing_class=processor,
@@ -83,6 +84,7 @@ def main():
                                "weights_index_sha256": hashlib.sha256(
                                    (model_path / "model.safetensors.index.json").read_bytes()).hexdigest()},
                 "train_samples": len(train_data), "validation_samples": len(validation_data),
+                "dataset_check": dataset_check,
                 "validation_case_ids": sorted({row["case_id"] for row in validation_data}),
                 "data_sha256": {name: hashlib.sha256((dataset / name).read_bytes()).hexdigest()
                                 for name in ("train.jsonl", "validation.jsonl", "manifest.json")},

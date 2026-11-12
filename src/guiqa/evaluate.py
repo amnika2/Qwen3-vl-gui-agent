@@ -9,11 +9,12 @@ from .runner import run_case
 
 
 def evaluate(root, suite, methods, config, model=None, calibration=False, port=13200):
+    workflows = evaluation_workflows(suite, config)
     experiment = ("calibration-" if calibration else "evaluation-") + uuid.uuid4().hex[:8]
     directory = root / "runs" / experiment
     directory.mkdir(parents=True)
     planned = [{"case_id": case, "build": build, "workflow": workflow, "method": method, "repeat": repeat}
-               for case in suite["cases"] for build in suite.get("builds", ["A", "B"]) for workflow in ("target", "preservation")
+               for case in suite["cases"] for build in suite.get("builds", ["A", "B"]) for workflow in workflows
                for method in methods for repeat in range(suite["repeats"])]
     write_json(directory / "schedule.json", {"experiment": experiment, "suite": suite,
                "planned": planned, "config": config})
@@ -34,6 +35,16 @@ def evaluate(root, suite, methods, config, model=None, calibration=False, port=1
     write_json(directory / "matrix.json", {"cells": completed,
         "passed": len(completed) == len(planned) and all(cell["matrix_matches"] for cell in completed)})
     return directory, summary
+
+
+def evaluation_workflows(suite, config):
+    default = ["target"] if config.get("dataset") == "datasets/dataset26-v1" else ["target", "preservation"]
+    workflows = suite.get("workflows", default)
+    if not isinstance(workflows, list) or not workflows or any(
+        not isinstance(workflow, str) or workflow not in {"target", "preservation"} for workflow in workflows
+    ):
+        raise ValueError("suite workflows must be a nonempty list of target and/or preservation")
+    return workflows
 
 
 def summarize(root: Path, directory: Path):

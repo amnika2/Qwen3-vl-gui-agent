@@ -1,4 +1,5 @@
 import json
+import copy
 import os
 import shlex
 import socket
@@ -37,7 +38,10 @@ IMPLEMENTATION_HASH = source_digest(Path(__file__).resolve().parents[2])
 
 
 def run_case(root, case_id, build, workflow, method, config, port=13200, model=None, repeat=0, experiment="pilot", scenario=None,
-             on_started=None):
+             on_started=None, index=0, condition=None):
+    if config.get("dataset") == "datasets/dataset26-v1":
+        return run_dataset26_case(root, case_id, build, workflow, method, config, port, model,
+                                  repeat, experiment, on_started, index, condition)
     if method == "sft" and config.get("review_format") in {"evidence_v1", "evidence_v2", "evidence_facts_v1"}:
         raise ValueError("collect raw SFT with configs/agent.yaml, then supply visible field annotations to scripts/build_review_evidence.py")
     public, fixture = load_case(root, case_id, workflow)
@@ -129,6 +133,90 @@ def run_case(root, case_id, build, workflow, method, config, port=13200, model=N
     return directory, result
 
 
+def run_dataset26_case(root, case_id, build, workflow, method, config, port=13200, model=None,
+                       repeat=0, experiment="dataset26", on_started=None, index=0, condition=None):
+    from .dataset26_execution import prepare_case
+    from .dataset26_oracle import judge as judge_business
+    from .dataset26_controls import public_controls
+    from .dataset26_review_labels import public_requirements
+
+    if method == "sft":
+        raise ValueError("dataset26 SFT uses the recorded dataset and configs/sft-train-dataset26-v1.yaml")
+    run_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ") + "-" + uuid.uuid4().hex[:8]
+    directory = root / "runs" / run_id
+    directory.mkdir(parents=True)
+    if condition is None:
+        prepared = prepare_case(root, case_id, build, directory, port, workflow, index)
+    else:
+        from .dataset26_execution import prepare_e2e_case
+        prepared = prepare_e2e_case(root, condition, directory, port)
+    run_config = copy.deepcopy(config)
+    if run_config.get("agent_runtime", {}).get("enabled"):
+        run_config["agent_runtime"].update(memory_database=str(directory / "memory.sqlite3"), memory_namespace=run_id)
+    result = {"run_id": run_id, "dataset": "dataset26-v1", "case_id": case_id, "build": build,
+              "workflow": workflow, "method": method, "experiment": experiment, "repeat": repeat,
+              "category": prepared.category, "task_family_id": prepared.task_family_id,
+              "source_commit": prepared.source_commit, "task": prepared.task, "expected": prepared.task,
+              "matrix_expected": "fail" if build == "A" and workflow == "target" else "pass",
+              "agent_verdict": "blocked", "oracle_verdict": "inconclusive", "actual": None,
+              "actions": 0, "model_calls": 0, "termination_reason": "running", "started": True,
+              "review_format": "business_evidence_v1", "review_profile": "business_evidence_v1",
+              "requirements": public_requirements(case_id, prepared.task), "config_hash": digest(run_config),
+              "reproduce": f"python -m guiqa run --case {case_id} --build {build} --workflow {workflow} "
+                           f"--method {method} --config {shlex.quote(str(directory / 'agent-config.json'))} --index {index}"}
+    if condition is not None:
+        result["condition_id"] = condition["id"]
+        result["reproduce"] = (f"python scripts/run_dataset26_e2e.py --case {case_id} --method {method} "
+                               f"--config {shlex.quote(str(directory / 'agent-config.json'))} "
+                               f"--output runs/reproduce-{run_id}")
+    write_json(directory / "agent-config.json", run_config)
+    write_json(directory / "manifest.json", {"run_id": run_id, "config": run_config,
+               "config_hash": result["config_hash"], "implementation_hash": IMPLEMENTATION_HASH})
+    write_json(directory / "result.json", {**result, "elapsed_seconds": 0})
+    if on_started is not None:
+        on_started(directory)
+    observer = None
+    started = time.monotonic()
+    try:
+        prepared.start()
+        with sync_playwright() as playwright:
+            with playwright.chromium.launch() as browser:
+                page = browser.new_page(viewport=VIEWPORT, device_scale_factor=1)
+                result["browser_version"] = browser.version
+                page.set_default_timeout(15000)
+                observer = prepared.observer(page)
+                prepared.setup(page)
+                result["public_tools"] = {"application_url": prepared.instance.url,
+                    "native_controls": public_controls(case_id), "available_files": prepared.available_files,
+                    "requirements": result["requirements"]}
+                context = RunContext(directory, result, observer, page)
+                if method == "script":
+                    trace = prepared.reference(page, directory, observer)
+                    result.update(actions=trace[-1]["step"], termination_reason="script_completed")
+                else:
+                    context.capture("Initial public task state")
+                    agent(context, prepared.task, model, run_config)
+                    result["gpu"] = model.metrics()
+                verdict, reason = judge_business(observer)
+                result.update(oracle_verdict=verdict, oracle_reason=reason, actual=observer.evidence.actual)
+                if method == "script":
+                    result["agent_verdict"] = verdict if verdict in {"pass", "fail"} else "blocked"
+    except KeyboardInterrupt:
+        result["termination_reason"] = "interrupted"
+    except Exception as error:
+        result.update(oracle_verdict="infra_error", termination_reason="infrastructure_failure",
+                      error=f"{type(error).__name__}; see private/error.txt")
+        (directory / "private/error.txt").write_text(traceback.format_exc())
+    finally:
+        if observer is not None:
+            write_json(directory / "private/oracle.json", observer.data())
+        prepared.close()
+        result["elapsed_seconds"] = time.monotonic() - started
+        write_json(directory / "result.json", result)
+        render(directory)
+    return directory, result
+
+
 def load_case(root: Path, case_id, workflow):
     if case_id not in ADAPTERS and case_id in APP_MODULES:
         from importlib import import_module
@@ -151,6 +239,8 @@ class RunContext:
         self.agent_session = None
 
     def execute(self, action, caller="agent"):
+        if self.result.get("review_format") == "business_evidence_v1":
+            self.observer.before_action(action)
         return self.tools.execute(action, caller) if self.tools else execute(self.page, action)
 
     def capture(self, description, action=None, raw=None, elapsed=0, error=None):
@@ -259,12 +349,12 @@ def agent(context, task, model, config):
 
 
 def agent_loop(context, task, model, config, deadline):
-    if config.get("review_format") in {"evidence_v1", "evidence_v2", "evidence_facts_v1"}:
+    if config.get("review_format") in {"evidence_v1", "evidence_v2", "evidence_facts_v1", "business_evidence_v1"}:
         context.result["review_format"] = config["review_format"]
     profile = context.result.get("review_profile", "persistence")
     session = context.agent_session
     available = {0}
-    ledger = ProgressLedger() if session or context.result["method"] == "qwen-improved" else None
+    ledger = ProgressLedger(profile=profile) if session or context.result["method"] == "qwen-improved" else None
     control = LoopControl(context.directory / "screenshots/000.png") if context.result["method"] == "qwen-controlled" else None
     while time.monotonic() < deadline:
         action = None
@@ -276,14 +366,19 @@ def agent_loop(context, task, model, config, deadline):
             options = {"progress": ledger.snapshot() if ledger else None}
             if session:
                 options["progress"] = {**session.progress(), "action_progress": ledger.snapshot()}
+            if profile == "business_evidence_v1":
+                options["progress"] = {**(options["progress"] or {}), "public_tools": context.result["public_tools"]}
             if profile != "persistence":
                 options["profile"] = profile
             raw = model.generate(task, context.directory / f"screenshots/{context.result['actions']:03d}.png",
                                  context.history, remaining, **options)
             context.result["model_calls"] += 1
             try:
+                public = context.result["public_tools"] if profile == "business_evidence_v1" else None
                 action = parse_action(raw, available, normalize_reload=control is not None,
-                                      tools=session.tools.catalog if session else None)
+                                      tools=session.tools.catalog if session else None,
+                                      **({"native_controls": public["native_controls"],
+                                          "available_files": public["available_files"]} if public is not None else {}))
             except (ValueError, KeyError, TypeError) as error:
                 context.event({"step": context.result["actions"], "retry": retry, "raw_output": raw,
                                "parse_error": str(error), "elapsed_seconds": time.monotonic() - start})
@@ -381,9 +476,11 @@ def controlled_review(context, task, model, control, available, deadline, reason
     after = context.result["actions"]
     available.add(after)
     review_format = context.result.get("review_format")
-    organized = review_format in {"evidence_v1", "evidence_v2", "evidence_facts_v1"}
+    organized = review_format in {"evidence_v1", "evidence_v2", "evidence_facts_v1", "business_evidence_v1"}
     select, parse, guard_review = select_evidence, parse_review, review_guard
-    if review_format in {"evidence_v2", "evidence_facts_v1"}:
+    if review_format == "business_evidence_v1":
+        from .business_review import select_evidence as select, parse_review as parse, review_guard as guard_review
+    elif review_format in {"evidence_v2", "evidence_facts_v1"}:
         from .review_context import select_evidence as select
         from .review_contract import review_guard as guard_review
 
@@ -392,9 +489,11 @@ def controlled_review(context, task, model, control, available, deadline, reason
         else:
             from .review_contract import parse_review as parse
     options = {"profile": profile} if profile != "persistence" else {}
+    if review_format == "business_evidence_v1":
+        options["requirements"] = context.result["requirements"]
     if organized:
         frames = (select(context.history, control.differences, before, after, nominated_steps)
-                  if review_format in {"evidence_v2", "evidence_facts_v1"} else
+                  if review_format in {"evidence_v2", "evidence_facts_v1", "business_evidence_v1"} else
                   select(context.history, control.differences, before, after))
         steps = [frame["step"] for frame in frames]
         options["frames"] = frames
@@ -410,7 +509,9 @@ def controlled_review(context, task, model, control, available, deadline, reason
     context.event({"step": after, "phase": "review", "raw_output": raw, "screenshot_steps": steps,
                    "elapsed_seconds": time.monotonic() - start})
     try:
-        verdict = (parse(raw, set(steps), profile) if organized else
+        verdict = (parse(raw, set(steps), profile, requirements=context.result["requirements"])
+                   if review_format == "business_evidence_v1" else
+                   parse(raw, set(steps), profile) if organized else
                    parse_action(raw, available, normalize_reload=True))
         if verdict["action"] != "finish":
             raise ValueError("review phase requires finish")
@@ -418,11 +519,14 @@ def controlled_review(context, task, model, control, available, deadline, reason
         context.result.update(termination_reason="review_invalid_output", observation=str(error))
         return
     guard = guard_review(verdict, profile=profile)
-    if not guard and verdict["verdict"] != "blocked" and control.last_type_step == before:
+    if (review_format != "business_evidence_v1" and not guard
+            and verdict["verdict"] != "blocked" and control.last_type_step == before):
         guard = "last_edit_not_submitted"
     context.result.update(review_model_verdict=verdict["verdict"], observation=verdict["observation"],
                           evidence_steps=verdict["evidence_steps"])
-    if organized:
+    if review_format == "business_evidence_v1":
+        context.result["checks"] = verdict["checks"]
+    elif organized:
         context.result["field_readings"] = verdict["field_readings"]
         if review_format in {"evidence_v2", "evidence_facts_v1"}:
             context.result.update({key: verdict[key] for key in

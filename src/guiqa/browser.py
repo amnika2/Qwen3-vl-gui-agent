@@ -3,6 +3,8 @@ import time
 
 from playwright.sync_api import TimeoutError as BrowserTimeout
 
+from .actions import browser_action
+
 VIEWPORT = {"width": 1280, "height": 900}
 
 
@@ -46,6 +48,7 @@ def settle(page):
 
 
 def execute(page, action):
+    action = browser_action(action)
     kind = action["action"]
     result = {"action": kind}
     if kind == "click":
@@ -53,7 +56,10 @@ def execute(page, action):
         page.mouse.click(x, y)
         result.update(raw_coordinate=action["coordinate"], css_coordinate=[x, y])
     elif kind == "type":
-        page.keyboard.insert_text(action["text"])
+        if action.get("input_method") == "keyboard":
+            page.keyboard.type(action["text"], delay=25)
+        else:
+            page.keyboard.insert_text(action["text"])
     elif kind == "press":
         # CDP keyboard events do not invoke Chromium's address-bar shortcuts in headless mode.
         if action["key"] == "Control+r":
@@ -64,6 +70,13 @@ def execute(page, action):
         page.mouse.wheel(0, action["pixels"])
     elif kind == "wait":
         page.wait_for_timeout(action["seconds"] * 1000)
+    elif kind == "navigate":
+        page.goto(action["url"], wait_until="domcontentloaded")
+    elif kind == "select":
+        selection = {key: action[key] for key in ("label", "value") if key in action}
+        page.locator(action["selector"]).select_option(**selection)
+    elif kind == "upload":
+        page.locator(action["selector"]).set_input_files(action["file"])
     settle(page)
     return result
 

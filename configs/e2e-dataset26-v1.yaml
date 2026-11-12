@@ -1,0 +1,54 @@
+version: 1
+dataset: dataset26-v1
+executions: 16
+builds: [A, B]
+cases:
+  sweeper-005:
+    category: F
+    task: >-
+      Create a product named E2E Cedar desk lamp. Enter Sale Price 2.451.831,25,
+      complete the required form and Save. Reopen the Items list and inspect that same
+      product. The displayed sale price must represent the full amount $2,451,831.25.
+  sweeper-192:
+    category: V
+    task: >-
+      On the signed-in user's Preferences, note the current Email and Height.
+      Attempt to change Email to jordan.lee@admin.com, which belongs to another account,
+      and Height to 177. Save and reopen Preferences. The duplicate email must produce
+      a visible validation error and both Email and Height must retain their original values.
+  sweeper-045:
+    category: O
+    task: >-
+      Open Catalog, Products, and the parent product Oxford Ash Tee. Open Edit for its
+      Size M variant, SKU OXFORD_ASH_TEE_M. Inspect the Qty input without saving.
+      It must show the seeded stock quantity 5.
+  sweeper-009:
+    category: L
+    task: >-
+      With short-id question permalinks enabled, open What is a tag? and accept its
+      answer. The answer must visibly become Accepted without an Answer do not found error.
+  sweeper-027:
+    category: N
+    task: >-
+      Open the Welcome page and its first comments page. Click Last, the double-arrow
+      pagination control. The result must show LASTPAGE_ONLY_MARKER from the final page,
+      rather than PAGE2_ONLY_MARKER from the next page.
+  sweeper-043:
+    category: X
+    task: >-
+      Open a new Etherpad pad named e2e-shift-brief. Use Import/Export to import the
+      supplied etherpad-legacy.etherpad file. Confirm overwrite if requested. The pad
+      editor must restore the text hey and replace the default welcome paragraph.
+    input_file: etherpad-legacy.etherpad
+  sweeper-087:
+    category: A
+    task: >-
+      The InvoicePlane account inactive@example.com is deactivated. Attempt to sign in
+      with its correct password oakTable#27x. Authentication must be rejected with the
+      credentials error and the authenticated dashboard must remain inaccessible.
+  sweeper-074:
+    category: B
+    task: >-
+      Purchase two units of Cookies at Candy cupboard, due 2030-12-31, with note
+      E2E_KEEP_NOTE. Transfer one unit to Pantry. Open Stock entries and filter to Pantry.
+      The transferred Cookies entry must retain note E2E_KEEP_NOTE.

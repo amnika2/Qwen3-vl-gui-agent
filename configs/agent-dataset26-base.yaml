@@ -1,0 +1,21 @@
+model_path: vendor/models/Qwen3-VL-8B-Instruct
+model_revision: 0c351dd01ed87e9c1b53cbc748cba10e6187ff3b
+dataset: datasets/dataset26-v1
+review_format: business_evidence_v1
+review_profile: business_evidence_v1
+max_actions: 40
+wall_seconds: 600
+max_new_tokens: 384
+review_max_new_tokens: 2048
+max_pixels: 802816
+seed: 42
+history_actions: 4
+agent_runtime:
+  enabled: true
+  planner_adapter: base
+  refresh_actions: 3
+  memory_database: .runtime/dataset26-agent-memory.sqlite3
+  memory_namespace: dataset26
+  memory_top_k: 3
+  max_tool_calls: 8
+  mcp_servers: []

@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "samples_checked": 4700,
+  "actions": {
+    "click": 2164,
+    "press": 600,
+    "type": 550,
+    "scroll": 286,
+    "navigate": 800,
+    "upload": 150,
+    "select": 150
+  },
+  "previously_rejected": 1200,
+  "now_rejected": 0,
+  "manifest_sha256": "35bc98196f8b524a811645f8c9564fa4b2f0b0a7f04f63aaa81de750dbf7d293"
+}

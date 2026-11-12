@@ -1,7 +1,8 @@
 class ProgressLedger:
     """Records executed GUI actions without reading page state or oracle evidence."""
 
-    def __init__(self):
+    def __init__(self, profile="persistence"):
+        self.profile = profile
         self.selection_active = False
         self.inputs = []
         self.last_reload_step = None
@@ -25,11 +26,23 @@ class ProgressLedger:
         elif kind == "press" and action["key"] == "Control+r":
             self.last_reload_step = step
             self.selection_active = False
+        elif kind == "navigate":
+            self.selection_active = False
         elif kind == "type":
             self.inputs.append({"step": step, "text": action["text"], "preceded_by_select_all": self.selection_active})
             self.selection_active = False
 
     def snapshot(self):
+        if self.profile == "business_evidence_v1":
+            notes = self.business_checks()
+        else:
+            notes = self.persistence_checks()
+        return {"recent_inputs": self.inputs[-6:], "selection_active": self.selection_active,
+                "last_executed_action": self.last_action,
+                "last_reload_step": self.last_reload_step, "consecutive_identical_clicks": self.repeated_clicks,
+                "pending_checks": notes}
+
+    def persistence_checks(self):
         if self.selection_active:
             next_step = "Select All has already executed. Now use type with the exact required replacement text. Clicking again would cancel the selection."
         elif self.last_action and self.last_action["action"] == "click":
@@ -49,7 +62,17 @@ class ProgressLedger:
         if self.repeated_clicks >= 2:
             notes.append("You repeated the same click. Inspect its visible outcome. Correct unexpected input; after saving, reopen instead of repeatedly saving.")
         notes.append("After all requested values are entered correctly, save once, reload/reopen the same record, and inspect the new screenshot before finishing.")
-        return {"recent_inputs": self.inputs[-6:], "selection_active": self.selection_active,
-                "last_executed_action": self.last_action,
-                "last_reload_step": self.last_reload_step, "consecutive_identical_clicks": self.repeated_clicks,
-                "pending_checks": notes}
+        return notes
+
+    def business_checks(self):
+        notes = ["Inspect the current screenshot against the public task and identify the same target object across stages. "
+                 "Collect the visible facts needed for each requirement before finishing."]
+        if self.selection_active:
+            notes.append("Select All has executed. Type the requested replacement before clicking elsewhere.")
+        if self.last_action and self.last_action["action"] == "type":
+            notes.append("Typing has executed. Read the visible value; the action text alone does not establish correct input.")
+        if self.repeated_clicks >= 2:
+            notes.append("The same click was repeated. Inspect its visible effect before choosing the next task operation.")
+        notes.append("For each requested outcome, cite screenshots showing the relevant input, object, control, or result. "
+                     "A completed action alone does not prove that the requirement is satisfied.")
+        return notes

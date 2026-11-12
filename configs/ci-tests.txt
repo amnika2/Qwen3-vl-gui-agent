@@ -18,3 +18,9 @@ tests/test_review_contract.py
 tests/test_review_facts_runtime.py
 tests/test_review_profiles.py
 tests/test_tasks.py
+tests/test_business_review.py
+tests/test_dataset26_e2e.py
+tests/test_dataset26_entrypoints.py
+tests/test_dataset26_oracle.py
+tests/test_dataset26_review_labels.py
+tests/test_dataset26_training.py

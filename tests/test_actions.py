@@ -14,6 +14,12 @@ from guiqa.browser import to_css
     {"action": "press", "key": "Control+l"},
     {"action": "wait", "seconds": float("inf")},
     {"action": "scroll", "pixels": 20000},
+    {"action": "scroll", "pixels": 2717},
+    {"action": "navigate", "url": ""},
+    {"action": "upload", "selector": "input[type=file]"},
+    {"action": "select", "selector": "select"},
+    {"action": "select", "selector": "select", "label": "One", "value": "1"},
+    {"action": "type", "text": "hello", "input_method": "unknown"},
     {"action": "finish", "verdict": "fail", "observation": "error", "evidence_steps": [5]},
     {"action": "exec", "text": "arbitrary code"},
 ])
@@ -40,3 +46,16 @@ def test_controlled_f5_reload_alias_is_opt_in():
     with pytest.raises(ValueError):
         parse_action('{"action":"press","key":"F5"}', {0})
     assert parse_action('{"action":"press","key":"F5"}', {0}, normalize_reload=True) == {"action": "press", "key": "Control+r"}
+
+
+@pytest.mark.parametrize("action", [
+    {"action": "navigate", "url": "http://guiqa.test/"},
+    {"action": "select", "selector": "#choice", "label": "One"},
+    {"action": "select", "selector": "#choice", "value": "1"},
+    {"action": "upload", "selector": "#file", "file": "files/input.txt"},
+    {"action": "type", "text": "hello", "input_method": "keyboard"},
+    {"action": "scroll", "pixels": 2716},
+    {"action": "scroll", "pixels": -2000},
+])
+def test_dataset26_browser_protocol(action):
+    assert parse_action(json.dumps(action), {0}) == action

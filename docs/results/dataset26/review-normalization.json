@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "normalized_reviews": 940,
+  "original_reviews_preserved": 940,
+  "reproducible_from_original_reviews": 940,
+  "labels_before": {
+    "fail": 417,
+    "pass": 523
+  },
+  "labels_after": {
+    "fail": 417,
+    "pass": 523
+  },
+  "label_changes": 0,
+  "observed_fact_changes": 0,
+  "operation_samples": 4700,
+  "by_split": {
+    "train": {
+      "operation": 3000,
+      "review": 600
+    },
+    "validation": {
+      "operation": 900,
+      "review": 180
+    },
+    "test": {
+      "operation": 800,
+      "review": 160
+    }
+  },
+  "public_evidence_supplements": {
+    "sweeper-196": 50,
+    "sweeper-055": 50,
+    "sweeper-049": 50,
+    "sweeper-001": 30
+  },
+  "maximum_review_images": 5,
+  "native_control_catalog_checked": true,
+  "source_trace_hashes_verified": 940,
+  "manifest_sha256": "35bc98196f8b524a811645f8c9564fa4b2f0b0a7f04f63aaa81de750dbf7d293"
+}

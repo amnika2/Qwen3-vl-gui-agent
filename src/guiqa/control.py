@@ -2,6 +2,8 @@ import json
 
 from PIL import Image, ImageChops, ImageStat
 
+from .actions import browser_action
+
 
 REVIEW_EVIDENCE_FIELDS = ("requested_value_entered", "submission_succeeded", "final_record_visible")
 
@@ -49,9 +51,7 @@ class LoopControl:
             self.post_type_step = 0
         elif self.last_type_step and not self.post_type_step:
             self.post_type_step = step
-        fields = {"click": ("coordinate",), "type": ("text",), "press": ("key",),
-                  "scroll": ("pixels",), "wait": ("seconds",)}
-        self.actions.append(json.dumps({"action": action["action"], **{key: action[key] for key in fields[action["action"]]}}, sort_keys=True))
+        self.actions.append(json.dumps(browser_action(action), sort_keys=True))
         for period in (1, 2, 3):
             if len(self.actions) >= 3 * period:
                 a, b, c = (self.actions[-3 * period:-2 * period], self.actions[-2 * period:-period], self.actions[-period:])

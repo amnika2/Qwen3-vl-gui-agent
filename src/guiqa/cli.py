@@ -53,7 +53,7 @@ def main(argv=None):
             from .runner import run_case
             model = load_model(args.method, config)
             directory, result = run_case(root, args.case, args.build, args.workflow, args.method, config,
-                                         port=args.port, model=model)
+                                         port=args.port, model=model, index=args.index)
             print(json.dumps({"run_dir": str(directory), **result}, ensure_ascii=False, indent=2))
             return 130 if result["termination_reason"] == "interrupted" else EXIT_CODES[result["oracle_verdict"]]
         from .evaluate import evaluate
@@ -97,8 +97,10 @@ def load_config(path):
             raise ValueError(f"{key} must be a positive integer")
     if type(config.get("seed")) is not int:
         raise ValueError("seed must be an integer")
-    if config.get("review_format", "legacy") not in {"legacy", "evidence_v1", "evidence_v2", "evidence_facts_v1"}:
-        raise ValueError("review_format must be legacy, evidence_v1, evidence_v2 or evidence_facts_v1")
+    if config.get("review_format", "legacy") not in {"legacy", "evidence_v1", "evidence_v2", "evidence_facts_v1", "business_evidence_v1"}:
+        raise ValueError("unsupported review_format")
+    if (config.get("dataset") == "datasets/dataset26-v1") != (config.get("review_format") == "business_evidence_v1"):
+        raise ValueError("dataset26 and business_evidence_v1 must be configured together")
     if "review_max_new_tokens" in config and (type(config["review_max_new_tokens"]) is not int or config["review_max_new_tokens"] < 1):
         raise ValueError("review_max_new_tokens must be a positive integer")
     config["model_path"] = str((path.parent.parent / config["model_path"]).resolve())
@@ -158,6 +160,7 @@ def arguments(argv):
     run.add_argument("--method", choices=["script", "sft", "qwen-base", "qwen-improved", "qwen-controlled"], required=True)
     run.add_argument("--config", type=Path, default=Path("configs/agent.yaml"))
     run.add_argument("--port", type=int, default=13200)
+    run.add_argument("--index", type=int, default=0, help="zero-based dataset26 parameter instance")
     evaluate = commands.add_parser("evaluate")
     evaluate.add_argument("--suite", type=Path, required=True)
     evaluate.add_argument("--methods", default="script,qwen-base")

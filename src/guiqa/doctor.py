@@ -1,4 +1,5 @@
 import importlib
+import hashlib
 import json
 import os
 import platform
@@ -36,6 +37,9 @@ def doctor(root: Path, config=None):
         result["checks"]["model_files"] = model_files_check(root / config["model_path"])
         result["checks"]["model_dependencies"] = model_dependencies_check(config)
         required.extend(["model_files", "model_dependencies", "cuda"])
+        if config.get("dataset") == "datasets/dataset26-v1":
+            result["checks"]["dataset26"] = dataset26_check(root / config["dataset"])
+            required.append("dataset26")
         if config.get("adapter_path"):
             result["checks"]["adapter_files"] = files_check(root / config["adapter_path"],
                 ["adapter_config.json", "adapter_model.safetensors"])
@@ -105,9 +109,29 @@ def model_dependencies_check(config):
              "transformers.models.qwen3_vl.processing_qwen3_vl", "accelerate"]
     if config.get("adapter_path"):
         names.append("peft")
-    if config.get("agent_runtime", {}).get("enabled") or config.get("review_format") in {"evidence_v2", "evidence_facts_v1"}:
+    if config.get("agent_runtime", {}).get("enabled") or config.get("review_format") in {
+        "evidence_v2", "evidence_facts_v1", "business_evidence_v1"
+    }:
         names.append("lmformatenforcer.integrations.transformers")
     return imports_check(names)
+
+
+def dataset26_check(directory):
+    files = files_check(directory, ["plan.json", "manifest.json"])
+    if not files["ok"]:
+        return files
+    manifest = json.loads((directory / "manifest.json").read_text())
+    plan = json.loads((directory / "plan.json").read_text())
+    execution = imports_check(["guiqa.dataset26_execution", "guiqa.dataset26_oracle", "guiqa.business_review"])
+    plan_matches = hashlib.sha256((directory / "plan.json").read_bytes()).hexdigest() == manifest["plan_sha256"]
+    applications = plan["applications"]
+    metadata_ready = (manifest["dataset"] == "dataset26-v1" and manifest["complete"]
+                      and manifest["review_format"] == "business_evidence_v1"
+                      and len(applications) == len({app["repo"] for app in applications}) == 26)
+    return {"ok": metadata_ready and plan_matches and execution["ok"], "directory": str(directory),
+            "applications": len(applications), "metadata_ready": metadata_ready,
+            "plan_matches_manifest": plan_matches, "execution_modules": execution,
+            "scope": "package metadata and execution imports; applications are not started"}
 
 
 def mcp_configuration_check(settings):

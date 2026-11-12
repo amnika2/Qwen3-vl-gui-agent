@@ -24,3 +24,18 @@ def test_replace_and_reload_record_actions_without_claiming_persistence():
     assert state["recent_inputs"][0]["preceded_by_select_all"]
     assert state["last_reload_step"] == 4
     assert "persisted" not in state
+
+
+def test_business_checks_do_not_force_form_submission():
+    ledger = ProgressLedger(profile="business_evidence_v1")
+    ledger.record({"action": "click", "coordinate": [500, 445]}, 1)
+    checks = " ".join(ledger.snapshot()["pending_checks"])
+    assert "public task" in checks and "target object" in checks
+    assert "Save" not in checks and "reopen" not in checks and "Control+a" not in checks
+
+
+def test_navigation_clears_the_previous_pages_select_all():
+    ledger = ProgressLedger(profile="business_evidence_v1")
+    ledger.record({"action": "press", "key": "Control+a"}, 1)
+    ledger.record({"action": "navigate", "url": "http://guiqa.test/list"}, 2)
+    assert not ledger.snapshot()["selection_active"]

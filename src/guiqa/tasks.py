@@ -15,9 +15,10 @@ def create_session(root, task_file, config_path=None):
     from .cli import load_config
 
     specification = yaml.safe_load(task_file.read_text())
-    validate_tasks(root, specification)
+    validate_task_specification(specification)
     selected_config = root / (config_path or specification.get("config", "configs/agent-full-base.yaml"))
     config = load_config(selected_config)
+    validate_task_cases(root, specification, config)
     session_id = "tasks-" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ") + "-" + uuid.uuid4().hex[:8]
     directory = root / "runs" / session_id
     directory.mkdir(parents=True)
@@ -75,7 +76,12 @@ def run_tasks(root, directory, session, model, port=13200, retry_failed=False):
     return session
 
 
-def validate_tasks(root, specification):
+def validate_tasks(root, specification, config=None):
+    validate_task_specification(specification)
+    validate_task_cases(root, specification, config)
+
+
+def validate_task_specification(specification):
     if not isinstance(specification, dict) or not isinstance(specification.get("tasks"), list) or not specification["tasks"]:
         raise ValueError("task file requires a nonempty tasks list")
     for key in ("name", "config"):
@@ -92,7 +98,18 @@ def validate_tasks(root, specification):
         identifiers.add(task["id"])
         if task["build"] not in {"A", "B"} or task["workflow"] not in {"target", "preservation"}:
             raise ValueError("task requires build A/B and workflow target/preservation")
-        load_case(root, task["case"], task["workflow"])
+
+
+def validate_task_cases(root, specification, config):
+    if config is not None and config.get("dataset") == "datasets/dataset26-v1":
+        plan = json.loads((root / config["dataset"] / "plan.json").read_text())
+        applications = {app["case_id"] for app in plan["applications"]}
+        for task in specification["tasks"]:
+            if task["case"] not in applications:
+                raise ValueError("task application is outside the frozen dataset26 plan: " + task["case"])
+    else:
+        for task in specification["tasks"]:
+            load_case(root, task["case"], task["workflow"])
 
 
 def render_session(directory, session):

@@ -42,6 +42,22 @@ def test_typing_sequence_resets_visual_stagnation(tmp_path):
     assert control.last_type_step == 3
 
 
+def test_dataset26_actions_share_cycle_detection_without_execution_metadata(tmp_path):
+    screenshot = tmp_path / "screen.png"
+    Image.new("RGB", (1280, 900), "white").save(screenshot)
+    actions = [
+        {"action": "navigate", "url": "http://guiqa.test/list"},
+        {"action": "select", "selector": "#choice", "value": "1"},
+        {"action": "upload", "selector": "#file", "file": "files/input.txt"},
+        {"action": "type", "text": "new", "input_method": "keyboard"},
+    ]
+    for action in actions:
+        control = LoopControl(screenshot)
+        assert control.record(action, 1, screenshot) is None
+        assert control.record({**action, "execution_detail": "ignored"}, 2, screenshot) is None
+        assert control.record(action, 3, screenshot) == "action_cycle_period_1"
+
+
 def test_loop_enters_reload_and_judgment_without_oracle_answer(tmp_path):
     class Observer:
         def capture(self, step, screenshot):

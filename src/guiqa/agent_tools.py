@@ -12,17 +12,7 @@ from mcp import Client
 from mcp.client.stdio import StdioServerParameters
 
 from .browser import execute
-from .actions import KEYS
-
-
-BROWSER_ARGUMENTS = {
-    "click": {"coordinate": {"type": "array", "minItems": 2, "maxItems": 2,
-                              "items": {"type": "number", "minimum": 0, "maximum": 1000}}},
-    "type": {"text": {"type": "string", "maxLength": 2000}},
-    "press": {"key": {"enum": sorted(KEYS)}},
-    "scroll": {"pixels": {"type": "integer", "minimum": -1800, "maximum": 1800}},
-    "wait": {"seconds": {"type": "number", "minimum": 0, "maximum": 5}},
-}
+from .actions import BROWSER_ACTION_SCHEMAS
 
 
 class MCPConnections:
@@ -80,10 +70,8 @@ class ToolRegistry:
         self.page, self.directory, self.connections = page, Path(directory), connections
         self.catalog = {
             "browser__" + action: {"name": "browser__" + action, "description": "Browser " + action,
-                "action": action, "transport": "browser", "input_schema": {
-                    "type": "object", "properties": properties, "required": list(properties),
-                    "additionalProperties": False}}
-            for action, properties in BROWSER_ARGUMENTS.items()}
+                "action": action, "transport": "browser", "input_schema": schema}
+            for action, schema in BROWSER_ACTION_SCHEMAS.items()}
         self.catalog.update(connections.catalog)
 
     def execute(self, action, caller="agent"):

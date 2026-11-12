@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "dataset": "dataset26-v1",
+  "partitions": {
+    "train": {
+      "applications": 12,
+      "trajectories": 600,
+      "samples": 3600,
+      "phases": {
+        "operation": 3000,
+        "review": 600
+      },
+      "case_ids": [
+        "sweeper-004",
+        "sweeper-034",
+        "sweeper-049",
+        "sweeper-053",
+        "sweeper-055",
+        "sweeper-102",
+        "sweeper-125",
+        "sweeper-142",
+        "sweeper-146",
+        "sweeper-151",
+        "sweeper-195",
+        "sweeper-196"
+      ]
+    },
+    "validation": {
+      "applications": 6,
+      "trajectories": 180,
+      "samples": 1080,
+      "phases": {
+        "operation": 900,
+        "review": 180
+      },
+      "case_ids": [
+        "sweeper-001",
+        "sweeper-020",
+        "sweeper-025",
+        "sweeper-037",
+        "sweeper-083",
+        "sweeper-101"
+      ]
+    },
+    "test": {
+      "applications": 8,
+      "trajectories": 160,
+      "samples": 960,
+      "phases": {
+        "operation": 800,
+        "review": 160
+      },
+      "case_ids": [
+        "sweeper-005",
+        "sweeper-009",
+        "sweeper-027",
+        "sweeper-043",
+        "sweeper-045",
+        "sweeper-074",
+        "sweeper-087",
+        "sweeper-192"
+      ]
+    }
+  },
+  "images_referenced": 2883,
+  "upload_files_referenced": 75,
+  "test_used_for_training": false,
+  "processor_smoke": {
+    "samples": [
+      "d26-sweeper-049-001-A-op-0",
+      "d26-sweeper-195-001-B-review"
+    ],
+    "image_counts": [
+      1,
+      5
+    ],
+    "image_grid_count": 6,
+    "sequence_tokens": [
+      1156,
+      5149
+    ],
+    "assistant_tokens": [
+      88,
+      270
+    ],
+    "loss_scope": "assistant JSON and EOS only"
+  },
+  "manifest_sha256": "35bc98196f8b524a811645f8c9564fa4b2f0b0a7f04f63aaa81de750dbf7d293",
+  "training_started": false,
+  "model_loaded": false,
+  "test_scope": "schema and artifact checks only; no model selection"
+}

@@ -55,6 +55,28 @@ BUSINESS_OPERATION_PROMPT = PROMPT.replace(
     "duplicate value, verify that rejection rather than claiming a record was created. "
     "Judge the outcome against the task and cite the input and outcome screenshots.")
 OPERATION_PROMPTS = {"persistence": PROMPT, "business_outcome_v1": BUSINESS_OPERATION_PROMPT}
+OPERATION_PROMPTS["business_evidence_v1"] = '''Operate the browser to test the public business requirement.
+Use screenshots to establish visible facts. Return exactly one JSON action per response.
+Coordinates range from 0 to 1000. Available actions:
+{"action":"click","coordinate":[x,y]}
+{"action":"type","text":"text"} (optional input_method="keyboard" sends key events)
+{"action":"press","key":"Control+a"} (also Control+r, Enter, Tab, Escape, Backspace, Delete, arrows, Home, End, PageUp, PageDown)
+{"action":"scroll","pixels":500} (range -2716 to 2716)
+{"action":"wait","seconds":1}
+{"action":"navigate","url":"application URL"}
+{"action":"select","selector":"supplied native control selector","label":"option label"}
+{"action":"upload","selector":"supplied native control selector","file":"supplied file path"}
+{"action":"finish","verdict":"pass|fail|blocked","observation":"visible results","evidence_steps":[0,5]}
+Native select/upload tools are declared in the public task context. Use the supplied file paths.
+Typing inserts text; to replace a value, focus the field, press Control+a, then type.
+Perform the operations required by the task and inspect their actual results on the same objects.
+For a mutation, establish the input/target, its trigger, and the resulting state. For a read-only
+task inspect the requested value or choices. Preserve baseline and intermediate screenshots needed
+to check unchanged values and multi-stage results. Correct rejection can satisfy the requirement.
+When finishing, nominate the screenshot steps needed to establish every required business check.
+Action attempts and success notifications alone do not prove the final result. Use blocked when
+required evidence is absent. Application defects are test results.
+'''
 
 
 class Qwen:
@@ -148,10 +170,22 @@ class Qwen:
                         "milestones. Action attempts are not proof of success. Initial summary is empty. "
                         "On later updates write summary in 1-3 sentences. Close each string promptly. "
                         "An example summary is 'Step 1 opened the editor. Step 3 entered the requested value.' ")
+        if self.config.get("review_format") == "business_evidence_v1":
+            instructions = instructions.replace("input/save/reopen ", "target/trigger/outcome ")
         if planning:
             if plan:
                 instructions += ("Return statuses, an array in exactly the existing plan's order. "
                                  "Preserve every plan step; only update its status. ")
+            elif self.config.get("review_format") == "business_evidence_v1":
+                example = {"plan": [{"step": "Identify the task objects and establish required baselines", "status": "in_progress"},
+                                    {"step": "Perform the requested operations and inspect each outcome", "status": "pending"},
+                                    {"step": "Verify the public business checks using visible evidence", "status": "pending"}],
+                           "summary": "", "next_goal": "Identify the required objects and controls"}
+                if reflection:
+                    example["reflection"] = ""
+                instructions += ("Return plan with concrete GUI subtasks for the public requirement. "
+                                 "Example initial response: " + json.dumps(example) + ". "
+                                 "Use only the operations the task requires. ")
             else:
                 example = {"plan": [{"step": "Open the requested record or creation form", "status": "in_progress"},
                                     {"step": "Enter the requested field values and click Save", "status": "pending"},
@@ -182,21 +216,33 @@ class Qwen:
     def learn_episode(self, episode, remaining):
         from .agent_session import EXPERIENCE_SCHEMA
 
-        messages = [{"role": "system", "content": [{"type": "text", "text": (
+        instructions = (
             "Extract reusable GUI interaction experience from this public episode. Return JSON "
             "with procedure and lessons, each a short list of concise instructions. Record how to "
             "locate controls, replace input, submit and reopen, and how to avoid observed mistakes. "
             "Do not store product verdicts, task-specific literal values, credentials, build/version "
             "labels or claims that a previous result predicts the next run. Failed episodes can "
-            "supply cautions; do not describe an unsuccessful procedure as proven successful.")}]},
+            "supply cautions; do not describe an unsuccessful procedure as proven successful.")
+        if self.config.get("review_format") == "business_evidence_v1":
+            instructions = instructions.replace("locate controls, replace input, submit and reopen", "locate controls, perform the required operations and collect evidence")
+        messages = [{"role": "system", "content": [{"type": "text", "text": instructions}]},
             {"role": "user", "content": [{"type": "text", "text": json.dumps(episode, ensure_ascii=False)}]}]
         return self._generate(messages, remaining, max_new_tokens=512, schema=EXPERIENCE_SCHEMA,
                               generation_options={"repetition_penalty": 1.1},
                               use_base=self.config["agent_runtime"].get("planner_adapter") == "base")
 
-    def assess(self, task, screenshots, history, remaining, profile="persistence", frames=None):
+    def assess(self, task, screenshots, history, remaining, profile="persistence", frames=None, requirements=None):
         from PIL import Image
 
+        if self.config.get("review_format") == "business_evidence_v1":
+            from .business_review import json_schema, review_content, review_prompt
+
+            paths = {step: Image.open(path).convert("RGB") for step, path in screenshots}
+            return self._generate([
+                {"role": "system", "content": [{"type": "text", "text": review_prompt(profile, requirements)}]},
+                {"role": "user", "content": review_content(task, history, frames, paths, requirements)}], remaining,
+                max_new_tokens=self.config.get("review_max_new_tokens"),
+                schema=json_schema(list(paths), requirements))
         if self.config.get("review_format") in {"evidence_v2", "evidence_facts_v1"}:
             from .review_context import review_content
 
